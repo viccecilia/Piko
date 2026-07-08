@@ -1,0 +1,20 @@
+{
+  "artifact_id": "import_version_probe",
+  "generated_at": "2026-07-08T01:56:48.375997+00:00",
+  "package": "langgraph",
+  "raw_package_source_dumped": false,
+  "probe_status": "success",
+  "import_success": true,
+  "version": "unknown",
+  "module_path_summary": "namespace_or_unknown",
+  "blocked_reason": null,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

@@ -1,0 +1,13 @@
+{
+  "source_id": "fixture_community_overlay_001",
+  "source_type": "steam_discussion",
+  "url": "https://example.invalid/community/example-game-overlay",
+  "title": "Players report overlay-related black screen",
+  "date": "2026-06-05",
+  "game_id": "game_mock_001",
+  "game_name": "Example Game",
+  "trust_tier": "community",
+  "platform": "windows",
+  "content": "Several players report a black screen after clicking Play. Disabling Steam Overlay helped some players. Do not download replacement DLL files from random links."
+}
+

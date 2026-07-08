@@ -1,0 +1,21 @@
+{
+  "artifact_type": "provider_live_realdata_env_handoff",
+  "generated_at": "2026-07-08T01:57:38.857254+00:00",
+  "provider_live_status": "deploy_ready_pending_provider_host",
+  "realdata_expected_coverage": "blocked_for_provider_endpoints",
+  "powershell_commands": [
+    "$env:PIKO_ENABLE_DISCOVERY_REAL_SOURCE=\"true\"",
+    "$env:PIKO_LIVE_DISCOVERY_TEST=\"true\"",
+    "# pending: set PIKO_SERP_DISCOVERY_URL=<non-local HTTPS approved JSON provider endpoint>",
+    "# pending: set PIKO_REDDIT_DISCOVERY_URL=<non-local HTTPS approved JSON provider endpoint>",
+    "# pending: set PIKO_STEAM_DISCOVERY_URL=<non-local HTTPS approved JSON provider endpoint>"
+  ],
+  "successful_providers": [],
+  "pending_provider_env_vars": [
+    "PIKO_SERP_DISCOVERY_URL",
+    "PIKO_REDDIT_DISCOVERY_URL",
+    "PIKO_STEAM_DISCOVERY_URL"
+  ],
+  "contains_secrets": false,
+  "candidate_only": true
+}

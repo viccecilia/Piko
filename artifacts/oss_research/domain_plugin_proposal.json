@@ -1,0 +1,23 @@
+{
+  "proposal_id": "domain_plugin_proposal_v1",
+  "status": "proposal_only",
+  "domain_plugin_contract": {
+    "domain_id": "string",
+    "source_connectors": "list of connector contracts, disabled by default unless approved",
+    "topic_scorers": "domain-specific scoring functions",
+    "evidence_rules": "source and evidence requirements",
+    "writer_profile": "tone and article template constraints",
+    "verification_rules": "domain-specific checks",
+    "publish_policy": "publishing eligibility; default false"
+  },
+  "gaming_migration_plan": [
+    "Keep gaming as default domain.",
+    "Move discovery rules behind registry lookup.",
+    "Do not break existing discovery/search."
+  ],
+  "demo_domain": {
+    "domain_id": "ai_tools",
+    "enabled_by_default": false,
+    "real_collection_enabled": false
+  }
+}

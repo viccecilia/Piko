@@ -1,0 +1,34 @@
+{
+  "artifact_id": "langgraph_dependency_license_safety_review",
+  "generated_at": "2026-07-08T01:56:47.770538+00:00",
+  "source_v03_readiness": "artifacts/v03_practical_plugin/practical_readiness_report.json",
+  "source_v03_activation_packet": "artifacts/v03_practical_plugin/real_activation_approval_packet.json",
+  "v03_ready_now": "local_fixture_ready",
+  "v03_activation_status": "not_approved",
+  "review_status": "pilot_review_only",
+  "package_name": "langgraph",
+  "expected_import": "langgraph",
+  "version_strategy": "probe installed version only; do not install without explicit approval",
+  "license_review": {
+    "status": "placeholder_required_before_production",
+    "production_approved": false
+  },
+  "security_boundary": {
+    "no_network_by_default": true,
+    "no_llm_by_default": true,
+    "no_credentials": true,
+    "no_runtime_replacement": true,
+    "no_vendor_source": true
+  },
+  "rollback_consideration": "keep V03 local fixture backend as stable fallback",
+  "production_approved": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

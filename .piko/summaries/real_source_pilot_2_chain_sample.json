@@ -1,0 +1,107 @@
+{
+  "source_records": [
+    {
+      "source_id": "pcgamingwiki_137191",
+      "source_type": "pcgamingwiki",
+      "title": "Hades",
+      "url": "https://www.pcgamingwiki.com/w/api.php?curid=137191",
+      "retrieved_at": "2026-06-21T06:29:21.357559Z",
+      "trust_tier": "reference",
+      "snippet": "|cover = Hades cover.jpg ...{{Refurl|url=https://fearlessrevolution.com/viewtopic.php?f=2&t=8378|title=Hades|date=2020-02-29}}}}",
+      "clean_text": "|cover = Hades cover.jpg ...{{Refurl|url=https://fearlessrevolution.com/viewtopic.php?f=2&t=8378|title=Hades|date=2020-02-29}}}}",
+      "metadata": {
+        "pageid": "137191",
+        "raw_text_included": false
+      }
+    }
+  ],
+  "evidence_cards": [
+    {
+      "evidence_card_id": "ev_pcgamingwiki_137191_1_candidate",
+      "source_id": "pcgamingwiki_137191",
+      "claim_type": "source_candidate",
+      "claim": "Hades is a pcgamingwiki source candidate for the player question.",
+      "symptom": null,
+      "solution": null,
+      "platform": null,
+      "version": null,
+      "confidence": 35,
+      "risk_note": "Source candidate only; needs page-level extraction before recommending an answer."
+    }
+  ],
+  "publish_decision": {
+    "value": "needs_more_evidence",
+    "recommended_next_action": "Keep as source candidate research until answer-level evidence and ranked steps exist.",
+    "reasons": [
+      "No ranked solution steps were produced from the available evidence."
+    ],
+    "blocks_publish": true
+  },
+  "verification_status": "pass",
+  "verification_checks": [
+    {
+      "name": "player_need",
+      "status": "pass",
+      "message": "Player need and game are present.",
+      "details": {}
+    },
+    {
+      "name": "source_evidence",
+      "status": "pass",
+      "message": "At least one traceable source is present.",
+      "details": {
+        "source_count": 1
+      }
+    },
+    {
+      "name": "evidence_source_trace",
+      "status": "pass",
+      "message": "Evidence cards link to known source IDs.",
+      "details": {
+        "missing_source_ids": []
+      }
+    },
+    {
+      "name": "ranked_step_trace",
+      "status": "pass",
+      "message": "Ranked steps use known source IDs.",
+      "details": {
+        "missing_source_ids": []
+      }
+    },
+    {
+      "name": "conflicts_surfaced",
+      "status": "pass",
+      "message": "Unresolved conflicts must be surfaced before publish decisions.",
+      "details": {
+        "unresolved_conflicts": []
+      }
+    },
+    {
+      "name": "risk_notes",
+      "status": "pass",
+      "message": "Risk notes are visible for risky actions.",
+      "details": {
+        "high_risk_steps": []
+      }
+    },
+    {
+      "name": "no_publishing_side_effect",
+      "status": "pass",
+      "message": "Workflow did not publish content.",
+      "details": {}
+    },
+    {
+      "name": "gate_decision_consistency",
+      "status": "pass",
+      "message": "Publish-ready decisions cannot coexist with failed gates.",
+      "details": {
+        "failed_gates": [
+          "evidence_gate",
+          "original_value_gate",
+          "publish_gate"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "artifact_id": "verify_task_draft_contract_v1",
+  "generated_at": "2026-07-08T01:56:31.977415+00:00",
+  "verify_drafts": [
+    {
+      "verify_id": "draft_verify_grow_langgraph",
+      "source_task_id": "draft_worker_grow_langgraph",
+      "required_commands": [
+        "python -m pytest",
+        "python -m pytest tests\\test_discovery_search.py -q"
+      ],
+      "artifact_checks": [
+        "JSON parse",
+        "summary exists",
+        "proposal-only flags intact"
+      ],
+      "guardrail_checks": [
+        "no default network",
+        "no default LLM",
+        "no auto-install",
+        "no auto-replace",
+        "no publish/deploy"
+      ],
+      "pass_conditions": [
+        "tests pass",
+        "guardrail scan clean",
+        "no active adoption without approval"
+      ],
+      "fail_conditions": [
+        "unsafe side effect",
+        "verification bypass",
+        "missing rollback or human approval for risky action"
+      ],
+      "status": "draft_only",
+      "auto_execute": false
+    },
+    {
+      "verify_id": "draft_verify_grow_llamaindex",
+      "source_task_id": "draft_worker_grow_llamaindex",
+      "required_commands": [
+        "python -m pytest",
+        "python -m pytest tests\\test_discovery_search.py -q"
+      ],
+      "artifact_checks": [
+        "JSON parse",
+        "summary exists",
+        "proposal-only flags intact"
+      ],
+      "guardrail_checks": [
+        "no default network",
+        "no default LLM",
+        "no auto-install",
+        "no auto-replace",
+        "no publish/deploy"
+      ],
+      "pass_conditions": [
+        "tests pass",
+        "guardrail scan clean",
+        "no active adoption without approval"
+      ],
+      "fail_conditions": [
+        "unsafe side effect",
+        "verification bypass",
+        "missing rollback or human approval for risky action"
+      ],
+      "status": "draft_only",
+      "auto_execute": false
+    }
+  ],
+  "status": "draft_only",
+  "auto_execute_performed": false
+}

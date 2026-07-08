@@ -1,0 +1,29 @@
+{
+  "artifact_type": "external_candidate_article_package",
+  "generated_at": "2026-07-08T01:56:31.584072+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "selected_topic": null,
+  "source_trace": [
+    {
+      "scope": "external_approved_endpoint",
+      "status": "blocked_for_external_endpoint",
+      "source_id": null,
+      "real_collection_performed": false
+    }
+  ],
+  "evidence_trace": [],
+  "outline": [
+    "Player need",
+    "External approved endpoint signal",
+    "Evidence still required before draft",
+    "Risk and source trace"
+  ],
+  "no_candidate_reason": "missing_external_endpoint_url",
+  "verification_required": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

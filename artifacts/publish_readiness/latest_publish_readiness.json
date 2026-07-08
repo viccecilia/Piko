@@ -1,0 +1,34 @@
+{
+  "artifact_type": "publish_readiness_metadata",
+  "generated_at": "2026-07-07T05:51:45.824974+00:00",
+  "verification_status": "fail",
+  "source_trace_present": true,
+  "evidence_trace_present": true,
+  "media_plan_present": true,
+  "manual_publish_required": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "has_images": false,
+  "media_plan": {
+    "recommended_media": [
+      "Use original screenshots only after permission or first-party capture."
+    ],
+    "required_screenshots": [
+      "game settings screen or save folder UI if future operator captures it"
+    ],
+    "image_source_policy": "Do not download or copy external screenshots, maps, tables, or images.",
+    "alt_text": [
+      "Describe the specific player-facing UI if an original screenshot is later added."
+    ],
+    "license_safety_notes": [
+      "No external media is retained in this package.",
+      "Generated or captured media requires a future explicit review step."
+    ]
+  },
+  "safety_flags": {
+    "external_images_downloaded": false,
+    "image_generation_used": false,
+    "deploy_performed": false,
+    "candidate_only": true
+  }
+}

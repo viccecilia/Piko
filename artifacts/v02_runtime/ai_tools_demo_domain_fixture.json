@@ -1,0 +1,22 @@
+{
+  "artifact_id": "ai_tools_demo_domain_fixture",
+  "generated_at": "2026-07-08T01:56:46.591276+00:00",
+  "domain_id": "ai_tools",
+  "candidate_only": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "llm_used": false,
+  "records": [
+    {
+      "candidate_id": "ai_tool_fixture_eval_guardrails",
+      "title": "Eval guardrail pack for agent workflows",
+      "source_id": "fixture_ai_tools_001",
+      "source_type": "local_fixture",
+      "snippet": "A bounded local fixture about eval checks, traceability, and approval gates.",
+      "operator_value": "helps verify agent output before adoption",
+      "risk": "candidate_only",
+      "recommended_next_action": "keep_as_demo_fixture"
+    }
+  ]
+}

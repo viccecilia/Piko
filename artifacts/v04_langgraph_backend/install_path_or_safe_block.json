@@ -1,0 +1,21 @@
+{
+  "artifact_id": "controlled_install_path_or_safe_block",
+  "generated_at": "2026-07-08T01:56:47.785537+00:00",
+  "status": "blocked_for_approval",
+  "install_allowed": false,
+  "install_performed": false,
+  "approved_command_used": null,
+  "exit_status": null,
+  "version": "unknown",
+  "blocked_reason": "install_allowed=false",
+  "rollback_note": "local_fixture remains available",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

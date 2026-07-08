@@ -1,0 +1,187 @@
+{
+  "artifact_type": "connector_readiness_report",
+  "generated_at": "2026-07-08T01:56:29.868323+00:00",
+  "connectors": [
+    {
+      "connector_id": "gaming_approved_endpoint",
+      "missing_env": [
+        "PIKO_APPROVED_ENDPOINT_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_steam_summary",
+      "missing_env": [
+        "PIKO_STEAM_DISCOVERY_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "gaming_reddit_summary",
+      "missing_env": [
+        "PIKO_REDDIT_DISCOVERY_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "gaming_serp_snippet",
+      "missing_env": [
+        "PIKO_SERP_DISCOVERY_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "gaming_mediawiki_reference",
+      "missing_env": [
+        "PIKO_ENABLE_REAL_CONNECTORS"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "gaming_jp_community_summary",
+      "missing_env": [
+        "PIKO_JP_COMMUNITY_DISCOVERY_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "gaming_kr_community_summary",
+      "missing_env": [
+        "PIKO_KR_COMMUNITY_DISCOVERY_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "ai_tools_approved_endpoint",
+      "missing_env": [
+        "PIKO_APPROVED_ENDPOINT_URL"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "ai_tools_github_repo_summary",
+      "missing_env": [
+        "PIKO_GITHUB_CONNECTOR_REF"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "ai_tools_release_note_summary",
+      "missing_env": [
+        "PIKO_AI_TOOLS_RELEASE_ENDPOINT"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "ai_tools_docs_page_summary",
+      "missing_env": [
+        "PIKO_AI_TOOLS_DOCS_ENDPOINT"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    },
+    {
+      "connector_id": "ai_tools_community_summary",
+      "missing_env": [
+        "PIKO_AI_TOOLS_COMMUNITY_ENDPOINT"
+      ],
+      "readiness_score": {
+        "contract_complete": true,
+        "credential_safe": true,
+        "source_policy_safe": true,
+        "domain_bound": true,
+        "tests_present": true,
+        "live_ready": false
+      },
+      "status": "candidate_disabled"
+    }
+  ],
+  "live_ready_default": false
+}

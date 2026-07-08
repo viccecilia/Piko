@@ -1,0 +1,38 @@
+{
+  "artifact_id": "graph_smoke_trace_gate_semantics",
+  "generated_at": "2026-07-08T01:56:48.399996+00:00",
+  "smoke_status": "success",
+  "nodes": [
+    "start",
+    "transform",
+    "gate",
+    "end"
+  ],
+  "state_summaries": [
+    {
+      "node": "start",
+      "state_summary": "bounded fixture state"
+    },
+    {
+      "node": "transform",
+      "state_summary": "bounded fixture state"
+    },
+    {
+      "node": "gate",
+      "state_summary": "bounded fixture state"
+    }
+  ],
+  "gate_decision": "pass",
+  "retry_count": 0,
+  "backend_ready": true,
+  "failed_or_blocked_not_marked_success": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

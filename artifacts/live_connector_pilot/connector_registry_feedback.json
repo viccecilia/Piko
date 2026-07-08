@@ -1,0 +1,13 @@
+{
+  "artifact_type": "live_connector_registry_feedback",
+  "generated_at": "2026-07-08T01:56:44.371581+00:00",
+  "connector_id": "approved_json_endpoint",
+  "last_probe_status": "success",
+  "last_probe_at": "2026-07-08T01:56:44.371581+00:00",
+  "readiness_delta": "live_probe_success",
+  "production_activation_allowed": false,
+  "live_ready": true,
+  "next_action": "operator_verify_live_payload",
+  "real_collection_performed": true,
+  "publishing_performed": false
+}

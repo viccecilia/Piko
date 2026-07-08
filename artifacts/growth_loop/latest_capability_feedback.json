@@ -1,0 +1,44 @@
+{
+  "artifact_id": "latest_capability_feedback",
+  "generated_at": "2026-07-08T01:56:31.968412+00:00",
+  "feedback": [
+    {
+      "feedback_id": "feedback_grow_langgraph",
+      "source_candidate_id": "grow_langgraph",
+      "target_capability": "capability_map",
+      "suggested_change": "augment",
+      "status": "proposal_only",
+      "summary": "Candidate can improve Piko through a bounded proposal and tests.",
+      "active_adoption_performed": false
+    },
+    {
+      "feedback_id": "feedback_grow_llamaindex",
+      "source_candidate_id": "grow_llamaindex",
+      "target_capability": "capability_map",
+      "suggested_change": "augment",
+      "status": "proposal_only",
+      "summary": "Candidate can improve Piko through a bounded proposal and tests.",
+      "active_adoption_performed": false
+    },
+    {
+      "feedback_id": "feedback_grow_openai-agents-sdk",
+      "source_candidate_id": "grow_openai-agents-sdk",
+      "target_capability": "capability_map",
+      "suggested_change": "watch",
+      "status": "proposal_only",
+      "summary": "Potentially useful but not enough evidence for implementation draft.",
+      "active_adoption_performed": false
+    },
+    {
+      "feedback_id": "feedback_grow_cap-agent-runtime-adapter-boundary",
+      "source_candidate_id": "grow_cap-agent-runtime-adapter-boundary",
+      "target_capability": "capability_map",
+      "suggested_change": "watch",
+      "status": "proposal_only",
+      "summary": "Potentially useful but not enough evidence for implementation draft.",
+      "active_adoption_performed": false
+    }
+  ],
+  "status": "proposal_only",
+  "active_capability_map_mutated": false
+}

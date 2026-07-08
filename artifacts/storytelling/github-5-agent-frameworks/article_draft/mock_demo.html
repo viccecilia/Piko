@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1280, height=720" />
+  <title>GitHub Agent Radar Demo Screens</title>
+  <style>
+    :root {
+      --bg: #0b1017;
+      --panel: #121923;
+      --panel2: #17202b;
+      --line: #2a3645;
+      --text: #f3f7fb;
+      --muted: #9aa8b8;
+      --flow: #5aa9ff;
+      --evidence: #47d18c;
+      --role: #f0b84a;
+      --lab: #b48cff;
+      --app: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    body {
+      background:
+        radial-gradient(circle at 10% 8%, rgba(90,169,255,.22), transparent 28%),
+        radial-gradient(circle at 88% 90%, rgba(71,209,140,.13), transparent 30%),
+        #080d13;
+    }
+    .scene {
+      display: none;
+      width: 1280px;
+      height: 720px;
+      padding: 34px;
+    }
+    body.scan #scan,
+    body.map #map,
+    body.queue #queue,
+    body.article #article {
+      display: block;
+    }
+    .app {
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(18,25,35,.96);
+      box-shadow: 0 24px 90px rgba(0,0,0,.45);
+    }
+    .topbar {
+      height: 56px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      background: rgba(9,13,18,.72);
+    }
+    .dots { display: flex; gap: 8px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #465466; }
+    .dot:nth-child(1) { background: #ff6b6b; }
+    .dot:nth-child(2) { background: #f0b84a; }
+    .dot:nth-child(3) { background: #47d18c; }
+    .title {
+      color: #dbe6f3;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    .status {
+      color: var(--muted);
+      font-size: 13px;
+      font-family: Consolas, monospace;
+    }
+    .content {
+      height: calc(100% - 56px);
+      display: grid;
+      grid-template-columns: 270px 1fr;
+    }
+    .sidebar {
+      border-right: 1px solid var(--line);
+      padding: 20px;
+      background: rgba(8,12,18,.42);
+    }
+    .side-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .nav {
+      display: grid;
+      gap: 10px;
+    }
+    .nav div {
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 9px;
+      padding: 11px 12px;
+      color: #cad5e3;
+      font-size: 13px;
+      background: rgba(255,255,255,.035);
+    }
+    .nav .active {
+      color: var(--text);
+      border-color: rgba(90,169,255,.5);
+      background: rgba(90,169,255,.13);
+    }
+    .main {
+      padding: 22px;
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+    .headline {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    .button {
+      border-radius: 9px;
+      border: 1px solid rgba(71,209,140,.45);
+      color: #dffdec;
+      background: rgba(71,209,140,.12);
+      padding: 10px 13px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+    .grid.two { grid-template-columns: 1.15fr .85fr; }
+    .grid.five { grid-template-columns: repeat(5, 1fr); }
+    .panel {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      background: rgba(255,255,255,.045);
+      padding: 16px;
+      min-height: 90px;
+    }
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: #e7eef8;
+    }
+    .repo {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 10px 0;
+      font-size: 13px;
+    }
+    .repo:first-of-type { border-top: 0; }
+    .repo b { color: #f6f8fc; }
+    .repo span { color: var(--muted); }
+    .score {
+      color: #dffdec;
+      border: 1px solid rgba(71,209,140,.36);
+      background: rgba(71,209,140,.12);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-family: Consolas, monospace;
+    }
+    .terminal {
+      font-family: Consolas, monospace;
+      color: #cfe7d8;
+      font-size: 13px;
+      line-height: 1.7;
+      background: #06090e;
+      border: 1px solid #263241;
+      border-radius: 12px;
+      padding: 15px;
+      height: 214px;
+      overflow: hidden;
+    }
+    .terminal .blue { color: #8fc7ff; }
+    .terminal .green { color: #6ee7a8; }
+    .terminal .yellow { color: #ffd166; }
+    .cap-card {
+      min-height: 152px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      padding: 16px;
+      background: rgba(255,255,255,.045);
+      display: grid;
+      align-content: space-between;
+    }
+    .cap-card strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .cap-card p {
+      margin: 0;
+      color: #b8c5d5;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .flow { color: var(--flow); }
+    .evidence { color: var(--evidence); }
+    .role { color: var(--role); }
+    .lab { color: var(--lab); }
+    .appc { color: var(--app); }
+    .kanban {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .lane {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,.04);
+      min-height: 424px;
+    }
+    .lane-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      color: #dbe6f3;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .task {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
+      background: rgba(9,13,18,.48);
+    }
+    .task b {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+    .task span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .article-preview {
+      background: #fff;
+      color: #1f2933;
+      border-radius: 10px;
+      padding: 22px;
+      height: 505px;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px #e6e8ec;
+    }
+    .article-preview h2 {
+      color: #111827;
+      font-size: 24px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+    .article-preview p {
+      font-size: 13px;
+      line-height: 1.72;
+      margin: 8px 0;
+      color: #344054;
+    }
+    .mini-shot {
+      border-radius: 8px;
+      background: #121923;
+      color: #f4f7fb;
+      margin: 14px 0;
+      padding: 15px;
+    }
+    .mini-shot .chips { display: flex; gap: 8px; margin-top: 10px; }
+    .mini-shot .chips span {
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <section id="scan" class="scene">
+    <div class="app">
+      <div class="topbar">
+        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="title">Codex Lab - 5 Agent Framework Run</div>
+        <div class="status">2026-07-02 09:30 JST</div>
+      </div>
+      <div class="content">
+        <aside class="sidebar">
+          <div class="side-label">Automation</div>
+          <div class="nav">
+            <div class="active">Run 5 Frameworks</div>
+            <div>LangGraph</div>
+            <div>LlamaIndex</div>
+            <div>CrewAI</div>
+            <div>AutoGen / AG2</div>
+          </div>
+        </aside>
+        <main class="main">
+          <div class="headline">
+            <div>
+              <h1>同一个任务，模拟跑 5 个 Agent 框架</h1>
+              <div class="sub">任务：找资料、整理证据、分工写草稿、多 Agent 讨论，最后做成可用入口。</div>
+            </div>
+            <div class="button">RUNNING</div>
+          </div>
+          <div class="grid two">
+            <div class="panel">
+              <h2>模拟运行结果</h2>
+              <div class="repo"><div><b>LangGraph</b><br><span>最适合控制流程、状态和重试</span></div><div class="score">流程</div></div>
+              <div class="repo"><div><b>LlamaIndex</b><br><span>最适合组织资料、证据和引用</span></div><div class="score">证据</div></div>
+              <div class="repo"><div><b>CrewAI</b><br><span>最适合解释角色分工和任务协作</span></div><div class="score">分工</div></div>
+              <div class="repo"><div><b>AutoGen / AG2</b><br><span>最适合观察多 Agent 对话实验</span></div><div class="score">实验</div></div>
+              <div class="repo"><div><b>Dify / Agents SDK</b><br><span>最适合把能力做成可用入口</span></div><div class="score">应用</div></div>
+            </div>
+            <div class="terminal">
+              <div><span class="blue">$</span> codex run agent-framework-benchmark</div>
+              <div><span class="green">✓</span> LangGraph: workflow completed with checkpoint</div>
+              <div><span class="green">✓</span> LlamaIndex: answer linked to source notes</div>
+              <div><span class="green">✓</span> CrewAI: roles split into researcher/writer/reviewer</div>
+              <div><span class="yellow">!</span> AutoGen/AG2: useful discussion, needs guardrails</div>
+              <div><span class="green">✓</span> Dify/Agents SDK: packaged into app entry</div>
+              <div><span class="blue">→</span> conclusion: 5 positions are enough for first map</div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <section id="map" class="scene">
+    <div class="app">
+      <div class="topbar">
+        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="title">5 Agent Run Summary</div>
+        <div class="status">one task, five roles</div>
+      </div>
+      <main class="main" style="height: calc(100% - 56px);">
+        <div class="headline">
+          <div>
+            <h1>跑完之后，5 个框架刚好补齐 5 个位置</h1>
+            <div class="sub">这不是排名，而是普通人理解 Agent 系统的第一张地图。</div>
+          </div>
+          <div class="button">CAPABILITY MAP</div>
+        </div>
+        <div class="grid five">
+          <div class="cap-card"><div><strong class="flow">流程</strong><p>LangGraph</p></div><p>下一步谁做，状态放哪里，失败怎么重试。</p></div>
+          <div class="cap-card"><div><strong class="evidence">证据</strong><p>LlamaIndex</p></div><p>资料从哪里来，回答能不能追溯。</p></div>
+          <div class="cap-card"><div><strong class="role">分工</strong><p>CrewAI</p></div><p>谁找资料，谁写草稿，谁审核返工。</p></div>
+          <div class="cap-card"><div><strong class="lab">实验</strong><p>AutoGen / AG2</p></div><p>多个 Agent 怎么对话、协商、互相调用。</p></div>
+          <div class="cap-card"><div><strong class="appc">应用</strong><p>Dify / Agents SDK</p></div><p>怎么接工具、接模型、做成用户入口。</p></div>
+        </div>
+        <div class="panel">
+          <h2>判断原则</h2>
+          <div class="repo"><div><b>错误问题</b><br><span>哪个 Agent 框架最强？</span></div><div class="score">SKIP</div></div>
+          <div class="repo"><div><b>正确问题</b><br><span>它在我的系统里负责哪个位置？失败能不能验证和回滚？</span></div><div class="score">KEEP</div></div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <section id="queue" class="scene">
+    <div class="app">
+      <div class="topbar">
+        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="title">Why These 5 Are Enough</div>
+        <div class="status">learning map</div>
+      </div>
+      <main class="main" style="height: calc(100% - 56px);">
+        <div class="headline">
+          <div>
+            <h1>为什么先看这 5 个就够了？</h1>
+            <div class="sub">它们覆盖流程、证据、分工、实验、应用，刚好是一套完整入门路径。</div>
+          </div>
+          <div class="button">VERIFY FIRST</div>
+        </div>
+        <div class="kanban">
+          <div class="lane">
+            <div class="lane-title"><span>基础骨架</span><span>2</span></div>
+            <div class="task"><b>LangGraph</b><span>先知道 Agent 任务怎么一步步跑。</span></div>
+            <div class="task"><b>LlamaIndex</b><span>再知道 Agent 依据什么资料回答。</span></div>
+          </div>
+          <div class="lane">
+            <div class="lane-title"><span>协作实验</span><span>2</span></div>
+            <div class="task"><b>CrewAI</b><span>理解角色和任务怎么分配。</span></div>
+            <div class="task"><b>AutoGen / AG2</b><span>理解多个 Agent 怎么讨论和协商。</span></div>
+          </div>
+          <div class="lane">
+            <div class="lane-title"><span>应用入口</span><span>1</span></div>
+            <div class="task"><b>Dify / Agents SDK</b><span>理解怎么把 Agent 做成用户能用的东西。</span></div>
+            <div class="task"><b>结论</b><span>这 5 个不是全部，但足够搭第一张认知地图。</span></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <section id="article" class="scene">
+    <div class="app">
+      <div class="topbar">
+        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="title">Article Draft Preview</div>
+        <div class="status">wechat style, long image ready</div>
+      </div>
+      <div class="content">
+        <aside class="sidebar">
+          <div class="side-label">Outputs</div>
+          <div class="nav">
+            <div class="active">图文版本</div>
+            <div>短视频版本</div>
+            <div>口播稿</div>
+            <div>分镜</div>
+          </div>
+        </aside>
+        <main class="main">
+          <div class="headline">
+            <div>
+              <h1>把 5 个框架的体验结果做成一篇小红书</h1>
+              <div class="sub">重点不是罗列项目，而是告诉读者：每个项目到底解决哪个问题。</div>
+            </div>
+            <div class="button">CONTENT PACKAGE</div>
+          </div>
+          <div class="article-preview">
+            <h2>我模拟跑了一遍 GitHub 上 5 个高星 Agent 项目</h2>
+            <p>最后发现，普通人先看这 5 个就够了。</p>
+            <div class="mini-shot">
+              <b>GitHub Agent Map</b>
+              <div class="chips"><span>流程</span><span>证据</span><span>分工</span><span>实验</span><span>应用</span></div>
+            </div>
+            <p>LangGraph 看流程，LlamaIndex 看证据，CrewAI 看分工，AutoGen/AG2 看实验，Dify/Agents SDK 看应用。</p>
+            <p>看懂这 5 个位置，再看其他 Agent 项目就不会乱。</p>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const scene = new URLSearchParams(location.search).get("scene") || "scan";
+    document.body.className = scene;
+  </script>
+</body>
+</html>

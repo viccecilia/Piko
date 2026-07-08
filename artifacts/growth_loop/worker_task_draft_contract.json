@@ -1,0 +1,20 @@
+{
+  "artifact_id": "worker_task_draft_contract_v1",
+  "generated_at": "2026-07-08T01:56:31.969416+00:00",
+  "schema": {
+    "required_fields": [
+      "task_id",
+      "source_candidate_id",
+      "round_name",
+      "goal",
+      "tasks",
+      "allowed_changes",
+      "forbidden_changes",
+      "required_validation",
+      "definition_of_done",
+      "status"
+    ]
+  },
+  "draft_filter": "Only CAP review decisions with next_action=draft_worker_task may generate worker drafts.",
+  "status": "draft_only"
+}

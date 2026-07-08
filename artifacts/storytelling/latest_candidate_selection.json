@@ -1,0 +1,28 @@
+{
+  "status": "selected",
+  "selected_at": "2026-07-08T01:56:46.235218+00:00",
+  "template_id": "agent-skill-storytelling:v1",
+  "candidate": {
+    "candidate_id": "story_agent_framework_adapter",
+    "title": "Piko 如何学习成熟 agent 框架但不盲目替换现有系统",
+    "capability_type": "open_source_learning",
+    "hook": "成熟框架值得学，但不等于要马上接进生产链路。",
+    "why_now": "OSS 队列已把 adapter boundary 作为候选能力交给 CAP/STORY。",
+    "source_refs": [
+      "artifacts\\oss_research\\agent_framework_adapter_proposal.json",
+      "artifacts\\oss_research\\latest_story_queue_candidates.json"
+    ]
+  },
+  "reason": "Fits today's internal skill/agent storytelling loop and does not require live collection.",
+  "evidence_refs": [
+    "artifacts\\oss_research\\agent_framework_adapter_proposal.json",
+    "artifacts\\oss_research\\latest_story_queue_candidates.json"
+  ],
+  "novelty_status": "new_or_safe_internal_angle",
+  "risk_notes": [
+    "Internal draft only.",
+    "No platform publishing.",
+    "No unverified external claims."
+  ],
+  "publish_ready": false
+}

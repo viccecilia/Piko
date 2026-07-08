@@ -1,0 +1,70 @@
+{
+  "artifact_id": "latest_scan_intake",
+  "scan_date": "2026-07-03",
+  "source_thread_id": "piko-github",
+  "source_memory_path": "C:\\Users\\pangv\\.codex\\automations\\piko-github\\memory.md",
+  "source_memory_exists": true,
+  "source_last_run": null,
+  "projects": [
+    {
+      "name": "LangGraph",
+      "source": "oss_research.latest_ranked_projects",
+      "github_url": "https://github.com/langchain-ai/langgraph",
+      "stars": 5000,
+      "license": "MIT",
+      "category": "workflow orchestration",
+      "piko_relevance": "Useful pattern for explicit, inspectable workflow state.",
+      "risk": "Needs adapter boundary; do not let external runtime bypass Piko verification."
+    },
+    {
+      "name": "LlamaIndex",
+      "source": "oss_research.latest_ranked_projects",
+      "github_url": "https://github.com/run-llama/llama_index",
+      "stars": 5000,
+      "license": "MIT",
+      "category": "RAG/evidence indexing",
+      "piko_relevance": "Useful for source indexing and evidence-card traceability.",
+      "risk": "Must avoid moving long raw source text through agent prompts."
+    },
+    {
+      "name": "OpenAI Agents SDK",
+      "source": "oss_research.latest_ranked_projects",
+      "github_url": "https://github.com/openai/openai-agents-python",
+      "stars": 5000,
+      "license": "MIT",
+      "category": "agent framework",
+      "piko_relevance": "Useful for future business agents behind Piko gates.",
+      "risk": "Must remain optional and disabled unless explicitly configured."
+    },
+    {
+      "name": "cap_agent_runtime_adapter_boundary",
+      "source": "oss_research.latest_cap_queue_candidates",
+      "github_url": null,
+      "stars": null,
+      "license": "unknown",
+      "category": "augment",
+      "piko_relevance": "CAP queue candidate from OSS learning.",
+      "risk": "medium"
+    },
+    {
+      "name": "story_agent_framework_adapter",
+      "source": "oss_research.latest_story_queue_candidates",
+      "github_url": null,
+      "stars": null,
+      "license": "unknown",
+      "category": "story_only",
+      "piko_relevance": "OSS 队列已把 adapter boundary 作为候选能力交给 CAP/STORY。",
+      "risk": "story_only; not runtime adoption"
+    }
+  ],
+  "candidate_recommendations": [
+    "typed worker DAG with resumable state/human gates",
+    "declarative eval/guardrail packs",
+    "connector capability manifest and sandbox policy",
+    "evidence index with claim-source graph plus freshness/conflict metadata",
+    "operator dashboard for verification traces and queue decisions"
+  ],
+  "used_latest_or_fallback": true,
+  "live_scan_performed": false,
+  "network_performed": false
+}

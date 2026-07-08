@@ -1,0 +1,44 @@
+{
+  "artifact_type": "gaming_fixture_signals",
+  "domain_id": "gaming",
+  "generated_at": "2026-07-08T01:56:31.223447+00:00",
+  "signals": [
+    {
+      "signal_id": "gaming_signal_save_location",
+      "source_type": "wiki_reference",
+      "source_id": "fixture_wiki_launch_001",
+      "title": "Example Game save data location note",
+      "url": "https://example.invalid/wiki/example-game",
+      "snippet": "Short fixture snippet for save data location.",
+      "metrics": {
+        "heat": 72,
+        "reply_count": 18
+      },
+      "domain_payload": {
+        "game_name": "Example Game",
+        "platform": "windows"
+      }
+    }
+  ],
+  "need_clusters": [
+    {
+      "cluster_id": "gaming_need_save_location",
+      "need_type": "save_location",
+      "representative_text": "Where is the save file location?",
+      "source_signal_ids": [
+        "gaming_signal_save_location"
+      ],
+      "opportunity_score": {
+        "heat": 72,
+        "evidence_maturity": 70,
+        "risk": 10,
+        "source_diversity": 40,
+        "actionability": 90
+      },
+      "domain_payload": {
+        "game_name": "Example Game"
+      }
+    }
+  ],
+  "real_collection_performed": false
+}

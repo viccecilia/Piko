@@ -1,0 +1,15 @@
+{
+  "artifact_type": "local_endpoint_opt_in",
+  "generated_at": "2026-07-08T01:56:44.304543+00:00",
+  "scope": "local_approved_endpoint",
+  "broad_internet_coverage": false,
+  "env_applied_only_inside_runner": true,
+  "enabled_flags": [
+    "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+    "PIKO_LIVE_DISCOVERY_TEST"
+  ],
+  "endpoint_url_host": "127.0.0.1",
+  "endpoint_url_stored": false,
+  "real_collection_performed": false,
+  "publishing_performed": false
+}

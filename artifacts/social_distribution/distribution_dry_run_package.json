@@ -1,0 +1,41 @@
+{
+  "artifact_type": "distribution_dry_run_package",
+  "generated_at": "2026-07-08T01:56:45.747468+00:00",
+  "package_id": "skill_social_distribution_dry_run_001",
+  "platform_targets": [
+    "xiaohongshu",
+    "wechat_official_account",
+    "douyin"
+  ],
+  "content_refs": [
+    "artifacts\\content_quality\\multi_platform_package.json"
+  ],
+  "media_refs": [],
+  "preflight_status": "blocked_for_approval",
+  "approval_status": "missing",
+  "dispatch_performed": false,
+  "publishing_performed": false,
+  "upload_performed": false,
+  "credential_storage_performed": false,
+  "platform_results": [
+    {
+      "platform_id": "xiaohongshu",
+      "status": "dry_run_blocked_for_approval",
+      "dispatch_performed": false,
+      "approval_required": true
+    },
+    {
+      "platform_id": "wechat_official_account",
+      "status": "dry_run_blocked_for_approval",
+      "dispatch_performed": false,
+      "approval_required": true
+    },
+    {
+      "platform_id": "douyin",
+      "status": "dry_run_blocked_for_approval",
+      "dispatch_performed": false,
+      "approval_required": true
+    }
+  ],
+  "operator_summary": "Dry-run package created. Human approval and external credential handling are required before any future live dispatch."
+}

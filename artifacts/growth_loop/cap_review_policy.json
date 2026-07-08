@@ -1,0 +1,31 @@
+{
+  "artifact_id": "cap_review_policy_v1",
+  "generated_at": "2026-07-08T01:56:31.950416+00:00",
+  "decision_dimensions": [
+    "fit_to_piko_goal",
+    "maturity",
+    "license_safety",
+    "implementation_cost",
+    "testability",
+    "security_risk",
+    "replacement_value",
+    "story_value"
+  ],
+  "decisions": [
+    "keep",
+    "augment",
+    "replace_candidate",
+    "deprecate_candidate",
+    "reject",
+    "story_only",
+    "watch"
+  ],
+  "rules": {
+    "story_only": "Must not enter runtime worker implementation queue.",
+    "replace_candidate": "Requires human approval, shadow tests, rollback plan, and Piko-verify before any replacement.",
+    "license_high_risk": "Cannot be adopt/augment until operator reviews license risk.",
+    "watch": "Track signal; do not implement.",
+    "augment": "May produce worker task draft only, not direct active adoption."
+  },
+  "runtime_adoption_performed": false
+}

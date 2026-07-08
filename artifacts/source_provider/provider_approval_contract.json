@@ -1,0 +1,115 @@
+{
+  "artifact_type": "source_provider_approval_contract",
+  "generated_at": "2026-07-08T01:56:45.781465+00:00",
+  "provider_type": "static_json_or_operator_owned_https_json",
+  "external_url_required": true,
+  "operator_approval_required": true,
+  "credential_storage_allowed": false,
+  "deployment_allowed": false,
+  "prohibited_providers": [
+    "localhost",
+    "127.0.0.1",
+    "file",
+    "fixture",
+    "raw_html_page",
+    "crawler"
+  ],
+  "approved_endpoint_contract": {
+    "root_fields": [
+      "games",
+      "questions",
+      "source",
+      "generated_at"
+    ],
+    "source_fields": [
+      "source_id",
+      "source_type",
+      "source_category",
+      "endpoint_type"
+    ],
+    "hot_game_fields": [
+      "game_id",
+      "game_name",
+      "source_category",
+      "source_url"
+    ],
+    "player_question_fields": [
+      "question_id",
+      "game_id",
+      "game_name",
+      "question_text",
+      "source_category",
+      "source_url",
+      "source_title",
+      "snippet"
+    ],
+    "retained_fields": [
+      "answer_maturity",
+      "conflict_count",
+      "engagement_count",
+      "game_id",
+      "game_name",
+      "games",
+      "generated_at",
+      "growth_24h",
+      "language",
+      "metadata",
+      "question_id",
+      "question_text",
+      "questions",
+      "rank",
+      "region",
+      "reply_count",
+      "risk_level",
+      "snippet",
+      "source",
+      "source_category",
+      "source_title",
+      "source_url",
+      "tags",
+      "update_recency_days",
+      "url",
+      "velocity"
+    ],
+    "prohibited_fields": [
+      "access_token",
+      "api_key",
+      "authorization",
+      "body",
+      "content",
+      "credential",
+      "credentials",
+      "full_comments",
+      "full_page",
+      "full_post",
+      "html",
+      "images",
+      "maps",
+      "page_html",
+      "password",
+      "raw_body",
+      "raw_page_text",
+      "raw_response_body",
+      "raw_text",
+      "refresh_token",
+      "secret",
+      "selftext",
+      "tables"
+    ],
+    "max_snippet_chars": 280,
+    "approved_endpoint_types": [
+      "json"
+    ],
+    "rejected_endpoint_types": [
+      "html",
+      "raw_body",
+      "raw_page",
+      "rss_full_text"
+    ],
+    "html_pages_approved": false,
+    "raw_body_endpoints_approved": false,
+    "candidate_only": true
+  },
+  "external_provider_validated": false,
+  "publishing_performed": false
+}

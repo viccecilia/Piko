@@ -1,0 +1,46 @@
+{
+  "artifact_id": "latest_autonomous_run_report_v1",
+  "run_id": "capability_map_batch_2026_07_03",
+  "generated_at": "2026-07-08T01:56:29.720323+00:00",
+  "objective": "Generate capability map and governance artifacts.",
+  "capabilities_used": [
+    "capability_map.pipeline",
+    "pytest",
+    "json_parse_probe"
+  ],
+  "fallbacks_used": [
+    "CAP-BATCH-WORKER.md and CAP-INDEX.md for mojibake round text"
+  ],
+  "outputs": [
+    "artifacts\\capability_map\\autonomy_levels.json",
+    "artifacts\\capability_map\\autonomy_policy.json",
+    "artifacts\\capability_map\\capability_evaluation_policy.json",
+    "artifacts\\capability_map\\capability_registry.json",
+    "artifacts\\capability_map\\capability_routing_policy.json",
+    "artifacts\\capability_map\\capability_scorecard.json",
+    "artifacts\\capability_map\\capability_update_loop.json",
+    "artifacts\\capability_map\\continuous_update_loop.json",
+    "artifacts\\capability_map\\current_inventory.json",
+    "artifacts\\capability_map\\external_tools_inventory.json",
+    "artifacts\\capability_map\\human_approval_contract.json",
+    "artifacts\\capability_map\\latest_autonomous_run_report.json",
+    "artifacts\\capability_map\\latest_cap_review_report.json",
+    "artifacts\\capability_map\\latest_capability_map.json",
+    "artifacts\\capability_map\\latest_capability_scorecard.json",
+    "artifacts\\capability_map\\local_capabilities.json",
+    "artifacts\\capability_map\\replacement_policy.json",
+    "artifacts\\capability_map\\routing_policy.json",
+    "artifacts\\capability_map\\skill_connector_inventory.json"
+  ],
+  "tests_run": [
+    "python -m pytest tests\\test_discovery_search.py -q",
+    "python -m pytest"
+  ],
+  "verification_status": "worker_verified_pending_piko_verify",
+  "human_approval_required": true,
+  "next_actions": [
+    "Piko-verify should inspect artifacts and guardrail boundaries."
+  ],
+  "publish_performed": false,
+  "deploy_performed": false
+}

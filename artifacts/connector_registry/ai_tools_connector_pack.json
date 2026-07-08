@@ -1,0 +1,359 @@
+{
+  "artifact_type": "ai_tools_connector_pack",
+  "domain_id": "ai_tools",
+  "generated_at": "2026-07-08T01:56:29.871323+00:00",
+  "connectors": [
+    {
+      "connector_id": "ai_tools_approved_endpoint",
+      "domain_ids": [
+        "ai_tools"
+      ],
+      "source_type": "approved_json_endpoint",
+      "status": "blocked_for_endpoint",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_APPROVED_ENDPOINT_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "git_history",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "private_repo_content",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "repository_archive",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "ai_tools_github_repo_summary",
+      "domain_ids": [
+        "ai_tools"
+      ],
+      "source_type": "github_repo_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "secret_reference",
+      "required_env": [
+        "PIKO_GITHUB_CONNECTOR_REF"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "git_history",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "private_repo_content",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "repository_archive",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "ai_tools_release_note_summary",
+      "domain_ids": [
+        "ai_tools"
+      ],
+      "source_type": "release_note_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_AI_TOOLS_RELEASE_ENDPOINT"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "git_history",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "private_repo_content",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "repository_archive",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "ai_tools_docs_page_summary",
+      "domain_ids": [
+        "ai_tools"
+      ],
+      "source_type": "docs_page_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_AI_TOOLS_DOCS_ENDPOINT"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "git_history",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "private_repo_content",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "repository_archive",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "ai_tools_community_summary",
+      "domain_ids": [
+        "ai_tools"
+      ],
+      "source_type": "community_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_AI_TOOLS_COMMUNITY_ENDPOINT"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "git_history",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "private_repo_content",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "repository_archive",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    }
+  ],
+  "github_api_called": false,
+  "repo_source_vendored": false
+}

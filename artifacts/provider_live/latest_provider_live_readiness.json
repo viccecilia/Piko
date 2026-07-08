@@ -1,0 +1,28 @@
+{
+  "artifact_type": "provider_live_readiness",
+  "generated_at": "2026-07-08T01:57:38.858248+00:00",
+  "provider_live_status": "deploy_ready_pending_provider_host",
+  "realdata_expected_coverage": "blocked_for_provider_endpoints",
+  "successful_provider_count": 0,
+  "pending_provider_env_vars": [
+    "PIKO_SERP_DISCOVERY_URL",
+    "PIKO_REDDIT_DISCOVERY_URL",
+    "PIKO_STEAM_DISCOVERY_URL"
+  ],
+  "partial_provider_endpoint_ready": false,
+  "real_collection_performed": false,
+  "broad_internet_coverage": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "upload_performed": false,
+  "deployment_performed": false,
+  "crawler_used": false,
+  "html_scrape_used": false,
+  "raw_response_body_saved": false,
+  "full_posts_saved": false,
+  "full_pages_saved": false,
+  "full_comments_saved": false,
+  "credentials_stored": false,
+  "secrets_retained": false,
+  "llm_called": false
+}

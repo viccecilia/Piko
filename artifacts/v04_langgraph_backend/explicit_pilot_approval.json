@@ -1,0 +1,24 @@
+{
+  "artifact_id": "explicit_langgraph_pilot_approval",
+  "generated_at": "2026-07-08T01:56:47.771538+00:00",
+  "pilot_approved": true,
+  "dependency_probe_allowed": true,
+  "install_allowed": false,
+  "network_allowed": false,
+  "llm_allowed": false,
+  "production_activation_allowed": false,
+  "approved_commands": [
+    "python -c \"import importlib; importlib.import_module('langgraph')\"",
+    "python -m pytest tests\\test_v04_langgraph_backend.py -q"
+  ],
+  "blocked_without_this_artifact": "blocked_for_approval",
+  "rollback_note": "Use local_fixture backend; do not alter active runtime.",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

@@ -1,0 +1,48 @@
+{
+  "artifact_type": "domain_pack_manifest",
+  "domain_id": "ai_tools",
+  "version": "0.1.0",
+  "generated_at": "2026-07-08T01:56:46.425275+00:00",
+  "source_types": [
+    "github_repo",
+    "docs_page",
+    "release_note",
+    "benchmark_post",
+    "community_thread"
+  ],
+  "signal_schema": [
+    "tool_candidate_signal",
+    "operator_need_signal",
+    "integration_risk_signal"
+  ],
+  "normalizer": "packages.domain_plugins.pipeline.normalize_ai_tools_fixture",
+  "scoring_profile": {
+    "operator_value_weight": 0.35,
+    "integration_safety_weight": 0.3,
+    "maintenance_signal_weight": 0.2,
+    "evidence_weight": 0.15
+  },
+  "content_templates": [
+    "tool_comparison",
+    "integration_risk_note",
+    "workflow_template",
+    "security_eval"
+  ],
+  "risk_policy": {
+    "license_risk_requires_review": true,
+    "security_eval_required": true
+  },
+  "distribution_targets": [
+    "web",
+    "wechat_official_account",
+    "xiaohongshu"
+  ],
+  "eval_suite": {
+    "suite_id": "ai_tools_domain_eval_v1",
+    "status": "not_started"
+  },
+  "activation_status": "candidate",
+  "candidate_only": true,
+  "publish_ready": false,
+  "publishing_performed": false
+}

@@ -1,0 +1,156 @@
+{
+  "artifact_type": "collection_plans",
+  "generated_at": "2026-07-08T01:56:29.859324+00:00",
+  "plans": {
+    "gaming": {
+      "artifact_type": "collection_plan",
+      "generated_at": "2026-07-08T01:56:29.860323+00:00",
+      "domain_id": "gaming",
+      "target_need": "current hot player needs",
+      "mode": "dry_run",
+      "candidate_connectors": [
+        "gaming_approved_endpoint",
+        "gaming_steam_summary",
+        "gaming_reddit_summary",
+        "gaming_serp_snippet",
+        "gaming_mediawiki_reference",
+        "gaming_jp_community_summary",
+        "gaming_kr_community_summary"
+      ],
+      "required_env": [
+        "PIKO_APPROVED_ENDPOINT_URL",
+        "PIKO_ENABLE_REAL_CONNECTORS",
+        "PIKO_JP_COMMUNITY_DISCOVERY_URL",
+        "PIKO_KR_COMMUNITY_DISCOVERY_URL",
+        "PIKO_REDDIT_DISCOVERY_URL",
+        "PIKO_SERP_DISCOVERY_URL",
+        "PIKO_STEAM_DISCOVERY_URL"
+      ],
+      "approval_status": "missing",
+      "expected_outputs": [
+        "source_signal",
+        "need_cluster",
+        "evidence_trace"
+      ],
+      "blocked_reasons": [
+        {
+          "connector_id": "gaming_approved_endpoint",
+          "missing_env": [
+            "PIKO_APPROVED_ENDPOINT_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "gaming_steam_summary",
+          "missing_env": [
+            "PIKO_STEAM_DISCOVERY_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "gaming_reddit_summary",
+          "missing_env": [
+            "PIKO_REDDIT_DISCOVERY_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "gaming_serp_snippet",
+          "missing_env": [
+            "PIKO_SERP_DISCOVERY_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "gaming_mediawiki_reference",
+          "missing_env": [
+            "PIKO_ENABLE_REAL_CONNECTORS"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "gaming_jp_community_summary",
+          "missing_env": [
+            "PIKO_JP_COMMUNITY_DISCOVERY_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "gaming_kr_community_summary",
+          "missing_env": [
+            "PIKO_KR_COMMUNITY_DISCOVERY_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        }
+      ],
+      "real_collection_performed": false,
+      "no_network_performed": true
+    },
+    "ai_tools": {
+      "artifact_type": "collection_plan",
+      "generated_at": "2026-07-08T01:56:29.862323+00:00",
+      "domain_id": "ai_tools",
+      "target_need": "operator tool evaluation needs",
+      "mode": "dry_run",
+      "candidate_connectors": [
+        "ai_tools_approved_endpoint",
+        "ai_tools_github_repo_summary",
+        "ai_tools_release_note_summary",
+        "ai_tools_docs_page_summary",
+        "ai_tools_community_summary"
+      ],
+      "required_env": [
+        "PIKO_AI_TOOLS_COMMUNITY_ENDPOINT",
+        "PIKO_AI_TOOLS_DOCS_ENDPOINT",
+        "PIKO_AI_TOOLS_RELEASE_ENDPOINT",
+        "PIKO_APPROVED_ENDPOINT_URL",
+        "PIKO_GITHUB_CONNECTOR_REF"
+      ],
+      "approval_status": "missing",
+      "expected_outputs": [
+        "source_signal",
+        "need_cluster",
+        "evidence_trace"
+      ],
+      "blocked_reasons": [
+        {
+          "connector_id": "ai_tools_approved_endpoint",
+          "missing_env": [
+            "PIKO_APPROVED_ENDPOINT_URL"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "ai_tools_github_repo_summary",
+          "missing_env": [
+            "PIKO_GITHUB_CONNECTOR_REF"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "ai_tools_release_note_summary",
+          "missing_env": [
+            "PIKO_AI_TOOLS_RELEASE_ENDPOINT"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "ai_tools_docs_page_summary",
+          "missing_env": [
+            "PIKO_AI_TOOLS_DOCS_ENDPOINT"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        },
+        {
+          "connector_id": "ai_tools_community_summary",
+          "missing_env": [
+            "PIKO_AI_TOOLS_COMMUNITY_ENDPOINT"
+          ],
+          "blocked_reason": "blocked_for_endpoint"
+        }
+      ],
+      "real_collection_performed": false,
+      "no_network_performed": true
+    }
+  }
+}

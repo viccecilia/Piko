@@ -1,0 +1,58 @@
+{
+  "artifact_id": "practical_candidate_selection",
+  "generated_at": "2026-07-08T01:56:47.136003+00:00",
+  "v02_foundation_present": true,
+  "first_candidate": "langgraph_style_workflow_adapter",
+  "expected_piko_workflow_benefit": [
+    "deterministic workflow state",
+    "explicit Gate nodes",
+    "retry and blocked traces",
+    "multi-agent handoff shape",
+    "operator-readable run timeline"
+  ],
+  "activation_boundary": "fixture_and_dry_run_only_until_human_approval",
+  "candidates": [
+    {
+      "candidate_id": "langgraph_style_workflow_adapter",
+      "label": "LangGraph-style workflow adapter",
+      "workflow_fit": 5,
+      "state_fit": 5,
+      "gate_retry_trace_fit": 5,
+      "evidence_rag_fit": 3,
+      "speed_to_use": 5,
+      "selection": "first_practical_candidate",
+      "why_now": "Directly serves Piko workflow orchestration, state, Gate, retry, trace, and multi-agent handoff."
+    },
+    {
+      "candidate_id": "llamaindex_style_evidence_rag",
+      "label": "LlamaIndex-style evidence/RAG",
+      "workflow_fit": 3,
+      "state_fit": 3,
+      "gate_retry_trace_fit": 2,
+      "evidence_rag_fit": 5,
+      "speed_to_use": 3,
+      "selection": "later_candidate",
+      "why_now": "Useful for evidence indexing, but V03 needs workflow control first."
+    },
+    {
+      "candidate_id": "promptfoo_style_eval",
+      "label": "promptfoo-style eval",
+      "workflow_fit": 2,
+      "state_fit": 2,
+      "gate_retry_trace_fit": 3,
+      "evidence_rag_fit": 2,
+      "speed_to_use": 3,
+      "selection": "later_candidate",
+      "why_now": "Eval is important, but V02 already created a local eval contract."
+    }
+  ],
+  "candidate_only": true,
+  "dry_run": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

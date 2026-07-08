@@ -1,0 +1,100 @@
+{
+  "artifact_type": "operator_live_connector_surface",
+  "generated_at": "2026-07-08T01:56:44.470927+00:00",
+  "connector_id": "approved_json_endpoint",
+  "selection": {
+    "artifact_type": "live_connector_selection",
+    "generated_at": "2026-07-08T01:56:44.404836+00:00",
+    "selected_connector_id": "approved_json_endpoint",
+    "selected_source_type": "approved_json_endpoint",
+    "selection_reason": "Lowest-risk connector: bounded JSON endpoint with existing contract validation.",
+    "excluded_connectors": [
+      {
+        "connector": "steam",
+        "live_enabled": false,
+        "reason": "outside_live_connector_v1_scope"
+      },
+      {
+        "connector": "reddit",
+        "live_enabled": false,
+        "reason": "outside_live_connector_v1_scope"
+      },
+      {
+        "connector": "jp_community",
+        "live_enabled": false,
+        "reason": "outside_live_connector_v1_scope"
+      },
+      {
+        "connector": "kr_community",
+        "live_enabled": false,
+        "reason": "outside_live_connector_v1_scope"
+      },
+      {
+        "connector": "serp",
+        "live_enabled": false,
+        "reason": "outside_live_connector_v1_scope"
+      },
+      {
+        "connector": "mediawiki",
+        "live_enabled": false,
+        "reason": "outside_live_connector_v1_scope"
+      }
+    ],
+    "only_approved_json_endpoint_allowed": true,
+    "real_collection_performed": false,
+    "publishing_performed": false
+  },
+  "approval": {
+    "artifact_type": "live_connector_approval",
+    "generated_at": "2026-07-08T01:56:44.405835+00:00",
+    "connector_id": "approved_json_endpoint",
+    "live_probe_allowed": true,
+    "collection_allowed": "only_when_double_opt_in_and_endpoint_present",
+    "allowed_endpoint_type": "json",
+    "max_payload_bytes": 256000,
+    "timeout_seconds": 5,
+    "max_records": 20,
+    "production_activation_allowed": false,
+    "forbidden_connectors": [
+      "steam",
+      "reddit",
+      "jp_community",
+      "kr_community",
+      "serp",
+      "mediawiki"
+    ],
+    "raw_response_body_saved": false,
+    "publishing_performed": false
+  },
+  "endpoint_readiness": {
+    "artifact_type": "live_connector_endpoint_readiness",
+    "generated_at": "2026-07-08T01:56:44.405835+00:00",
+    "connector_id": "approved_json_endpoint",
+    "status": "ready",
+    "required_env": [
+      "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+      "PIKO_LIVE_DISCOVERY_TEST",
+      "PIKO_APPROVED_ENDPOINT_URL"
+    ],
+    "missing_config": [],
+    "endpoint_configured": true,
+    "double_opt_in_configured": true,
+    "endpoint_url_stored": false,
+    "real_collection_performed": false,
+    "publishing_performed": false
+  },
+  "probe_status": "success",
+  "collection_status": "success",
+  "normalized_counts": {
+    "games": 2,
+    "questions": 4
+  },
+  "handoff_status": "handoff_ready",
+  "ranking_preview_status": "completed",
+  "blocked_reason": null,
+  "real_collection_performed": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "candidate_only": true,
+  "read_only_surface": true
+}

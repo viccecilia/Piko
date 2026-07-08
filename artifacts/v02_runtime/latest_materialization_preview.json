@@ -1,0 +1,32 @@
+{
+  "artifact_id": "latest_materialization_preview",
+  "generated_at": "2026-07-08T01:56:46.588275+00:00",
+  "source_draft_package": "artifacts/growth_loop/latest_draft_queue_package.json",
+  "approval_id": "approval_v02_pending_example",
+  "approval_status": "pending_operator_review",
+  "approval_allows_materialization": false,
+  "blocked_reason": "approval_not_granted",
+  "materialization_performed": false,
+  "round_queue_files_created": false,
+  "would_create": [
+    {
+      "task_id": "draft_worker_grow_langgraph",
+      "target_worker_round_file": ".piko/round_queue/DRAFT-draft_worker_grow_langgraph.md",
+      "target_verify_round_file": ".piko/round_queue/VERIFY-draft_worker_grow_langgraph.md",
+      "dry_run_only": true
+    },
+    {
+      "task_id": "draft_worker_grow_llamaindex",
+      "target_worker_round_file": ".piko/round_queue/DRAFT-draft_worker_grow_llamaindex.md",
+      "target_verify_round_file": ".piko/round_queue/VERIFY-draft_worker_grow_llamaindex.md",
+      "dry_run_only": true
+    }
+  ],
+  "safety": {
+    "publish_ready": false,
+    "publishing_performed": false,
+    "auto_execute_performed": false,
+    "auto_apply_performed": false,
+    "runtime_adoption_performed": false
+  }
+}

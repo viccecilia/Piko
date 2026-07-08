@@ -1,0 +1,16 @@
+{
+  "plan_id": "storytelling_tts_plan_latest",
+  "duration_seconds_target": [
+    60,
+    120
+  ],
+  "voice_style": "clear, concise, friendly Chinese narrator",
+  "voice_cloning": false,
+  "impersonation": false,
+  "specific_real_person_voice": false,
+  "tts_provider_required": false,
+  "notes": [
+    "No real TTS call is performed in this round.",
+    "Use neutral synthetic narration if later approved."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "registry_version": "storytelling-template-registry-v1",
+  "updated_at": "2026-07-08T01:56:46.271275+00:00",
+  "templates": [
+    {
+      "template_id": "agent-skill-storytelling:v1",
+      "version": "v1",
+      "source_reference": "C:\\Users\\pangv\\.codex\\skills\\agent-skill-storytelling\\SKILL.md",
+      "structure": [
+        "strong_hook",
+        "old_pain",
+        "new_capability",
+        "quick_judgment",
+        "mechanism_explanation",
+        "practical_steps",
+        "real_limits",
+        "best_fit_users",
+        "summary_action"
+      ],
+      "allowed_outputs": [
+        "wechat_article",
+        "xiaohongshu_carousel",
+        "copy_package",
+        "voiceover_script",
+        "tts_plan",
+        "storyboard",
+        "local_html_video_draft"
+      ],
+      "guardrails": [
+        "no platform publishing",
+        "no voice cloning",
+        "no unauthorized media",
+        "no unverified capability claims"
+      ],
+      "status": "active"
+    }
+  ]
+}

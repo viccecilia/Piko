@@ -1,0 +1,19 @@
+{
+  "artifact_id": "latest_cap_queue_candidates",
+  "generated_at": "2026-07-08T01:56:45.241977+00:00",
+  "candidates": [
+    {
+      "candidate_id": "cap_agent_runtime_adapter_boundary",
+      "capability_change_type": "augment",
+      "risk": "medium",
+      "tests_needed": [
+        "adapter contract tests",
+        "no default LLM/API tests"
+      ],
+      "verification_needed": [
+        "Piko-verify approval before runtime changes"
+      ],
+      "auto_execute": false
+    }
+  ]
+}

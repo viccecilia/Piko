@@ -1,0 +1,77 @@
+{
+  "artifact_type": "final_mvp_content_package",
+  "generated_at": "2026-07-08T01:56:31.495072+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "internal_candidate_package",
+  "selected_topic": {
+    "question_id": "q1",
+    "game_name": "Hades II",
+    "question_text": "Where is the save file?",
+    "evidence_quality": 70,
+    "risk_level": "low",
+    "publish_ready": false
+  },
+  "source_trace": [
+    {
+      "scope": "external_approved_endpoint",
+      "status": "success",
+      "source_id": "approved_1"
+    }
+  ],
+  "evidence_cards": [
+    {
+      "evidence_card_id": "finish_ev_q1",
+      "source_id": "approved_1",
+      "claim_type": "candidate_signal",
+      "claim": "Where is the save file?",
+      "confidence": 70,
+      "risk_note": "Risk level: low; needs page-level evidence before publishing."
+    }
+  ],
+  "ranked_claims": [
+    {
+      "rank": 1,
+      "claim": "Where is the save file?",
+      "source_ids": [
+        "approved_1"
+      ],
+      "evidence_card_ids": [
+        "finish_ev_q1"
+      ],
+      "needs_more_evidence": true
+    }
+  ],
+  "writer_input": {
+    "game_name": "Hades II",
+    "player_question": "Where is the save file?",
+    "source_ids": [
+      "approved_1"
+    ],
+    "evidence_card_ids": [
+      "finish_ev_q1"
+    ],
+    "instruction": "Prepare internal brief only; do not publish."
+  },
+  "quality_package": {
+    "headline_hook_present": true,
+    "intro_directness": "candidate_signal_only",
+    "source_trace_present": true,
+    "evidence_trace_present": true,
+    "media_plan_present": true,
+    "image_generation_performed": false
+  },
+  "media_plan": {
+    "external_media_used": false,
+    "image_generation_performed": false,
+    "recommended_media": [
+      "Operator-owned screenshot only after future explicit approval."
+    ]
+  },
+  "verification_required": true,
+  "real_collection_performed": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true,
+  "upstream_funnel_status": "completed"
+}

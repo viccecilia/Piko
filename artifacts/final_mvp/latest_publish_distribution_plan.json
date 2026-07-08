@@ -1,0 +1,57 @@
+{
+  "artifact_type": "final_mvp_publish_distribution_plan",
+  "generated_at": "2026-07-08T01:56:31.497073+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "dry_run_package_ready",
+  "platform_packages": [
+    {
+      "platform": "xiaohongshu",
+      "package_type": "dry_run_preview",
+      "approval_required": true,
+      "credential_required_before_dispatch": true,
+      "dispatch_performed": false,
+      "upload_performed": false,
+      "publishing_performed": false
+    },
+    {
+      "platform": "wechat_official_account",
+      "package_type": "dry_run_preview",
+      "approval_required": true,
+      "credential_required_before_dispatch": true,
+      "dispatch_performed": false,
+      "upload_performed": false,
+      "publishing_performed": false
+    },
+    {
+      "platform": "douyin",
+      "package_type": "dry_run_preview",
+      "approval_required": true,
+      "credential_required_before_dispatch": true,
+      "dispatch_performed": false,
+      "upload_performed": false,
+      "publishing_performed": false
+    },
+    {
+      "platform": "web",
+      "package_type": "dry_run_preview",
+      "approval_required": true,
+      "credential_required_before_dispatch": true,
+      "dispatch_performed": false,
+      "upload_performed": false,
+      "publishing_performed": false
+    }
+  ],
+  "required_credentials": [
+    "platform_operator_credential_not_stored"
+  ],
+  "human_approval_required": true,
+  "approval_granted": false,
+  "credential_storage_performed": false,
+  "real_collection_performed": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "upload_performed": false,
+  "deployment_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Piko Evidence Cards Video Draft</title>
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #64748b;
+      --paper: #f8fafc;
+      --line: #d7dee8;
+      --cyan: #0e7490;
+      --green: #15803d;
+      --red: #b91c1c;
+      --yellow: #ca8a04;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #e5e7eb;
+      font-family: Inter, "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      color: var(--ink);
+    }
+    .stage {
+      width: min(100vw, 430px);
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,250,252,.95)),
+        repeating-linear-gradient(90deg, transparent 0 54px, rgba(15,23,42,.05) 54px 55px);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, .25);
+    }
+    .topbar {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      right: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+    .badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(255,255,255,.7);
+    }
+    .scene {
+      position: absolute;
+      inset: 68px 24px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: show 64s linear infinite;
+    }
+    .scene h1, .scene h2 {
+      margin: 0;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .scene h1 { font-size: 42px; }
+    .scene h2 { font-size: 30px; }
+    .scene p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.45;
+      color: #334155;
+    }
+    .cards {
+      display: grid;
+      gap: 10px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 10px 24px rgba(15,23,42,.08);
+    }
+    .card strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: white;
+      font-size: 14px;
+      line-height: 1;
+    }
+    .cyan { background: var(--cyan); }
+    .green { background: var(--green); }
+    .red { background: var(--red); }
+    .yellow { background: var(--yellow); }
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .flow .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+    }
+    .arrow { color: var(--cyan); font-weight: 800; }
+    .checklist {
+      display: grid;
+      gap: 12px;
+      font-size: 20px;
+    }
+    .checklist div {
+      border-left: 5px solid var(--green);
+      padding: 10px 12px;
+      background: rgba(255,255,255,.78);
+      border-radius: 6px;
+    }
+    .footer {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      height: 5px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #dbe3ec;
+    }
+    .footer::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: var(--cyan);
+      transform-origin: left;
+      animation: progress 64s linear infinite;
+    }
+    .s1 { animation-delay: 0s; }
+    .s2 { animation-delay: -56s; }
+    .s3 { animation-delay: -48s; }
+    .s4 { animation-delay: -40s; }
+    .s5 { animation-delay: -32s; }
+    .s6 { animation-delay: -24s; }
+    .s7 { animation-delay: -16s; }
+    .s8 { animation-delay: -8s; }
+    @keyframes show {
+      0%, 11% { opacity: 1; transform: translateY(0); }
+      12.5%, 100% { opacity: 0; transform: translateY(-18px); }
+    }
+    @keyframes progress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="topbar">
+      <span class="badge">Piko Skill Daily</span>
+      <span>2026-07-03</span>
+    </div>
+
+    <section class="scene s1">
+      <h1>别急着让 Agent 会跑</h1>
+      <p>先让证据能被找到。</p>
+      <div class="tagrow">
+        <span class="tag cyan">Evidence Cards</span>
+        <span class="tag green">Piko</span>
+      </div>
+    </section>
+
+    <section class="scene s2">
+      <h2>旧痛点</h2>
+      <div class="cards">
+        <div class="card"><strong>结论很快</strong><span>但来源散在 JSON、Markdown、截图里</span></div>
+        <div class="card"><strong>复查很慢</strong><span>判断和证据之间缺少稳定引用</span></div>
+      </div>
+    </section>
+
+    <section class="scene s3">
+      <h2>今天的新能力</h2>
+      <p>LlamaIndex 的 retriever abstraction + document metadata。</p>
+      <div class="card"><strong>重点不是 RAG</strong><span>而是把资料变成可审计的证据接口。</span></div>
+    </section>
+
+    <section class="scene s4">
+      <h2>机制</h2>
+      <div class="flow">
+        <div class="card">artifact <span class="arrow">→</span></div>
+        <div class="card">metadata <span class="arrow">→</span></div>
+        <div class="card">evidence card <span class="arrow">→</span></div>
+        <div class="card">storytelling + verification</div>
+      </div>
+    </section>
+
+    <section class="scene s5">
+      <h2>快速判断</h2>
+      <div class="cards">
+        <div class="card"><strong>值得学</strong><span>接口思想、metadata、引用链路</span></div>
+        <div class="card"><strong>别盲接</strong><span>先做离线 fixture，再谈框架接入</span></div>
+      </div>
+    </section>
+
+    <section class="scene s6">
+      <h2>实操三步</h2>
+      <div class="checklist">
+        <div>拆 `latest_patterns.json`</div>
+        <div>生成 evidence_card_id</div>
+        <div>验证强结论是否有来源</div>
+      </div>
+    </section>
+
+    <section class="scene s7">
+      <h2>真实限制</h2>
+      <div class="tagrow">
+        <span class="tag yellow">fixture 要降级</span>
+        <span class="tag red">别搬运长原文</span>
+        <span class="tag cyan">metadata 要克制</span>
+      </div>
+    </section>
+
+    <section class="scene s8">
+      <h2>Piko 可借鉴点</h2>
+      <p>不是更会 RAG，而是让每个判断都能回到证据卡片。</p>
+      <div class="card"><strong>下一步</strong><span>先做离线 evidence-card fixture。</span></div>
+    </section>
+
+    <div class="footer"></div>
+  </main>
+</body>
+</html>

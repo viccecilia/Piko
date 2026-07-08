@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1920" />
+  <title>我让 Codex 每天扫描 GitHub 高星 AI 项目</title>
+  <style>
+    :root {
+      --bg: #090d12;
+      --panel: #121923;
+      --panel2: #17202b;
+      --line: #263241;
+      --text: #f4f7fb;
+      --muted: #a9b4c2;
+      --flow: #5aa9ff;
+      --evidence: #47d18c;
+      --role: #f0b84a;
+      --lab: #b48cff;
+      --app: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+    }
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+    .bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(90,169,255,.26), transparent 24%),
+        radial-gradient(circle at 86% 78%, rgba(71,209,140,.18), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 34%),
+        var(--bg);
+    }
+    .grid {
+      position: absolute;
+      inset: 0;
+      opacity: .24;
+      background-image:
+        linear-gradient(rgba(255,255,255,.07) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255,255,255,.07) 2px, transparent 2px);
+      background-size: 54px 54px;
+    }
+    .scan {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 240px;
+      opacity: .18;
+      background: linear-gradient(180deg, transparent, rgba(244,247,251,.25), transparent);
+    }
+    .clip {
+      position: absolute;
+      inset: 0;
+      padding: 104px 72px 88px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 48px;
+      overflow: hidden;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font: 800 25px/1.2 monospace;
+      text-transform: uppercase;
+    }
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: 2px solid rgba(244,247,251,.18);
+      border-radius: 8px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,.055);
+      color: #d9e4ef;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    h1, h2, p { margin: 0; letter-spacing: 0; }
+    h1 {
+      font-size: 110px;
+      line-height: 1.05;
+      font-weight: 900;
+      max-width: 900px;
+    }
+    h2 {
+      font-size: 82px;
+      line-height: 1.08;
+      font-weight: 900;
+      max-width: 900px;
+    }
+    p {
+      font-size: 38px;
+      line-height: 1.42;
+      font-weight: 600;
+      color: #d7e0eb;
+      max-width: 860px;
+    }
+    .stage {
+      align-self: stretch;
+      display: grid;
+      align-content: center;
+      gap: 24px;
+      border: 3px solid rgba(244,247,251,.14);
+      border-radius: 8px;
+      background: rgba(8,13,19,.72);
+      padding: 42px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+    }
+    .row { display: flex; flex-wrap: wrap; gap: 18px; }
+    .repo, .chip, .node, .role {
+      border: 3px solid rgba(244,247,251,.16);
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      padding: 18px 22px;
+      color: #eef4fb;
+      font-size: 32px;
+      font-weight: 800;
+    }
+    .repo {
+      font-family: monospace;
+      font-size: 29px;
+      color: #cfd8e4;
+    }
+    .chip { min-width: 142px; text-align: center; }
+    .flow { color: var(--flow); border-color: rgba(90,169,255,.62); }
+    .evidence { color: var(--evidence); border-color: rgba(71,209,140,.62); }
+    .role-color { color: var(--role); border-color: rgba(240,184,74,.62); }
+    .lab { color: var(--lab); border-color: rgba(180,140,255,.62); }
+    .app { color: var(--app); border-color: rgba(255,107,107,.62); }
+    .diagram {
+      display: grid;
+      gap: 18px;
+    }
+    .arrow {
+      color: var(--muted);
+      font-size: 38px;
+      font-weight: 900;
+      text-align: center;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .panel {
+      border: 3px solid rgba(244,247,251,.14);
+      border-radius: 8px;
+      background: rgba(255,255,255,.055);
+      padding: 28px;
+      min-height: 260px;
+    }
+    .panel-title {
+      color: var(--muted);
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      border-top: 3px solid rgba(244,247,251,.16);
+      padding-top: 26px;
+      color: var(--muted);
+      font-size: 27px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+    .progress {
+      width: 260px;
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+    .bar {
+      height: 100%;
+      width: 100%;
+      transform-origin: left center;
+      background: linear-gradient(90deg, var(--flow), var(--evidence), var(--role), var(--lab), var(--app));
+    }
+    .bigword {
+      position: absolute;
+      right: -28px;
+      bottom: 170px;
+      font-size: 156px;
+      line-height: 1;
+      font-weight: 900;
+      opacity: .09;
+      color: #f4f7fb;
+      transform: rotate(-90deg);
+      transform-origin: right bottom;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="github-agent-5" data-start="0" data-width="1080" data-height="1920" data-duration="75" data-fps="30">
+    <div class="bg"></div>
+    <div class="grid"></div>
+    <div id="scan" class="scan"></div>
+
+    <section id="scene-01" class="clip" data-start="0" data-duration="4" data-track-index="1">
+      <div class="meta"><span>GitHub Agent Map</span><span>01/11</span></div>
+      <div class="stage">
+        <div class="row"><span class="repo">LangGraph</span><span class="repo">CrewAI</span><span class="repo">AutoGen</span></div>
+        <h1>我让 Codex 每天扫描 GitHub 高星 AI 项目</h1>
+        <div class="row"><span class="chip flow">流程</span><span class="chip evidence">证据</span><span class="chip role-color">分工</span><span class="chip lab">实验</span><span class="chip app">应用</span></div>
+      </div>
+      <div class="footer"><span>真正该抄的不是框架，而是 5 个能力</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-02" class="clip" data-start="4" data-duration="6" data-track-index="1">
+      <div class="meta"><span>Pain</span><span>02/11</span></div>
+      <div class="stage">
+        <h2>项目越收藏，越乱</h2>
+        <div class="row"><span class="repo">LangGraph?</span><span class="repo">CrewAI?</span><span class="repo">AutoGen?</span><span class="repo">LlamaIndex?</span><span class="repo">Dify?</span><span class="repo">Semantic Kernel?</span></div>
+      </div>
+      <div class="footer"><span>问题不是项目少，是不知道它们各自负责什么。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-03" class="clip" data-start="10" data-duration="6" data-track-index="1">
+      <div class="meta"><span>Turn</span><span>03/11</span></div>
+      <div class="stage diagram">
+        <h2>不是学 100 个项目</h2>
+        <div class="node">GitHub 高星项目</div>
+        <div class="arrow">↓</div>
+        <div class="node">筛出 5 个系统位置</div>
+      </div>
+      <div class="footer"><span>先看位置，再决定深入哪个框架。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-04" class="clip" data-start="16" data-duration="6" data-track-index="1">
+      <div class="meta"><span>Capability Map</span><span>04/11</span></div>
+      <div class="stage">
+        <h2>流程 / 证据 / 分工 / 实验 / 应用</h2>
+        <div class="row"><span class="chip flow">流程</span><span class="chip evidence">证据</span><span class="chip role-color">分工</span><span class="chip lab">实验</span><span class="chip app">应用</span></div>
+      </div>
+      <div class="footer"><span>这 5 个位置，组成 Agent 系统主干。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-05" class="clip" data-start="22" data-duration="7" data-track-index="1">
+      <div class="meta"><span>LangGraph</span><span>05/11</span></div>
+      <div class="stage diagram">
+        <span class="label flow">流程和状态</span>
+        <h2>LangGraph</h2>
+        <div class="node flow">Task → Checkpoint → Gate → Retry</div>
+        <p>下一步谁做？状态放哪里？失败怎么重试？</p>
+      </div>
+      <div class="footer"><span>它是 Agent 系统的流程骨架。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-06" class="clip" data-start="29" data-duration="7" data-track-index="1">
+      <div class="meta"><span>LlamaIndex</span><span>06/11</span></div>
+      <div class="stage diagram">
+        <span class="label evidence">资料和证据</span>
+        <h2>LlamaIndex</h2>
+        <div class="node evidence">Source → Evidence → Traceable Answer</div>
+        <p>资料从哪里来？回答能不能追溯？</p>
+      </div>
+      <div class="footer"><span>它让 Agent 不再凭空回答。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-07" class="clip" data-start="36" data-duration="7" data-track-index="1">
+      <div class="meta"><span>CrewAI</span><span>07/11</span></div>
+      <div class="stage">
+        <span class="label role-color">角色和协作</span>
+        <h2>CrewAI</h2>
+        <div class="row"><span class="role role-color">Source</span><span class="role role-color">Writer</span><span class="role role-color">Editor</span><span class="role role-color">Factcheck</span></div>
+        <p>把复杂工作拆成多个可验收角色。</p>
+      </div>
+      <div class="footer"><span>分工不是表演，是为了更容易验收。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-08" class="clip" data-start="43" data-duration="7" data-track-index="1">
+      <div class="meta"><span>AutoGen / AG2</span><span>08/11</span></div>
+      <div class="stage diagram">
+        <span class="label lab">多 Agent 实验</span>
+        <h2>AutoGen / AG2</h2>
+        <div class="node lab">Agent A ↔ Agent B ↔ Tool</div>
+        <p>观察对话、协商、互相调用和收敛。</p>
+      </div>
+      <div class="footer"><span>适合探索协作模式，不适合跳过验证。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-09" class="clip" data-start="50" data-duration="8" data-track-index="1">
+      <div class="meta"><span>Dify / OpenAI Agents SDK</span><span>09/11</span></div>
+      <div class="stage">
+        <span class="label app">应用和工具入口</span>
+        <h2>Dify / Agents SDK</h2>
+        <div class="row"><span class="chip app">Tool</span><span class="chip app">Model</span><span class="chip app">File</span><span class="chip app">API</span><span class="chip app">App</span></div>
+        <p>把 Agent 从 demo 变成用户真的能用的入口。</p>
+      </div>
+      <div class="footer"><span>应用层负责把能力交到用户手里。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-10" class="clip" data-start="58" data-duration="10" data-track-index="1">
+      <div class="meta"><span>Piko Route</span><span>10/11</span></div>
+      <div class="stage">
+        <h2>成熟框架 + Piko 规则</h2>
+        <div class="split">
+          <div class="panel"><div class="panel-title">不做</div><div class="node">训练模型</div><div class="node">从零造 runtime</div></div>
+          <div class="panel"><div class="panel-title">要做</div><div class="node evidence">证据链</div><div class="node flow">验证体系</div><div class="node role-color">人类确认</div></div>
+        </div>
+      </div>
+      <div class="footer"><span>把业务规则、证据链、验证体系喂进去。</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <section id="scene-11" class="clip" data-start="68" data-duration="7" data-track-index="1">
+      <div class="meta"><span>Close</span><span>11/11</span></div>
+      <div class="stage">
+        <h2>先看系统位置，再看项目名字</h2>
+        <div class="row"><span class="chip flow">流程</span><span class="chip evidence">证据</span><span class="chip role-color">分工</span><span class="chip lab">实验</span><span class="chip app">应用</span></div>
+        <p>真正能落地的 Agent，不是一个工具，是一条能被验证的生产线。</p>
+      </div>
+      <div class="footer"><span>GitHub Agent Map</span><span class="progress"><span class="bar"></span></span></div>
+    </section>
+
+    <div class="bigword">AGENT MAP</div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    window.__timelines["github-agent-5"] = {
+      engine: "css-local",
+      duration: 75,
+      externalNetworkRequired: false
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "artifact_id": "practical_readiness_report",
+  "generated_at": "2026-07-08T01:56:47.167513+00:00",
+  "ready_now": "local_fixture_ready",
+  "not_ready_for_real_external_backend": true,
+  "blocked_by": [
+    "dependency approval not granted",
+    "license review not completed",
+    "real backend smoke not run",
+    "operator activation approval missing"
+  ],
+  "next_real_step": "V04 may request explicit approval for a sandboxed LangGraph package smoke if operator chooses.",
+  "risk_register": [
+    {
+      "risk": "external backend changes trace semantics",
+      "mitigation": "compare against local fixture trace"
+    },
+    {
+      "risk": "dependency bloat",
+      "mitigation": "single-package approval and rollback plan"
+    },
+    {
+      "risk": "Gate bypass",
+      "mitigation": "adapter contract requires Gate output and verification"
+    }
+  ],
+  "recommended_V04": {
+    "type": "optional_sandboxed_dependency_smoke",
+    "requires_human_approval": true,
+    "default_skip": true
+  },
+  "candidate_only": true,
+  "dry_run": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

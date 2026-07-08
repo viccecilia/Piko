@@ -1,0 +1,17 @@
+{
+  "artifact_type": "live_connector_endpoint_readiness",
+  "generated_at": "2026-07-08T01:56:44.465930+00:00",
+  "connector_id": "approved_json_endpoint",
+  "status": "ready",
+  "required_env": [
+    "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+    "PIKO_LIVE_DISCOVERY_TEST",
+    "PIKO_APPROVED_ENDPOINT_URL"
+  ],
+  "missing_config": [],
+  "endpoint_configured": true,
+  "double_opt_in_configured": true,
+  "endpoint_url_stored": false,
+  "real_collection_performed": false,
+  "publishing_performed": false
+}

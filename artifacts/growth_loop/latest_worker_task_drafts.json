@@ -1,0 +1,78 @@
+{
+  "artifact_id": "latest_worker_task_drafts",
+  "generated_at": "2026-07-08T01:56:31.970414+00:00",
+  "worker_drafts": [
+    {
+      "task_id": "draft_worker_grow_langgraph",
+      "source_candidate_id": "grow_langgraph",
+      "round_name": "GROW Draft: LangGraph",
+      "goal": "Candidate can improve Piko through a bounded proposal and tests.",
+      "tasks": [
+        "Read source proposal artifacts.",
+        "Implement only after operator approval.",
+        "Keep defaults offline and safe."
+      ],
+      "allowed_changes": [
+        "artifacts/*",
+        "tests/*",
+        "docs/*",
+        "bounded packages/* after approval"
+      ],
+      "forbidden_changes": [
+        "publish",
+        "deploy",
+        "commit",
+        "push",
+        "default network",
+        "default LLM",
+        "auto-install",
+        "auto-replace"
+      ],
+      "required_validation": [
+        "python -m pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "definition_of_done": "Worker summary written and Piko-verify can inspect changes.",
+      "status": "draft_only",
+      "auto_execute": false
+    },
+    {
+      "task_id": "draft_worker_grow_llamaindex",
+      "source_candidate_id": "grow_llamaindex",
+      "round_name": "GROW Draft: LlamaIndex",
+      "goal": "Candidate can improve Piko through a bounded proposal and tests.",
+      "tasks": [
+        "Read source proposal artifacts.",
+        "Implement only after operator approval.",
+        "Keep defaults offline and safe."
+      ],
+      "allowed_changes": [
+        "artifacts/*",
+        "tests/*",
+        "docs/*",
+        "bounded packages/* after approval"
+      ],
+      "forbidden_changes": [
+        "publish",
+        "deploy",
+        "commit",
+        "push",
+        "default network",
+        "default LLM",
+        "auto-install",
+        "auto-replace"
+      ],
+      "required_validation": [
+        "python -m pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "definition_of_done": "Worker summary written and Piko-verify can inspect changes.",
+      "status": "draft_only",
+      "auto_execute": false
+    }
+  ],
+  "status": "draft_only",
+  "auto_execute_performed": false
+}

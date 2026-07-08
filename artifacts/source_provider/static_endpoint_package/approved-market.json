@@ -1,0 +1,142 @@
+{
+  "source": {
+    "source_id": "fixture_mirror_market_001",
+    "source_type": "approved_market_json",
+    "source_category": "steam",
+    "endpoint_type": "json",
+    "url": "fixture://real_endpoint/approved_market_payload.json",
+    "trust_tier": "fixture_mirror"
+  },
+  "generated_at": "2026-06-24T00:00:00Z",
+  "metadata": {
+    "fixture_mirror": true,
+    "raw_text_included": false,
+    "candidate_only": true,
+    "provider_package_scope": "deploy_ready_static_json",
+    "deploy_ready": true,
+    "external_provider_validated": false,
+    "broad_internet_coverage": false
+  },
+  "games": [
+    {
+      "game_id": "hades_ii",
+      "game_name": "Hades II",
+      "source_category": "steam",
+      "source_url": "https://example.invalid/steam/hades-ii",
+      "rank": 5,
+      "velocity": 88,
+      "community_post_velocity": 91,
+      "update_recency_days": 2,
+      "cross_region_mentions": 3,
+      "region": "global"
+    },
+    {
+      "game_id": "stardew_valley",
+      "game_name": "Stardew Valley",
+      "source_category": "reddit",
+      "source_url": "https://example.invalid/reddit/stardew",
+      "rank": 18,
+      "velocity": 72,
+      "community_post_velocity": 76,
+      "update_recency_days": 14,
+      "cross_region_mentions": 4,
+      "region": "global"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "rev_q_answered_001",
+      "game_id": "stardew_valley",
+      "game_name": "Stardew Valley",
+      "question_text": "Where is the Stardew Valley save file location?",
+      "source_category": "steam",
+      "source_url": "https://example.invalid/steam/stardew/save-location",
+      "source_title": "Steam discussion: save location",
+      "url": "https://example.invalid/steam/stardew/save-location",
+      "language": "en",
+      "region": "en",
+      "engagement_count": 180,
+      "reply_count": 24,
+      "growth_24h": 12,
+      "duplicate_count": 8,
+      "answer_maturity": "answered",
+      "risk_level": "low",
+      "snippet": "Players ask where saves are stored before moving between PC and Steam Deck.",
+      "tags": [
+        "save",
+        "location"
+      ]
+    },
+    {
+      "question_id": "rev_q_watchlist_001",
+      "game_id": "hades_ii",
+      "game_name": "Hades II",
+      "question_text": "Hades II crashes after the latest patch, is there a fix?",
+      "source_category": "reddit",
+      "source_url": "https://example.invalid/reddit/hades/crash",
+      "source_title": "Reddit thread: crash after patch",
+      "url": "https://example.invalid/reddit/hades/crash",
+      "language": "en",
+      "region": "en",
+      "engagement_count": 260,
+      "reply_count": 48,
+      "growth_24h": 83,
+      "duplicate_count": 13,
+      "answer_maturity": "unanswered",
+      "risk_level": "medium",
+      "snippet": "Several players report crashes after the latest patch but no confirmed fix yet.",
+      "tags": [
+        "crash",
+        "bug"
+      ]
+    },
+    {
+      "question_id": "rev_q_conflict_001",
+      "game_id": "hades_ii",
+      "game_name": "Hades II",
+      "question_text": "Which Steam Deck settings keep Hades II stable at 40 FPS?",
+      "source_category": "serp_snippet",
+      "source_url": "https://example.invalid/search/hades-deck-settings",
+      "source_title": "Search snippets: Hades II Steam Deck settings",
+      "url": "https://example.invalid/search/hades-deck-settings",
+      "language": "en",
+      "region": "global",
+      "engagement_count": 120,
+      "reply_count": 18,
+      "growth_24h": 30,
+      "duplicate_count": 5,
+      "answer_maturity": "conflicting",
+      "conflict_count": 2,
+      "risk_level": "low",
+      "snippet": "Search snippets disagree on frame cap and graphics settings.",
+      "tags": [
+        "settings",
+        "steam_deck"
+      ]
+    },
+    {
+      "question_id": "rev_q_high_risk_001",
+      "game_id": "stardew_valley",
+      "game_name": "Stardew Valley",
+      "question_text": "Can I use this third-party save recovery tool?",
+      "source_category": "jp_community",
+      "source_url": "https://example.invalid/jp/stardew/save-recovery",
+      "source_title": "JP community: save recovery warning",
+      "url": "https://example.invalid/jp/stardew/save-recovery",
+      "language": "ja",
+      "region": "jp",
+      "engagement_count": 70,
+      "reply_count": 9,
+      "growth_24h": 10,
+      "duplicate_count": 3,
+      "answer_maturity": "conflicting",
+      "conflict_count": 3,
+      "risk_level": "high",
+      "snippet": "Players discuss save recovery tools, but the safest action is to avoid risky executables.",
+      "tags": [
+        "save",
+        "recovery"
+      ]
+    }
+  ]
+}

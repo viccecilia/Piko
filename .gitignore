@@ -1,0 +1,25 @@
+﻿# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environments/secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated heavy media kept out of public backup
+artifacts/**/*.png
+artifacts/**/*.jpg
+artifacts/**/*.jpeg
+artifacts/**/*.gif
+artifacts/**/*.mp3
+artifacts/**/*.wav
+artifacts/**/*.mp4
+artifacts/**/*.webm
+
+# Local editor/system
+.DS_Store
+Thumbs.db

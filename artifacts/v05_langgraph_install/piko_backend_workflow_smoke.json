@@ -1,0 +1,28 @@
+{
+  "artifact_id": "piko_workflow_langgraph_backend_smoke",
+  "generated_at": "2026-07-08T01:56:48.401997+00:00",
+  "verification_required": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "workflow_smoke_status": "success",
+  "requested_backend": "langgraph_backend",
+  "effective_backend": "langgraph_backend",
+  "backend_ready": true,
+  "blocked_reason": null,
+  "trace": {
+    "nodes": [
+      "source_discovery",
+      "evidence_rank",
+      "draft_handoff",
+      "verification_gate"
+    ],
+    "gate_decision": "pass_for_internal_handoff"
+  },
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

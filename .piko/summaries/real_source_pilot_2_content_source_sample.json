@@ -1,0 +1,23 @@
+{
+  "query": "Stardew Valley",
+  "player_question": "Where is the save file location?",
+  "records": [
+    {
+      "source_id": "pcgamingwiki_31535",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "title": "Stardew Valley",
+      "retrieved_at": "2026-06-21T07:14:13.570741Z",
+      "trust_tier": "reference",
+      "snippet": "===Save game data location===\n{{Game data|\n{{Game data/saves|Windows|{{p|appdata}}\\StardewValley\\Saves\\}}\n{{Game data/saves|OS X|{{p|osxhome}}/.config/StardewValley/Saves/}}\n{{Game data/saves|Linux|{{p|xdgconfighome}}/StardewValley/Saves/}}\n}}",
+      "clean_text": "===Save game data location===\n{{Game data|\n{{Game data/saves|Windows|{{p|appdata}}\\StardewValley\\Saves\\}}\n{{Game data/saves|OS X|{{p|osxhome}}/.config/StardewValley/Saves/}}\n{{Game data/saves|Linux|{{p|xdgconfighome}}/StardewValley/Saves/}}\n}}",
+      "raw_text": null,
+      "metadata": {
+        "pageid": "31535",
+        "section": "Save game data location",
+        "raw_text_included": false,
+        "api": "MediaWiki parse section"
+      }
+    }
+  ]
+}

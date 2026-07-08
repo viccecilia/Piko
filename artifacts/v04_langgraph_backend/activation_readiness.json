@@ -1,0 +1,28 @@
+{
+  "artifact_id": "activation_readiness_without_production_approval",
+  "generated_at": "2026-07-08T01:56:47.825540+00:00",
+  "backend_status": "available_for_pilot_smoke",
+  "pilot_ready": true,
+  "production_activation_allowed": false,
+  "active_runtime_replaced": false,
+  "remaining_approval_steps": [
+    "Piko-verify V04 approval",
+    "operator production approval",
+    "dependency license review completion",
+    "rollback plan acceptance",
+    "separate production activation round"
+  ],
+  "rollback_plan": [
+    "keep local_fixture as default backend",
+    "disable langgraph_backend selector",
+    "do not change active runtime config"
+  ],
+  "recommended_next_stage": "V05 only after Piko-verify and operator approval",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

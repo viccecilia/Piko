@@ -1,0 +1,24 @@
+{
+  "proposal_id": "agent_runtime_adapter_proposal_v1",
+  "status": "proposal_only",
+  "interface": {
+    "run_task": "Execute one bounded task with structured input/output.",
+    "tool_policy": "Declare allowed tools and external side effects.",
+    "state_contract": "Read/write only Piko pipeline state fields.",
+    "evidence_contract": "Return evidence-card references, not raw source bodies.",
+    "verification_contract": "Always emit verification inputs and cannot bypass Piko verification."
+  },
+  "candidate_frameworks": [
+    "LangGraph",
+    "OpenAI Agents SDK",
+    "CrewAI",
+    "LlamaIndex"
+  ],
+  "piko_control_points": [
+    "source policy",
+    "gates",
+    "verification",
+    "publishing disabled by default"
+  ],
+  "default_llm_or_api_call": false
+}

@@ -1,0 +1,316 @@
+{
+  "game_name": "Example Game",
+  "player_question": "crash on startup",
+  "mode": "fixture",
+  "draft": "# Example Game Crash On Startup Fix\n\nIf Example Game has crash on startup, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- Example Game Patch Notes: Launch Stability (official_notes): https://example.invalid/example-game/patch-notes\n- Example Game PC Notes (pcgamingwiki): https://example.invalid/wiki/example-game\n- Players report overlay-related black screen (steam_discussion): https://example.invalid/community/example-game-overlay\n- Example Game Steam Deck Compatibility Notes (protondb): https://example.invalid/protondb/example-game\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+  "sources": [
+    {
+      "source_id": "fixture_official_launch_001",
+      "source_type": "official_notes",
+      "title": "Example Game Patch Notes: Launch Stability",
+      "url": "https://example.invalid/example-game/patch-notes",
+      "retrieved_at": null,
+      "trust_tier": "official",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "fixture_wiki_launch_001",
+      "source_type": "pcgamingwiki",
+      "title": "Example Game PC Notes",
+      "url": "https://example.invalid/wiki/example-game",
+      "retrieved_at": null,
+      "trust_tier": "reference",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "fixture_community_overlay_001",
+      "source_type": "steam_discussion",
+      "title": "Players report overlay-related black screen",
+      "url": "https://example.invalid/community/example-game-overlay",
+      "retrieved_at": null,
+      "trust_tier": "community",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "fixture_protondb_deck_001",
+      "source_type": "protondb",
+      "title": "Example Game Steam Deck Compatibility Notes",
+      "url": "https://example.invalid/protondb/example-game",
+      "retrieved_at": null,
+      "trust_tier": "compatibility",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    }
+  ],
+  "evidence_cards": [
+    {
+      "evidence_card_id": "ev_fixture_official_launch_001_1_verify",
+      "source_id": "fixture_official_launch_001",
+      "claim_type": "solution",
+      "claim": "Verify game files",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "crash on startup or black screen",
+      "solution": "Verify game files",
+      "platform": "windows",
+      "version": null,
+      "confidence": 82,
+      "risk_note": "Low risk."
+    },
+    {
+      "evidence_card_id": "ev_fixture_wiki_launch_001_2_verify",
+      "source_id": "fixture_wiki_launch_001",
+      "claim_type": "solution",
+      "claim": "Verify game files",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "crash on startup or black screen",
+      "solution": "Verify game files",
+      "platform": "windows",
+      "version": null,
+      "confidence": 70,
+      "risk_note": "Low risk."
+    },
+    {
+      "evidence_card_id": "ev_fixture_community_overlay_001_3_overlay",
+      "source_id": "fixture_community_overlay_001",
+      "claim_type": "solution",
+      "claim": "Disable Steam Overlay",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "black screen after clicking Play",
+      "solution": "Disable Steam Overlay",
+      "platform": "windows",
+      "version": null,
+      "confidence": 74,
+      "risk_note": "Low risk; reversible setting."
+    },
+    {
+      "evidence_card_id": "ev_fixture_protondb_deck_001_4_proton",
+      "source_id": "fixture_protondb_deck_001",
+      "claim_type": "platform_note",
+      "claim": "Switch Proton version",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "Steam Deck launch failure",
+      "solution": "Switch Proton version",
+      "platform": "steam_deck",
+      "version": null,
+      "confidence": 68,
+      "risk_note": "Only applies to Steam Deck / Proton contexts."
+    }
+  ],
+  "ranked_steps": [
+    {
+      "rank": 1,
+      "solution": "Verify game files",
+      "confidence": 82,
+      "risk_level": "low",
+      "source_ids": [
+        "fixture_official_launch_001",
+        "fixture_wiki_launch_001"
+      ]
+    },
+    {
+      "rank": 2,
+      "solution": "Disable Steam Overlay",
+      "confidence": 74,
+      "risk_level": "low",
+      "source_ids": [
+        "fixture_community_overlay_001"
+      ]
+    }
+  ],
+  "agent_trace": [
+    {
+      "agent": "keyword_agent",
+      "status": "completed",
+      "output_keys": [
+        "keywords"
+      ],
+      "duration_ms": 0
+    },
+    {
+      "agent": "pain_agent",
+      "status": "completed",
+      "output_keys": [
+        "article_candidate",
+        "blocking_level",
+        "pain_score",
+        "pain_type",
+        "reason",
+        "search_value"
+      ],
+      "duration_ms": 0
+    },
+    {
+      "agent": "source_agent",
+      "status": "completed",
+      "output_keys": [
+        "fixture_selection",
+        "real_collection_performed",
+        "sources"
+      ],
+      "duration_ms": 1
+    },
+    {
+      "agent": "evidence_agent",
+      "status": "completed",
+      "output_keys": [
+        "claim_candidates",
+        "evidence_cards"
+      ],
+      "duration_ms": 1
+    },
+    {
+      "agent": "conflict_agent",
+      "status": "completed",
+      "output_keys": [
+        "conflicts",
+        "requires_human_review",
+        "warnings"
+      ],
+      "duration_ms": 0
+    },
+    {
+      "agent": "ranking_agent",
+      "status": "completed",
+      "output_keys": [
+        "ranked_solutions"
+      ],
+      "duration_ms": 0
+    },
+    {
+      "agent": "writer_agent",
+      "status": "completed",
+      "output_keys": [
+        "claim_trace",
+        "draft_excerpt",
+        "draft_format",
+        "evidence_card_ids",
+        "game",
+        "llm_error",
+        "llm_fallback_used",
+        "llm_used",
+        "markdown",
+        "player_question",
+        "publish_ready",
+        "publishing_performed",
+        "ranked_steps",
+        "sections",
+        "source_ids",
+        "used_raw_sources",
+        "used_source_ids"
+      ],
+      "duration_ms": 0
+    },
+    {
+      "agent": "editor_agent",
+      "status": "completed",
+      "output_keys": [
+        "edited_text",
+        "editor_note",
+        "removed_patterns",
+        "risk_notes_visible",
+        "style_pass"
+      ],
+      "duration_ms": 0
+    }
+  ],
+  "verification_report": {
+    "status": "pass",
+    "checks": [
+      {
+        "name": "player_need",
+        "status": "pass",
+        "message": "Player need and game are present.",
+        "details": {}
+      },
+      {
+        "name": "source_evidence",
+        "status": "pass",
+        "message": "At least one traceable source is present.",
+        "details": {
+          "source_count": 4
+        }
+      },
+      {
+        "name": "evidence_source_trace",
+        "status": "pass",
+        "message": "Evidence cards link to known source IDs.",
+        "details": {
+          "missing_source_ids": []
+        }
+      },
+      {
+        "name": "ranked_step_trace",
+        "status": "pass",
+        "message": "Ranked steps use known source IDs.",
+        "details": {
+          "missing_source_ids": []
+        }
+      },
+      {
+        "name": "conflicts_surfaced",
+        "status": "pass",
+        "message": "Unresolved conflicts must be surfaced before publish decisions.",
+        "details": {
+          "unresolved_conflicts": []
+        }
+      },
+      {
+        "name": "risk_notes",
+        "status": "pass",
+        "message": "Risk notes are visible for risky actions.",
+        "details": {
+          "high_risk_steps": []
+        }
+      },
+      {
+        "name": "no_publishing_side_effect",
+        "status": "pass",
+        "message": "Workflow did not publish content.",
+        "details": {}
+      },
+      {
+        "name": "gate_decision_consistency",
+        "status": "pass",
+        "message": "Publish-ready decisions cannot coexist with failed gates.",
+        "details": {
+          "failed_gates": []
+        }
+      }
+    ],
+    "summary": "pass: 8/8 checks passed.",
+    "workflow": "article_pipeline_v1",
+    "run_id": "run_mock_001"
+  },
+  "publish_action": "draft_review",
+  "publish_decision": {
+    "value": "verified_candidate",
+    "recommended_next_action": "Eligible for later publishing eligibility checks; the current skeleton still performs no publishing.",
+    "reasons": [
+      "All mock gates passed with sufficient low-risk source-backed steps."
+    ],
+    "blocks_publish": false
+  },
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "llm_used": false,
+  "artifact_paths": {
+    "json": "artifacts\\demo_runs\\20260623T052531Z_example-game-crash-on-startup.json",
+    "markdown": "artifacts\\demo_runs\\20260623T052531Z_example-game-crash-on-startup.md"
+  }
+}

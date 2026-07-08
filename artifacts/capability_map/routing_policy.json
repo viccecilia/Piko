@@ -1,0 +1,185 @@
+{
+  "artifact_id": "capability_routing_policy_v1",
+  "generated_at": "2026-07-08T01:56:29.692325+00:00",
+  "constraints": [
+    "default_no_network",
+    "credential_required",
+    "human_approval_required",
+    "license_sensitive"
+  ],
+  "routes": [
+    {
+      "task_type": "market_discovery",
+      "preferred_capabilities": [
+        "workflow.discovery",
+        "workflow.endpoint_verification"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "source_collection",
+      "preferred_capabilities": [
+        "agent.source",
+        "workflow.endpoint_verification"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "evidence_extraction",
+      "preferred_capabilities": [
+        "agent.evidence"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "ranking",
+      "preferred_capabilities": [
+        "agent.ranking"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "writing",
+      "preferred_capabilities": [
+        "agent.writer"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "editing",
+      "preferred_capabilities": [
+        "agent.editor"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "factcheck",
+      "preferred_capabilities": [
+        "agent.factcheck"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "verification",
+      "preferred_capabilities": [
+        "workflow.article_pipeline",
+        "gate.publish_readiness"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "dashboard",
+      "preferred_capabilities": [
+        "tool.data_analytics"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "document_export",
+      "preferred_capabilities": [
+        "skill.documents",
+        "skill.spreadsheets"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "security_review",
+      "preferred_capabilities": [
+        "skill.security-best-practices"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    },
+    {
+      "task_type": "github_research",
+      "preferred_capabilities": [
+        "connector.github"
+      ],
+      "fallback_capabilities": [
+        "operator_manual_review"
+      ],
+      "forbidden_capabilities": [
+        "publish_without_approval",
+        "deploy_without_approval",
+        "credential_use_without_approval"
+      ]
+    }
+  ],
+  "runtime_routing_changed": false
+}

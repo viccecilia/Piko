@@ -1,0 +1,42 @@
+{
+  "artifact_type": "live_connector_selection",
+  "generated_at": "2026-07-08T01:56:44.404836+00:00",
+  "selected_connector_id": "approved_json_endpoint",
+  "selected_source_type": "approved_json_endpoint",
+  "selection_reason": "Lowest-risk connector: bounded JSON endpoint with existing contract validation.",
+  "excluded_connectors": [
+    {
+      "connector": "steam",
+      "live_enabled": false,
+      "reason": "outside_live_connector_v1_scope"
+    },
+    {
+      "connector": "reddit",
+      "live_enabled": false,
+      "reason": "outside_live_connector_v1_scope"
+    },
+    {
+      "connector": "jp_community",
+      "live_enabled": false,
+      "reason": "outside_live_connector_v1_scope"
+    },
+    {
+      "connector": "kr_community",
+      "live_enabled": false,
+      "reason": "outside_live_connector_v1_scope"
+    },
+    {
+      "connector": "serp",
+      "live_enabled": false,
+      "reason": "outside_live_connector_v1_scope"
+    },
+    {
+      "connector": "mediawiki",
+      "live_enabled": false,
+      "reason": "outside_live_connector_v1_scope"
+    }
+  ],
+  "only_approved_json_endpoint_allowed": true,
+  "real_collection_performed": false,
+  "publishing_performed": false
+}

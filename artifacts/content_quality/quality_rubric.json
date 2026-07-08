@@ -1,0 +1,25 @@
+{
+  "artifact_type": "content_quality_rubric",
+  "generated_at": "2026-07-08T01:56:45.741465+00:00",
+  "dimensions": [
+    "hook_strength",
+    "reader_pain_match",
+    "clarity",
+    "evidence_trace",
+    "platform_fit",
+    "actionability",
+    "risk_disclosure"
+  ],
+  "scoring": {
+    "min": 0,
+    "max": 5,
+    "publish_ready_threshold": null
+  },
+  "platforms": [
+    "xiaohongshu",
+    "wechat_official_account",
+    "douyin"
+  ],
+  "llm_required": false,
+  "unauthorized_media_allowed": false
+}

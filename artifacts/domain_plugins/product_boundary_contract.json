@@ -1,0 +1,53 @@
+{
+  "artifact_type": "product_boundary_contract",
+  "generated_at": "2026-07-08T01:56:31.216450+00:00",
+  "product_positioning": "Piko is a domain-agnostic pluggable multi-agent collaboration system.",
+  "core_boundary": {
+    "domain_agnostic": true,
+    "core_allowed_concepts": [
+      "domain",
+      "source_signal",
+      "need_cluster",
+      "evidence",
+      "workflow_trace",
+      "content_package",
+      "distribution_package",
+      "verify_gate"
+    ],
+    "core_owns": [
+      "workflow",
+      "agent_runtime",
+      "evidence",
+      "trace",
+      "eval",
+      "quality",
+      "distribution_dry_run",
+      "verify_gate"
+    ],
+    "core_must_not_own": [
+      "gaming_vocabulary",
+      "ai_tools_vocabulary",
+      "domain_source_types",
+      "domain_templates",
+      "domain_risk_rules"
+    ]
+  },
+  "domain_boundary": {
+    "domain_owns": [
+      "vocabulary",
+      "source_types",
+      "normalizers",
+      "scoring_presets",
+      "templates",
+      "risk_rules",
+      "operator_labels"
+    ],
+    "packs": [
+      "gaming",
+      "ai_tools"
+    ]
+  },
+  "candidate_only": true,
+  "publish_ready": false,
+  "publishing_performed": false
+}

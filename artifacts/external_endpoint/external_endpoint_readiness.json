@@ -1,0 +1,25 @@
+{
+  "artifact_type": "external_endpoint_readiness",
+  "generated_at": "2026-07-08T01:56:31.582070+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "required_env": [
+    "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+    "PIKO_LIVE_DISCOVERY_TEST",
+    "PIKO_APPROVED_ENDPOINT_URL"
+  ],
+  "missing_config": [
+    "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+    "PIKO_LIVE_DISCOVERY_TEST",
+    "PIKO_APPROVED_ENDPOINT_URL"
+  ],
+  "blocked_reason": "missing_external_endpoint_url",
+  "endpoint_url_present": false,
+  "endpoint_scheme": null,
+  "endpoint_host": null,
+  "endpoint_url_stored": false,
+  "double_opt_in_configured": false,
+  "broad_internet_coverage": false,
+  "real_collection_performed": false,
+  "publishing_performed": false
+}

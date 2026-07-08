@@ -1,0 +1,41 @@
+{
+  "schema_id": "oss_research_intake_v1",
+  "required_fields": [
+    "project_name",
+    "github_url",
+    "stars",
+    "license",
+    "domain",
+    "category",
+    "observed_patterns",
+    "piko_relevance",
+    "risks",
+    "source_date"
+  ],
+  "categories": [
+    "agent framework",
+    "workflow orchestration",
+    "RAG/evidence indexing",
+    "plugin architecture",
+    "connector framework",
+    "evaluation/guardrail",
+    "automation",
+    "operator UI",
+    "content pipeline",
+    "self-improvement",
+    "video/content skill"
+  ],
+  "retained_fields": [
+    "metadata",
+    "short_notes",
+    "source_refs"
+  ],
+  "prohibited_fields": [
+    "raw_repository_body",
+    "full_readme",
+    "credentials",
+    "api_key",
+    "authorization"
+  ],
+  "mode": "fixture_or_explicit_opt_in_only"
+}

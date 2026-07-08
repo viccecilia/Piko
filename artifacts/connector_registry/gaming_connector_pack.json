@@ -1,0 +1,477 @@
+{
+  "artifact_type": "gaming_connector_pack",
+  "domain_id": "gaming",
+  "generated_at": "2026-07-08T01:56:29.870322+00:00",
+  "connectors": [
+    {
+      "connector_id": "gaming_approved_endpoint",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "approved_json_endpoint",
+      "status": "blocked_for_endpoint",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_APPROVED_ENDPOINT_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "gaming_steam_summary",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "steam_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_STEAM_DISCOVERY_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "gaming_reddit_summary",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "reddit_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_REDDIT_DISCOVERY_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "gaming_serp_snippet",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "serp_snippet",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_SERP_DISCOVERY_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "gaming_mediawiki_reference",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "mediawiki_reference",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_ENABLE_REAL_CONNECTORS"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "gaming_jp_community_summary",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "jp_community_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_JP_COMMUNITY_DISCOVERY_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    },
+    {
+      "connector_id": "gaming_kr_community_summary",
+      "domain_ids": [
+        "gaming"
+      ],
+      "source_type": "kr_community_summary",
+      "status": "candidate_disabled",
+      "endpoint_type": "json",
+      "auth_type": "none",
+      "required_env": [
+        "PIKO_KR_COMMUNITY_DISCOVERY_URL"
+      ],
+      "retained_fields": [
+        "source_id",
+        "source_type",
+        "domain_id",
+        "title",
+        "url",
+        "snippet",
+        "retrieved_at",
+        "metrics",
+        "language",
+        "region",
+        "trust_tier"
+      ],
+      "prohibited_fields": [
+        "access_token",
+        "api_key",
+        "authorization",
+        "body",
+        "content",
+        "cookie",
+        "credential",
+        "credentials",
+        "full_comments",
+        "full_page",
+        "full_post",
+        "html",
+        "images",
+        "maps",
+        "page_html",
+        "password",
+        "raw_body",
+        "raw_page_text",
+        "raw_response_body",
+        "raw_text",
+        "refresh_token",
+        "secret",
+        "selftext",
+        "tables",
+        "token"
+      ],
+      "rate_limit_policy": {
+        "requests_per_minute": 6,
+        "burst": 1,
+        "operator_override_required": true
+      },
+      "timeout_policy": {
+        "timeout_seconds": 5,
+        "max_results": 20,
+        "max_snippet_chars": 500
+      },
+      "approval_required": true,
+      "dry_run_supported": true,
+      "live_collect_default": false,
+      "candidate_only": true
+    }
+  ],
+  "all_live_connectors_disabled_by_default": true
+}

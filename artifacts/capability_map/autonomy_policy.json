@@ -1,0 +1,65 @@
+{
+  "artifact_id": "autonomy_policy_v1",
+  "generated_at": "2026-07-08T01:56:29.718322+00:00",
+  "levels": [
+    {
+      "level": "L0",
+      "name": "manual_only",
+      "allowed": true,
+      "max_for": [
+        "publish",
+        "deploy",
+        "credentials",
+        "license-risk"
+      ]
+    },
+    {
+      "level": "L1",
+      "name": "assisted_proposal",
+      "allowed": true,
+      "max_for": [
+        "capability proposals"
+      ]
+    },
+    {
+      "level": "L2",
+      "name": "worker_executes_with_tests",
+      "allowed": true,
+      "max_for": [
+        "bounded code/artifact changes"
+      ]
+    },
+    {
+      "level": "L3",
+      "name": "worker_executes_and_verify_gates_approve",
+      "allowed": true,
+      "max_for": [
+        "approved internal queues"
+      ]
+    },
+    {
+      "level": "L4",
+      "name": "autonomous_scheduled_run_with_human_final_approval",
+      "allowed": false,
+      "max_for": [
+        "future only"
+      ]
+    },
+    {
+      "level": "L5",
+      "name": "full_autonomous_publish_deploy",
+      "allowed": false,
+      "disabled": true,
+      "max_for": []
+    }
+  ],
+  "human_approval_required_for": [
+    "publish_article",
+    "deploy_site",
+    "store_credentials",
+    "use_paid_api",
+    "license_risk_adoption",
+    "destructive_replacement"
+  ],
+  "full_autonomous_publish_deploy_enabled": false
+}

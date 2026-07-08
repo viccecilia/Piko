@@ -1,0 +1,108 @@
+{
+  "artifact_type": "skill_runtime_registry",
+  "generated_at": "2026-07-08T01:56:45.738465+00:00",
+  "runtime_version": "skill-runtime-v0",
+  "manifest_schema": {
+    "required_fields": [
+      "activation_status",
+      "eval_suite",
+      "inputs",
+      "outputs",
+      "owner",
+      "purpose",
+      "risk_level",
+      "skill_id",
+      "triggers",
+      "version"
+    ],
+    "activation_status_values": [
+      "candidate",
+      "evaluated",
+      "approved",
+      "active",
+      "deprecated"
+    ],
+    "default_activation_status": "candidate"
+  },
+  "progressive_loading_policy": {
+    "load_only_relevant_skills": true,
+    "max_default_skill_contexts": 1,
+    "trigger_matching_executes_skill": false,
+    "candidate_skills_auto_activate": false,
+    "deprecated_skills_routeable": false
+  },
+  "skills": [
+    {
+      "skill_id": "content_quality_assistant",
+      "version": "0.1.0",
+      "purpose": "Improve Piko draft quality across hook, intro, structure, evidence, readability, risk notes, and platform fit.",
+      "triggers": [
+        "content quality",
+        "rewrite",
+        "xiaohongshu",
+        "wechat",
+        "douyin",
+        "article package"
+      ],
+      "inputs": [
+        "article_brief",
+        "evidence_cards",
+        "target_platforms"
+      ],
+      "outputs": [
+        "quality_scorecard",
+        "rewrite_package",
+        "multi_platform_package"
+      ],
+      "risk_level": "medium",
+      "owner": "Piko-worker",
+      "eval_suite": {
+        "suite_id": "content_quality_v0",
+        "status": "not_started"
+      },
+      "activation_status": "candidate"
+    },
+    {
+      "skill_id": "social_distribution_dry_run",
+      "version": "0.1.0",
+      "purpose": "Package platform-specific social posts for approval-gated dry-run distribution.",
+      "triggers": [
+        "distribution",
+        "publish package",
+        "one-click",
+        "social"
+      ],
+      "inputs": [
+        "multi_platform_package",
+        "operator_approval"
+      ],
+      "outputs": [
+        "distribution_package",
+        "preflight_report"
+      ],
+      "risk_level": "high",
+      "owner": "Piko-worker",
+      "eval_suite": {
+        "suite_id": "social_distribution_v0",
+        "status": "not_started"
+      },
+      "activation_status": "candidate"
+    }
+  ],
+  "trigger_probe": {
+    "skill_id": "content_quality_assistant",
+    "matched_triggers": [
+      "content quality",
+      "xiaohongshu"
+    ],
+    "should_load": true,
+    "should_execute": false,
+    "load_policy": "progressive_context_only_until_operator_or_workflow_invokes"
+  },
+  "validation": {
+    "content_quality_assistant": [],
+    "social_distribution_dry_run": []
+  },
+  "candidate_only": true,
+  "external_install_performed": false
+}

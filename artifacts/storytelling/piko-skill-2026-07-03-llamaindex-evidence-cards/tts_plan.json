@@ -1,0 +1,12 @@
+{
+  "status": "generated",
+  "engine": "edge_tts",
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+12%",
+  "pitch": "+0Hz",
+  "style": "clear Chinese knowledge-video narrator; not cloning or imitating any real person",
+  "input": "artifacts/storytelling/piko-skill-2026-07-03-llamaindex-evidence-cards/voiceover.md",
+  "planned_output": "artifacts/storytelling/piko-skill-2026-07-03-llamaindex-evidence-cards/audio/voiceover.mp3",
+  "actual_output": "artifacts/storytelling/piko-skill-2026-07-03-llamaindex-evidence-cards/audio/voiceover.mp3",
+  "audio_bytes": 414864
+}

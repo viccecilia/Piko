@@ -1,0 +1,42 @@
+{
+  "artifact_id": "real_activation_approval_packet",
+  "generated_at": "2026-07-08T01:56:47.166511+00:00",
+  "candidate_id": "langgraph_style_workflow_adapter",
+  "activation_status": "not_approved",
+  "auto_activate": false,
+  "dependency_review": "required_before_install",
+  "license_review": "required_before_install",
+  "config_requirements": [
+    "explicit package approval",
+    "no default network",
+    "no default LLM"
+  ],
+  "test_matrix": [
+    "adapter contract tests",
+    "local graph fixture tests",
+    "retry/failure/gate tests",
+    "article handoff safety tests",
+    "operator trace window probes"
+  ],
+  "rollback_plan": [
+    "keep local fixture adapter active",
+    "disable external backend flag",
+    "remove approved package from runtime config"
+  ],
+  "activation_checklist": [
+    "Piko-verify approval",
+    "operator approval",
+    "dependency review",
+    "license review",
+    "sandboxed smoke test"
+  ],
+  "candidate_only": true,
+  "dry_run": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

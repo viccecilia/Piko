@@ -1,0 +1,86 @@
+主题：别只看 Agent 框架，真正的新机会在工程底座
+版本：2026-07-08 dense demo cards
+
+P1 封面
+主标题：别只看 Agent 框架了
+副标题：真正值得看的是四层工程底座
+正文：Graphify 管知识结构；Headroom 管上下文；OpenRath 管运行时；Trigger.dev 管长任务恢复。
+画面建议：封面做四层地图，中心标题，四个项目围绕四层能力。
+读者价值：一眼知道本期不是排行榜，而是一个判断框架。
+状态：SIMULATED_VISUAL
+
+P2 真实痛点
+主标题：Demo 很快，落地很慢
+副标题：真实问题不在模型，而在工程链路
+正文：项目太大、上下文太脏、任务太长、风险太高。会调用工具只是开始。
+画面建议：痛点列表 + “我不按 star 看，而按补哪块短板看”的判断框。
+读者价值：把 Agent 落地痛点说透。
+状态：SIMULATED_VISUAL
+
+P3 Graphify
+主标题：先把项目读成图
+项目名：Graphify
+一句话定位：把代码、文档、schema 映射成可查询知识图谱。
+解决什么：大型项目不是一堆文件，而是依赖、调用、文档、schema 组成的关系网。
+普通开发者能学什么：做 RAG 不一定只靠向量库，代码理解可以引入 evidence graph。
+适合 / 不适合：适合代码库问答和架构理解；不适合简单全文搜索或不想维护索引的场景。
+画面建议：GitHub / README 截图位 + 关系图解释。
+读者价值：理解 Agent 为什么先要有“项目地图”。
+状态：REAL_SCREENSHOT_REQUIRED
+
+P4 Headroom
+主标题：上下文不是垃圾桶
+项目名：Headroom
+一句话定位：在内容进入 LLM 前，压缩工具输出、日志、文件和 RAG chunks。
+解决什么：Agent 工具输出越来越长，模型上下文被日志和碎片材料塞满。
+普通开发者能学什么：上下文管理不是塞更多 token，而是筛选、压缩和保真边界。
+适合 / 不适合：适合日志多、RAG chunk 多、工具输出长；不适合高精度原文引用场景。
+画面建议：GitHub / README 截图位 + 日志漏斗压缩图。
+读者价值：理解“压缩但不失真”会成为 Agent 基础设施问题。
+状态：REAL_SCREENSHOT_REQUIRED
+
+P5 OpenRath
+主标题：Agent 需要运行时
+项目名：OpenRath
+一句话定位：面向 multi-agent / multi-session workflow 的 PyTorch-like runtime。
+解决什么：多 Agent 不是多开几个聊天窗口，而是要管理 session、memory、tool 和 workflow。
+普通开发者能学什么：把 Agent 过程看成可组织、可复盘、可替换的运行对象。
+适合 / 不适合：适合多角色协作和实验型 runtime；不适合单轮聊天或成熟生产系统。
+画面建议：GitHub / README 截图位 + Session/Memory/Tool/Workflow 结构图。
+读者价值：理解 runtime 不是炫技，而是让复杂任务有形状。
+状态：REAL_SCREENSHOT_REQUIRED
+
+P6 Trigger.dev
+主标题：长任务必须能恢复
+项目名：Trigger.dev
+一句话定位：用 TypeScript 构建 durable AI workflow 和 background tasks。
+解决什么：AI workflow 会超时、失败、等待审批，不能只靠脚本从头跑到尾。
+普通开发者能学什么：长任务要有队列、重试、日志、状态、人工介入和可观察性。
+适合 / 不适合：适合后台任务和 AI 自动化流程；不适合只调用一次模型的小脚本。
+画面建议：GitHub / README 截图位 + retry/queue/trace/approval 时间线。
+读者价值：理解 Agent 工程会和任务队列、监控、审批系统汇合。
+状态：REAL_SCREENSHOT_REQUIRED
+
+P7 四层地图
+主标题：Agent 工程化四层地图
+副标题：从读懂到执行
+正文：第 1 层知识结构，Graphify；第 2 层上下文预算，Headroom；第 3 层运行时状态，OpenRath；第 4 层可靠执行，Trigger.dev。
+画面建议：四层堆叠图，每层一句解释和对应项目。
+读者价值：读者能按“缺哪一层”来选工具。
+状态：SIMULATED_VISUAL
+
+P8 判断卡
+主标题：不要盲目使用
+副标题：高 star 不等于适合你
+正文：项目还小要看 issue/commit/license；截图很炫要看 demo path；压缩很猛要看证据失真；平台很全要看是否过重。
+画面建议：判断清单 + 适合/先别上两栏。
+读者价值：避免把 demo 当生产。
+状态：SIMULATED_VISUAL
+
+P9 保存总结
+主标题：看 Agent 项目问 5 句
+副标题：收藏这张清单
+正文：怎么读懂资料？怎么省上下文？怎么管状态？怎么恢复失败？怎么让人介入？
+画面建议：五条 checklist，每条一行解释。
+读者价值：读者以后看任何 Agent 项目都能套这张筛选表。
+状态：SIMULATED_VISUAL

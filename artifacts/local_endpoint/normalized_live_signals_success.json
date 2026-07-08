@@ -1,0 +1,76 @@
+{
+  "artifact_type": "local_endpoint_normalized_live_signals_success",
+  "generated_at": "2026-07-08T01:56:38.238106+00:00",
+  "scope": "local_approved_endpoint",
+  "status": "success",
+  "real_collection_performed": true,
+  "games_count": 2,
+  "questions_count": 4,
+  "signal_count": 2,
+  "signals": [
+    {
+      "signal_type": "hot_game",
+      "source_id": "fixture_mirror_market_001",
+      "source_type": "approved_market_json",
+      "candidate": {
+        "game_id": "hades_ii",
+        "game_name": "Hades II",
+        "mode": "real-source",
+        "ranking_score": 84,
+        "heat_score": 90,
+        "steam_player_rank": 5,
+        "steam_review_velocity": 88,
+        "discussion_velocity": 91,
+        "update_recency_days": 2,
+        "cross_region_mentions": 3,
+        "source_diversity": 2,
+        "region_signals": [
+          "steam",
+          "global"
+        ],
+        "candidate_only": true,
+        "reasons": [
+          "Strong Steam player rank signal.",
+          "Community discussion velocity is high.",
+          "Recent update can create fresh player needs.",
+          "Multiple regions show discussion activity.",
+          "Multiple source or region signals increase ranking confidence."
+        ]
+      }
+    },
+    {
+      "signal_type": "hot_game",
+      "source_id": "fixture_mirror_market_001",
+      "source_type": "approved_market_json",
+      "candidate": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "mode": "real-source",
+        "ranking_score": 43,
+        "heat_score": 36,
+        "steam_player_rank": null,
+        "steam_review_velocity": 0,
+        "discussion_velocity": 72,
+        "update_recency_days": 14,
+        "cross_region_mentions": 4,
+        "source_diversity": 2,
+        "region_signals": [
+          "reddit",
+          "global"
+        ],
+        "candidate_only": true,
+        "reasons": [
+          "Community discussion velocity is high.",
+          "Recent update can create fresh player needs.",
+          "Multiple regions show discussion activity.",
+          "Multiple source or region signals increase ranking confidence."
+        ]
+      }
+    }
+  ],
+  "source_trace_present": true,
+  "broad_internet_coverage": false,
+  "raw_response_body_saved": false,
+  "publishing_performed": false,
+  "candidate_only": true
+}

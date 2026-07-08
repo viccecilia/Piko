@@ -1,0 +1,78 @@
+{
+  "artifact_id": "langgraph_style_adapter_contract",
+  "generated_at": "2026-07-08T01:56:47.138006+00:00",
+  "graph_id": "piko_discovery_to_handoff_graph_fixture",
+  "optional_backend": "langgraph",
+  "backend_required": false,
+  "nodes": [
+    "source_discovery",
+    "evidence_rank",
+    "draft_handoff",
+    "verification_gate"
+  ],
+  "edges": [
+    {
+      "from": "source_discovery",
+      "to": "evidence_rank"
+    },
+    {
+      "from": "evidence_rank",
+      "to": "draft_handoff"
+    },
+    {
+      "from": "draft_handoff",
+      "to": "verification_gate"
+    }
+  ],
+  "state_schema": {
+    "game_name": "string",
+    "player_question": "string",
+    "candidate": "object",
+    "evidence_cards": "array",
+    "ranked_steps": "array",
+    "handoff": "object",
+    "verification": "object"
+  },
+  "input_contract": {
+    "requires_game_name": true,
+    "requires_player_question": true,
+    "fixture_only": true
+  },
+  "output_contract": {
+    "requires_trace_id": true,
+    "requires_gate_decision": true,
+    "requires_publish_disabled": true
+  },
+  "gate_policy": {
+    "failed_gate_status": "blocked_for_operator",
+    "must_include_next_action": true
+  },
+  "retry_policy": {
+    "max_retries": 1,
+    "retryable_failures": [
+      "transient_node_failure"
+    ]
+  },
+  "side_effect_policy": {
+    "external_install": false,
+    "network": false,
+    "llm": false,
+    "publish": false,
+    "deploy": false,
+    "active_replacement": false
+  },
+  "trace_policy": {
+    "record_node_timeline": true,
+    "record_state_summary": true,
+    "retain_full_source": false
+  },
+  "candidate_only": true,
+  "dry_run": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

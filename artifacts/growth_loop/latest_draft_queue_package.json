@@ -1,0 +1,232 @@
+{
+  "artifact_id": "latest_draft_queue_package",
+  "generated_at": "2026-07-08T01:56:31.986415+00:00",
+  "status": "draft_only",
+  "worker_drafts": [
+    {
+      "task_id": "draft_worker_grow_langgraph",
+      "source_candidate_id": "grow_langgraph",
+      "round_name": "GROW Draft: LangGraph",
+      "goal": "Candidate can improve Piko through a bounded proposal and tests.",
+      "tasks": [
+        "Read source proposal artifacts.",
+        "Implement only after operator approval.",
+        "Keep defaults offline and safe."
+      ],
+      "allowed_changes": [
+        "artifacts/*",
+        "tests/*",
+        "docs/*",
+        "bounded packages/* after approval"
+      ],
+      "forbidden_changes": [
+        "publish",
+        "deploy",
+        "commit",
+        "push",
+        "default network",
+        "default LLM",
+        "auto-install",
+        "auto-replace"
+      ],
+      "required_validation": [
+        "python -m pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "definition_of_done": "Worker summary written and Piko-verify can inspect changes.",
+      "status": "draft_only",
+      "auto_execute": false
+    },
+    {
+      "task_id": "draft_worker_grow_llamaindex",
+      "source_candidate_id": "grow_llamaindex",
+      "round_name": "GROW Draft: LlamaIndex",
+      "goal": "Candidate can improve Piko through a bounded proposal and tests.",
+      "tasks": [
+        "Read source proposal artifacts.",
+        "Implement only after operator approval.",
+        "Keep defaults offline and safe."
+      ],
+      "allowed_changes": [
+        "artifacts/*",
+        "tests/*",
+        "docs/*",
+        "bounded packages/* after approval"
+      ],
+      "forbidden_changes": [
+        "publish",
+        "deploy",
+        "commit",
+        "push",
+        "default network",
+        "default LLM",
+        "auto-install",
+        "auto-replace"
+      ],
+      "required_validation": [
+        "python -m pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "definition_of_done": "Worker summary written and Piko-verify can inspect changes.",
+      "status": "draft_only",
+      "auto_execute": false
+    }
+  ],
+  "verify_drafts": [
+    {
+      "verify_id": "draft_verify_grow_langgraph",
+      "source_task_id": "draft_worker_grow_langgraph",
+      "required_commands": [
+        "python -m pytest",
+        "python -m pytest tests\\test_discovery_search.py -q"
+      ],
+      "artifact_checks": [
+        "JSON parse",
+        "summary exists",
+        "proposal-only flags intact"
+      ],
+      "guardrail_checks": [
+        "no default network",
+        "no default LLM",
+        "no auto-install",
+        "no auto-replace",
+        "no publish/deploy"
+      ],
+      "pass_conditions": [
+        "tests pass",
+        "guardrail scan clean",
+        "no active adoption without approval"
+      ],
+      "fail_conditions": [
+        "unsafe side effect",
+        "verification bypass",
+        "missing rollback or human approval for risky action"
+      ],
+      "status": "draft_only",
+      "auto_execute": false
+    },
+    {
+      "verify_id": "draft_verify_grow_llamaindex",
+      "source_task_id": "draft_worker_grow_llamaindex",
+      "required_commands": [
+        "python -m pytest",
+        "python -m pytest tests\\test_discovery_search.py -q"
+      ],
+      "artifact_checks": [
+        "JSON parse",
+        "summary exists",
+        "proposal-only flags intact"
+      ],
+      "guardrail_checks": [
+        "no default network",
+        "no default LLM",
+        "no auto-install",
+        "no auto-replace",
+        "no publish/deploy"
+      ],
+      "pass_conditions": [
+        "tests pass",
+        "guardrail scan clean",
+        "no active adoption without approval"
+      ],
+      "fail_conditions": [
+        "unsafe side effect",
+        "verification bypass",
+        "missing rollback or human approval for risky action"
+      ],
+      "status": "draft_only",
+      "auto_execute": false
+    }
+  ],
+  "source_cap_decisions": [
+    {
+      "candidate_id": "grow_langgraph",
+      "name": "LangGraph",
+      "decision": "augment",
+      "decision_reason": "Candidate can improve Piko through a bounded proposal and tests.",
+      "required_tests": [
+        "pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "draft_worker_task",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_llamaindex",
+      "name": "LlamaIndex",
+      "decision": "augment",
+      "decision_reason": "Candidate can improve Piko through a bounded proposal and tests.",
+      "required_tests": [
+        "pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "draft_worker_task",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "decision": "watch",
+      "decision_reason": "Potentially useful but not enough evidence for implementation draft.",
+      "required_tests": [],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "watch",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_cap-agent-runtime-adapter-boundary",
+      "name": "cap_agent_runtime_adapter_boundary",
+      "decision": "watch",
+      "decision_reason": "Potentially useful but not enough evidence for implementation draft.",
+      "required_tests": [],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=medium",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "watch",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_story-agent-framework-adapter",
+      "name": "story_agent_framework_adapter",
+      "decision": "story_only",
+      "decision_reason": "Candidate is useful for content/education but not runtime adoption.",
+      "required_tests": [],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "story_pipeline_only",
+      "active_capability_updated": false
+    }
+  ],
+  "human_approval_required": true,
+  "round_queue_files_created": false,
+  "auto_execute_performed": false,
+  "auto_apply_performed": false,
+  "runtime_adoption_performed": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "network_performed": false,
+  "llm_performed": false
+}

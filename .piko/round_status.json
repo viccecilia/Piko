@@ -1,0 +1,17 @@
+{
+    "round_queue_dir":  ".piko/round_queue",
+    "current_round":  "PROVIDER-LIVE-1-to-PROVIDER-LIVE-5",
+    "worker_status":  "complete",
+    "verification_status":  "passed",
+    "next_round":  null,
+    "worker_prompt_file":  ".piko/round_queue/PROVIDER-LIVE-BATCH-WORKER.md",
+    "verification_prompt_file":  ".piko/round_queue/PROVIDER-LIVE-BATCH-VERIFY.md",
+    "last_verified_round":  "PROVIDER-LIVE-1-to-PROVIDER-LIVE-5",
+    "last_completed_round":  "PROVIDER-LIVE-5-R02",
+    "verification_summary_file":  ".piko/summaries/verify_PROVIDER-LIVE-1-to-PROVIDER-LIVE-5.md",
+    "worker_summary_file":  ".piko/summaries/worker_PROVIDER-LIVE-1-to-PROVIDER-LIVE-5.md",
+    "worker_summary":  "PROVIDER-LIVE packages for SERP, Reddit, and Steam were generated and validated locally. No non-local HTTPS provider endpoint is configured, so status is deploy_ready_pending_provider_host and no provider live success is claimed.",
+    "verification_summary":  "PROVIDER-LIVE-1 through PROVIDER-LIVE-5 verified and passed as deploy_ready_pending_provider_host. SERP, Reddit, and Steam approved JSON packages and REALDATA env handoff were generated, but no non-local HTTPS provider endpoint is configured, so no provider live success or partial coverage is claimed.",
+    "updated_by":  "Piko-verify",
+    "updated_at":  "2026-07-08T10:59:14.4420837+09:00"
+}

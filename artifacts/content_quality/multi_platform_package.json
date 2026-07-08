@@ -1,0 +1,53 @@
+{
+  "artifact_type": "multi_platform_content_package",
+  "generated_at": "2026-07-08T01:56:45.741465+00:00",
+  "source_ids": [
+    "fixture_official_launch_001",
+    "fixture_wiki_launch_001"
+  ],
+  "publish_ready": false,
+  "publishing_performed": false,
+  "platforms": {
+    "xiaohongshu": {
+      "title": "\u5b58\u6863\u4f4d\u7f6e\u522b\u4e71\u627e\uff1a\u5148\u786e\u8ba4\u8fd9 3 \u4ef6\u4e8b",
+      "caption": "\u5907\u4efd\u524d\u5148\u786e\u8ba4\u5e73\u53f0\u3001\u4e91\u5b58\u6863\u548c\u672c\u5730\u8def\u5f84\u3002\u522b\u6025\u7740\u8986\u76d6\u6587\u4ef6\u3002",
+      "card_outline": [
+        "\u95ee\u9898",
+        "\u4f4e\u98ce\u9669\u68c0\u67e5\u987a\u5e8f",
+        "\u5907\u4efd\u63d0\u9192"
+      ],
+      "hashtags": [
+        "\u6e38\u620f\u653b\u7565",
+        "\u5b58\u6863\u5907\u4efd",
+        "Piko"
+      ]
+    },
+    "wechat_official_account": {
+      "title": "Example Game \u5b58\u6863\u4f4d\u7f6e\u68c0\u67e5\u6e05\u5355",
+      "summary": "\u7ed9\u9700\u8981\u5907\u4efd\u3001\u8fc1\u79fb\u6216\u6392\u67e5\u4e91\u5b58\u6863\u7684\u73a9\u5bb6\u4e00\u4e2a\u4f4e\u98ce\u9669\u987a\u5e8f\u3002",
+      "body_sections": [
+        "\u5148\u786e\u8ba4\u5e73\u53f0",
+        "\u67e5\u6765\u6e90",
+        "\u5907\u4efd\u540e\u518d\u6539"
+      ],
+      "image_plan": "Use operator-owned screenshots only after approval."
+    },
+    "douyin": {
+      "hook_3s": "\u522b\u6025\u7740\u5220\u6587\u4ef6\uff0c\u627e\u5b58\u6863\u5148\u770b\u5e73\u53f0\u3002",
+      "voiceover": [
+        "\u5148\u786e\u8ba4\u542f\u52a8\u5668",
+        "\u518d\u67e5\u672c\u5730\u8def\u5f84",
+        "\u6700\u540e\u5907\u4efd\u518d\u66ff\u6362"
+      ],
+      "shot_list": [
+        "\u684c\u9762\u6587\u4ef6\u5939\u793a\u610f",
+        "\u5907\u4efd\u63d0\u9192\u5b57\u5e55",
+        "\u6765\u6e90\u5361\u7247"
+      ]
+    }
+  },
+  "media_policy": {
+    "unauthorized_images_used": false,
+    "image_generation_performed": false
+  }
+}

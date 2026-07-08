@@ -1,0 +1,70 @@
+{
+  "artifact_type": "cross_domain_router",
+  "generated_at": "2026-07-08T01:56:31.220450+00:00",
+  "supported_domains": [
+    "gaming",
+    "ai_tools"
+  ],
+  "routes": {
+    "gaming": {
+      "status": "ok",
+      "domain": {
+        "domain_id": "gaming",
+        "status": "active",
+        "enabled_by_default": true,
+        "activation_status": "active",
+        "source_types": [
+          "official_notes",
+          "wiki_reference",
+          "community_thread",
+          "compatibility_report",
+          "search_snippet"
+        ],
+        "publish_ready": false,
+        "publishing_performed": false
+      },
+      "routing_decision": "active_fixture",
+      "normalizer": "gaming_compatibility_adapter",
+      "scoring_profile": "gaming_scoring_profile",
+      "content_template": "gaming_content_template",
+      "candidate_only": false,
+      "publish_ready": false,
+      "publishing_performed": false
+    },
+    "ai_tools": {
+      "status": "ok",
+      "domain": {
+        "domain_id": "ai_tools",
+        "status": "candidate",
+        "enabled_by_default": false,
+        "activation_status": "candidate",
+        "source_types": [
+          "github_repo",
+          "docs_page",
+          "release_note",
+          "benchmark_post",
+          "community_thread"
+        ],
+        "publish_ready": false,
+        "publishing_performed": false
+      },
+      "routing_decision": "candidate_preview_only",
+      "normalizer": "ai_tools_fixture_adapter",
+      "scoring_profile": "ai_tools_scoring_profile",
+      "content_template": "ai_tools_content_template",
+      "candidate_only": true,
+      "publish_ready": false,
+      "publishing_performed": false
+    },
+    "unknown": {
+      "status": "not_found",
+      "domain_id": "unknown",
+      "routing_decision": "safe_fail_unknown_domain",
+      "candidate_only": true,
+      "publish_ready": false,
+      "publishing_performed": false
+    }
+  },
+  "unknown_domain_fallback": "safe_fail_unknown_domain",
+  "default_to_gaming_for_unknown": false
+}

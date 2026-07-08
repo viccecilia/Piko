@@ -1,0 +1,32 @@
+{
+  "artifact_id": "latest_cap_review_report_v1",
+  "generated_at": "2026-07-08T01:56:29.724323+00:00",
+  "status": "completed",
+  "required_artifacts_present": {
+    "current_inventory.json": true,
+    "skill_connector_inventory.json": true,
+    "latest_capability_map.json": true,
+    "capability_scorecard.json": true,
+    "replacement_policy.json": true,
+    "capability_registry.json": true,
+    "routing_policy.json": true,
+    "autonomy_levels.json": true,
+    "human_approval_contract.json": true,
+    "continuous_update_loop.json": true
+  },
+  "guardrails": {
+    "auto_install_performed": false,
+    "auto_replace_performed": false,
+    "self_improvement_patch_applied": false,
+    "publish_performed": false,
+    "deploy_performed": false,
+    "commit_or_push_performed": false,
+    "default_network_performed": false,
+    "default_llm_performed": false,
+    "verification_bypassed": false
+  },
+  "review_notes": [
+    "OSS candidates remain candidates and are not marked absorbed.",
+    "Human final confirmation remains required for high-risk actions."
+  ]
+}

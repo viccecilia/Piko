@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我让 Codex 每天扫描 GitHub 高星 AI 项目，最后发现 Agent 真正该抄的不是框架，而是这 5 个能力</title>
+  <style>
+    :root {
+      --text: #1f2933;
+      --muted: #667085;
+      --line: #e6e8ec;
+      --soft: #f6f8fb;
+      --ink: #0b1017;
+      --panel: #121923;
+      --flow: #2f80ed;
+      --evidence: #16a365;
+      --role: #d19100;
+      --lab: #805ad5;
+      --app: #e55353;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.78;
+    }
+    .page {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 80px;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .eyebrow {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 16px;
+      color: #111827;
+      font-size: 30px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 38px 0 14px;
+      color: #111827;
+      font-size: 21px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 28px 0 10px;
+      color: #111827;
+      font-size: 17px;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 12px 0;
+      font-size: 15px;
+    }
+    strong { color: #111827; }
+    ul, ol {
+      margin: 12px 0 16px;
+      padding-left: 22px;
+      font-size: 15px;
+    }
+    li { margin: 5px 0; }
+    .lead {
+      color: #344054;
+      font-size: 16px;
+    }
+    .note {
+      border-left: 4px solid #111827;
+      background: var(--soft);
+      padding: 14px 16px;
+      margin: 18px 0;
+      font-size: 14px;
+      color: #344054;
+    }
+    .figure {
+      margin: 28px 0;
+    }
+    .caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    .shot-img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #d8dde6;
+      box-shadow: 0 16px 38px rgba(15,23,42,.14);
+      background: #0b1017;
+    }
+    .dark-card {
+      border-radius: 10px;
+      border: 1px solid #263241;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(90,169,255,.25), transparent 24%),
+        radial-gradient(circle at 88% 86%, rgba(71,209,140,.15), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,.04), transparent 35%),
+        var(--panel);
+      color: #f4f7fb;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15,23,42,.22);
+    }
+    .map-card {
+      padding: 28px;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      color: #a9b4c2;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .big-title {
+      margin: 0 0 20px;
+      font-size: 32px;
+      line-height: 1.18;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .chip, .node, .repo {
+      border: 1px solid rgba(244,247,251,.18);
+      border-radius: 7px;
+      background: rgba(255,255,255,.06);
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .repo {
+      color: #d4dce8;
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-weight: 700;
+    }
+    .flow { color: var(--flow); border-color: rgba(47,128,237,.38); }
+    .evidence { color: var(--evidence); border-color: rgba(22,163,101,.38); }
+    .role { color: var(--role); border-color: rgba(209,145,0,.38); }
+    .lab { color: var(--lab); border-color: rgba(128,90,213,.38); }
+    .app { color: var(--app); border-color: rgba(229,83,83,.38); }
+    .diagram-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .diagram-col {
+      min-height: 128px;
+      border: 1px solid rgba(244,247,251,.16);
+      border-radius: 8px;
+      background: rgba(255,255,255,.045);
+      padding: 12px;
+      display: grid;
+      align-content: space-between;
+      gap: 8px;
+    }
+    .diagram-col b {
+      display: block;
+      font-size: 16px;
+      color: #f4f7fb;
+    }
+    .diagram-col span {
+      display: block;
+      color: #a9b4c2;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .framework-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      align-items: stretch;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px;
+      margin: 16px 0;
+      background: #fff;
+    }
+    .framework-name {
+      border-radius: 8px;
+      background: var(--soft);
+      padding: 14px;
+      display: grid;
+      align-content: center;
+      gap: 8px;
+      font-weight: 800;
+      color: #111827;
+    }
+    .framework-name span {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .framework-card p { margin: 0 0 8px; }
+    .pipeline {
+      display: grid;
+      gap: 10px;
+      padding: 26px;
+    }
+    .pipeline .node {
+      color: #f4f7fb;
+      font-size: 15px;
+      padding: 13px 15px;
+    }
+    .arrow {
+      color: #a9b4c2;
+      text-align: center;
+      font-weight: 900;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .box {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .box-title {
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      background: #f0f2f5;
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 13px;
+    }
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      margin-top: 36px;
+      padding-top: 18px;
+    }
+    @media (max-width: 720px) {
+      .diagram-grid { grid-template-columns: 1fr; }
+      .framework-card { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      h1 { font-size: 25px; }
+      .big-title { font-size: 27px; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div class="eyebrow">GitHub Agent Radar / 小红书图文版</div>
+      <h1>我模拟跑了一遍 GitHub 上 5 个高星 Agent 项目，发现普通人先看这 5 个就够了</h1>
+      <p class="lead">如果你最近开始研究 AI Agent，大概率会遇到一个问题：项目太多了。LangGraph、CrewAI、AutoGen、LlamaIndex、Dify、OpenAI Agents SDK……每一个看起来都重要，但真正适合普通人先搞懂的，是它们分别代表的 5 个系统位置。</p>
+    </header>
+
+    <p>这次我没有只看 README，也没有只按 star 数排序，而是做了一个模拟任务：</p>
+    <div class="note"><strong>同一个任务，分别用 5 类 Agent 框架跑一遍。</strong>任务很简单：让 Agent 找资料、整理证据、分工写草稿、互相讨论，最后把能力做成一个能用的入口。</div>
+    <p>跑完之后我发现，普通人没必要一上来学几十个 Agent 项目。先看懂这 5 个代表就够了：LangGraph、LlamaIndex、CrewAI、AutoGen / AG2、Dify / OpenAI Agents SDK。</p>
+
+    <figure class="figure">
+      <img class="shot-img" src="assets/demo-01-codex-scan.png" alt="Codex 自动扫描 GitHub 高星 AI 项目的模拟演示界面" />
+      <figcaption class="caption">图 1：模拟把同一个 Agent 任务丢给 5 类框架，观察它们各自擅长什么。</figcaption>
+    </figure>
+
+    <figure class="figure">
+      <img class="shot-img" src="assets/demo-02-capability-map.png" alt="GitHub Agent 能力地图模拟界面" />
+      <figcaption class="caption">图 2：跑完之后，5 个项目刚好对应 Agent 系统的 5 个关键位置。</figcaption>
+    </figure>
+
+    <h2>为什么不是随便挑 5 个？</h2>
+    <p>因为一个真正能工作的 Agent 系统，至少要回答 6 个问题：</p>
+    <ul>
+      <li>任务怎么拆？</li>
+      <li>状态怎么保存？</li>
+      <li>工具怎么调用？</li>
+      <li>证据从哪里来？</li>
+      <li>多个 Agent 怎么协作？</li>
+      <li>最后结果怎么验证？</li>
+    </ul>
+    <p>很多人卡住，不是因为模型不够强，而是因为只学了其中一块。只学工具调用，很快会发现流程乱；只学 RAG，很快会发现不会安排任务；只学多 Agent，很快会发现每个 Agent 都在聊天，但结果没人收口。</p>
+
+    <h2>第 1 个：LangGraph，负责流程和状态</h2>
+    <div class="framework-card">
+      <div class="framework-name">LangGraph<span>流程 / 状态 / Gate</span></div>
+      <div>
+        <p><strong>模拟体验：</strong>最像“Agent 的流程编排器”。它不负责让模型更聪明，而是让任务知道下一步该去哪、状态放在哪里、失败后怎么回到某一步。</p>
+        <p><strong>为什么要选它：</strong>因为只要 Agent 任务超过两步，你就会需要流程和状态。LangGraph 代表的是“把 Agent 跑稳”的能力。</p>
+      </div>
+    </div>
+
+    <h2>第 2 个：LlamaIndex，负责资料和证据</h2>
+    <div class="framework-card">
+      <div class="framework-name">LlamaIndex<span>资料 / 索引 / 追溯</span></div>
+      <div>
+        <p><strong>模拟体验：</strong>最像“Agent 的资料室”。它擅长把文档、网页、知识库变成可检索、可引用、可追溯的上下文。</p>
+        <p><strong>为什么要选它：</strong>因为 Agent 不能只会说话，还要知道自己根据什么说。LlamaIndex 代表的是“让回答有证据”的能力。</p>
+      </div>
+    </div>
+
+    <h2>第 3 个：CrewAI，负责角色和协作</h2>
+    <div class="framework-card">
+      <div class="framework-name">CrewAI<span>角色 / 任务 / 分工</span></div>
+      <div>
+        <p><strong>模拟体验：</strong>最像“把一个复杂任务拆成一组岗位”。你可以让 Researcher 找资料，让 Writer 写草稿，让 Reviewer 挑问题。</p>
+        <p><strong>为什么要选它：</strong>因为普通人最容易理解“角色分工”。CrewAI 代表的是“把 Agent 协作讲清楚”的能力。</p>
+      </div>
+    </div>
+
+    <h2>第 4 个：AutoGen / AG2，负责多 Agent 实验</h2>
+    <div class="framework-card">
+      <div class="framework-name">AutoGen / AG2<span>对话 / 协商 / 实验</span></div>
+      <div>
+        <p><strong>模拟体验：</strong>最像“多 Agent 实验室”。你可以观察多个 Agent 怎么对话、协商、互相调用工具，以及什么时候开始跑偏。</p>
+        <p><strong>为什么要选它：</strong>因为它能让你看到多 Agent 的真实边界：有时很有启发，有时只是热闹。AutoGen / AG2 代表的是“做协作实验”的能力。</p>
+      </div>
+    </div>
+
+    <h2>第 5 个：Dify / OpenAI Agents SDK，负责应用和工具入口</h2>
+    <div class="framework-card">
+      <div class="framework-name">Dify / Agents SDK<span>工具 / 模型 / 应用</span></div>
+      <div>
+        <p><strong>模拟体验：</strong>最像“把 Agent 做成产品入口”。Dify 更偏低代码应用搭建，OpenAI Agents SDK 更偏开发者把工具、模型、handoff 组合起来。</p>
+        <p><strong>为什么要选它：</strong>因为最后你总要让用户真的能用。它们代表的是“把 Agent 从 demo 变成应用”的能力。</p>
+      </div>
+    </div>
+
+    <h2>为什么这 5 个就够入门？</h2>
+    <p>因为它们刚好覆盖一个 Agent 系统从内部执行到外部应用的完整链路：</p>
+    <ul>
+      <li><strong>LangGraph</strong>：任务怎么跑。</li>
+      <li><strong>LlamaIndex</strong>：资料怎么来。</li>
+      <li><strong>CrewAI</strong>：角色怎么分。</li>
+      <li><strong>AutoGen / AG2</strong>：多个 Agent 怎么实验。</li>
+      <li><strong>Dify / OpenAI Agents SDK</strong>：怎么做成入口。</li>
+    </ul>
+    <figure class="figure">
+      <img class="shot-img" src="assets/demo-03-verify-queue.png" alt="GitHub Agent 选题队列模拟界面" />
+      <figcaption class="caption">图 3：这 5 个项目不是排名，而是 5 个学习入口。</figcaption>
+    </figure>
+
+    <h2>如果你是普通人，学习顺序怎么排？</h2>
+    <p>我的建议不是从最火的开始，而是按“系统位置”学：</p>
+    <div class="two-col">
+      <div class="box">
+        <div class="box-title">先学这三个</div>
+        <ul>
+          <li>LangGraph：看懂流程</li>
+          <li>LlamaIndex：看懂证据</li>
+          <li>Dify / Agents SDK：看懂应用入口</li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="box-title">再看这两个</div>
+        <ul>
+          <li>CrewAI：看懂角色分工</li>
+          <li>AutoGen / AG2：看懂多 Agent 实验</li>
+          <li>不要一开始就追所有框架</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>看任何新 Agent 项目，都问这 6 个问题</h2>
+    <p>以后你再刷到一个新的 Agent 项目，不要先问“它是不是最强”，先问：</p>
+    <ul>
+      <li>这个项目在我的系统里负责哪个位置？</li>
+      <li>它替代了什么旧流程？</li>
+      <li>它能不能被测试？</li>
+      <li>它失败了能不能回滚？</li>
+      <li>它有没有证据链？</li>
+      <li>它会不会绕过人工确认？</li>
+    </ul>
+    <p>如果回答不了这些问题，再高星也只是收藏夹里的一个链接。</p>
+
+    <h2>一句话总结</h2>
+    <div class="note"><strong>这 5 个 Agent/框架不是唯一答案，但它们是最适合入门的一张地图。</strong></div>
+    <p>如果你想搞懂 AI Agent，不要一上来收藏 100 个项目。先搞懂 5 个位置：流程怎么跑，证据怎么来，角色怎么分，协作怎么实验，应用怎么落地。</p>
+
+    <figure class="figure">
+      <img class="shot-img" src="assets/demo-04-content-package.png" alt="图文和视频产出包模拟界面" />
+      <figcaption class="caption">图 4：同一套研究素材，可以拆成图文版本和短视频版本。</figcaption>
+    </figure>
+
+    <p class="source">参考线索：本文是编辑草稿，不使用实时 GitHub star 数。发布前如需出现具体排名或 star 数，请重新核验 GitHub 当前公开数据。</p>
+  </article>
+</body>
+</html>

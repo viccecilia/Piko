@@ -1,0 +1,100 @@
+{
+  "artifact_id": "capability_evaluation_policy_v1",
+  "generated_at": "2026-07-08T01:56:29.678323+00:00",
+  "score_range": [
+    0,
+    100
+  ],
+  "replacement_decision_uses_multiple_signals": true,
+  "components": [
+    {
+      "component": "accuracy",
+      "definition": "Correctness against source-backed expected behavior.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "reliability",
+      "definition": "Repeatable behavior under fixture and bounded live tests.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "cost",
+      "definition": "Operational/token/API cost to run safely.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "latency",
+      "definition": "Time cost and operator wait impact.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "maintainability",
+      "definition": "Ease of testing, debugging, and rollback.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "security",
+      "definition": "Secret handling, side-effect boundaries, and data retention.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "license_safety",
+      "definition": "License compatibility and third-party risk.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "domain_fit",
+      "definition": "Fit for Piko's game-guide/source-evidence workflow.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "test_coverage",
+      "definition": "Automated and manual verification coverage.",
+      "range": [
+        0,
+        100
+      ]
+    },
+    {
+      "component": "operator_ergonomics",
+      "definition": "Ease of safe operator use and review.",
+      "range": [
+        0,
+        100
+      ]
+    }
+  ],
+  "decision_thresholds": {
+    "keep": "overall>=75 and no blocking risk",
+    "improve": "overall>=60 or strategic gap exists",
+    "wrap": "useful but requires safety boundary",
+    "replace_candidate": "candidate outperforms current capability after shadow tests",
+    "defer": "insufficient evidence or missing approval",
+    "reject": "security/license/domain fit risk too high",
+    "story_only": "useful for education but not runtime adoption"
+  }
+}

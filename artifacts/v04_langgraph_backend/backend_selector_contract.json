@@ -1,0 +1,39 @@
+{
+  "artifact_id": "backend_selector_contract",
+  "generated_at": "2026-07-08T01:56:47.793539+00:00",
+  "default_backend": "local_fixture",
+  "allowed_backends": [
+    "local_fixture",
+    "langgraph_backend"
+  ],
+  "selection_requirements": {
+    "langgraph_backend": [
+      "pilot_approved",
+      "dependency_probe_allowed",
+      "langgraph_available",
+      "explicit_request"
+    ]
+  },
+  "default_selection": {
+    "requested_backend": "local_fixture",
+    "effective_backend": "local_fixture",
+    "backend_status": "local_fixture_selected",
+    "blocked_reason": null
+  },
+  "langgraph_selection_probe": {
+    "requested_backend": "langgraph_backend",
+    "effective_backend": "langgraph_backend",
+    "backend_status": "available_for_pilot_smoke",
+    "blocked_reason": null
+  },
+  "production_config_modified": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

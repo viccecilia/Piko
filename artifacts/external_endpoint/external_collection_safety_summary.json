@@ -1,0 +1,17 @@
+{
+  "artifact_type": "external_collection_safety_summary",
+  "generated_at": "2026-07-08T01:56:31.571078+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "raw_response_body_saved": false,
+  "full_posts_saved": false,
+  "full_pages_saved": false,
+  "full_comments_saved": false,
+  "secrets_retained": false,
+  "crawler_used": false,
+  "html_scrape_used": false,
+  "broad_internet_coverage": false,
+  "real_collection_performed": false,
+  "publishing_performed": false,
+  "candidate_only": true
+}

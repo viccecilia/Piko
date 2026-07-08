@@ -1,0 +1,11 @@
+{
+  "artifact_type": "static_endpoint_package",
+  "generated_at": "2026-07-08T01:56:45.888465+00:00",
+  "package_dir": "artifacts\\source_provider\\static_endpoint_package",
+  "payload_path": "artifacts\\source_provider\\static_endpoint_package\\approved-market.json",
+  "readme_path": "artifacts\\source_provider\\static_endpoint_package\\README.md",
+  "contract_valid": true,
+  "upload_performed": false,
+  "deployment_performed": false,
+  "credentials_stored": false
+}

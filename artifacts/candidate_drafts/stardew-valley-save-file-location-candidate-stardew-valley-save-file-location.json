@@ -1,0 +1,1665 @@
+{
+  "artifact_type": "discovery_candidate_draft",
+  "status": "internal_draft_only",
+  "candidate": {
+    "candidate_id": "candidate_stardew_valley_save_file_location",
+    "cluster_id": "stardew_valley:save_file_location",
+    "game_id": "stardew_valley",
+    "game_name": "Stardew Valley",
+    "need_key": "save_file_location",
+    "search_intent": "save_file",
+    "normalization_hints": [
+      "location",
+      "save"
+    ],
+    "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+    "article_intent": "Help players find and safely back up Stardew Valley save files.",
+    "decision": "publish_candidate",
+    "answer_status": "answered",
+    "risk_level": "low",
+    "candidate_type": "solution_candidate",
+    "runnable": true,
+    "source_search_hints": [
+      "Stardew Valley save file location",
+      "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "Stardew Valley save file location en",
+      "Stardew Valley save file location jp",
+      "Stardew Valley save file location steam_discussion",
+      "Stardew Valley save file location wiki_comment"
+    ],
+    "source_query_hints": [
+      "Stardew Valley save file location",
+      "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "Stardew Valley save file location en",
+      "Stardew Valley save file location jp",
+      "Stardew Valley save file location steam_discussion",
+      "Stardew Valley save file location wiki_comment"
+    ],
+    "required_source_types": [
+      "steam_discussion",
+      "wiki_comment"
+    ],
+    "preferred_source_types": [
+      "steam_discussion",
+      "wiki_comment"
+    ],
+    "source_regions": [
+      "en",
+      "jp"
+    ],
+    "risk_flags": [],
+    "safety_flags": [
+      "candidate_only",
+      "requires_evidence_pipeline",
+      "not_publish_ready"
+    ],
+    "safety_reasons": [
+      "Discovery candidates are not publishing approval."
+    ],
+    "piko_value_add": [
+      "Single-page clarity: combine scattered answers into one source-traced guide.",
+      "Risk ordering: rank low-risk steps before risky actions.",
+      "Cross-language bridge: connect repeated EN/JP/KR questions with clear sourcing.",
+      "Gap fill: existing material appears fragmented.",
+      "Focused scope: this topic can likely be answered on one useful page."
+    ],
+    "cluster_reasons": [
+      "Game heat score: 72.",
+      "Question heat score: 53.",
+      "Answer status: answered.",
+      "Evidence quality: 75.",
+      "Competition gap: 76.",
+      "Piko value add score: 78.",
+      "Repeated questions appear across multiple regions.",
+      "Language-gap opportunity: bridge EN and JP/KR signals with clear sourcing.",
+      "Source coverage level: partial.",
+      "Competition gap status: fragmented."
+    ],
+    "score_inputs": {
+      "game_heat": 72,
+      "question_heat": 53,
+      "answer_status": "answered",
+      "evidence_quality": 75,
+      "conflict_score": 0,
+      "risk_level": "low",
+      "freshness_score": 36,
+      "evergreen_value": 85,
+      "competition_gap": 76,
+      "competition_gap_status": "fragmented",
+      "actionability_score": 85,
+      "piko_value_add_score": 78,
+      "content_opportunity_score": 87
+    },
+    "publish_ready": false,
+    "requires_evidence_pipeline": true,
+    "safety_notes": [
+      "Discovery output is candidate-only and is not publishing permission."
+    ]
+  },
+  "workflow_request": {
+    "game_id": "stardew_valley",
+    "game_name": "Stardew Valley",
+    "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+    "article_intent": "Help players find and safely back up Stardew Valley save files.",
+    "candidate_id": "candidate_stardew_valley_save_file_location",
+    "cluster_id": "stardew_valley:save_file_location",
+    "source_query_hints": [
+      "Stardew Valley save file location",
+      "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "Stardew Valley save file location en",
+      "Stardew Valley save file location jp",
+      "Stardew Valley save file location steam_discussion",
+      "Stardew Valley save file location wiki_comment"
+    ],
+    "safety_metadata": {
+      "decision": "publish_candidate",
+      "answer_status": "answered",
+      "risk_level": "low",
+      "candidate_type": "solution_candidate",
+      "runnable": true,
+      "risk_flags": [],
+      "safety_flags": [
+        "candidate_only",
+        "requires_evidence_pipeline",
+        "not_publish_ready"
+      ],
+      "safety_reasons": [
+        "Discovery candidates are not publishing approval."
+      ],
+      "safety_notes": [
+        "Discovery output is candidate-only and is not publishing permission."
+      ],
+      "requires_evidence_pipeline": true,
+      "candidate_only": true
+    },
+    "publish_ready": false,
+    "publishing_performed": false,
+    "real_collection_performed": false
+  },
+  "workflow_result": {
+    "workflow": "article_pipeline_v1",
+    "status": "completed",
+    "steps": [
+      "keyword_agent",
+      "pain_agent",
+      "source_agent",
+      "evidence_agent",
+      "conflict_agent",
+      "ranking_agent",
+      "writer_agent",
+      "editor_agent",
+      "article_brief"
+    ],
+    "agent_outputs": {
+      "keyword_agent": {
+        "keywords": [
+          "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+          "Stardew Valley black screen fix",
+          "Stardew Valley Steam Deck settings",
+          "Stardew Valley save file location",
+          "Stardew Valley controller not working"
+        ]
+      },
+      "pain_agent": {
+        "pain_type": "blocking_launch_issue",
+        "pain_score": 82,
+        "blocking_level": "high",
+        "search_value": "medium",
+        "article_candidate": true,
+        "reason": "The mock topic blocks play and can be answered with a ranked solution path."
+      },
+      "source_agent": {
+        "sources": [
+          {
+            "source_id": "source_mock_official",
+            "source_type": "official_notes",
+            "priority": 1
+          },
+          {
+            "source_id": "source_mock_wiki",
+            "source_type": "pcgamingwiki",
+            "priority": 2
+          },
+          {
+            "source_id": "source_mock_discussion",
+            "source_type": "steam_discussion",
+            "priority": 3
+          },
+          {
+            "source_id": "source_mock_forum",
+            "source_type": "community_forum",
+            "priority": 4
+          }
+        ],
+        "real_collection_performed": false,
+        "fixture_selection": false
+      },
+      "evidence_agent": {
+        "evidence_cards": [
+          {
+            "evidence_card_id": "ev_mock_001",
+            "source_id": "source_mock_official",
+            "claim_type": "solution",
+            "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+            "solution": "Verify game files",
+            "platform": "windows",
+            "confidence": 82
+          },
+          {
+            "evidence_card_id": "ev_mock_002",
+            "source_id": "source_mock_discussion",
+            "claim_type": "solution",
+            "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+            "solution": "Disable Steam Overlay",
+            "platform": "windows",
+            "confidence": 74
+          }
+        ],
+        "claim_candidates": [
+          {
+            "evidence_card_id": "ev_mock_001",
+            "source_id": "source_mock_official",
+            "claim_type": "solution",
+            "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+            "solution": "Verify game files",
+            "platform": "windows",
+            "confidence": 82
+          },
+          {
+            "evidence_card_id": "ev_mock_002",
+            "source_id": "source_mock_discussion",
+            "claim_type": "solution",
+            "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+            "solution": "Disable Steam Overlay",
+            "platform": "windows",
+            "confidence": 74
+          }
+        ]
+      },
+      "conflict_agent": {
+        "conflicts": [],
+        "warnings": [
+          "Steam Deck fixes should not be mixed into the Windows quick answer without a platform note."
+        ],
+        "requires_human_review": false
+      },
+      "ranking_agent": {
+        "ranked_solutions": [
+          {
+            "rank": 1,
+            "solution": "Verify game files",
+            "confidence": 82,
+            "risk_level": "low",
+            "source_ids": [
+              "fixture_official_launch_001",
+              "fixture_wiki_launch_001"
+            ]
+          },
+          {
+            "rank": 2,
+            "solution": "Disable Steam Overlay",
+            "confidence": 74,
+            "risk_level": "low",
+            "source_ids": [
+              "fixture_community_overlay_001"
+            ]
+          }
+        ]
+      },
+      "writer_agent": {
+        "game": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+        "draft_format": "markdown",
+        "draft_excerpt": "# Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix\n\nIf Stardew Valley has Where is the Stardew Valley save file location on Windows and Steam Deck?, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- None (official_notes): None\n- None (pcgamingwiki): None\n- None (steam_discussion): None\n- None (community_forum): None\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+        "markdown": "# Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix\n\nIf Stardew Valley has Where is the Stardew Valley save file location on Windows and Steam Deck?, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- None (official_notes): None\n- None (pcgamingwiki): None\n- None (steam_discussion): None\n- None (community_forum): None\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+        "sections": [
+          "quick_answer",
+          "what_to_try_first",
+          "risk_notes",
+          "sources",
+          "confidence"
+        ],
+        "source_ids": [
+          "source_mock_discussion",
+          "source_mock_official"
+        ],
+        "used_source_ids": [
+          "source_mock_discussion",
+          "source_mock_official"
+        ],
+        "evidence_card_ids": [
+          "ev_mock_001",
+          "ev_mock_002"
+        ],
+        "claim_trace": [
+          {
+            "claim": "Verify game files",
+            "source_id": "source_mock_official",
+            "evidence_card_id": "ev_mock_001",
+            "confidence": 82
+          },
+          {
+            "claim": "Disable Steam Overlay",
+            "source_id": "source_mock_discussion",
+            "evidence_card_id": "ev_mock_002",
+            "confidence": 74
+          }
+        ],
+        "ranked_steps": [
+          {
+            "rank": 1,
+            "solution": "Verify game files",
+            "confidence": 82,
+            "risk_level": "low",
+            "source_ids": [
+              "fixture_official_launch_001",
+              "fixture_wiki_launch_001"
+            ]
+          },
+          {
+            "rank": 2,
+            "solution": "Disable Steam Overlay",
+            "confidence": 74,
+            "risk_level": "low",
+            "source_ids": [
+              "fixture_community_overlay_001"
+            ]
+          }
+        ],
+        "publish_ready": false,
+        "used_raw_sources": false,
+        "publishing_performed": false,
+        "llm_used": false,
+        "llm_fallback_used": false,
+        "llm_error": null
+      },
+      "editor_agent": {
+        "style_pass": true,
+        "edited_text": "",
+        "removed_patterns": [
+          "generic_intro",
+          "unsupported_claims"
+        ],
+        "risk_notes_visible": true,
+        "editor_note": "Mock draft starts with the answer and preserves risk warnings."
+      }
+    },
+    "article_brief": {
+      "topic_id": "topic_mock_001",
+      "game_id": "stardew_valley",
+      "game_name": "Stardew Valley",
+      "title": "Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix",
+      "article_intent": "Help players solve Where is the Stardew Valley save file location on Windows and Steam Deck? in Stardew Valley.",
+      "problem_statement": "Stardew Valley players need a low-risk path for Where is the Stardew Valley save file location on Windows and Steam Deck?.",
+      "primary_user_pain": "Players are searching for a clear fix for Where is the Stardew Valley save file location on Windows and Steam Deck?.",
+      "quick_answer": [
+        "Verify game files",
+        "Disable Steam Overlay",
+        "Update GPU driver"
+      ],
+      "ranked_solutions": [
+        {
+          "rank": 1,
+          "solution": "Verify game files",
+          "confidence": 82,
+          "risk_level": "low",
+          "source_ids": [
+            "fixture_official_launch_001",
+            "fixture_wiki_launch_001"
+          ]
+        },
+        {
+          "rank": 2,
+          "solution": "Disable Steam Overlay",
+          "confidence": 74,
+          "risk_level": "low",
+          "source_ids": [
+            "fixture_community_overlay_001"
+          ]
+        }
+      ],
+      "do_not_recommend": [
+        "Download unknown DLL files",
+        "Replace executable files from unofficial sources"
+      ],
+      "platform": "windows",
+      "confidence": 78,
+      "last_checked": "2026-07-08",
+      "risk_notes": [
+        "Try reversible fixes first.",
+        "Do not download unknown DLL files or replace executables from unofficial sources.",
+        "Do not delete saves without a backup.",
+        "Real source candidates are not enough to recommend an answer until page-level evidence is extracted."
+      ],
+      "source_summary": [
+        "source_mock_official (official_notes)",
+        "source_mock_wiki (pcgamingwiki)",
+        "source_mock_discussion (steam_discussion)",
+        "source_mock_forum (community_forum)"
+      ],
+      "unresolved_questions": [],
+      "evidence_gaps": []
+    },
+    "gate_results": [
+      {
+        "gate": "intent_gate",
+        "decision": "pass",
+        "score": 90,
+        "reasons": [
+          "Article brief targets one player need."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "evidence_gate",
+        "decision": "pass",
+        "score": 86,
+        "reasons": [
+          "Found 3 unique mock source IDs.",
+          "Every ranked solution has source IDs."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "conflict_gate",
+        "decision": "pass",
+        "score": 82,
+        "reasons": [
+          "Platform scope is present."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "risk_gate",
+        "decision": "pass",
+        "score": 92,
+        "reasons": [
+          "No high-risk solution is recommended first."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "original_value_gate",
+        "decision": "pass",
+        "score": 84,
+        "reasons": [
+          "Brief includes ranked solutions.",
+          "Brief includes what not to try first."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "readability_gate",
+        "decision": "pass",
+        "score": 88,
+        "reasons": [
+          "Player can see what to try first from the brief."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "factcheck_gate",
+        "decision": "pass",
+        "score": 85,
+        "reasons": [
+          "Mock claim trace is complete."
+        ],
+        "blocks_publish": false
+      },
+      {
+        "gate": "publish_gate",
+        "decision": "pass",
+        "score": 75,
+        "reasons": [
+          "Suitable for draft review."
+        ],
+        "blocks_publish": false
+      }
+    ],
+    "publish_action": "draft_review",
+    "pipeline_state": {
+      "run_id": "run_mock_001",
+      "workflow": "article_pipeline_v1",
+      "status": "completed",
+      "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "game": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "platform": null,
+        "version": null
+      },
+      "intent": "Help players solve Where is the Stardew Valley save file location on Windows and Steam Deck? in Stardew Valley.",
+      "sources": [
+        {
+          "source_id": "source_mock_official",
+          "source_type": "official_notes",
+          "title": null,
+          "url": null,
+          "retrieved_at": null,
+          "trust_tier": "mock",
+          "snippet": null,
+          "clean_text": null,
+          "metadata": {}
+        },
+        {
+          "source_id": "source_mock_wiki",
+          "source_type": "pcgamingwiki",
+          "title": null,
+          "url": null,
+          "retrieved_at": null,
+          "trust_tier": "mock",
+          "snippet": null,
+          "clean_text": null,
+          "metadata": {}
+        },
+        {
+          "source_id": "source_mock_discussion",
+          "source_type": "steam_discussion",
+          "title": null,
+          "url": null,
+          "retrieved_at": null,
+          "trust_tier": "mock",
+          "snippet": null,
+          "clean_text": null,
+          "metadata": {}
+        },
+        {
+          "source_id": "source_mock_forum",
+          "source_type": "community_forum",
+          "title": null,
+          "url": null,
+          "retrieved_at": null,
+          "trust_tier": "mock",
+          "snippet": null,
+          "clean_text": null,
+          "metadata": {}
+        }
+      ],
+      "evidence_cards": [
+        {
+          "evidence_card_id": "ev_mock_001",
+          "source_id": "source_mock_official",
+          "claim_type": "solution",
+          "claim": "Verify game files",
+          "source_type": null,
+          "url": null,
+          "retrieved_at": null,
+          "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+          "solution": "Verify game files",
+          "platform": "windows",
+          "version": null,
+          "confidence": 82,
+          "risk_note": null
+        },
+        {
+          "evidence_card_id": "ev_mock_002",
+          "source_id": "source_mock_discussion",
+          "claim_type": "solution",
+          "claim": "Disable Steam Overlay",
+          "source_type": null,
+          "url": null,
+          "retrieved_at": null,
+          "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+          "solution": "Disable Steam Overlay",
+          "platform": "windows",
+          "version": null,
+          "confidence": 74,
+          "risk_note": null
+        }
+      ],
+      "conflicts": [],
+      "ranked_steps": [
+        {
+          "rank": 1,
+          "solution": "Verify game files",
+          "confidence": 82,
+          "risk_level": "low",
+          "source_ids": [
+            "fixture_official_launch_001",
+            "fixture_wiki_launch_001"
+          ]
+        },
+        {
+          "rank": 2,
+          "solution": "Disable Steam Overlay",
+          "confidence": 74,
+          "risk_level": "low",
+          "source_ids": [
+            "fixture_community_overlay_001"
+          ]
+        }
+      ],
+      "draft": {
+        "format": "markdown",
+        "title": null,
+        "body": "# Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix\n\nIf Stardew Valley has Where is the Stardew Valley save file location on Windows and Steam Deck?, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- None (official_notes): None\n- None (pcgamingwiki): None\n- None (steam_discussion): None\n- None (community_forum): None\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+        "used_raw_sources": false,
+        "publishing_performed": false
+      },
+      "article_brief": {
+        "topic_id": "topic_mock_001",
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "title": "Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix",
+        "article_intent": "Help players solve Where is the Stardew Valley save file location on Windows and Steam Deck? in Stardew Valley.",
+        "problem_statement": "Stardew Valley players need a low-risk path for Where is the Stardew Valley save file location on Windows and Steam Deck?.",
+        "primary_user_pain": "Players are searching for a clear fix for Where is the Stardew Valley save file location on Windows and Steam Deck?.",
+        "quick_answer": [
+          "Verify game files",
+          "Disable Steam Overlay",
+          "Update GPU driver"
+        ],
+        "ranked_solutions": [
+          {
+            "rank": 1,
+            "solution": "Verify game files",
+            "confidence": 82,
+            "risk_level": "low",
+            "source_ids": [
+              "fixture_official_launch_001",
+              "fixture_wiki_launch_001"
+            ]
+          },
+          {
+            "rank": 2,
+            "solution": "Disable Steam Overlay",
+            "confidence": 74,
+            "risk_level": "low",
+            "source_ids": [
+              "fixture_community_overlay_001"
+            ]
+          }
+        ],
+        "do_not_recommend": [
+          "Download unknown DLL files",
+          "Replace executable files from unofficial sources"
+        ],
+        "platform": "windows",
+        "confidence": 78,
+        "last_checked": "2026-07-08",
+        "risk_notes": [
+          "Try reversible fixes first.",
+          "Do not download unknown DLL files or replace executables from unofficial sources.",
+          "Do not delete saves without a backup.",
+          "Real source candidates are not enough to recommend an answer until page-level evidence is extracted."
+        ],
+        "source_summary": [
+          "source_mock_official (official_notes)",
+          "source_mock_wiki (pcgamingwiki)",
+          "source_mock_discussion (steam_discussion)",
+          "source_mock_forum (community_forum)"
+        ],
+        "unresolved_questions": [],
+        "evidence_gaps": []
+      },
+      "agent_runs": [
+        {
+          "agent": "keyword_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "keywords": [
+              "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+              "Stardew Valley black screen fix",
+              "Stardew Valley Steam Deck settings",
+              "Stardew Valley save file location",
+              "Stardew Valley controller not working"
+            ]
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.526686Z",
+          "ended_at": "2026-07-08T01:56:45.526686Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "pain_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "pain_type": "blocking_launch_issue",
+            "pain_score": 82,
+            "blocking_level": "high",
+            "search_value": "medium",
+            "article_candidate": true,
+            "reason": "The mock topic blocks play and can be answered with a ranked solution path."
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.526686Z",
+          "ended_at": "2026-07-08T01:56:45.526686Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "source_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "sources": [
+              {
+                "source_id": "source_mock_official",
+                "source_type": "official_notes",
+                "priority": 1
+              },
+              {
+                "source_id": "source_mock_wiki",
+                "source_type": "pcgamingwiki",
+                "priority": 2
+              },
+              {
+                "source_id": "source_mock_discussion",
+                "source_type": "steam_discussion",
+                "priority": 3
+              },
+              {
+                "source_id": "source_mock_forum",
+                "source_type": "community_forum",
+                "priority": 4
+              }
+            ],
+            "real_collection_performed": false,
+            "fixture_selection": false
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.526686Z",
+          "ended_at": "2026-07-08T01:56:45.527686Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "evidence_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "evidence_cards": [
+              {
+                "evidence_card_id": "ev_mock_001",
+                "source_id": "source_mock_official",
+                "claim_type": "solution",
+                "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+                "solution": "Verify game files",
+                "platform": "windows",
+                "confidence": 82
+              },
+              {
+                "evidence_card_id": "ev_mock_002",
+                "source_id": "source_mock_discussion",
+                "claim_type": "solution",
+                "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+                "solution": "Disable Steam Overlay",
+                "platform": "windows",
+                "confidence": 74
+              }
+            ],
+            "claim_candidates": [
+              {
+                "evidence_card_id": "ev_mock_001",
+                "source_id": "source_mock_official",
+                "claim_type": "solution",
+                "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+                "solution": "Verify game files",
+                "platform": "windows",
+                "confidence": 82
+              },
+              {
+                "evidence_card_id": "ev_mock_002",
+                "source_id": "source_mock_discussion",
+                "claim_type": "solution",
+                "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+                "solution": "Disable Steam Overlay",
+                "platform": "windows",
+                "confidence": 74
+              }
+            ]
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.527686Z",
+          "ended_at": "2026-07-08T01:56:45.528688Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "conflict_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "conflicts": [],
+            "warnings": [
+              "Steam Deck fixes should not be mixed into the Windows quick answer without a platform note."
+            ],
+            "requires_human_review": false
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.528688Z",
+          "ended_at": "2026-07-08T01:56:45.528688Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "ranking_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "ranked_solutions": [
+              {
+                "rank": 1,
+                "solution": "Verify game files",
+                "confidence": 82,
+                "risk_level": "low",
+                "source_ids": [
+                  "fixture_official_launch_001",
+                  "fixture_wiki_launch_001"
+                ]
+              },
+              {
+                "rank": 2,
+                "solution": "Disable Steam Overlay",
+                "confidence": 74,
+                "risk_level": "low",
+                "source_ids": [
+                  "fixture_community_overlay_001"
+                ]
+              }
+            ]
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.529687Z",
+          "ended_at": "2026-07-08T01:56:45.529687Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "writer_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "game": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+            "draft_format": "markdown",
+            "draft_excerpt": "# Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix\n\nIf Stardew Valley has Where is the Stardew Valley save file location on Windows and Steam Deck?, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- None (official_notes): None\n- None (pcgamingwiki): None\n- None (steam_discussion): None\n- None (community_forum): None\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+            "markdown": "# Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix\n\nIf Stardew Valley has Where is the Stardew Valley save file location on Windows and Steam Deck?, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- None (official_notes): None\n- None (pcgamingwiki): None\n- None (steam_discussion): None\n- None (community_forum): None\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+            "sections": [
+              "quick_answer",
+              "what_to_try_first",
+              "risk_notes",
+              "sources",
+              "confidence"
+            ],
+            "source_ids": [
+              "source_mock_discussion",
+              "source_mock_official"
+            ],
+            "used_source_ids": [
+              "source_mock_discussion",
+              "source_mock_official"
+            ],
+            "evidence_card_ids": [
+              "ev_mock_001",
+              "ev_mock_002"
+            ],
+            "claim_trace": [
+              {
+                "claim": "Verify game files",
+                "source_id": "source_mock_official",
+                "evidence_card_id": "ev_mock_001",
+                "confidence": 82
+              },
+              {
+                "claim": "Disable Steam Overlay",
+                "source_id": "source_mock_discussion",
+                "evidence_card_id": "ev_mock_002",
+                "confidence": 74
+              }
+            ],
+            "ranked_steps": [
+              {
+                "rank": 1,
+                "solution": "Verify game files",
+                "confidence": 82,
+                "risk_level": "low",
+                "source_ids": [
+                  "fixture_official_launch_001",
+                  "fixture_wiki_launch_001"
+                ]
+              },
+              {
+                "rank": 2,
+                "solution": "Disable Steam Overlay",
+                "confidence": 74,
+                "risk_level": "low",
+                "source_ids": [
+                  "fixture_community_overlay_001"
+                ]
+              }
+            ],
+            "publish_ready": false,
+            "used_raw_sources": false,
+            "publishing_performed": false,
+            "llm_used": false,
+            "llm_fallback_used": false,
+            "llm_error": null
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.529687Z",
+          "ended_at": "2026-07-08T01:56:45.529687Z",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "agent": "editor_agent",
+          "version": "v1",
+          "input_summary": {
+            "game_id": "stardew_valley",
+            "game_name": "Stardew Valley",
+            "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+          },
+          "output": {
+            "style_pass": true,
+            "edited_text": "",
+            "removed_patterns": [
+              "generic_intro",
+              "unsupported_claims"
+            ],
+            "risk_notes_visible": true,
+            "editor_note": "Mock draft starts with the answer and preserves risk warnings."
+          },
+          "status": "completed",
+          "started_at": "2026-07-08T01:56:45.529687Z",
+          "ended_at": "2026-07-08T01:56:45.529687Z",
+          "duration_ms": 0,
+          "error": null
+        }
+      ],
+      "gate_results": [
+        {
+          "gate": "intent_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "intent_gate",
+            "decision": "pass",
+            "score": 90,
+            "reasons": [
+              "Article brief targets one player need."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "evidence_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "evidence_gate",
+            "decision": "pass",
+            "score": 86,
+            "reasons": [
+              "Found 3 unique mock source IDs.",
+              "Every ranked solution has source IDs."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "conflict_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "conflict_gate",
+            "decision": "pass",
+            "score": 82,
+            "reasons": [
+              "Platform scope is present."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "risk_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "risk_gate",
+            "decision": "pass",
+            "score": 92,
+            "reasons": [
+              "No high-risk solution is recommended first."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "original_value_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "original_value_gate",
+            "decision": "pass",
+            "score": 84,
+            "reasons": [
+              "Brief includes ranked solutions.",
+              "Brief includes what not to try first."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "readability_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "readability_gate",
+            "decision": "pass",
+            "score": 88,
+            "reasons": [
+              "Player can see what to try first from the brief."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "factcheck_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "factcheck_gate",
+            "decision": "pass",
+            "score": 85,
+            "reasons": [
+              "Mock claim trace is complete."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        },
+        {
+          "gate": "publish_gate",
+          "input_summary": {
+            "topic_id": "topic_mock_001",
+            "confidence": 78
+          },
+          "result": {
+            "gate": "publish_gate",
+            "decision": "pass",
+            "score": 75,
+            "reasons": [
+              "Suitable for draft review."
+            ],
+            "blocks_publish": false
+          },
+          "status": "completed",
+          "duration_ms": 0,
+          "error": null
+        }
+      ],
+      "decision": "draft_review",
+      "publish_decision": {
+        "value": "verified_candidate",
+        "recommended_next_action": "Eligible for later publishing eligibility checks; the current skeleton still performs no publishing.",
+        "reasons": [
+          "All mock gates passed with sufficient low-risk source-backed steps."
+        ],
+        "blocks_publish": false
+      },
+      "verification_report": {
+        "status": "fail",
+        "checks": [
+          {
+            "name": "player_need",
+            "status": "pass",
+            "message": "Player need and game are present.",
+            "details": {}
+          },
+          {
+            "name": "source_evidence",
+            "status": "pass",
+            "message": "At least one traceable source is present.",
+            "details": {
+              "source_count": 4
+            }
+          },
+          {
+            "name": "evidence_source_trace",
+            "status": "pass",
+            "message": "Evidence cards link to known source IDs.",
+            "details": {
+              "missing_source_ids": []
+            }
+          },
+          {
+            "name": "ranked_step_trace",
+            "status": "fail",
+            "message": "Ranked steps use known source IDs.",
+            "details": {
+              "missing_source_ids": [
+                "fixture_community_overlay_001",
+                "fixture_official_launch_001",
+                "fixture_wiki_launch_001"
+              ]
+            }
+          },
+          {
+            "name": "conflicts_surfaced",
+            "status": "pass",
+            "message": "Unresolved conflicts must be surfaced before publish decisions.",
+            "details": {
+              "unresolved_conflicts": []
+            }
+          },
+          {
+            "name": "risk_notes",
+            "status": "pass",
+            "message": "Risk notes are visible for risky actions.",
+            "details": {
+              "high_risk_steps": []
+            }
+          },
+          {
+            "name": "no_publishing_side_effect",
+            "status": "pass",
+            "message": "Workflow did not publish content.",
+            "details": {}
+          },
+          {
+            "name": "gate_decision_consistency",
+            "status": "pass",
+            "message": "Publish-ready decisions cannot coexist with failed gates.",
+            "details": {
+              "failed_gates": []
+            }
+          }
+        ],
+        "summary": "fail: 7/8 checks passed.",
+        "workflow": "article_pipeline_v1",
+        "run_id": "run_mock_001"
+      },
+      "monitoring_summary": {
+        "total_duration_ms": 0,
+        "status": "completed",
+        "warning_count": 0,
+        "error_count": 0,
+        "estimated_tokens": 1572
+      },
+      "steps": [
+        "keyword_agent",
+        "pain_agent",
+        "source_agent",
+        "evidence_agent",
+        "conflict_agent",
+        "ranking_agent",
+        "writer_agent",
+        "editor_agent",
+        "article_brief"
+      ],
+      "errors": []
+    },
+    "publish_decision": {
+      "value": "verified_candidate",
+      "recommended_next_action": "Eligible for later publishing eligibility checks; the current skeleton still performs no publishing.",
+      "reasons": [
+        "All mock gates passed with sufficient low-risk source-backed steps."
+      ],
+      "blocks_publish": false
+    },
+    "verification_report": {
+      "status": "fail",
+      "checks": [
+        {
+          "name": "player_need",
+          "status": "pass",
+          "message": "Player need and game are present.",
+          "details": {}
+        },
+        {
+          "name": "source_evidence",
+          "status": "pass",
+          "message": "At least one traceable source is present.",
+          "details": {
+            "source_count": 4
+          }
+        },
+        {
+          "name": "evidence_source_trace",
+          "status": "pass",
+          "message": "Evidence cards link to known source IDs.",
+          "details": {
+            "missing_source_ids": []
+          }
+        },
+        {
+          "name": "ranked_step_trace",
+          "status": "fail",
+          "message": "Ranked steps use known source IDs.",
+          "details": {
+            "missing_source_ids": [
+              "fixture_community_overlay_001",
+              "fixture_official_launch_001",
+              "fixture_wiki_launch_001"
+            ]
+          }
+        },
+        {
+          "name": "conflicts_surfaced",
+          "status": "pass",
+          "message": "Unresolved conflicts must be surfaced before publish decisions.",
+          "details": {
+            "unresolved_conflicts": []
+          }
+        },
+        {
+          "name": "risk_notes",
+          "status": "pass",
+          "message": "Risk notes are visible for risky actions.",
+          "details": {
+            "high_risk_steps": []
+          }
+        },
+        {
+          "name": "no_publishing_side_effect",
+          "status": "pass",
+          "message": "Workflow did not publish content.",
+          "details": {}
+        },
+        {
+          "name": "gate_decision_consistency",
+          "status": "pass",
+          "message": "Publish-ready decisions cannot coexist with failed gates.",
+          "details": {
+            "failed_gates": []
+          }
+        }
+      ],
+      "summary": "fail: 7/8 checks passed.",
+      "workflow": "article_pipeline_v1",
+      "run_id": "run_mock_001"
+    }
+  },
+  "draft": {
+    "format": "markdown",
+    "title": null,
+    "body": "# Stardew Valley Where Is The Stardew Valley Save File Location On Windows And Steam Deck? Fix\n\nIf Stardew Valley has Where is the Stardew Valley save file location on Windows and Steam Deck?, start with reversible fixes. Do not download replacement files or delete saves while you are still narrowing down the cause.\n\n## Quick Answer\nTry the lowest-risk source-backed steps first, then separate platform-specific notes before changing anything deeper.\n\n## What To Try First\n1. Verify game files\nRisk: low.\nSources: fixture_official_launch_001, fixture_wiki_launch_001\n2. Disable Steam Overlay\nRisk: low.\nSources: fixture_community_overlay_001\n\n## Do Not Try First\n- Do not download unknown DLL files, recovery tools, or executable replacements.\n- Do not delete saves or config folders without a backup.\n- Do not apply platform-specific fixes until you confirm they match your setup.\n\n## Sources\n- None (official_notes): None\n- None (pcgamingwiki): None\n- None (steam_discussion): None\n- None (community_forum): None\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until source freshness and platform edge cases are checked.\n",
+    "used_raw_sources": false,
+    "publishing_performed": false
+  },
+  "sources": [
+    {
+      "source_id": "source_mock_official",
+      "source_type": "official_notes",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "source_mock_wiki",
+      "source_type": "pcgamingwiki",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "source_mock_discussion",
+      "source_type": "steam_discussion",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "source_mock_forum",
+      "source_type": "community_forum",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    }
+  ],
+  "evidence_cards": [
+    {
+      "evidence_card_id": "ev_mock_001",
+      "source_id": "source_mock_official",
+      "claim_type": "solution",
+      "claim": "Verify game files",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "solution": "Verify game files",
+      "platform": "windows",
+      "version": null,
+      "confidence": 82,
+      "risk_note": null
+    },
+    {
+      "evidence_card_id": "ev_mock_002",
+      "source_id": "source_mock_discussion",
+      "claim_type": "solution",
+      "claim": "Disable Steam Overlay",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "solution": "Disable Steam Overlay",
+      "platform": "windows",
+      "version": null,
+      "confidence": 74,
+      "risk_note": null
+    }
+  ],
+  "ranked_steps": [
+    {
+      "rank": 1,
+      "solution": "Verify game files",
+      "confidence": 82,
+      "risk_level": "low",
+      "source_ids": [
+        "fixture_official_launch_001",
+        "fixture_wiki_launch_001"
+      ]
+    },
+    {
+      "rank": 2,
+      "solution": "Disable Steam Overlay",
+      "confidence": 74,
+      "risk_level": "low",
+      "source_ids": [
+        "fixture_community_overlay_001"
+      ]
+    }
+  ],
+  "agent_trace": [
+    {
+      "agent": "keyword_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "keywords"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "pain_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "article_candidate",
+        "blocking_level",
+        "pain_score",
+        "pain_type",
+        "reason",
+        "search_value"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "source_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "fixture_selection",
+        "real_collection_performed",
+        "sources"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "evidence_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "claim_candidates",
+        "evidence_cards"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "conflict_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "conflicts",
+        "requires_human_review",
+        "warnings"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "ranking_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "ranked_solutions"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "writer_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "claim_trace",
+        "draft_excerpt",
+        "draft_format",
+        "evidence_card_ids",
+        "game",
+        "llm_error",
+        "llm_fallback_used",
+        "llm_used",
+        "markdown",
+        "player_question",
+        "publish_ready",
+        "publishing_performed",
+        "ranked_steps",
+        "sections",
+        "source_ids",
+        "used_raw_sources",
+        "used_source_ids"
+      ],
+      "source_ids": [
+        "source_mock_discussion",
+        "source_mock_official"
+      ],
+      "error": null
+    },
+    {
+      "agent": "editor_agent",
+      "version": "v1",
+      "status": "completed",
+      "input_summary": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?"
+      },
+      "output_keys": [
+        "edited_text",
+        "editor_note",
+        "removed_patterns",
+        "risk_notes_visible",
+        "style_pass"
+      ],
+      "source_ids": [],
+      "error": null
+    }
+  ],
+  "verification_report": {
+    "status": "fail",
+    "checks": [
+      {
+        "name": "player_need",
+        "status": "pass",
+        "message": "Player need and game are present.",
+        "details": {}
+      },
+      {
+        "name": "source_evidence",
+        "status": "pass",
+        "message": "At least one traceable source is present.",
+        "details": {
+          "source_count": 4
+        }
+      },
+      {
+        "name": "evidence_source_trace",
+        "status": "pass",
+        "message": "Evidence cards link to known source IDs.",
+        "details": {
+          "missing_source_ids": []
+        }
+      },
+      {
+        "name": "ranked_step_trace",
+        "status": "fail",
+        "message": "Ranked steps use known source IDs.",
+        "details": {
+          "missing_source_ids": [
+            "fixture_community_overlay_001",
+            "fixture_official_launch_001",
+            "fixture_wiki_launch_001"
+          ]
+        }
+      },
+      {
+        "name": "conflicts_surfaced",
+        "status": "pass",
+        "message": "Unresolved conflicts must be surfaced before publish decisions.",
+        "details": {
+          "unresolved_conflicts": []
+        }
+      },
+      {
+        "name": "risk_notes",
+        "status": "pass",
+        "message": "Risk notes are visible for risky actions.",
+        "details": {
+          "high_risk_steps": []
+        }
+      },
+      {
+        "name": "no_publishing_side_effect",
+        "status": "pass",
+        "message": "Workflow did not publish content.",
+        "details": {}
+      },
+      {
+        "name": "gate_decision_consistency",
+        "status": "pass",
+        "message": "Publish-ready decisions cannot coexist with failed gates.",
+        "details": {
+          "failed_gates": []
+        }
+      }
+    ],
+    "summary": "fail: 7/8 checks passed.",
+    "workflow": "article_pipeline_v1",
+    "run_id": "run_mock_001"
+  },
+  "publish_decision": {
+    "value": "verification_failed",
+    "recommended_next_action": "Keep candidate output blocked until verification passes.",
+    "reasons": [
+      "fail: 7/8 checks passed."
+    ],
+    "blocks_publish": true
+  },
+  "publish_action": "draft_review",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "candidate_only": true,
+  "safety_fields": {
+    "candidate_only": true,
+    "publish_ready": false,
+    "publishing_performed": false,
+    "real_collection_performed": false,
+    "requires_evidence_pipeline": true,
+    "runnable_candidate": true,
+    "risk_level": "low",
+    "safety_flags": [
+      "candidate_only",
+      "requires_evidence_pipeline",
+      "not_publish_ready"
+    ],
+    "verification_status": "fail",
+    "publish_decision_blocks_publish": true,
+    "discovery_is_publish_permission": false,
+    "artifact_internal_draft_only": true,
+    "not_public_web_page": true,
+    "long_raw_source_retained": false
+  }
+}

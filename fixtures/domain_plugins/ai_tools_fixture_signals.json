@@ -1,0 +1,93 @@
+{
+  "artifact_type": "ai_tools_fixture_signals",
+  "domain_id": "ai_tools",
+  "generated_at": "2026-07-08T01:56:31.223447+00:00",
+  "signals": [
+    {
+      "signal_id": "ai_tools_signal_workflow_adapter",
+      "source_type": "github_repo",
+      "source_id": "fixture_ai_repo_001",
+      "title": "Workflow adapter library fixture",
+      "url": "https://example.invalid/ai-tools/workflow-adapter",
+      "snippet": "Short fixture snippet about workflow graph adapters.",
+      "metrics": {
+        "stars_delta": 120,
+        "release_recency_days": 7
+      },
+      "domain_payload": {
+        "tool_name": "Workflow Adapter Fixture",
+        "category": "workflow"
+      }
+    },
+    {
+      "signal_id": "ai_tools_signal_eval_runner",
+      "source_type": "docs_page",
+      "source_id": "fixture_ai_docs_001",
+      "title": "Eval runner fixture docs",
+      "url": "https://example.invalid/ai-tools/eval-runner",
+      "snippet": "Short fixture snippet about declarative eval cases.",
+      "metrics": {
+        "doc_quality": 80
+      },
+      "domain_payload": {
+        "tool_name": "Eval Runner Fixture",
+        "category": "evaluation"
+      }
+    },
+    {
+      "signal_id": "ai_tools_signal_security_note",
+      "source_type": "release_note",
+      "source_id": "fixture_ai_release_001",
+      "title": "Security policy update fixture",
+      "url": "https://example.invalid/ai-tools/security-note",
+      "snippet": "Short fixture snippet about credential handling changes.",
+      "metrics": {
+        "risk_attention": 90
+      },
+      "domain_payload": {
+        "tool_name": "Security Fixture",
+        "category": "security"
+      }
+    }
+  ],
+  "need_clusters": [
+    {
+      "cluster_id": "ai_tools_need_select_workflow_adapter",
+      "need_type": "tool_selection",
+      "representative_text": "Which workflow adapter is safe to pilot?",
+      "source_signal_ids": [
+        "ai_tools_signal_workflow_adapter",
+        "ai_tools_signal_eval_runner"
+      ],
+      "opportunity_score": {
+        "heat": 68,
+        "evidence_maturity": 62,
+        "risk": 35,
+        "source_diversity": 50,
+        "actionability": 75
+      },
+      "domain_payload": {
+        "operator_context": "workflow runtime comparison"
+      }
+    },
+    {
+      "cluster_id": "ai_tools_need_security_eval",
+      "need_type": "security_eval",
+      "representative_text": "Does the tool require credential safety review?",
+      "source_signal_ids": [
+        "ai_tools_signal_security_note"
+      ],
+      "opportunity_score": {
+        "heat": 64,
+        "evidence_maturity": 55,
+        "risk": 80,
+        "source_diversity": 30,
+        "actionability": 60
+      },
+      "domain_payload": {
+        "operator_context": "credential policy"
+      }
+    }
+  ],
+  "real_collection_performed": false
+}

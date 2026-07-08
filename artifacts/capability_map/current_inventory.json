@@ -1,0 +1,240 @@
+{
+  "artifact_id": "local_capabilities_v1",
+  "generated_at": "2026-07-08T01:56:29.656325+00:00",
+  "runtime_changes_performed": false,
+  "capabilities": [
+    {
+      "id": "agent.source",
+      "name": "SourceAgent",
+      "type": "local_agent",
+      "owner_module": "packages.agents.source_agent",
+      "inputs": [
+        "game",
+        "player_question",
+        "source_query_hints"
+      ],
+      "outputs": [
+        "normalized source candidates"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_real_source_pilot_2.py",
+        "tests/test_stage_5.py"
+      ],
+      "known_limitations": [
+        "Real connectors are disabled by default.",
+        "Does not retain raw full source bodies."
+      ]
+    },
+    {
+      "id": "agent.evidence",
+      "name": "EvidenceAgent",
+      "type": "local_agent",
+      "owner_module": "packages.agents.evidence_agent",
+      "inputs": [
+        "source records",
+        "article brief"
+      ],
+      "outputs": [
+        "evidence cards",
+        "claim candidates"
+      ],
+      "current_status": "improve",
+      "tests": [
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "known_limitations": [
+        "Needs more source-specific extraction rules before broad live use."
+      ]
+    },
+    {
+      "id": "agent.ranking",
+      "name": "RankingAgent",
+      "type": "local_agent",
+      "owner_module": "packages.agents.ranking_agent",
+      "inputs": [
+        "evidence cards",
+        "conflicts"
+      ],
+      "outputs": [
+        "ranked steps with source_ids"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_content_benchmark.py"
+      ],
+      "known_limitations": [
+        "Ranking remains rule-based."
+      ]
+    },
+    {
+      "id": "agent.writer",
+      "name": "WriterAgent",
+      "type": "local_agent",
+      "owner_module": "packages.agents.writer_agent",
+      "inputs": [
+        "article brief",
+        "ranked steps",
+        "evidence cards"
+      ],
+      "outputs": [
+        "structured writer_output",
+        "markdown draft"
+      ],
+      "current_status": "improve",
+      "tests": [
+        "tests/test_content_benchmark.py",
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "known_limitations": [
+        "LLM writer is optional and disabled by default."
+      ]
+    },
+    {
+      "id": "agent.editor",
+      "name": "EditorAgent",
+      "type": "local_agent",
+      "owner_module": "packages.agents.editor_agent",
+      "inputs": [
+        "writer output"
+      ],
+      "outputs": [
+        "edited text",
+        "style pass"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_stage_3.py"
+      ],
+      "known_limitations": [
+        "Style checks are conservative placeholder logic."
+      ]
+    },
+    {
+      "id": "agent.factcheck",
+      "name": "FactcheckAgent",
+      "type": "local_agent",
+      "owner_module": "packages.agents.factcheck_agent",
+      "inputs": [
+        "claim trace",
+        "evidence cards"
+      ],
+      "outputs": [
+        "factcheck result"
+      ],
+      "current_status": "improve",
+      "tests": [
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "known_limitations": [
+        "Does not replace verification_report."
+      ]
+    },
+    {
+      "id": "workflow.article_pipeline",
+      "name": "Article Pipeline",
+      "type": "workflow",
+      "owner_module": "packages.workflows.article_pipeline",
+      "inputs": [
+        "game",
+        "player_question"
+      ],
+      "outputs": [
+        "pipeline_state",
+        "verification_report",
+        "publish_decision"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "python -m packages.workflows.article_pipeline",
+        "tests/test_stage_6.py"
+      ],
+      "known_limitations": [
+        "Mock-first by default; no publishing side effect."
+      ]
+    },
+    {
+      "id": "workflow.discovery",
+      "name": "Discovery/Funnel/Watchlist",
+      "type": "workflow",
+      "owner_module": "packages.discovery.search_engine",
+      "inputs": [
+        "fixture or approved endpoint signals"
+      ],
+      "outputs": [
+        "candidate clusters",
+        "watchlist signals",
+        "rankings"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_discovery_search.py"
+      ],
+      "known_limitations": [
+        "Discovery output is candidate-only and not publish permission."
+      ]
+    },
+    {
+      "id": "workflow.endpoint_verification",
+      "name": "Endpoint Verification",
+      "type": "workflow",
+      "owner_module": "packages.discovery.real_endpoint_verify",
+      "inputs": [
+        "fixture or approved JSON endpoint"
+      ],
+      "outputs": [
+        "normalized records",
+        "safety flags"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_rev_batch_3_6.py",
+        "tests/test_live_1.py"
+      ],
+      "known_limitations": [
+        "Live mode requires explicit opt-in and configured endpoint."
+      ]
+    },
+    {
+      "id": "gate.publish_readiness",
+      "name": "Publish Readiness",
+      "type": "gate",
+      "owner_module": "packages.gates.publishing_eligibility",
+      "inputs": [
+        "verification report",
+        "pipeline state"
+      ],
+      "outputs": [
+        "eligibility metadata"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_stage_7.py"
+      ],
+      "known_limitations": [
+        "Eligibility never deploys or publishes."
+      ]
+    },
+    {
+      "id": "workflow.self_improvement",
+      "name": "Self-improvement/Ledger Guardrail",
+      "type": "workflow",
+      "owner_module": "packages.improvement",
+      "inputs": [
+        "diagnostic signals",
+        "upgrade proposals"
+      ],
+      "outputs": [
+        "proposal artifacts",
+        "guarded ledger entries"
+      ],
+      "current_status": "keep",
+      "tests": [
+        "tests/test_self_improvement.py"
+      ],
+      "known_limitations": [
+        "Does not auto-apply patches."
+      ]
+    }
+  ]
+}

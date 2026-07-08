@@ -1,0 +1,68 @@
+{
+  "artifact_type": "source_governance_policy",
+  "generated_at": "2026-07-08T01:56:29.844323+00:00",
+  "source_tiers": {
+    "approved_json_endpoint": {
+      "allowed": true,
+      "requires_contract_validation": true,
+      "raw_body_allowed": false
+    },
+    "official_api": {
+      "allowed": true,
+      "requires_contract_validation": true,
+      "raw_body_allowed": false
+    },
+    "community_summary": {
+      "allowed": true,
+      "requires_bounded_snippet": true,
+      "raw_body_allowed": false
+    },
+    "search_snippet": {
+      "allowed": true,
+      "requires_bounded_snippet": true,
+      "raw_body_allowed": false
+    },
+    "wiki_source_doc": {
+      "allowed": true,
+      "requires_bounded_snippet": true,
+      "raw_body_allowed": false
+    },
+    "html_page": {
+      "allowed": false,
+      "blocked_reason": "html_scrape_not_allowed"
+    },
+    "crawler": {
+      "allowed": false,
+      "blocked_reason": "crawler_not_allowed"
+    }
+  },
+  "prohibited_items": [
+    "access_token",
+    "api_key",
+    "authorization",
+    "body",
+    "content",
+    "cookie",
+    "credential",
+    "credentials",
+    "full_comments",
+    "full_page",
+    "full_post",
+    "html",
+    "images",
+    "maps",
+    "page_html",
+    "password",
+    "raw_body",
+    "raw_page_text",
+    "raw_response_body",
+    "raw_text",
+    "refresh_token",
+    "secret",
+    "selftext",
+    "tables",
+    "token"
+  ],
+  "json_endpoint_rule": "contract_validation_required_before_live_collection",
+  "unsafe_source_policy_blocked": true
+}

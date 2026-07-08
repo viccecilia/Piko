@@ -1,0 +1,39 @@
+{
+  "artifact_id": "agent_runtime_adapter_contract_v1",
+  "generated_at": "2026-07-08T01:56:46.592276+00:00",
+  "required_methods": [
+    "run_task",
+    "tool_policy",
+    "state_contract",
+    "evidence_contract",
+    "verification_contract",
+    "side_effect_policy"
+  ],
+  "tool_policy": {
+    "external_tools_default": false,
+    "network_default": false,
+    "llm_default": false
+  },
+  "state_contract": {
+    "input_must_be_json": true,
+    "output_must_be_json": true
+  },
+  "evidence_contract": {
+    "requires_source_ids": true,
+    "raw_source_body_allowed": false
+  },
+  "verification_contract": {
+    "verification_required": true,
+    "cannot_bypass_gates": true
+  },
+  "side_effect_policy": {
+    "publish_allowed": false,
+    "deploy_allowed": false,
+    "install_allowed": false,
+    "active_runtime_replacement_allowed": false
+  },
+  "publish_ready": false,
+  "publishing_performed": false,
+  "llm_used": false,
+  "network_performed": false
+}

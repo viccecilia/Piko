@@ -1,0 +1,55 @@
+P1 封面
+主标题：别再手搓多 Agent 流程了
+副标题：OpenAI Agents SDK 把工具、交接和输出管起来
+关键词：Agent / Tools / Handoff / Output
+画面建议：大标题占左侧，右侧四张小卡片，底部放项目名。
+素材标记：NEEDS_RENDER
+
+P2 GitHub 仓库
+主标题：先看项目定位
+副标题：A lightweight framework for multi-agent workflows
+画面建议：使用公开仓库页截图，框出项目名、简介、stars、license。
+素材标记：REAL_SCREENSHOT_REQUIRED
+
+P3 安装步骤
+主标题：第一步：安装
+副标题：用官方最新文档复核安装命令
+画面建议：终端截图或文档截图，展示安装命令；未实际安装时只写“建议安装步骤”。
+素材标记：REAL_SCREENSHOT_REQUIRED
+
+P4 最小代码
+主标题：第二步：写最小 Agent
+副标题：先让一个 Agent 跑通，再拆角色
+画面建议：编辑器截图，展示最小可读示例，代码不超过一屏。
+素材标记：REAL_SCREENSHOT_REQUIRED
+
+P5 输出结果
+主标题：第三步：看输出
+副标题：重点不是长文本，而是能否结构化
+画面建议：终端输出或 JSON 结果截图；如果没有实际运行，只能做“模拟输出示意”。
+素材标记：REAL_SCREENSHOT_REQUIRED
+
+P6 机制图
+主标题：它管四个边界
+副标题：Agent 执行，Tools 限权，Handoff 交接，Output 进系统
+画面建议：四段流程图，从 Agent 流向 Tools、Handoff、Structured output。
+素材标记：SIMULATED_VISUAL
+
+P7 限制图
+主标题：别把它当魔法
+副标题：成本、延迟、权限、正确性都要评估
+画面建议：四个风险芯片，配一个醒目的边界提示。
+素材标记：SIMULATED_VISUAL
+
+P8 总结图
+主标题：先跑一个小流程
+副标题：公开资料研究 -> 中文草稿 -> 风险审核
+画面建议：三步清单卡，做成可收藏的框架图。
+素材标记：NEEDS_RENDER
+
+P9 保存总结
+主标题：收藏这套判断框架
+副标题：长任务、多角色、有下游系统，才值得上多 Agent
+画面建议：适合/不适合双栏清单，右下角加“先小后大”行动提示。
+素材标记：NEEDS_RENDER
+

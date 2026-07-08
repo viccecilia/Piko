@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Piko AgentRuntimeAdapter Boundary</title>
+    <style>
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: #0b1017;
+        color: #f6f7f2;
+        font-family: sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #0b1017;
+      }
+      .stage-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(140deg, rgba(29, 78, 216, 0.26), transparent 38%),
+          radial-gradient(circle at 72% 18%, rgba(20, 184, 166, 0.18), transparent 26%),
+          linear-gradient(180deg, #0b1017 0%, #101820 54%, #141b1f 100%);
+      }
+      .grid {
+        position: absolute;
+        inset: 0;
+        opacity: 0.14;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+        background-size: 72px 72px;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        padding: 128px 84px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 44px;
+      }
+      #scene-hook {
+        opacity: 1;
+      }
+      .eyebrow {
+        color: #8adbd5;
+        font-size: 34px;
+        font-weight: 700;
+      }
+      .title {
+        margin: 0;
+        font-size: 78px;
+        line-height: 1.1;
+        font-weight: 800;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+      }
+      .subtitle {
+        font-size: 40px;
+        line-height: 1.36;
+        color: #d7e0e3;
+        max-width: 860px;
+      }
+      .card {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(15, 23, 30, 0.88);
+        border-radius: 8px;
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .bad { border-color: rgba(248, 113, 113, 0.64); }
+      .good { border-color: rgba(45, 212, 191, 0.64); }
+      .label {
+        font-size: 34px;
+        color: #f6f7f2;
+        font-weight: 800;
+      }
+      .body {
+        margin-top: 14px;
+        font-size: 30px;
+        line-height: 1.36;
+        color: #d7e0e3;
+      }
+      .adapter-flow {
+        display: grid;
+        grid-template-columns: 1fr 150px 1fr;
+        align-items: center;
+        gap: 22px;
+      }
+      .gate {
+        height: 320px;
+        display: grid;
+        place-items: center;
+        border: 2px solid #2dd4bf;
+        background: rgba(20, 184, 166, 0.18);
+        border-radius: 8px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+      .chip {
+        padding: 18px 22px;
+        border-radius: 8px;
+        font-size: 29px;
+        font-weight: 800;
+        background: #10201e;
+        border: 1px solid #2dd4bf;
+        color: #e8fffb;
+      }
+      .danger {
+        background: #2a1113;
+        border-color: #fb7185;
+        color: #ffe4e6;
+      }
+      .rail {
+        display: grid;
+        gap: 18px;
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        align-items: center;
+        gap: 18px;
+        font-size: 34px;
+        font-weight: 800;
+      }
+      .num {
+        height: 60px;
+        width: 60px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: #facc15;
+        color: #111827;
+      }
+      .footer {
+        position: absolute;
+        left: 84px;
+        right: 84px;
+        bottom: 84px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #a8b5bb;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="piko-agent-runtime-adapter" data-start="0" data-width="1080" data-height="1920" data-duration="60">
+      <div class="stage-bg"></div>
+      <div class="grid"></div>
+
+      <section id="scene-hook" class="clip" data-start="0" data-duration="4" data-track-index="1">
+        <div class="eyebrow">Piko Skill Radar</div>
+        <h1 class="title">&#20808;&#21152;&#36793;&#30028;<br />&#20877;&#25509;&#26694;&#26550;</h1>
+        <div class="subtitle">&#21035;&#24613;&#30528;&#25226; Agent &#26694;&#26550;&#35013;&#36827;&#31995;&#32479;&#12290;</div>
+      </section>
+
+      <section id="scene-pain" class="clip" data-start="4" data-duration="6" data-track-index="1">
+        <div class="eyebrow">&#26087;&#30171;&#28857;</div>
+        <h1 class="title">&#20004;&#20010;&#22353;</h1>
+        <div class="split">
+          <div class="card bad">
+            <div class="label">&#21482;&#20889;&#35843;&#30740;</div>
+            <div class="body">&#33021;&#21147;&#36827;&#19981;&#20102; pipeline</div>
+          </div>
+          <div class="card bad">
+            <div class="label">&#30452;&#25509;&#25509;&#20837;</div>
+            <div class="body">&#23457;&#26680;&#38392;&#38376;&#34987;&#32469;&#24320;</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-adapter" class="clip" data-start="10" data-duration="7" data-track-index="1">
+        <div class="eyebrow">&#26032;&#33021;&#21147;</div>
+        <h1 class="title">Agent Runtime<br />Adapter</h1>
+        <div class="adapter-flow">
+          <div class="card">
+            <div class="label">LangGraph<br />Agents SDK<br />LlamaIndex</div>
+          </div>
+          <div class="gate">&#36793;&#30028;<br />&#38376;&#31105;</div>
+          <div class="card good">
+            <div class="label">Piko</div>
+            <div class="body">&#26469;&#28304;&#31574;&#30053;<br />verify<br />&#21457;&#24067;&#38480;&#21046;</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-contracts" class="clip" data-start="17" data-duration="15" data-track-index="1">
+        <div class="eyebrow">&#26426;&#21046;&#35299;&#37322;</div>
+        <h1 class="title">&#20116;&#20010; contract</h1>
+        <div class="chips">
+          <div class="chip">run_task</div>
+          <div class="chip">tool_policy</div>
+          <div class="chip">state_contract</div>
+          <div class="chip">evidence_contract</div>
+          <div class="chip">verification_contract</div>
+        </div>
+      </section>
+
+      <section id="scene-steps" class="clip" data-start="32" data-duration="10" data-track-index="1">
+        <div class="eyebrow">&#23454;&#25805;&#27493;&#39588;</div>
+        <h1 class="title">&#20808; fixture<br />&#20877; tests</h1>
+        <div class="rail">
+          <div class="step"><div class="num">1</div><div>&#21015;&#26694;&#26550;</div></div>
+          <div class="step"><div class="num">2</div><div>&#25277;&#25509;&#21475;</div></div>
+          <div class="step"><div class="num">3</div><div>&#31163;&#32447; fixture</div></div>
+          <div class="step"><div class="num">4</div><div>contract tests</div></div>
+          <div class="step"><div class="num">5</div><div>&#20132;&#32473; CAP</div></div>
+        </div>
+      </section>
+
+      <section id="scene-limits" class="clip" data-start="42" data-duration="10" data-track-index="1">
+        <div class="eyebrow">&#30495;&#23454;&#38480;&#21046;</div>
+        <h1 class="title">&#19977;&#20010;&#19981;&#21487;&#32469;&#36807;</h1>
+        <div class="chips">
+          <div class="chip danger">&#19981;&#40664;&#35748; API</div>
+          <div class="chip danger">&#19981;&#32469;&#36807; verify</div>
+          <div class="chip danger">&#19981;&#33258;&#21160;&#21457;&#24067;</div>
+        </div>
+        <div class="subtitle">proposal only&#65292;&#20808;&#39564;&#35777;&#36793;&#30028;&#12290;</div>
+      </section>
+
+      <section id="scene-close" class="clip" data-start="52" data-duration="8" data-track-index="1">
+        <div class="eyebrow">&#24635;&#32467;&#21644;&#34892;&#21160;</div>
+        <h1 class="title">&#23398;&#36793;&#30028;<br />&#19981;&#26159;&#36861;&#28909;&#28857;</h1>
+        <div class="card good">
+          <div class="label">Piko &#30340;&#19979;&#19968;&#27493;</div>
+          <div class="body">&#20570;&#31163;&#32447; fixture&#65292;&#34917; contract tests&#65292;&#30830;&#35748; verify &#19981;&#21487;&#32469;&#36807;&#12290;</div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <span>Piko Daily Skill</span>
+        <span>2026-07-02</span>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const scenes = [
+        { id: "#scene-hook", start: 0, duration: 4 },
+        { id: "#scene-pain", start: 4, duration: 6 },
+        { id: "#scene-adapter", start: 10, duration: 7 },
+        { id: "#scene-contracts", start: 17, duration: 15 },
+        { id: "#scene-steps", start: 32, duration: 10 },
+        { id: "#scene-limits", start: 42, duration: 10 },
+        { id: "#scene-close", start: 52, duration: 8 }
+      ];
+      window.__timelines["piko-agent-runtime-adapter"] = {
+        engine: "local-preview",
+        duration: 60,
+        externalNetworkRequired: false
+      };
+
+      const isDirectPreview = location.protocol === "file:" && !navigator.userAgent.includes("HeadlessChrome");
+      if (isDirectPreview) {
+        let previewIndex = 0;
+        const showScene = (index) => {
+          scenes.forEach((scene, i) => {
+            const node = document.querySelector(scene.id);
+            if (!node) return;
+            node.style.opacity = i === index ? "1" : "0";
+            node.style.transform = i === index ? "translateY(0)" : "translateY(18px)";
+            node.style.transition = "opacity 420ms ease, transform 420ms ease";
+          });
+        };
+        showScene(previewIndex);
+        setInterval(() => {
+          previewIndex = (previewIndex + 1) % scenes.length;
+          showScene(previewIndex);
+        }, 4200);
+      }
+    </script>
+  </body>
+</html>

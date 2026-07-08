@@ -1,0 +1,62 @@
+{
+  "artifact_id": "discovery_workflow_result",
+  "generated_at": "2026-07-08T01:56:47.141002+00:00",
+  "workflow": "discovery_candidate_to_article_handoff_fixture",
+  "selected_topic": {
+    "topic_id": "fixture_topic_crash_startup",
+    "decision": "publish_candidate",
+    "intent": "fix_crash_on_startup",
+    "source_ids": [
+      "fixture_official_launch_001",
+      "fixture_wiki_launch_001"
+    ],
+    "risk": "low"
+  },
+  "evidence_summary": {
+    "evidence_count": 2,
+    "source_ids": [
+      "fixture_official_launch_001",
+      "fixture_wiki_launch_001"
+    ],
+    "evidence_card_ids": [
+      "ev_fixture_official_launch_001_verify",
+      "ev_fixture_wiki_launch_001_overlay"
+    ]
+  },
+  "ranking_decision": {
+    "ranked_steps": [
+      {
+        "rank": 1,
+        "step": "Verify game files",
+        "source_ids": [
+          "fixture_official_launch_001"
+        ],
+        "risk": "low"
+      },
+      {
+        "rank": 2,
+        "step": "Disable overlays before deeper changes",
+        "source_ids": [
+          "fixture_wiki_launch_001"
+        ],
+        "risk": "low"
+      }
+    ],
+    "watchlist_or_high_risk_promoted": false
+  },
+  "trace_ids": [
+    "trace_01",
+    "trace_02",
+    "trace_03",
+    "trace_04"
+  ],
+  "publish_ready": false,
+  "publishing_performed": false,
+  "candidate_only": true,
+  "dry_run": true,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

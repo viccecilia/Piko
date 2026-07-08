@@ -1,0 +1,23 @@
+{
+  "artifact_id": "operator_langgraph_status",
+  "generated_at": "2026-07-08T01:56:48.408997+00:00",
+  "install_status": "already_available",
+  "install_performed": false,
+  "import_success": true,
+  "version": "unknown",
+  "minimal_smoke_status": "success",
+  "workflow_smoke_status": "success",
+  "effective_backend": "langgraph_backend",
+  "fallback_available": true,
+  "backend_ready": true,
+  "read_only": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

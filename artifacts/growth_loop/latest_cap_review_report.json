@@ -1,0 +1,86 @@
+{
+  "artifact_id": "latest_cap_review_report",
+  "generated_at": "2026-07-08T01:56:31.960414+00:00",
+  "decisions": [
+    {
+      "candidate_id": "grow_langgraph",
+      "name": "LangGraph",
+      "decision": "augment",
+      "decision_reason": "Candidate can improve Piko through a bounded proposal and tests.",
+      "required_tests": [
+        "pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "draft_worker_task",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_llamaindex",
+      "name": "LlamaIndex",
+      "decision": "augment",
+      "decision_reason": "Candidate can improve Piko through a bounded proposal and tests.",
+      "required_tests": [
+        "pytest",
+        "artifact JSON parse",
+        "guardrail scan"
+      ],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "draft_worker_task",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "decision": "watch",
+      "decision_reason": "Potentially useful but not enough evidence for implementation draft.",
+      "required_tests": [],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "watch",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_cap-agent-runtime-adapter-boundary",
+      "name": "cap_agent_runtime_adapter_boundary",
+      "decision": "watch",
+      "decision_reason": "Potentially useful but not enough evidence for implementation draft.",
+      "required_tests": [],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=medium",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "watch",
+      "active_capability_updated": false
+    },
+    {
+      "candidate_id": "grow_story-agent-framework-adapter",
+      "name": "story_agent_framework_adapter",
+      "decision": "story_only",
+      "decision_reason": "Candidate is useful for content/education but not runtime adoption.",
+      "required_tests": [],
+      "human_approval_required": false,
+      "risk_notes": [
+        "risk_level=low",
+        "proposal-only; no active adoption"
+      ],
+      "next_action": "story_pipeline_only",
+      "active_capability_updated": false
+    }
+  ],
+  "active_capability_updated": false,
+  "auto_apply_performed": false
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checked_at": "2026-07-03T10:21:52.0563693+09:00",
+  "required_outputs": {
+    "title_candidates": true,
+    "wechat_article": true,
+    "xiaohongshu_cards": true,
+    "voiceover_script": true,
+    "tts_plan": true,
+    "voiceover_audio": true,
+    "storyboard": true,
+    "screen_text": true,
+    "html_video_draft": true,
+    "asset_needs": true,
+    "why_selected_today": true,
+    "piko_takeaways": true,
+    "risks_and_not_fit": true
+  },
+  "fixed_structure_markers": [
+    "强标题",
+    "旧痛点",
+    "新能力",
+    "快速判断",
+    "机制解释",
+    "实操步骤",
+    "真实限制",
+    "适合谁",
+    "总结和行动"
+  ],
+  "safety": {
+    "auto_publish": false,
+    "external_copyright_images": false,
+    "secrets_read_or_output": false,
+    "claims_limited_to_local_artifacts": true
+  }
+}

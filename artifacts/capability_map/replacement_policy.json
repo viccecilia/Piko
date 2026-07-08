@@ -1,0 +1,32 @@
+{
+  "artifact_id": "replacement_policy_v1",
+  "generated_at": "2026-07-08T01:56:29.679325+00:00",
+  "lifecycle": [
+    "candidate",
+    "shadow_test",
+    "limited_rollout",
+    "verified_replacement",
+    "deprecated",
+    "removed"
+  ],
+  "minimum_replacement_conditions": [
+    "candidate_score_significantly_higher",
+    "compatible_existing_contract",
+    "tests_cover_existing_behavior",
+    "rollback_plan_defined",
+    "license_and_security_accepted",
+    "Piko-verify_passed"
+  ],
+  "forbidden_replacement_conditions": [
+    "missing_tests",
+    "license_incompatible",
+    "default_network_upgrade",
+    "removes_guardrail",
+    "bypasses_verification"
+  ],
+  "shadow_test_required": true,
+  "verification_required": true,
+  "rollback_required": true,
+  "requires_human_approval_for_high_risk": true,
+  "runtime_replacement_performed": false
+}

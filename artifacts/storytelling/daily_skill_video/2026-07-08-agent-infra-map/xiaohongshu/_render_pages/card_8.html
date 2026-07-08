@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --paper: #f6efe2;
+      --ink: #171614;
+      --muted: #625d54;
+      --line: #cfc2ae;
+      --red: #cc3f32;
+      --blue: #2457d6;
+      --green: #19825c;
+      --gold: #a56614;
+      --purple: #6a49c8;
+      --soft: rgba(255,255,255,.58);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #151515;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", Inter, Arial, sans-serif;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      padding: 24px;
+    }
+    .card {
+      width: min(100%, 420px);
+      aspect-ratio: 3 / 4;
+      margin: 0 auto;
+      padding: 34px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.34)),
+        var(--paper);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .dark {
+      background:
+        radial-gradient(circle at 85% 18%, rgba(204,63,50,.2), transparent 28%),
+        linear-gradient(180deg, #1a1917, #111);
+      color: #f8f1e5;
+      border-color: rgba(255,255,255,.18);
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .dark .topline { color: #bfb4a5; }
+    .badge {
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 13px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    h1, h2, h3, p { margin: 0; letter-spacing: 0; }
+    h1 {
+      font-size: 58px;
+      line-height: 1.02;
+      font-weight: 900;
+    }
+    h2 {
+      font-size: 42px;
+      line-height: 1.08;
+      font-weight: 900;
+    }
+    h3 {
+      font-size: 25px;
+      line-height: 1.18;
+      font-weight: 850;
+    }
+    p, li {
+      font-size: 18px;
+      line-height: 1.45;
+    }
+    ul { margin: 0; padding-left: 22px; }
+    .lead {
+      font-size: 24px;
+      line-height: 1.32;
+      font-weight: 750;
+    }
+    .accent { color: var(--red); }
+    .dark .accent { color: #ff725f; }
+    .section {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 16px;
+    }
+    .dark .section {
+      border-color: rgba(255,255,255,.2);
+      background: rgba(255,255,255,.07);
+    }
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .four {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .layer {
+      border-left: 8px solid var(--blue);
+      background: var(--soft);
+      padding: 14px;
+      min-height: 120px;
+    }
+    .layer strong { display: block; font-size: 20px; margin-bottom: 6px; }
+    .layer small { display: block; color: var(--muted); font-size: 13px; margin-top: 8px; }
+    .dark .layer { background: rgba(255,255,255,.08); }
+    .dark .layer small { color: #c9bdad; }
+    .l2 { border-left-color: var(--green); }
+    .l3 { border-left-color: var(--gold); }
+    .l4 { border-left-color: var(--red); }
+    .screenshot {
+      border: 2px dashed #8d8172;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.04) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, rgba(0,0,0,.04) 0 1px, transparent 1px 100%),
+        #fffaf0;
+      background-size: 22px 22px;
+      padding: 16px;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .screenshot .label {
+      font-weight: 900;
+      font-size: 20px;
+    }
+    .screenshot .note {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .repo-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      font-size: 13px;
+    }
+    .repo-meta span {
+      background: rgba(0,0,0,.06);
+      padding: 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .quote {
+      background: #1c1b18;
+      color: #f7efe3;
+      padding: 16px;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 750;
+    }
+    .dark .quote { background: #f7efe3; color: #171614; }
+    .takeaway {
+      border-top: 3px solid var(--ink);
+      padding-top: 12px;
+      font-size: 18px;
+      line-height: 1.42;
+      font-weight: 750;
+    }
+    .dark .takeaway { border-color: #f7efe3; }
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      border: 1px solid currentColor;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      line-height: 1;
+    }
+    .mini-title {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    .dark .mini-title { color: #c9bdad; }
+    .footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+    .dark .footer {
+      color: #c9bdad;
+      border-color: rgba(255,255,255,.18);
+    }
+    .check {
+      display: grid;
+      gap: 12px;
+    }
+    .check div {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+    .demo-path {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .demo-path span {
+      background: #1c1b18;
+      color: #f7efe3;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 800;
+      text-align: center;
+    }
+    .num {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: #fff;
+      font-weight: 900;
+      border-radius: 50%;
+    }
+  
+    html, body { margin: 0 !important; width: 1080px !important; height: 1440px !important; overflow: hidden !important; background: #111 !important; }
+    .card {
+      width: 1080px !important;
+      height: 1440px !important;
+      aspect-ratio: auto !important;
+      margin: 0 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body><section class="card">
+      <div class="topline"><span>判断卡</span><span class="badge">小红书 08</span></div>
+      <h2>不要盲目使用</h2>
+      <p class="lead">高 star 不等于适合你。今天这类项目，最怕被当成“万能 Agent 套件”。</p>
+      <div class="section">
+        <div class="mini-title">我的使用判断</div>
+        <ul>
+          <li>项目还小：先看 issue、commit、license，不要只看标题。</li>
+          <li>截图很炫：先问有没有真实 demo path。</li>
+          <li>压缩很猛：先问会不会损伤引用和证据。</li>
+          <li>平台很全：先问会不会比你的问题更重。</li>
+        </ul>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">值得试</div><p>你正在做复杂 Agent、代码库问答、长任务自动化。</p></div>
+        <div class="section"><div class="mini-title">先别上</div><p>你只是做单次 prompt、小脚本、轻量 demo。</p></div>
+      </div>
+      <p class="takeaway">读者能学什么：开源项目不是越新越好，先判断它补的是不是你的短板。</p>
+      <div class="footer"><span>风险边界</span><span>别把 demo 当生产</span></div>
+    </section></body>
+</html>

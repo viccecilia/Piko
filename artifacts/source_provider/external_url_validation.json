@@ -1,0 +1,15 @@
+{
+  "artifact_type": "external_url_validation",
+  "generated_at": "2026-07-08T01:56:45.890465+00:00",
+  "status": "deploy_ready_pending_host",
+  "external_provider_validated": false,
+  "approved_url_redacted": null,
+  "blocked_reason": "missing_external_url",
+  "game_count": 0,
+  "question_count": 0,
+  "real_collection_performed": false,
+  "raw_response_body_saved": false,
+  "credentials_stored": false,
+  "deployment_performed": false,
+  "broad_internet_coverage": false
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_type": "worker_run_trace",
+  "generated_at": "2026-07-08T01:56:45.650466+00:00",
+  "run_id": "skill_trace_350c3656057f",
+  "stage_id": "SKILL-2",
+  "round_id": "SKILL-2-R01",
+  "task_status": "completed",
+  "artifact_ids": [
+    "artifacts/skill_runtime/runtime_registry.json",
+    "artifacts/skill_runtime/lifecycle_policy.json"
+  ],
+  "gate_decisions": [
+    {
+      "gate": "publish_gate",
+      "decision": "blocked_dry_run_only",
+      "reason": "social distribution is not approved for live dispatch"
+    }
+  ],
+  "safety": {
+    "secrets_recorded": false,
+    "raw_prompts_recorded": false,
+    "raw_source_recorded": false
+  }
+}

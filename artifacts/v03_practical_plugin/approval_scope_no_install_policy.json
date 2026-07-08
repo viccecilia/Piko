@@ -1,0 +1,39 @@
+{
+  "artifact_id": "v03_approval_scope_no_install_policy",
+  "generated_at": "2026-07-08T01:56:47.137005+00:00",
+  "candidate_id": "langgraph_style_workflow_adapter",
+  "allowed_without_extra_approval": [
+    "dry_run",
+    "fixture_run",
+    "local_adapter_contract",
+    "local_trace_artifacts"
+  ],
+  "requires_human_approval": [
+    "external_dependency_install",
+    "network_access",
+    "llm_use",
+    "active_runtime_replacement",
+    "production_workflow_activation",
+    "credential_use"
+  ],
+  "operator_approval_checklist": [
+    "dependency and license review",
+    "data retention review",
+    "side-effect review",
+    "Gate and verification review",
+    "rollback plan accepted",
+    "test matrix passed"
+  ],
+  "activation_blocked_without_approval": true,
+  "auto_install_allowed": false,
+  "active_replacement_allowed": false,
+  "candidate_only": true,
+  "dry_run": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

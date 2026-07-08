@@ -1,0 +1,43 @@
+{
+  "artifact_id": "article_package_handoff",
+  "generated_at": "2026-07-08T01:56:47.149512+00:00",
+  "source_workflow": "artifacts/v03_practical_plugin/discovery_workflow_result.json",
+  "draft_intent": "internal_package_for_existing_article_pipeline",
+  "source_trace": [
+    "fixture_official_launch_001",
+    "fixture_wiki_launch_001"
+  ],
+  "evidence_trace": [
+    "ev_fixture_official_launch_001_verify",
+    "ev_fixture_wiki_launch_001_overlay"
+  ],
+  "ranked_steps": [
+    {
+      "rank": 1,
+      "step": "Verify game files",
+      "source_ids": [
+        "fixture_official_launch_001"
+      ],
+      "risk": "low"
+    },
+    {
+      "rank": 2,
+      "step": "Disable overlays before deeper changes",
+      "source_ids": [
+        "fixture_wiki_launch_001"
+      ],
+      "risk": "low"
+    }
+  ],
+  "verification_required": true,
+  "article_pipeline_safe_input_shape": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "candidate_only": true,
+  "dry_run": true,
+  "auto_install_performed": false,
+  "active_replacement_performed": false,
+  "network_performed": false,
+  "llm_performed": false,
+  "secrets_used": false
+}

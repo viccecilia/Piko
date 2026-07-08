@@ -1,0 +1,183 @@
+{
+  "artifact_id": "capability_scorecard_v1",
+  "generated_at": "2026-07-08T01:56:29.679325+00:00",
+  "scorecard": [
+    {
+      "capability_id": "agent.source",
+      "name": "SourceAgent",
+      "score": 82,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_real_source_pilot_2.py",
+        "tests/test_stage_5.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.evidence",
+      "name": "EvidenceAgent",
+      "score": 70,
+      "decision": "improve",
+      "evidence": [
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "recommended_action": "improve through worker/verify proposal",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.ranking",
+      "name": "RankingAgent",
+      "score": 82,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_content_benchmark.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.writer",
+      "name": "WriterAgent",
+      "score": 70,
+      "decision": "improve",
+      "evidence": [
+        "tests/test_content_benchmark.py",
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "recommended_action": "improve through worker/verify proposal",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.editor",
+      "name": "EditorAgent",
+      "score": 82,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_stage_3.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.factcheck",
+      "name": "FactcheckAgent",
+      "score": 70,
+      "decision": "improve",
+      "evidence": [
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "recommended_action": "improve through worker/verify proposal",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "workflow.article_pipeline",
+      "name": "Article Pipeline",
+      "score": 85,
+      "decision": "keep",
+      "evidence": [
+        "python -m packages.workflows.article_pipeline",
+        "tests/test_stage_6.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "workflow.discovery",
+      "name": "Discovery/Funnel/Watchlist",
+      "score": 85,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_discovery_search.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "workflow.endpoint_verification",
+      "name": "Endpoint Verification",
+      "score": 85,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_rev_batch_3_6.py",
+        "tests/test_live_1.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "gate.publish_readiness",
+      "name": "Publish Readiness",
+      "score": 82,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_stage_7.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "workflow.self_improvement",
+      "name": "Self-improvement/Ledger Guardrail",
+      "score": 85,
+      "decision": "keep",
+      "evidence": [
+        "tests/test_self_improvement.py"
+      ],
+      "recommended_action": "keep and monitor",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    }
+  ],
+  "top_improvement_targets": [
+    {
+      "capability_id": "agent.evidence",
+      "name": "EvidenceAgent",
+      "score": 70,
+      "decision": "improve",
+      "evidence": [
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "recommended_action": "improve through worker/verify proposal",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.writer",
+      "name": "WriterAgent",
+      "score": 70,
+      "decision": "improve",
+      "evidence": [
+        "tests/test_content_benchmark.py",
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "recommended_action": "improve through worker/verify proposal",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    },
+    {
+      "capability_id": "agent.factcheck",
+      "name": "FactcheckAgent",
+      "score": 70,
+      "decision": "improve",
+      "evidence": [
+        "tests/test_real_source_pilot_2.py"
+      ],
+      "recommended_action": "improve through worker/verify proposal",
+      "requires_human_approval": false,
+      "rollback_expectation": "No runtime change in this batch; rollback is artifact deletion only."
+    }
+  ],
+  "top_replacement_candidates": [],
+  "automatic_actions_performed": false
+}

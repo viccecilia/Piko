@@ -1,0 +1,27 @@
+{
+  "artifact_id": "latest_growth_review_report",
+  "generated_at": "2026-07-08T01:56:31.999413+00:00",
+  "status": "completed",
+  "required_artifacts_present": {
+    "latest_scan_intake.json": true,
+    "latest_normalized_candidates.json": true,
+    "cap_review_policy.json": true,
+    "latest_cap_review_report.json": true,
+    "latest_capability_feedback.json": true,
+    "worker_task_draft_contract.json": true,
+    "verify_task_draft_contract.json": true,
+    "latest_draft_queue_package.json": true
+  },
+  "guardrails": {
+    "auto_execute_performed": false,
+    "auto_apply_performed": false,
+    "runtime_adoption_performed": false,
+    "publish_performed": false,
+    "deploy_performed": false,
+    "commit_or_push_performed": false,
+    "network_performed": false,
+    "llm_performed": false,
+    "verification_bypassed": false
+  },
+  "next_round": "V02-1-R01"
+}

@@ -1,0 +1,81 @@
+{
+  "artifact_type": "live_connector_real_funnel_handoff",
+  "generated_at": "2026-07-08T01:56:44.469928+00:00",
+  "status": "handoff_ready",
+  "connector_id": "approved_json_endpoint",
+  "hot_game_candidates": [
+    {
+      "signal_type": "hot_game",
+      "source_id": "fixture_mirror_market_001",
+      "source_type": "approved_market_json",
+      "candidate": {
+        "game_id": "hades_ii",
+        "game_name": "Hades II",
+        "mode": "real-source",
+        "ranking_score": 84,
+        "heat_score": 90,
+        "steam_player_rank": 5,
+        "steam_review_velocity": 88,
+        "discussion_velocity": 91,
+        "update_recency_days": 2,
+        "cross_region_mentions": 3,
+        "source_diversity": 2,
+        "region_signals": [
+          "steam",
+          "global"
+        ],
+        "candidate_only": true,
+        "reasons": [
+          "Strong Steam player rank signal.",
+          "Community discussion velocity is high.",
+          "Recent update can create fresh player needs.",
+          "Multiple regions show discussion activity.",
+          "Multiple source or region signals increase ranking confidence."
+        ]
+      }
+    },
+    {
+      "signal_type": "hot_game",
+      "source_id": "fixture_mirror_market_001",
+      "source_type": "approved_market_json",
+      "candidate": {
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "mode": "real-source",
+        "ranking_score": 43,
+        "heat_score": 36,
+        "steam_player_rank": null,
+        "steam_review_velocity": 0,
+        "discussion_velocity": 72,
+        "update_recency_days": 14,
+        "cross_region_mentions": 4,
+        "source_diversity": 2,
+        "region_signals": [
+          "reddit",
+          "global"
+        ],
+        "candidate_only": true,
+        "reasons": [
+          "Community discussion velocity is high.",
+          "Recent update can create fresh player needs.",
+          "Multiple regions show discussion activity.",
+          "Multiple source or region signals increase ranking confidence."
+        ]
+      }
+    }
+  ],
+  "need_clusters": [],
+  "source_trace": [
+    {
+      "connector_id": "approved_json_endpoint",
+      "status": "success",
+      "signal_count": 2,
+      "real_collection_performed": true
+    }
+  ],
+  "blocked_reason": null,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": true,
+  "candidate_only": true
+}

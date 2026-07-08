@@ -1,0 +1,141 @@
+{
+  "artifact_type": "collection_dry_run_report",
+  "generated_at": "2026-07-08T01:56:29.863324+00:00",
+  "no_network_performed": true,
+  "real_collection_performed": false,
+  "connectors_planned": 12,
+  "blocked_connectors": [
+    {
+      "connector_id": "gaming_approved_endpoint",
+      "missing_env": [
+        "PIKO_APPROVED_ENDPOINT_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_steam_summary",
+      "missing_env": [
+        "PIKO_STEAM_DISCOVERY_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_reddit_summary",
+      "missing_env": [
+        "PIKO_REDDIT_DISCOVERY_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_serp_snippet",
+      "missing_env": [
+        "PIKO_SERP_DISCOVERY_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_mediawiki_reference",
+      "missing_env": [
+        "PIKO_ENABLE_REAL_CONNECTORS"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_jp_community_summary",
+      "missing_env": [
+        "PIKO_JP_COMMUNITY_DISCOVERY_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "gaming_kr_community_summary",
+      "missing_env": [
+        "PIKO_KR_COMMUNITY_DISCOVERY_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "ai_tools_approved_endpoint",
+      "missing_env": [
+        "PIKO_APPROVED_ENDPOINT_URL"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "ai_tools_github_repo_summary",
+      "missing_env": [
+        "PIKO_GITHUB_CONNECTOR_REF"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "ai_tools_release_note_summary",
+      "missing_env": [
+        "PIKO_AI_TOOLS_RELEASE_ENDPOINT"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "ai_tools_docs_page_summary",
+      "missing_env": [
+        "PIKO_AI_TOOLS_DOCS_ENDPOINT"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    },
+    {
+      "connector_id": "ai_tools_community_summary",
+      "missing_env": [
+        "PIKO_AI_TOOLS_COMMUNITY_ENDPOINT"
+      ],
+      "blocked_reason": "blocked_for_endpoint"
+    }
+  ],
+  "retained_fields": [
+    "source_id",
+    "source_type",
+    "domain_id",
+    "title",
+    "url",
+    "snippet",
+    "retrieved_at",
+    "metrics",
+    "language",
+    "region",
+    "trust_tier"
+  ],
+  "prohibited_fields": [
+    "access_token",
+    "api_key",
+    "authorization",
+    "body",
+    "content",
+    "cookie",
+    "credential",
+    "credentials",
+    "full_comments",
+    "full_page",
+    "full_post",
+    "html",
+    "images",
+    "maps",
+    "page_html",
+    "password",
+    "raw_body",
+    "raw_page_text",
+    "raw_response_body",
+    "raw_text",
+    "refresh_token",
+    "secret",
+    "selftext",
+    "tables",
+    "token"
+  ],
+  "real_status": {
+    "status": "blocked_for_endpoint",
+    "missing": [
+      "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+      "PIKO_LIVE_DISCOVERY_TEST",
+      "PIKO_APPROVED_ENDPOINT_URL"
+    ]
+  }
+}

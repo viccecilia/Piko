@@ -1,0 +1,29 @@
+{
+  "artifact_id": "real_data_handoff_readiness",
+  "generated_at": "2026-07-08T01:56:48.416997+00:00",
+  "runtime_backend_status": "backend_ready",
+  "recommended_real_data_backend": "langgraph_backend",
+  "required_endpoint_env": [
+    "PIKO_ENABLE_DISCOVERY_REAL_SOURCE=true",
+    "PIKO_LIVE_DISCOVERY_TEST=true",
+    "PIKO_APPROVED_ENDPOINT_URL=<approved json endpoint>"
+  ],
+  "source_guardrails": [
+    "approved JSON endpoints only",
+    "no crawler",
+    "no raw/full source body retention",
+    "ordinary pytest remains offline",
+    "publish_ready remains false"
+  ],
+  "next_stage": "real data batch only after Piko-verify approval",
+  "real_data_collected": false,
+  "production_activation_allowed": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

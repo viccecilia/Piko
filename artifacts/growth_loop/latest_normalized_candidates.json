@@ -1,0 +1,78 @@
+{
+  "artifact_id": "latest_normalized_candidates",
+  "generated_at": "2026-07-08T01:56:31.949415+00:00",
+  "candidates": [
+    {
+      "candidate_id": "grow_langgraph",
+      "name": "LangGraph",
+      "category": "workflow orchestration",
+      "github_url": "https://github.com/langchain-ai/langgraph",
+      "stars": 5000,
+      "license": "MIT",
+      "piko_relevance": "Useful pattern for explicit, inspectable workflow state.",
+      "risk_level": "low",
+      "novelty_status": "new",
+      "dedup_key": "langgraph",
+      "source": "oss_research.latest_ranked_projects",
+      "active_adoption_performed": false
+    },
+    {
+      "candidate_id": "grow_llamaindex",
+      "name": "LlamaIndex",
+      "category": "RAG/evidence indexing",
+      "github_url": "https://github.com/run-llama/llama_index",
+      "stars": 5000,
+      "license": "MIT",
+      "piko_relevance": "Useful for source indexing and evidence-card traceability.",
+      "risk_level": "low",
+      "novelty_status": "new",
+      "dedup_key": "llamaindex",
+      "source": "oss_research.latest_ranked_projects",
+      "active_adoption_performed": false
+    },
+    {
+      "candidate_id": "grow_openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "category": "agent framework",
+      "github_url": "https://github.com/openai/openai-agents-python",
+      "stars": 5000,
+      "license": "MIT",
+      "piko_relevance": "Useful for future business agents behind Piko gates.",
+      "risk_level": "low",
+      "novelty_status": "new",
+      "dedup_key": "openai-agents-sdk",
+      "source": "oss_research.latest_ranked_projects",
+      "active_adoption_performed": false
+    },
+    {
+      "candidate_id": "grow_cap-agent-runtime-adapter-boundary",
+      "name": "cap_agent_runtime_adapter_boundary",
+      "category": "augment",
+      "github_url": null,
+      "stars": null,
+      "license": "unknown",
+      "piko_relevance": "CAP queue candidate from OSS learning.",
+      "risk_level": "medium",
+      "novelty_status": "watch",
+      "dedup_key": "cap-agent-runtime-adapter-boundary",
+      "source": "oss_research.latest_cap_queue_candidates",
+      "active_adoption_performed": false
+    },
+    {
+      "candidate_id": "grow_story-agent-framework-adapter",
+      "name": "story_agent_framework_adapter",
+      "category": "story_only",
+      "github_url": null,
+      "stars": null,
+      "license": "unknown",
+      "piko_relevance": "OSS 队列已把 adapter boundary 作为候选能力交给 CAP/STORY。",
+      "risk_level": "low",
+      "novelty_status": "story_only",
+      "dedup_key": "story-agent-framework-adapter",
+      "source": "oss_research.latest_story_queue_candidates",
+      "active_adoption_performed": false
+    }
+  ],
+  "dedup_count": 0,
+  "runtime_adoption_performed": false
+}

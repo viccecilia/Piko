@@ -1,0 +1,24 @@
+{
+  "artifact_id": "continuous_capability_update_loop_v1",
+  "generated_at": "2026-07-08T01:56:29.722323+00:00",
+  "loop": [
+    "daily OSS research",
+    "pattern extraction",
+    "capability candidate scoring",
+    "replacement policy check",
+    "task queue candidate generation",
+    "human approval",
+    "worker implementation",
+    "verify validation",
+    "capability map update"
+  ],
+  "required_controls": [
+    "human approval",
+    "verify validation",
+    "rollback plan",
+    "no auto-install",
+    "no auto-replace"
+  ],
+  "automatic_install_enabled": false,
+  "automatic_replacement_enabled": false
+}

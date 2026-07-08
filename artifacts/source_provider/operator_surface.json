@@ -1,0 +1,15 @@
+{
+  "artifact_type": "source_provider_operator_surface",
+  "generated_at": "2026-07-08T01:56:45.891464+00:00",
+  "provider_status": "deploy_ready_pending_host",
+  "package_path": "artifacts\\source_provider\\static_endpoint_package\\approved-market.json",
+  "external_provider_validated": false,
+  "approved_url_redacted": null,
+  "blocked_reason": "missing_external_url",
+  "next_action": "host_static_endpoint_package_then_rerun_validation",
+  "upload_performed": false,
+  "deployment_performed": false,
+  "credentials_stored": false,
+  "publishing_performed": false,
+  "read_only_surface": true
+}

@@ -1,0 +1,64 @@
+{
+  "artifact_type": "domain_operator_surface",
+  "generated_at": "2026-07-08T01:56:31.226447+00:00",
+  "registered_domains": [
+    {
+      "domain_id": "gaming",
+      "status": "active",
+      "enabled_by_default": true,
+      "activation_status": "active",
+      "source_types": [
+        "official_notes",
+        "wiki_reference",
+        "community_thread",
+        "compatibility_report",
+        "search_snippet"
+      ],
+      "publish_ready": false,
+      "publishing_performed": false
+    },
+    {
+      "domain_id": "ai_tools",
+      "status": "candidate",
+      "enabled_by_default": false,
+      "activation_status": "candidate",
+      "source_types": [
+        "github_repo",
+        "docs_page",
+        "release_note",
+        "benchmark_post",
+        "community_thread"
+      ],
+      "publish_ready": false,
+      "publishing_performed": false
+    }
+  ],
+  "domain_status": {
+    "gaming": "active_fixture",
+    "ai_tools": "candidate_fixture"
+  },
+  "fixture_status": {
+    "gaming": "available",
+    "ai_tools": "available"
+  },
+  "workflow_route": {
+    "gaming": "active_fixture",
+    "ai_tools": "candidate_preview_only"
+  },
+  "content_package_status": {
+    "gaming": "candidate_package_available",
+    "ai_tools": "candidate_package_available"
+  },
+  "core_language": [
+    "domain",
+    "source_signal",
+    "need_cluster",
+    "evidence",
+    "workflow_trace",
+    "content_package",
+    "distribution_package",
+    "verify_gate"
+  ],
+  "publish_ready": false,
+  "publishing_performed": false
+}

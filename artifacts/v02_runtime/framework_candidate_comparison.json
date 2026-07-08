@@ -1,0 +1,48 @@
+{
+  "artifact_id": "framework_candidate_comparison",
+  "generated_at": "2026-07-08T01:56:46.593279+00:00",
+  "installed": false,
+  "active_runtime_replaced": false,
+  "candidates": [
+    {
+      "name": "LangGraph",
+      "workflow_fit": 5,
+      "evidence_fit": 4,
+      "tool_policy_fit": 4,
+      "testability": 5,
+      "lock_in_risk": "medium",
+      "integration_cost": "medium",
+      "recommended_next_step": "adapter_spike_candidate"
+    },
+    {
+      "name": "LlamaIndex",
+      "workflow_fit": 3,
+      "evidence_fit": 5,
+      "tool_policy_fit": 3,
+      "testability": 4,
+      "lock_in_risk": "medium",
+      "integration_cost": "low",
+      "recommended_next_step": "adapter_spike_candidate"
+    },
+    {
+      "name": "CrewAI",
+      "workflow_fit": 3,
+      "evidence_fit": 2,
+      "tool_policy_fit": 3,
+      "testability": 3,
+      "lock_in_risk": "medium",
+      "integration_cost": "medium",
+      "recommended_next_step": "watch"
+    },
+    {
+      "name": "OpenAI Agents SDK",
+      "workflow_fit": 4,
+      "evidence_fit": 3,
+      "tool_policy_fit": 5,
+      "testability": 4,
+      "lock_in_risk": "low",
+      "integration_cost": "medium",
+      "recommended_next_step": "watch"
+    }
+  ]
+}

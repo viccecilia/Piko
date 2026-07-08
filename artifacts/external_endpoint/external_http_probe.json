@@ -1,0 +1,19 @@
+{
+  "artifact_type": "external_http_probe",
+  "generated_at": "2026-07-08T01:56:31.583072+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "blocked_reason": "missing_external_endpoint_url",
+  "missing_config": [
+    "PIKO_ENABLE_DISCOVERY_REAL_SOURCE",
+    "PIKO_LIVE_DISCOVERY_TEST",
+    "PIKO_APPROVED_ENDPOINT_URL"
+  ],
+  "timeout_seconds": 5.0,
+  "max_payload_bytes": 256000,
+  "real_collection_performed": false,
+  "raw_response_body_saved": false,
+  "publishing_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

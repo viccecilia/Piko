@@ -1,0 +1,178 @@
+{
+  "artifact_type": "permission_audit_policy",
+  "generated_at": "2026-07-08T01:56:29.846323+00:00",
+  "permissions": [
+    {
+      "connector_id": "approved_json_endpoint",
+      "domain_id": "gaming",
+      "allowed_operations": [
+        "dry_run",
+        "verify_contract"
+      ],
+      "denied_operations": [
+        "live_collect",
+        "crawl",
+        "scrape_html",
+        "publish",
+        "upload"
+      ],
+      "timeout_seconds": 5,
+      "max_results": 20,
+      "audit_event_shape": [
+        "event_id",
+        "connector_id",
+        "domain_id",
+        "operation",
+        "status",
+        "timestamp",
+        "blocked_reason"
+      ]
+    },
+    {
+      "connector_id": "mediawiki_reference",
+      "domain_id": "gaming",
+      "allowed_operations": [
+        "dry_run",
+        "verify_contract"
+      ],
+      "denied_operations": [
+        "live_collect",
+        "crawl",
+        "scrape_html",
+        "publish",
+        "upload"
+      ],
+      "timeout_seconds": 5,
+      "max_results": 20,
+      "audit_event_shape": [
+        "event_id",
+        "connector_id",
+        "domain_id",
+        "operation",
+        "status",
+        "timestamp",
+        "blocked_reason"
+      ]
+    },
+    {
+      "connector_id": "steam_market_summary",
+      "domain_id": "gaming",
+      "allowed_operations": [
+        "dry_run",
+        "verify_contract"
+      ],
+      "denied_operations": [
+        "live_collect",
+        "crawl",
+        "scrape_html",
+        "publish",
+        "upload"
+      ],
+      "timeout_seconds": 5,
+      "max_results": 20,
+      "audit_event_shape": [
+        "event_id",
+        "connector_id",
+        "domain_id",
+        "operation",
+        "status",
+        "timestamp",
+        "blocked_reason"
+      ]
+    },
+    {
+      "connector_id": "reddit_summary",
+      "domain_id": "gaming",
+      "allowed_operations": [
+        "dry_run",
+        "verify_contract"
+      ],
+      "denied_operations": [
+        "live_collect",
+        "crawl",
+        "scrape_html",
+        "publish",
+        "upload"
+      ],
+      "timeout_seconds": 5,
+      "max_results": 20,
+      "audit_event_shape": [
+        "event_id",
+        "connector_id",
+        "domain_id",
+        "operation",
+        "status",
+        "timestamp",
+        "blocked_reason"
+      ]
+    },
+    {
+      "connector_id": "serp_snippet",
+      "domain_id": "gaming",
+      "allowed_operations": [
+        "dry_run",
+        "verify_contract"
+      ],
+      "denied_operations": [
+        "live_collect",
+        "crawl",
+        "scrape_html",
+        "publish",
+        "upload"
+      ],
+      "timeout_seconds": 5,
+      "max_results": 20,
+      "audit_event_shape": [
+        "event_id",
+        "connector_id",
+        "domain_id",
+        "operation",
+        "status",
+        "timestamp",
+        "blocked_reason"
+      ]
+    },
+    {
+      "connector_id": "github_repo_summary",
+      "domain_id": "ai_tools",
+      "allowed_operations": [
+        "dry_run",
+        "verify_contract"
+      ],
+      "denied_operations": [
+        "live_collect",
+        "crawl",
+        "scrape_html",
+        "publish",
+        "upload"
+      ],
+      "timeout_seconds": 5,
+      "max_results": 20,
+      "audit_event_shape": [
+        "event_id",
+        "connector_id",
+        "domain_id",
+        "operation",
+        "status",
+        "timestamp",
+        "blocked_reason"
+      ]
+    }
+  ],
+  "audit_event_prohibited_fields": [
+    "access_token",
+    "api_key",
+    "authorization",
+    "cookie",
+    "credential",
+    "credentials",
+    "full_source",
+    "password",
+    "raw_response_body",
+    "raw_text",
+    "refresh_token",
+    "secret",
+    "token"
+  ],
+  "live_collect_default_allowed": false
+}

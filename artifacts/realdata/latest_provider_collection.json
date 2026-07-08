@@ -1,0 +1,68 @@
+{
+  "artifact_type": "realdata_provider_collection",
+  "generated_at": "2026-07-08T01:56:45.455686+00:00",
+  "coverage_status": "blocked_for_provider_endpoints",
+  "provider_statuses": [
+    {
+      "provider_id": "steam",
+      "endpoint_env_var": "PIKO_STEAM_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_status": "missing",
+      "blocked_reason": "missing_provider_endpoint",
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "endpoint_url_stored": false
+    },
+    {
+      "provider_id": "reddit",
+      "endpoint_env_var": "PIKO_REDDIT_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_status": "missing",
+      "blocked_reason": "missing_provider_endpoint",
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "endpoint_url_stored": false
+    },
+    {
+      "provider_id": "serp_snippet",
+      "endpoint_env_var": "PIKO_SERP_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_status": "missing",
+      "blocked_reason": "missing_provider_endpoint",
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "endpoint_url_stored": false
+    },
+    {
+      "provider_id": "jp_community",
+      "endpoint_env_var": "PIKO_JP_COMMUNITY_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_status": "missing",
+      "blocked_reason": "missing_provider_endpoint",
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "endpoint_url_stored": false
+    },
+    {
+      "provider_id": "kr_community",
+      "endpoint_env_var": "PIKO_KR_COMMUNITY_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_status": "missing",
+      "blocked_reason": "missing_provider_endpoint",
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "endpoint_url_stored": false
+    }
+  ],
+  "hot_games": [],
+  "player_questions": [],
+  "source_summary": [],
+  "provider_results": [],
+  "blocked_reason": "No approved provider endpoints or live opt-in are configured.",
+  "real_collection_performed": false,
+  "broad_internet_coverage": false,
+  "raw_response_body_saved": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "candidate_only": true
+}

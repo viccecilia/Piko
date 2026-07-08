@@ -1,0 +1,13 @@
+{
+  "artifact_type": "local_endpoint_fixture_safety",
+  "generated_at": "2026-07-08T01:56:44.303544+00:00",
+  "scope": "local_approved_endpoint",
+  "broad_internet_coverage": false,
+  "prohibited_field_paths": [],
+  "prohibited_fields_present": false,
+  "max_snippet_chars": 89,
+  "snippet_bounds_ok": true,
+  "source_trace_present": true,
+  "raw_response_body_saved": false,
+  "publishing_performed": false
+}

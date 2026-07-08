@@ -1,0 +1,25 @@
+{
+  "artifact_id": "v05_explicit_langgraph_install_approval",
+  "generated_at": "2026-07-08T01:56:48.366997+00:00",
+  "source_v04_backend_status": "available_for_pilot_smoke",
+  "install_approved": true,
+  "approved_package": "langgraph",
+  "approved_command": [
+    "C:\\Users\\pangv\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-m",
+    "pip",
+    "install",
+    "langgraph"
+  ],
+  "version_policy": "latest compatible package from configured pip index for local smoke only",
+  "production_activation_allowed": false,
+  "rollback_note": "Keep local_fixture as default backend; do not alter active runtime.",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

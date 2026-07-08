@@ -1,0 +1,60 @@
+{
+  "artifact_id": "latest_patterns",
+  "generated_at": "2026-07-08T01:56:45.230980+00:00",
+  "patterns": [
+    {
+      "pattern_id": "langgraph_state_machine",
+      "source_project": "LangGraph",
+      "summary": "state machine",
+      "why_it_matters": "Piko can study this as a pattern for workflow orchestration without copying source code.",
+      "piko_mapping_hint": "Useful pattern for explicit, inspectable workflow state.",
+      "risk": "Needs adapter boundary; do not let external runtime bypass Piko verification.",
+      "copied_source_code": false
+    },
+    {
+      "pattern_id": "langgraph_agent_runtime_boundary",
+      "source_project": "LangGraph",
+      "summary": "agent runtime boundary",
+      "why_it_matters": "Piko can study this as a pattern for workflow orchestration without copying source code.",
+      "piko_mapping_hint": "Useful pattern for explicit, inspectable workflow state.",
+      "risk": "Needs adapter boundary; do not let external runtime bypass Piko verification.",
+      "copied_source_code": false
+    },
+    {
+      "pattern_id": "llamaindex_retriever_abstraction",
+      "source_project": "LlamaIndex",
+      "summary": "retriever abstraction",
+      "why_it_matters": "Piko can study this as a pattern for RAG/evidence indexing without copying source code.",
+      "piko_mapping_hint": "Useful for source indexing and evidence-card traceability.",
+      "risk": "Must avoid moving long raw source text through agent prompts.",
+      "copied_source_code": false
+    },
+    {
+      "pattern_id": "llamaindex_document_metadata",
+      "source_project": "LlamaIndex",
+      "summary": "document metadata",
+      "why_it_matters": "Piko can study this as a pattern for RAG/evidence indexing without copying source code.",
+      "piko_mapping_hint": "Useful for source indexing and evidence-card traceability.",
+      "risk": "Must avoid moving long raw source text through agent prompts.",
+      "copied_source_code": false
+    },
+    {
+      "pattern_id": "openai_agents_sdk_tool_policy",
+      "source_project": "OpenAI Agents SDK",
+      "summary": "tool policy",
+      "why_it_matters": "Piko can study this as a pattern for agent framework without copying source code.",
+      "piko_mapping_hint": "Useful for future business agents behind Piko gates.",
+      "risk": "Must remain optional and disabled unless explicitly configured.",
+      "copied_source_code": false
+    },
+    {
+      "pattern_id": "openai_agents_sdk_agent_handoff",
+      "source_project": "OpenAI Agents SDK",
+      "summary": "agent handoff",
+      "why_it_matters": "Piko can study this as a pattern for agent framework without copying source code.",
+      "piko_mapping_hint": "Useful for future business agents behind Piko gates.",
+      "risk": "Must remain optional and disabled unless explicitly configured.",
+      "copied_source_code": false
+    }
+  ]
+}

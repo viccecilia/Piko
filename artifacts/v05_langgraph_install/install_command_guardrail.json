@@ -1,0 +1,36 @@
+{
+  "artifact_id": "install_command_guardrail",
+  "generated_at": "2026-07-08T01:56:48.373997+00:00",
+  "approved_command_probe": {
+    "command": [
+      "C:\\Users\\pangv\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "langgraph"
+    ],
+    "allowed": true,
+    "blocked_reason": null
+  },
+  "disallowed_command_probe": {
+    "command": [
+      "C:\\Users\\pangv\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "langchain"
+    ],
+    "allowed": false,
+    "blocked_reason": "command_not_in_explicit_v05_approval"
+  },
+  "secrets_or_env_dump_saved": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "real_source_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

@@ -1,0 +1,37 @@
+{
+  "artifact_type": "source_provider_strategy",
+  "generated_at": "2026-07-08T01:56:45.885466+00:00",
+  "recommended_strategy": "static_json_provider_package_first",
+  "providers": [
+    {
+      "provider": "GitHub Raw / Gist raw URL",
+      "recommended_for_first_try": true,
+      "requires_credentials_in_piko": false
+    },
+    {
+      "provider": "Cloudflare Pages static JSON",
+      "recommended_for_first_try": true,
+      "requires_credentials_in_piko": false
+    },
+    {
+      "provider": "Vercel / Netlify static JSON",
+      "recommended_for_first_try": true,
+      "requires_credentials_in_piko": false
+    },
+    {
+      "provider": "User-owned HTTPS API endpoint",
+      "recommended_for_first_try": false,
+      "requires_credentials_in_piko": false
+    }
+  ],
+  "invalid_external_providers": [
+    "localhost",
+    "127.0.0.1",
+    "file",
+    "fixture",
+    "raw_html_page"
+  ],
+  "deployment_performed": false,
+  "credentials_stored": false,
+  "publishing_performed": false
+}

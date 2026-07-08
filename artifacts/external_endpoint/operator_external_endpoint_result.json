@@ -1,0 +1,19 @@
+{
+  "artifact_type": "operator_external_endpoint_result",
+  "generated_at": "2026-07-08T01:56:31.585071+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "readiness_status": "blocked_for_external_endpoint",
+  "blocked_reason": "missing_external_endpoint_url",
+  "normalized_counts": {
+    "games": 0,
+    "questions": 0
+  },
+  "handoff_status": "blocked_for_external_endpoint",
+  "candidate_status": "blocked_for_external_endpoint",
+  "real_collection_performed": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "broad_internet_coverage": false,
+  "read_only_surface": true
+}

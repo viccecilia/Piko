@@ -1,0 +1,31 @@
+﻿{
+    "artifact_type":  "real_data_endpoint_contract_verification",
+    "round_id":  "REAL-1-R02",
+    "generated_at":  "2026-07-03T20:20:51.2887412+09:00",
+    "status":  "blocked_for_endpoint",
+    "endpoint_verification_status":  "skipped",
+    "endpoint_verification_mode":  "live",
+    "skipped_reason":  "Live endpoint verification requires PIKO_ENABLE_DISCOVERY_REAL_SOURCE=true and PIKO_LIVE_DISCOVERY_TEST=true.",
+    "readiness_artifact":  "artifacts/real_data_pilot/live_readiness.json",
+    "endpoint_verification_artifact":  "artifacts/endpoint_verification/latest_endpoint_verification.json",
+    "normalized_game_count":  0,
+    "normalized_question_count":  0,
+    "real_collection_performed":  false,
+    "publishing_performed":  false,
+    "candidate_only":  true,
+    "failed_contract_validation":  false,
+    "contract_validation_performed":  false,
+    "blocked_reason":  "Live endpoint contract verification was not attempted because required endpoint configuration is missing.",
+    "missing_requirements":  [
+                                 "PIKO_ENABLE_DISCOVERY_REAL_SOURCE=true",
+                                 "PIKO_LIVE_DISCOVERY_TEST=true",
+                                 "PIKO_APPROVED_ENDPOINT_URL"
+                             ],
+    "safety_flags":  {
+                         "raw_response_body_saved":  false,
+                         "crawler_used":  false,
+                         "html_scrape_allowed":  false,
+                         "full_source_retained":  false,
+                         "secrets_retained":  false
+                     }
+}

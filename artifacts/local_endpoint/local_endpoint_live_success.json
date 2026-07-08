@@ -1,0 +1,31 @@
+{
+  "artifact_type": "local_endpoint_live_success",
+  "generated_at": "2026-07-08T01:56:44.980809+00:00",
+  "scope": "local_approved_endpoint",
+  "mode": "real-source/local-approved-endpoint",
+  "status": "success",
+  "smoke": {
+    "artifact_type": "local_endpoint_smoke",
+    "generated_at": "2026-07-08T01:56:44.323443+00:00",
+    "scope": "local_approved_endpoint",
+    "endpoint_url_host": "127.0.0.1",
+    "endpoint_url_stored": false,
+    "status_code": 200,
+    "content_type": "application/json; charset=utf-8",
+    "contract_valid": true,
+    "game_count": 2,
+    "question_count": 4,
+    "raw_response_body_saved": false,
+    "real_collection_performed": false,
+    "publishing_performed": false
+  },
+  "connector_id": "approved_json_endpoint",
+  "real_collection_performed": true,
+  "normalized_game_count": 2,
+  "normalized_question_count": 4,
+  "ranking_count": 2,
+  "broad_internet_coverage": false,
+  "raw_response_body_saved": false,
+  "publishing_performed": false,
+  "candidate_only": true
+}

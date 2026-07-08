@@ -1,0 +1,66 @@
+{
+  "artifact_id": "latest_upgrade_proposals",
+  "generated_at": "2026-07-08T01:56:45.237976+00:00",
+  "proposals": [
+    {
+      "proposal_id": "proposal_langgraph_state_machine",
+      "target_area": "workflow/evidence architecture",
+      "expected_benefit": "Piko can study this as a pattern for workflow orchestration without copying source code.",
+      "implementation_shape": "Write an adapter proposal and tests first; no runtime change in this batch.",
+      "tests_needed": [
+        "schema validation",
+        "offline fixture test",
+        "verification guardrail test"
+      ],
+      "rollback_plan": "Delete proposal artifact; no production behavior changed.",
+      "handoff_target": "STORY",
+      "content_angle": "Useful pattern for explicit, inspectable workflow state.",
+      "auto_apply_allowed": false
+    },
+    {
+      "proposal_id": "proposal_langgraph_agent_runtime_boundary",
+      "target_area": "workflow/evidence architecture",
+      "expected_benefit": "Piko can study this as a pattern for workflow orchestration without copying source code.",
+      "implementation_shape": "Write an adapter proposal and tests first; no runtime change in this batch.",
+      "tests_needed": [
+        "schema validation",
+        "offline fixture test",
+        "verification guardrail test"
+      ],
+      "rollback_plan": "Delete proposal artifact; no production behavior changed.",
+      "handoff_target": "CAP",
+      "content_angle": "Useful pattern for explicit, inspectable workflow state.",
+      "auto_apply_allowed": false
+    },
+    {
+      "proposal_id": "proposal_llamaindex_retriever_abstraction",
+      "target_area": "workflow/evidence architecture",
+      "expected_benefit": "Piko can study this as a pattern for RAG/evidence indexing without copying source code.",
+      "implementation_shape": "Write an adapter proposal and tests first; no runtime change in this batch.",
+      "tests_needed": [
+        "schema validation",
+        "offline fixture test",
+        "verification guardrail test"
+      ],
+      "rollback_plan": "Delete proposal artifact; no production behavior changed.",
+      "handoff_target": "STORY",
+      "content_angle": "Useful for source indexing and evidence-card traceability.",
+      "auto_apply_allowed": false
+    },
+    {
+      "proposal_id": "proposal_llamaindex_document_metadata",
+      "target_area": "workflow/evidence architecture",
+      "expected_benefit": "Piko can study this as a pattern for RAG/evidence indexing without copying source code.",
+      "implementation_shape": "Write an adapter proposal and tests first; no runtime change in this batch.",
+      "tests_needed": [
+        "schema validation",
+        "offline fixture test",
+        "verification guardrail test"
+      ],
+      "rollback_plan": "Delete proposal artifact; no production behavior changed.",
+      "handoff_target": "STORY",
+      "content_angle": "Useful for source indexing and evidence-card traceability.",
+      "auto_apply_allowed": false
+    }
+  ]
+}

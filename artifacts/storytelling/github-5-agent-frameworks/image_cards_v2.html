@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub 5 Agent Frameworks Cards V2</title>
+  <style>
+    :root {
+      --bg: #090d12;
+      --panel: #121923;
+      --panel2: #17202b;
+      --line: #263241;
+      --text: #f4f7fb;
+      --muted: #a9b4c2;
+      --flow: #5aa9ff;
+      --evidence: #47d18c;
+      --role: #f0b84a;
+      --lab: #b48cff;
+      --app: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #05070a;
+      color: var(--text);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+    }
+    .wrap {
+      width: min(1240px, 100%);
+      margin: 0 auto;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      aspect-ratio: 9 / 16;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 2px solid rgba(244,247,251,.12);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(90,169,255,.24), transparent 24%),
+        radial-gradient(circle at 88% 92%, rgba(71,209,140,.16), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,.04), transparent 30%),
+        var(--panel);
+      padding: 28px;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.42);
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .24;
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
+    .card > * { position: relative; z-index: 1; }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font: 700 12px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    .hero {
+      font-size: 46px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0;
+      color: #d6dee8;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .visual {
+      border: 2px solid rgba(244,247,251,.12);
+      background: rgba(4,8,13,.48);
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 210px;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+    }
+    .repo, .node, .chip, .role {
+      border: 2px solid rgba(244,247,251,.12);
+      border-radius: 7px;
+      background: rgba(255,255,255,.055);
+      padding: 10px 12px;
+      font-size: 15px;
+      color: #eef4fb;
+    }
+    .repo { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .row { display: flex; flex-wrap: wrap; gap: 9px; }
+    .chip { font-weight: 800; }
+    .flow { color: var(--flow); border-color: rgba(90,169,255,.46); }
+    .evidence { color: var(--evidence); border-color: rgba(71,209,140,.46); }
+    .role-color { color: var(--role); border-color: rgba(240,184,74,.46); }
+    .lab { color: var(--lab); border-color: rgba(180,140,255,.46); }
+    .app { color: var(--app); border-color: rgba(255,107,107,.46); }
+    .diagram {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .arrow { color: var(--muted); text-align: center; font-weight: 900; }
+    .footer {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+      border-top: 2px solid rgba(244,247,251,.12);
+      padding-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="meta"><span>GitHub Agent Map</span><span>01/12</span></div>
+      <h2 class="hero">别再乱学 Agent 了</h2>
+      <div class="visual">
+        <div class="row"><span class="repo">LangGraph</span><span class="repo">CrewAI</span><span class="repo">AutoGen</span></div>
+        <div class="row"><span class="chip flow">流程</span><span class="chip evidence">证据</span><span class="chip role-color">分工</span><span class="chip lab">实验</span><span class="chip app">应用</span></div>
+      </div>
+      <div class="footer">GitHub 高星项目里，先看懂这 5 类。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Pain</span><span>02/12</span></div>
+      <h2>项目越收藏，越乱</h2>
+      <div class="visual">
+        <span class="repo">LangGraph?</span><span class="repo">CrewAI?</span><span class="repo">AutoGen?</span><span class="repo">LlamaIndex?</span><span class="repo">Dify?</span>
+      </div>
+      <div class="footer">问题不是项目少，是不知道它们各自负责什么。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Turn</span><span>03/12</span></div>
+      <h2>不是学 100 个项目</h2>
+      <div class="visual diagram">
+        <div class="node">GitHub 高星项目</div><div class="arrow">↓</div><div class="node">相关性筛选</div><div class="arrow">↓</div><div class="node">5 个系统位置</div>
+      </div>
+      <div class="footer">先把项目放进系统位置，再决定要不要深入。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Map</span><span>04/12</span></div>
+      <h2>Agent 的 5 个位置</h2>
+      <div class="visual">
+        <div class="row"><span class="chip flow">流程</span><span class="chip evidence">证据</span></div>
+        <div class="row"><span class="chip role-color">分工</span><span class="chip lab">实验</span><span class="chip app">应用</span></div>
+      </div>
+      <div class="footer">先看位置，再看项目名。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>LangGraph</span><span>05/12</span></div>
+      <h2><span class="flow">流程</span>和状态</h2>
+      <div class="visual diagram">
+        <div class="node flow">Task</div><div class="arrow">→</div><div class="node flow">Checkpoint</div><div class="arrow">→</div><div class="node flow">Gate / Retry</div>
+      </div>
+      <div class="footer">下一步谁做？状态放哪里？失败怎么重试？</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>LlamaIndex</span><span>06/12</span></div>
+      <h2><span class="evidence">资料</span>和证据</h2>
+      <div class="visual diagram">
+        <div class="node evidence">Source</div><div class="arrow">→</div><div class="node evidence">Evidence</div><div class="arrow">→</div><div class="node evidence">Traceable Answer</div>
+      </div>
+      <div class="footer">资料从哪里来？回答能不能追溯？</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>CrewAI</span><span>07/12</span></div>
+      <h2><span class="role-color">角色</span>和协作</h2>
+      <div class="visual">
+        <div class="row"><span class="role role-color">Source</span><span class="role role-color">Writer</span></div>
+        <div class="row"><span class="role role-color">Editor</span><span class="role role-color">Factcheck</span></div>
+      </div>
+      <div class="footer">把复杂工作拆成一组可验收的角色。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>AutoGen / AG2</span><span>08/12</span></div>
+      <h2><span class="lab">多 Agent</span>实验</h2>
+      <div class="visual diagram">
+        <div class="node lab">Agent A ↔ Agent B</div><div class="node lab">Tool Call</div><div class="node lab">Result Checkpoint</div>
+      </div>
+      <div class="footer">观察对话、协商、互相调用和收敛。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Dify / Agents SDK</span><span>09/12</span></div>
+      <h2><span class="app">应用</span>和工具入口</h2>
+      <div class="visual">
+        <div class="row"><span class="chip app">Tool</span><span class="chip app">Model</span><span class="chip app">File</span><span class="chip app">API</span></div>
+        <div class="node app">User App</div>
+      </div>
+      <div class="footer">把 Agent 从 demo 做成用户能用的入口。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Question</span><span>10/12</span></div>
+      <h2>别问哪个最强</h2>
+      <div class="visual">
+        <div class="node">Ranking anxiety ✕</div>
+        <div class="node">System position ✓</div>
+      </div>
+      <div class="footer">问它在系统里负责哪个位置。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Piko Route</span><span>11/12</span></div>
+      <h2>成熟框架 + Piko 规则</h2>
+      <div class="visual diagram">
+        <div class="node">Framework</div><div class="node">Evidence Chain</div><div class="node">Verify</div><div class="node">Human Gate</div>
+      </div>
+      <div class="footer">不训练模型，不从零造 runtime，最后由人类确认。</div>
+    </section>
+    <section class="card">
+      <div class="meta"><span>Close</span><span>12/12</span></div>
+      <h2 class="hero">先看系统位置</h2>
+      <div class="visual">
+        <div class="row"><span class="chip flow">流程</span><span class="chip evidence">证据</span><span class="chip role-color">分工</span><span class="chip lab">实验</span><span class="chip app">应用</span></div>
+      </div>
+      <div class="footer">真正能落地的 Agent，是一条能被验证的生产线。</div>
+    </section>
+  </main>
+</body>
+</html>
+

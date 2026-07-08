@@ -1,0 +1,21 @@
+{
+  "artifact_id": "backend_probe_summary",
+  "generated_at": "2026-07-08T01:56:47.792537+00:00",
+  "backend_status": "available",
+  "langgraph_available": true,
+  "install_performed": false,
+  "blocked_reason": "install_allowed=false",
+  "fallback_available": true,
+  "fallback_backend": "local_fixture",
+  "fallback_smoke_status": "completed_internal",
+  "next_action": "use_langgraph_backend_smoke",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

@@ -1,0 +1,23 @@
+{
+  "artifact_type": "operator_endpoint_result_surface",
+  "generated_at": "2026-07-08T01:56:44.995807+00:00",
+  "scope": "local_approved_endpoint",
+  "status": "success",
+  "real_collection_performed": true,
+  "broad_internet_coverage": false,
+  "normalized_counts": {
+    "games": 2,
+    "questions": 4
+  },
+  "top_candidate_count": 2,
+  "pain_bucket_names": [
+    "conflict_answer_topics",
+    "high_risk_blocked_topics",
+    "hot_answered_questions",
+    "hot_unanswered_watchlist_questions"
+  ],
+  "article_handoff_status": "ready_for_internal_evidence_pipeline",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "read_only_surface": true
+}

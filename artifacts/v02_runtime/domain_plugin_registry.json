@@ -1,0 +1,67 @@
+{
+  "artifact_id": "domain_plugin_registry_v1",
+  "generated_at": "2026-07-08T01:56:46.589276+00:00",
+  "candidate_only": true,
+  "active_domain": "gaming",
+  "default_domain": "gaming",
+  "domains": [
+    {
+      "domain_id": "gaming",
+      "status": "active",
+      "enabled_by_default": true,
+      "source_contracts": [
+        "game_source_record",
+        "player_question_signal"
+      ],
+      "topic_scoring": {
+        "strategy": "player_need_heat",
+        "bounded_fixture_default": true
+      },
+      "evidence_rules": {
+        "requires_source_ids": true,
+        "raw_source_body_allowed": false
+      },
+      "writer_profile": {
+        "voice": "clear_game_guide",
+        "llm_default": false
+      },
+      "verification_rules": {
+        "requires_traceability": true,
+        "publish_gate_required": true
+      },
+      "publish_policy": {
+        "publish_ready": false,
+        "publishing_performed": false
+      }
+    },
+    {
+      "domain_id": "ai_tools",
+      "status": "candidate",
+      "enabled_by_default": false,
+      "source_contracts": [
+        "tool_candidate_record",
+        "operator_question_signal"
+      ],
+      "topic_scoring": {
+        "strategy": "operator_value_and_safety",
+        "bounded_fixture_default": true
+      },
+      "evidence_rules": {
+        "requires_source_ids": true,
+        "raw_source_body_allowed": false
+      },
+      "writer_profile": {
+        "voice": "operator_note",
+        "llm_default": false
+      },
+      "verification_rules": {
+        "requires_traceability": true,
+        "requires_human_approval": true
+      },
+      "publish_policy": {
+        "publish_ready": false,
+        "publishing_performed": false
+      }
+    }
+  ]
+}

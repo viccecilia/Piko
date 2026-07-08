@@ -1,0 +1,56 @@
+{
+  "slug": "stardew-valley-save-file-location",
+  "piko_article": {
+    "title": "Stardew Valley Save File Location",
+    "strengths": [
+      "Starts with the answer.",
+      "Keeps risky actions behind backup warnings.",
+      "Links claims to source IDs.",
+      "Separates platform paths from troubleshooting steps."
+    ],
+    "limits": [
+      "This benchmark draft uses a controlled PCGamingWiki/MediaWiki source sample plus a small manual comparison set.",
+      "It should stay a draft until a future round verifies page-level evidence and platform-specific edge cases."
+    ]
+  },
+  "materials": [
+    {
+      "title": "PCGamingWiki - Stardew Valley",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "source_type": "reference_wiki",
+      "covers": "Structured save game data locations for Windows, macOS, and Linux.",
+      "notes": "Strong structured source, but the raw wiki format is not written as a player-first troubleshooting checklist."
+    },
+    {
+      "title": "Stardew Valley Wiki - Saves",
+      "url": "https://stardewvalleywiki.com/Saves",
+      "source_type": "community_official_wiki",
+      "covers": "Save transfer and troubleshooting guidance, including missing-save recovery context.",
+      "notes": "Useful for recovery context, but long and broad for a player who only needs the local save path first."
+    },
+    {
+      "title": "Steam Community discussion - save file location",
+      "url": "https://steamcommunity.com/app/413150/discussions/0/405694031551275585",
+      "source_type": "community_discussion",
+      "covers": "Short player answers pointing to %AppData%/StardewValley/Saves on Windows.",
+      "notes": "Direct and practical, but less complete and less structured than a source-backed guide."
+    }
+  ],
+  "comparison_dimensions": [
+    "direct_answer",
+    "low_risk_first_step",
+    "source_traceability",
+    "platform_scope",
+    "risk_warning",
+    "clarity_for_nontechnical_player",
+    "requires_clicking_out",
+    "piko_has_incremental_value"
+  ],
+  "takeaways": [
+    "Piko's draft is strongest as a short answer and risk-filtered checklist.",
+    "PCGamingWiki is strong on structured paths, but its raw page format is not always player-friendly.",
+    "Official/community wiki material can add context, but Piko should avoid copying tables or long prose.",
+    "Next round should verify save folder paths against at least one official/community-maintained source before publishing."
+  ],
+  "next_recommendation": "Keep as draft benchmark and add page-level source verification before any publishing eligibility step."
+}

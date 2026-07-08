@@ -1,0 +1,14 @@
+{
+  "artifact_type": "external_normalized_signals",
+  "generated_at": "2026-07-08T01:56:31.572071+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "signals": [],
+  "signal_count": 0,
+  "need_clusters": [],
+  "blocked_reason": "missing_external_endpoint_url",
+  "real_collection_performed": false,
+  "publishing_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

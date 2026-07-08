@@ -1,0 +1,25 @@
+{
+  "skill_exists": true,
+  "story_reference_exists": true,
+  "video_reference_exists": true,
+  "description_covers_scope": true,
+  "storytelling_template_version": "v1",
+  "template_id": "agent-skill-storytelling:v1",
+  "structure": [
+    "strong_hook",
+    "old_pain",
+    "new_capability",
+    "quick_judgment",
+    "mechanism_explanation",
+    "practical_steps",
+    "real_limits",
+    "best_fit_users",
+    "summary_action"
+  ],
+  "guardrails": [
+    "no platform publishing",
+    "no voice cloning",
+    "no unauthorized media",
+    "no unverified capability claims"
+  ]
+}

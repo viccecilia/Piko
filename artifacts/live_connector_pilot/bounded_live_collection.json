@@ -1,0 +1,19 @@
+{
+  "artifact_type": "bounded_live_collection_artifact",
+  "generated_at": "2026-07-08T01:56:44.434688+00:00",
+  "status": "success",
+  "connector_id": "approved_json_endpoint",
+  "real_collection_performed": true,
+  "normalized_counts": {
+    "games": 2,
+    "questions": 4
+  },
+  "payload_size_bounds": {
+    "max_payload_bytes": 256000,
+    "max_records": 20
+  },
+  "blocked_reason": null,
+  "raw_body_saved": false,
+  "publishing_performed": false,
+  "candidate_only": true
+}

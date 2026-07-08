@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "topic_id": "piko_storytelling_loop_v1",
+      "title": "Piko 的每日 skill/agent 内容生产闭环",
+      "covered_at": "2026-07-01T11:13:53.815667+00:00",
+      "source_refs": [
+        "C:\\Users\\pangv\\.codex\\skills\\agent-skill-storytelling\\SKILL.md"
+      ],
+      "template_version": "v1",
+      "reuse_allowed_reason": "May be reused only with a materially new angle or updated capability evidence.",
+      "needs_operator_choice": false
+    },
+    {
+      "topic_id": "story_agent_framework_adapter",
+      "title": "Piko 如何学习成熟 agent 框架但不盲目替换现有系统",
+      "covered_at": "2026-07-01T11:15:27.438977+00:00",
+      "source_refs": [
+        "artifacts\\oss_research\\agent_framework_adapter_proposal.json",
+        "artifacts\\oss_research\\latest_story_queue_candidates.json"
+      ],
+      "template_version": "v1",
+      "reuse_allowed_reason": "May be reused only with a materially new angle or updated capability evidence.",
+      "needs_operator_choice": false
+    }
+  ],
+  "latest": {
+    "topic_id": "story_agent_framework_adapter",
+    "title": "Piko 如何学习成熟 agent 框架但不盲目替换现有系统",
+    "covered_at": "2026-07-08T01:56:46.253275+00:00",
+    "source_refs": [
+      "artifacts\\oss_research\\agent_framework_adapter_proposal.json",
+      "artifacts\\oss_research\\latest_story_queue_candidates.json"
+    ],
+    "template_version": "v1",
+    "reuse_allowed_reason": "May be reused only with a materially new angle or updated capability evidence.",
+    "needs_operator_choice": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "artifact_type": "connector_registry_contract",
+  "generated_at": "2026-07-08T01:56:29.869323+00:00",
+  "domain_agnostic": true,
+  "required_fields": [
+    "connector_id",
+    "domain_ids",
+    "source_type",
+    "status",
+    "endpoint_type",
+    "auth_type",
+    "retained_fields",
+    "prohibited_fields",
+    "rate_limit_policy",
+    "timeout_policy",
+    "approval_required",
+    "dry_run_supported"
+  ],
+  "default_status": "candidate_disabled",
+  "default_mode": "dry_run",
+  "real_collection_requires": [
+    "explicit_approval",
+    "opt_in",
+    "endpoint_or_secret_reference",
+    "credential_policy",
+    "verification_gate"
+  ],
+  "auto_enable_connector": false,
+  "publish_ready": false,
+  "publishing_performed": false
+}

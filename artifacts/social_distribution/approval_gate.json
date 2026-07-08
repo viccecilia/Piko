@@ -1,0 +1,27 @@
+{
+  "artifact_type": "distribution_approval_gate",
+  "generated_at": "2026-07-08T01:56:45.747468+00:00",
+  "approval_required": true,
+  "approval_status": "missing",
+  "dispatch_allowed": false,
+  "blocked_reason": "human_approval_required",
+  "credential_policy": {
+    "store_credentials": false,
+    "inline_credentials_allowed": false,
+    "allowed_secret_handling": "external_secure_input_only_future_round"
+  },
+  "preflight_checklist": [
+    "content_quality_passed",
+    "source_trace_present",
+    "media_rights_checked",
+    "platform_fields_complete",
+    "human_approval_recorded",
+    "credentials_not_persisted"
+  ],
+  "sanitized_probe": {
+    "platform": "xiaohongshu",
+    "token": "[REDACTED]",
+    "approval": false
+  },
+  "publishing_performed": false
+}

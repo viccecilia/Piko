@@ -1,0 +1,22 @@
+{
+  "artifact_type": "live_connector_approval",
+  "generated_at": "2026-07-08T01:56:44.405835+00:00",
+  "connector_id": "approved_json_endpoint",
+  "live_probe_allowed": true,
+  "collection_allowed": "only_when_double_opt_in_and_endpoint_present",
+  "allowed_endpoint_type": "json",
+  "max_payload_bytes": 256000,
+  "timeout_seconds": 5,
+  "max_records": 20,
+  "production_activation_allowed": false,
+  "forbidden_connectors": [
+    "steam",
+    "reddit",
+    "jp_community",
+    "kr_community",
+    "serp",
+    "mediawiki"
+  ],
+  "raw_response_body_saved": false,
+  "publishing_performed": false
+}

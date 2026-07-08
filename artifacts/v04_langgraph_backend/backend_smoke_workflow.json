@@ -1,0 +1,35 @@
+{
+  "artifact_id": "langgraph_backend_smoke_workflow",
+  "generated_at": "2026-07-08T01:56:47.803539+00:00",
+  "requested_backend": "langgraph_backend",
+  "effective_backend": "langgraph_backend",
+  "backend_status": "available_for_pilot_smoke",
+  "blocked_reason": null,
+  "nodes": [
+    "source_discovery",
+    "evidence_rank",
+    "draft_handoff",
+    "verification_gate"
+  ],
+  "gate_decision": "pass_for_internal_handoff",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "trace_ref": "inline_bounded_trace",
+  "trace": {
+    "status": "completed_internal",
+    "trace_ids": [
+      "trace_01",
+      "trace_02",
+      "trace_03",
+      "trace_04"
+    ],
+    "retry_counts": {}
+  },
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

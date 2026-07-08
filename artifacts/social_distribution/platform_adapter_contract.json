@@ -1,0 +1,62 @@
+{
+  "artifact_type": "social_platform_adapter_contract",
+  "generated_at": "2026-07-08T01:56:45.746464+00:00",
+  "platforms": [
+    {
+      "platform_id": "xiaohongshu",
+      "content_fields": [
+        "title",
+        "body_or_caption",
+        "hashtags_or_summary"
+      ],
+      "media_fields": [
+        "operator_owned_media_refs",
+        "alt_text",
+        "license_notes"
+      ],
+      "credential_policy": "never_store_credentials_in_repo_or_artifacts",
+      "approval_required": true,
+      "rate_limit_policy": "manual_operator_controlled",
+      "dry_run_supported": true,
+      "live_dispatch_default": false
+    },
+    {
+      "platform_id": "wechat_official_account",
+      "content_fields": [
+        "title",
+        "body_or_caption",
+        "hashtags_or_summary"
+      ],
+      "media_fields": [
+        "operator_owned_media_refs",
+        "alt_text",
+        "license_notes"
+      ],
+      "credential_policy": "never_store_credentials_in_repo_or_artifacts",
+      "approval_required": true,
+      "rate_limit_policy": "manual_operator_controlled",
+      "dry_run_supported": true,
+      "live_dispatch_default": false
+    },
+    {
+      "platform_id": "douyin",
+      "content_fields": [
+        "title",
+        "body_or_caption",
+        "hashtags_or_summary"
+      ],
+      "media_fields": [
+        "operator_owned_media_refs",
+        "alt_text",
+        "license_notes"
+      ],
+      "credential_policy": "never_store_credentials_in_repo_or_artifacts",
+      "approval_required": true,
+      "rate_limit_policy": "manual_operator_controlled",
+      "dry_run_supported": true,
+      "live_dispatch_default": false
+    }
+  ],
+  "default_mode": "dry_run",
+  "publishing_performed": false
+}

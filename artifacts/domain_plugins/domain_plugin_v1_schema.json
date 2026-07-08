@@ -1,0 +1,27 @@
+{
+  "artifact_type": "domain_plugin_v1_schema",
+  "generated_at": "2026-07-08T01:56:31.216450+00:00",
+  "required_fields": [
+    "domain_id",
+    "version",
+    "source_types",
+    "signal_schema",
+    "normalizer",
+    "scoring_profile",
+    "content_templates",
+    "risk_policy",
+    "distribution_targets",
+    "eval_suite",
+    "activation_status"
+  ],
+  "activation_status_values": [
+    "candidate",
+    "evaluated",
+    "approved",
+    "active",
+    "deprecated"
+  ],
+  "default_activation_status": "candidate",
+  "approval_rule": "eval_suite must pass before approval; activation requires operator decision.",
+  "auto_activate_new_domain": false
+}

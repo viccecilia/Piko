@@ -1,0 +1,47 @@
+{
+  "artifact_id": "approval_packet_contract_v1",
+  "generated_at": "2026-07-08T01:56:46.581276+00:00",
+  "candidate_only": true,
+  "materialization_performed": false,
+  "required_fields": [
+    "approval_id",
+    "source_draft_package",
+    "selected_task_ids",
+    "operator_decision",
+    "approval_scope",
+    "expires_at",
+    "risk_acknowledgement",
+    "status"
+  ],
+  "allowed_statuses": [
+    "pending_operator_review",
+    "approved_for_materialization",
+    "rejected",
+    "expired"
+  ],
+  "materialization_rule": {
+    "requires_status": "approved_for_materialization",
+    "requires_unexpired": true,
+    "requires_risk_acknowledgement": true,
+    "requires_selected_task_ids": true,
+    "default_action": "do_not_materialize"
+  },
+  "sample_pending_packet": {
+    "approval_id": "approval_v02_pending_example",
+    "source_draft_package": "artifacts/growth_loop/latest_draft_queue_package.json",
+    "selected_task_ids": [],
+    "operator_decision": "not_reviewed",
+    "approval_scope": "none",
+    "expires_at": "2026-07-15T01:56:46.581276+00:00",
+    "risk_acknowledgement": false,
+    "status": "pending_operator_review"
+  },
+  "safety": {
+    "publish_ready": false,
+    "publishing_performed": false,
+    "auto_apply_performed": false,
+    "runtime_adoption_performed": false,
+    "network_performed": false,
+    "llm_performed": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "artifact_type": "declarative_eval_report",
+  "generated_at": "2026-07-08T01:56:45.651463+00:00",
+  "suite_id": "skill_quality_distribution_v0",
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "case_results": [
+    {
+      "case_id": "quality_save_location_001",
+      "status": "passed",
+      "forbidden_hits": [],
+      "expected_missing": [],
+      "blocked_reasons": []
+    },
+    {
+      "case_id": "social_dry_run_001",
+      "status": "passed",
+      "forbidden_hits": [],
+      "expected_missing": [],
+      "blocked_reasons": []
+    }
+  ],
+  "auto_activate_skill": false
+}

@@ -1,0 +1,434 @@
+{
+  "slug": "stardew-valley-save-file-location",
+  "game": "Stardew Valley",
+  "player_question": "Stardew Valley save file location and what to check first if saves do not appear",
+  "intent": "Help players quickly find Stardew Valley save folders and avoid risky save-file troubleshooting.",
+  "status": "draft_benchmark_only",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "llm_used": false,
+  "llm_fallback_used": true,
+  "llm_error": "OpenAI request failed: HTTP 401",
+  "agent_path": [
+    "source_agent",
+    "evidence_agent",
+    "ranking_agent",
+    "writer_agent",
+    "editor_agent",
+    "factcheck_agent"
+  ],
+  "source_trace_present": true,
+  "evidence_trace_present": true,
+  "quick_answer": "Check the platform-specific Saves folder first, then back it up before editing or moving any files.",
+  "platform_locations": [
+    {
+      "path": "%AppData%\\StardewValley\\Saves\\",
+      "platform": "windows"
+    },
+    {
+      "path": "~/.config/StardewValley/Saves/",
+      "platform": "mac"
+    },
+    {
+      "path": "$XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/",
+      "platform": "linux"
+    }
+  ],
+  "ranked_steps": [
+    {
+      "rank": 1,
+      "solution": "Check the platform-specific save folder first.",
+      "confidence": 78,
+      "risk_level": "low",
+      "source_ids": [
+        "pcgamingwiki_31535"
+      ],
+      "evidence_card_ids": [
+        "ev_pcgamingwiki_31535_1_save_windows",
+        "ev_pcgamingwiki_31535_1_save_mac",
+        "ev_pcgamingwiki_31535_1_save_linux"
+      ]
+    },
+    {
+      "rank": 2,
+      "solution": "Back up the whole Saves folder before moving, deleting, or editing files.",
+      "confidence": 70,
+      "risk_level": "low",
+      "source_ids": [
+        "pcgamingwiki_31535"
+      ],
+      "evidence_card_ids": [
+        "ev_pcgamingwiki_31535_1_save_windows",
+        "ev_pcgamingwiki_31535_1_save_mac",
+        "ev_pcgamingwiki_31535_1_save_linux"
+      ]
+    }
+  ],
+  "writer_output": {
+    "game": "Stardew Valley",
+    "player_question": "save file location and what to check first if saves do not appear",
+    "draft_format": "markdown",
+    "draft_excerpt": "# Stardew Valley Save File Location\n\nIf your Stardew Valley save is missing, do not reinstall or edit files first. Check the save folder for your platform, then make a backup before changing anything.\n\n## Quick Answer\nCheck the platform-specific Saves folder first, then back it up before editing or moving any files.\n\n## Save File Locations\n- **windows**: `%AppData%\\StardewValley\\Saves\\`. Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.\n- **mac**: `~/.config/StardewValley/Saves/`. Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.\n- **linux**: `$XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/`. Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.\n\n## What To Check First\n1. Check the platform-specific save folder first.\nSources: pcgamingwiki_31535\n2. Back up the whole Saves folder before moving, deleting, or editing files.\nSources: pcgamingwiki_31535\n\n## Do Not Try First\n- Do not download unknown recovery tools, DLL files, or save patches.\n- Do not delete the original save folder without a backup.\n- Do not overwrite cloud and local saves until you know which one is newer.\n\n## Sources\n- Stardew Valley (pcgamingwiki): https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until a future verification round checks source freshness and platform edge cases.\n",
+    "markdown": "# Stardew Valley Save File Location\n\nIf your Stardew Valley save is missing, do not reinstall or edit files first. Check the save folder for your platform, then make a backup before changing anything.\n\n## Quick Answer\nCheck the platform-specific Saves folder first, then back it up before editing or moving any files.\n\n## Save File Locations\n- **windows**: `%AppData%\\StardewValley\\Saves\\`. Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.\n- **mac**: `~/.config/StardewValley/Saves/`. Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.\n- **linux**: `$XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/`. Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.\n\n## What To Check First\n1. Check the platform-specific save folder first.\nSources: pcgamingwiki_31535\n2. Back up the whole Saves folder before moving, deleting, or editing files.\nSources: pcgamingwiki_31535\n\n## Do Not Try First\n- Do not download unknown recovery tools, DLL files, or save patches.\n- Do not delete the original save folder without a backup.\n- Do not overwrite cloud and local saves until you know which one is newer.\n\n## Sources\n- Stardew Valley (pcgamingwiki): https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until a future verification round checks source freshness and platform edge cases.\n",
+    "sections": [
+      "quick_answer",
+      "save_file_locations",
+      "what_to_check_first",
+      "risk_notes",
+      "sources",
+      "confidence"
+    ],
+    "source_ids": [
+      "pcgamingwiki_31535"
+    ],
+    "evidence_card_ids": [
+      "ev_pcgamingwiki_31535_1_candidate",
+      "ev_pcgamingwiki_31535_1_save_windows",
+      "ev_pcgamingwiki_31535_1_save_mac",
+      "ev_pcgamingwiki_31535_1_save_linux"
+    ],
+    "claim_trace": [
+      {
+        "claim": "Stardew Valley is a pcgamingwiki source candidate for the player question.",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_candidate",
+        "confidence": 35
+      },
+      {
+        "claim": "Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_save_windows",
+        "confidence": 78
+      },
+      {
+        "claim": "Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_save_mac",
+        "confidence": 78
+      },
+      {
+        "claim": "Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_save_linux",
+        "confidence": 78
+      }
+    ],
+    "ranked_steps": [
+      {
+        "rank": 1,
+        "solution": "Check the platform-specific save folder first.",
+        "confidence": 78,
+        "risk_level": "low",
+        "source_ids": [
+          "pcgamingwiki_31535"
+        ],
+        "evidence_card_ids": [
+          "ev_pcgamingwiki_31535_1_save_windows",
+          "ev_pcgamingwiki_31535_1_save_mac",
+          "ev_pcgamingwiki_31535_1_save_linux"
+        ]
+      },
+      {
+        "rank": 2,
+        "solution": "Back up the whole Saves folder before moving, deleting, or editing files.",
+        "confidence": 70,
+        "risk_level": "low",
+        "source_ids": [
+          "pcgamingwiki_31535"
+        ],
+        "evidence_card_ids": [
+          "ev_pcgamingwiki_31535_1_save_windows",
+          "ev_pcgamingwiki_31535_1_save_mac",
+          "ev_pcgamingwiki_31535_1_save_linux"
+        ]
+      }
+    ],
+    "platform_locations": [
+      {
+        "platform": "windows",
+        "path": "%AppData%\\StardewValley\\Saves\\",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_save_windows"
+      },
+      {
+        "platform": "mac",
+        "path": "~/.config/StardewValley/Saves/",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_save_mac"
+      },
+      {
+        "platform": "linux",
+        "path": "$XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/",
+        "source_id": "pcgamingwiki_31535",
+        "evidence_card_id": "ev_pcgamingwiki_31535_1_save_linux"
+      }
+    ],
+    "publish_ready": false,
+    "used_raw_sources": false,
+    "publishing_performed": false,
+    "llm_used": false,
+    "llm_fallback_used": true,
+    "llm_error": "OpenAI request failed: HTTP 401",
+    "used_source_ids": [
+      "pcgamingwiki_31535"
+    ]
+  },
+  "editor_output": {
+    "style_pass": true,
+    "edited_text": "# Stardew Valley Save File Location\n\nIf your Stardew Valley save is missing, do not reinstall or edit files first. Check the save folder for your platform, then make a backup before changing anything.\n\n## Quick Answer\nCheck the platform-specific Saves folder first, then back it up before editing or moving any files.\n\n## Save File Locations\n- **windows**: `%AppData%\\StardewValley\\Saves\\`. Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.\n- **mac**: `~/.config/StardewValley/Saves/`. Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.\n- **linux**: `$XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/`. Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.\n\n## What To Check First\n1. Check the platform-specific save folder first.\nSources: pcgamingwiki_31535\n2. Back up the whole Saves folder before moving, deleting, or editing files.\nSources: pcgamingwiki_31535\n\n## Do Not Try First\n- Do not download unknown recovery tools, DLL files, or save patches.\n- Do not delete the original save folder without a backup.\n- Do not overwrite cloud and local saves until you know which one is newer.\n\n## Sources\n- Stardew Valley (pcgamingwiki): https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location\n\n## Confidence\nDraft benchmark only. Source trace is present, but this page should remain unpublished until a future verification round checks source freshness and platform edge cases.\n\n\n## Risk Notes\nKeep risky changes out of the first steps.",
+    "removed_patterns": [],
+    "risk_notes_visible": true,
+    "editor_note": "Mock draft starts with the answer and preserves risk warnings."
+  },
+  "factcheck_output": {
+    "checked_claims": 3,
+    "missing_source_ids": [],
+    "missing_evidence_card_ids": [],
+    "unsupported_claims": [],
+    "platform_mismatches": [],
+    "factcheck_pass": true,
+    "trace": {
+      "supported_claims": [
+        {
+          "claim": "Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.",
+          "evidence_card_id": "ev_pcgamingwiki_31535_1_save_windows",
+          "source_id": "pcgamingwiki_31535",
+          "supported": true
+        },
+        {
+          "claim": "Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.",
+          "evidence_card_id": "ev_pcgamingwiki_31535_1_save_mac",
+          "source_id": "pcgamingwiki_31535",
+          "supported": true
+        },
+        {
+          "claim": "Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.",
+          "evidence_card_id": "ev_pcgamingwiki_31535_1_save_linux",
+          "source_id": "pcgamingwiki_31535",
+          "supported": true
+        }
+      ],
+      "unsupported_claims": [],
+      "passed": true
+    }
+  },
+  "verification_report": {
+    "status": "pass",
+    "checks": [
+      {
+        "name": "source_trace_present",
+        "passed": true
+      },
+      {
+        "name": "evidence_trace_present",
+        "passed": true
+      },
+      {
+        "name": "factcheck_pass",
+        "passed": true
+      },
+      {
+        "name": "no_publishing_side_effect",
+        "passed": true
+      }
+    ],
+    "summary": "Benchmark artifact verification mirrors source, evidence, factcheck, and publishing safety checks."
+  },
+  "agent_trace": [
+    {
+      "agent": "source_agent",
+      "source_ids": [
+        "pcgamingwiki_31535"
+      ],
+      "output_keys": [
+        "connector",
+        "fixture_selection",
+        "provided_source_records_used",
+        "query",
+        "real_collection_performed",
+        "sources"
+      ]
+    },
+    {
+      "agent": "evidence_agent",
+      "source_ids": [
+        "pcgamingwiki_31535"
+      ],
+      "output_keys": [
+        "claim_candidates",
+        "evidence_cards",
+        "evidence_status",
+        "real_source_records_used"
+      ]
+    },
+    {
+      "agent": "ranking_agent",
+      "source_ids": [
+        "pcgamingwiki_31535"
+      ],
+      "output_keys": [
+        "evidence_status",
+        "ranked_solutions",
+        "uncertainty"
+      ]
+    },
+    {
+      "agent": "writer_agent",
+      "source_ids": [
+        "pcgamingwiki_31535"
+      ],
+      "output_keys": [
+        "claim_trace",
+        "draft_excerpt",
+        "draft_format",
+        "evidence_card_ids",
+        "game",
+        "llm_error",
+        "llm_fallback_used",
+        "llm_used",
+        "markdown",
+        "platform_locations",
+        "player_question",
+        "publish_ready",
+        "publishing_performed",
+        "ranked_steps",
+        "sections",
+        "source_ids",
+        "used_raw_sources"
+      ]
+    },
+    {
+      "agent": "editor_agent",
+      "source_ids": [],
+      "output_keys": [
+        "edited_text",
+        "editor_note",
+        "removed_patterns",
+        "risk_notes_visible",
+        "style_pass"
+      ]
+    },
+    {
+      "agent": "factcheck_agent",
+      "source_ids": [],
+      "output_keys": [
+        "checked_claims",
+        "factcheck_pass",
+        "missing_evidence_card_ids",
+        "missing_source_ids",
+        "platform_mismatches",
+        "trace",
+        "unsupported_claims"
+      ]
+    }
+  ],
+  "risk_notes": [
+    "Back up the entire save folder before moving, deleting, editing, or replacing files.",
+    "Do not download unknown save editors, DLL files, or patches just to recover a save.",
+    "Cloud sync can overwrite local changes; copy saves elsewhere before testing sync fixes."
+  ],
+  "uncertainty_notes": [
+    "This benchmark draft uses a controlled PCGamingWiki/MediaWiki source sample plus a small manual comparison set.",
+    "It should stay a draft until a future round verifies page-level evidence and platform-specific edge cases."
+  ],
+  "sources": [
+    {
+      "source_id": "pcgamingwiki_31535",
+      "source_type": "pcgamingwiki",
+      "title": "Stardew Valley",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "retrieved_at": "2026-06-21T07:14:13.570741Z",
+      "trust_tier": "reference"
+    }
+  ],
+  "evidence_cards": [
+    {
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_candidate",
+      "source_id": "pcgamingwiki_31535",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "retrieved_at": "2026-06-21T07:14:13.570741Z",
+      "claim_type": "source_candidate",
+      "claim": "Stardew Valley is a pcgamingwiki source candidate for the player question.",
+      "symptom": null,
+      "solution": null,
+      "platform": null,
+      "confidence": 35,
+      "quote_snippet": "===Save game data location===\n{{Game data|\n{{Game data/saves|Windows|{{p|appdata}}\\StardewValley\\Saves\\}}\n{{Game data/saves|OS X|{{p|osxhome}}/.config/StardewValley/Saves/}}\n{{Game data/saves|Linux|{{p|xdgconfighome}}/StardewValley/Saves/}}\n}}",
+      "risk_note": "Source candidate only; needs page-level extraction before recommending an answer.",
+      "uncertainty": "needs_more_evidence"
+    },
+    {
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_save_windows",
+      "source_id": "pcgamingwiki_31535",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "retrieved_at": "2026-06-21T07:14:13.570741Z",
+      "claim_type": "save_location",
+      "claim": "Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.",
+      "symptom": "Player needs to find or troubleshoot save files.",
+      "solution": "Check %AppData%\\StardewValley\\Saves\\",
+      "platform": "windows",
+      "confidence": 78,
+      "quote_snippet": "{{p|appdata}}\\StardewValley\\Saves\\",
+      "risk_note": "Low risk for locating files; back up saves before moving, deleting, or editing anything."
+    },
+    {
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_save_mac",
+      "source_id": "pcgamingwiki_31535",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "retrieved_at": "2026-06-21T07:14:13.570741Z",
+      "claim_type": "save_location",
+      "claim": "Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.",
+      "symptom": "Player needs to find or troubleshoot save files.",
+      "solution": "Check ~/.config/StardewValley/Saves/",
+      "platform": "mac",
+      "confidence": 78,
+      "quote_snippet": "{{p|osxhome}}/.config/StardewValley/Saves/",
+      "risk_note": "Low risk for locating files; back up saves before moving, deleting, or editing anything."
+    },
+    {
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_save_linux",
+      "source_id": "pcgamingwiki_31535",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley#Save_game_data_location",
+      "retrieved_at": "2026-06-21T07:14:13.570741Z",
+      "claim_type": "save_location",
+      "claim": "Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.",
+      "symptom": "Player needs to find or troubleshoot save files.",
+      "solution": "Check $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/",
+      "platform": "linux",
+      "confidence": 78,
+      "quote_snippet": "{{p|xdgconfighome}}/StardewValley/Saves/",
+      "risk_note": "Low risk for locating files; back up saves before moving, deleting, or editing anything."
+    }
+  ],
+  "evidence_to_claim_trace": [
+    {
+      "claim": "Stardew Valley is a pcgamingwiki source candidate for the player question.",
+      "source_id": "pcgamingwiki_31535",
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_candidate",
+      "confidence": 35
+    },
+    {
+      "claim": "Stardew Valley save files are stored at %AppData%\\StardewValley\\Saves\\ on windows.",
+      "source_id": "pcgamingwiki_31535",
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_save_windows",
+      "confidence": 78
+    },
+    {
+      "claim": "Stardew Valley save files are stored at ~/.config/StardewValley/Saves/ on mac.",
+      "source_id": "pcgamingwiki_31535",
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_save_mac",
+      "confidence": 78
+    },
+    {
+      "claim": "Stardew Valley save files are stored at $XDG_CONFIG_HOME or ~/.config/StardewValley/Saves/ on linux.",
+      "source_id": "pcgamingwiki_31535",
+      "evidence_card_id": "ev_pcgamingwiki_31535_1_save_linux",
+      "confidence": 78
+    }
+  ]
+}

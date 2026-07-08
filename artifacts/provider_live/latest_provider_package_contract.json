@@ -1,0 +1,107 @@
+{
+  "artifact_type": "provider_live_package_contract",
+  "generated_at": "2026-07-08T01:57:38.852248+00:00",
+  "providers": [
+    {
+      "provider_id": "serp_snippet",
+      "endpoint_env_var": "PIKO_SERP_DISCOVERY_URL",
+      "package_path": "artifacts\\provider_live\\serp-approved.json",
+      "root_fields": [
+        "games",
+        "questions",
+        "source",
+        "generated_at",
+        "metadata"
+      ],
+      "aliases_accepted_by_realdata": {
+        "games": "hot_games",
+        "questions": "player_questions"
+      },
+      "candidate_only": true,
+      "raw_text_included": false,
+      "broad_internet_coverage": false,
+      "enabled_by_default": false
+    },
+    {
+      "provider_id": "reddit",
+      "endpoint_env_var": "PIKO_REDDIT_DISCOVERY_URL",
+      "package_path": "artifacts\\provider_live\\reddit-approved.json",
+      "root_fields": [
+        "games",
+        "questions",
+        "source",
+        "generated_at",
+        "metadata"
+      ],
+      "aliases_accepted_by_realdata": {
+        "games": "hot_games",
+        "questions": "player_questions"
+      },
+      "candidate_only": true,
+      "raw_text_included": false,
+      "broad_internet_coverage": false,
+      "enabled_by_default": false
+    },
+    {
+      "provider_id": "steam",
+      "endpoint_env_var": "PIKO_STEAM_DISCOVERY_URL",
+      "package_path": "artifacts\\provider_live\\steam-approved.json",
+      "root_fields": [
+        "games",
+        "questions",
+        "source",
+        "generated_at",
+        "metadata"
+      ],
+      "aliases_accepted_by_realdata": {
+        "games": "hot_games",
+        "questions": "player_questions"
+      },
+      "candidate_only": true,
+      "raw_text_included": false,
+      "broad_internet_coverage": false,
+      "enabled_by_default": false
+    }
+  ],
+  "retention_policy": {
+    "max_snippet_chars": 280,
+    "prohibited_fields": [
+      "access_token",
+      "api_key",
+      "authorization",
+      "body",
+      "content",
+      "credential",
+      "credentials",
+      "full comments",
+      "full copied tables",
+      "full pages",
+      "full posts",
+      "full_comments",
+      "full_page",
+      "full_post",
+      "html",
+      "images",
+      "maps",
+      "page_html",
+      "password",
+      "raw page text",
+      "raw source body",
+      "raw_body",
+      "raw_page_text",
+      "raw_response_body",
+      "raw_text",
+      "refresh_token",
+      "secret",
+      "selftext",
+      "table_html",
+      "tables"
+    ],
+    "raw_full_source_allowed": false,
+    "credentials_allowed": false
+  },
+  "default_network_disabled": true,
+  "crawler_allowed": false,
+  "html_scrape_allowed": false,
+  "publishing_performed": false
+}

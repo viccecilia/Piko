@@ -1,0 +1,32 @@
+﻿{
+    "artifact_type":  "real_data_live_readiness",
+    "round_id":  "REAL-1-R01",
+    "generated_at":  "2026-07-03T20:20:51.2887412+09:00",
+    "status":  "blocked_for_endpoint",
+    "opt_in_enabled":  false,
+    "live_test_enabled":  false,
+    "endpoint_present":  false,
+    "approved_endpoint_url_present":  false,
+    "approved_endpoint_url_stored":  false,
+    "can_run_live":  false,
+    "blocked_reason":  "Missing required approved live data configuration.",
+    "missing_requirements":  [
+                                 "PIKO_ENABLE_DISCOVERY_REAL_SOURCE=true",
+                                 "PIKO_LIVE_DISCOVERY_TEST=true",
+                                 "PIKO_APPROVED_ENDPOINT_URL"
+                             ],
+    "real_collection_performed":  false,
+    "publishing_performed":  false,
+    "candidate_only":  true,
+    "safety_flags":  {
+                         "crawler_used":  false,
+                         "html_scrape_allowed":  false,
+                         "raw_response_body_saved":  false,
+                         "full_posts_saved":  false,
+                         "full_pages_saved":  false,
+                         "full_comments_saved":  false,
+                         "secrets_retained":  false,
+                         "llm_called":  false,
+                         "deploy_performed":  false
+                     }
+}

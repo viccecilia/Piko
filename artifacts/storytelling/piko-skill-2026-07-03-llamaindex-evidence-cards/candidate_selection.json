@@ -1,0 +1,22 @@
+{
+  "status": "selected",
+  "selected_at": "2026-07-03T10:21:52.0563693+09:00",
+  "template_id": "agent-skill-storytelling:v1",
+  "candidate": {
+    "candidate_id": "story_llamaindex_evidence_cards",
+    "title": "Piko 可以学 LlamaIndex 的，不是 RAG，而是证据索引",
+    "capability_type": "open_source_learning",
+    "source_project": "LlamaIndex",
+    "patterns": [
+      "llamaindex_retriever_abstraction",
+      "llamaindex_document_metadata"
+    ],
+    "source_refs": [
+      "artifacts/oss_research/latest_patterns.json",
+      "artifacts/oss_research/latest_ranked_projects.json"
+    ]
+  },
+  "reason": "Yesterday's artifacts already covered agent runtime adapter boundary; this run uses a distinct evidence-card traceability angle from the same OSS research batch.",
+  "novelty_status": "new_angle_not_in_coverage_history",
+  "publish_ready": false
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_type": "external_endpoint_approval_contract",
+  "generated_at": "2026-07-08T01:56:31.567072+00:00",
+  "endpoint_required": true,
+  "endpoint_type": "json",
+  "operator_approved_required": true,
+  "allowed_scope": "external_approved_endpoint",
+  "broad_internet_coverage": false,
+  "rejected_endpoint_types": [
+    "html",
+    "rss",
+    "raw_body",
+    "crawler",
+    "file",
+    "fixture",
+    "localhost"
+  ],
+  "max_payload_bytes": 256000,
+  "timeout_seconds": 5.0,
+  "publish_ready": false,
+  "publishing_performed": false
+}

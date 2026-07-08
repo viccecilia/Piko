@@ -1,0 +1,53 @@
+{
+  "artifact_type": "domain_agnostic_workflow_contract",
+  "generated_at": "2026-07-08T01:56:31.224448+00:00",
+  "generic_stages": [
+    "collect_signals",
+    "cluster_needs",
+    "rank_opportunities",
+    "build_evidence",
+    "create_content_package",
+    "verify_gate"
+  ],
+  "domain_specific_stage_names_allowed_in_core": false,
+  "traces": {
+    "gaming": {
+      "domain_id": "gaming",
+      "stages": [
+        "collect_signals",
+        "cluster_needs",
+        "rank_opportunities",
+        "build_evidence",
+        "create_content_package",
+        "verify_gate"
+      ],
+      "source_signal_count": 1,
+      "need_cluster_count": 1,
+      "verify_gate": {
+        "status": "candidate_pass",
+        "publish_ready": false
+      },
+      "workflow_trace_present": true
+    },
+    "ai_tools": {
+      "domain_id": "ai_tools",
+      "stages": [
+        "collect_signals",
+        "cluster_needs",
+        "rank_opportunities",
+        "build_evidence",
+        "create_content_package",
+        "verify_gate"
+      ],
+      "source_signal_count": 3,
+      "need_cluster_count": 2,
+      "verify_gate": {
+        "status": "candidate_pass",
+        "publish_ready": false
+      },
+      "workflow_trace_present": true
+    }
+  },
+  "publish_ready": false,
+  "publishing_performed": false
+}

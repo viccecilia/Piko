@@ -1,0 +1,68 @@
+{
+  "artifact_type": "skill_lifecycle_and_drill_eval",
+  "generated_at": "2026-07-08T01:56:45.650466+00:00",
+  "lifecycle": [
+    {
+      "status": "candidate",
+      "entry": "manifest_exists",
+      "can_route": true,
+      "can_execute": false
+    },
+    {
+      "status": "evaluated",
+      "entry": "drill_eval_report_exists",
+      "can_route": true,
+      "can_execute": false
+    },
+    {
+      "status": "approved",
+      "entry": "human_approval_recorded",
+      "can_route": true,
+      "can_execute": "dry_run_only"
+    },
+    {
+      "status": "active",
+      "entry": "verify_passed_and_operator_enabled",
+      "can_route": true,
+      "can_execute": true
+    },
+    {
+      "status": "deprecated",
+      "entry": "replacement_or_safety_reason",
+      "can_route": false,
+      "can_execute": false
+    }
+  ],
+  "drill_eval_contract": {
+    "case_id": "content_quality_drill_001",
+    "sample_input": {
+      "game_name": "Example Game",
+      "player_question": "Where is the save file location?",
+      "evidence_card_ids": [
+        "ev_save_location_001"
+      ]
+    },
+    "expected_output": [
+      "direct_hook",
+      "source_trace",
+      "risk_note",
+      "platform_fit"
+    ],
+    "forbidden_behavior": [
+      "claim_publish_ready",
+      "invent_sources",
+      "call_llm_by_default"
+    ],
+    "pass_criteria": [
+      "publish_ready_false",
+      "evidence_trace_present",
+      "clear_next_action"
+    ]
+  },
+  "sample_skill": {
+    "skill_id": "content_quality_assistant",
+    "activation_status": "candidate",
+    "eval_status": "not_started",
+    "active_allowed": false
+  }
+}

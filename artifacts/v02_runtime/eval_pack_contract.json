@@ -1,0 +1,48 @@
+{
+  "artifact_id": "eval_pack_contract_v1",
+  "generated_at": "2026-07-08T01:56:46.594276+00:00",
+  "checks": [
+    {
+      "check_id": "claim_source_trace",
+      "requires_evidence_source_ids": true,
+      "blocks_publish_on_fail": true,
+      "external_service_required": false
+    },
+    {
+      "check_id": "source_freshness",
+      "requires_evidence_source_ids": false,
+      "blocks_publish_on_fail": true,
+      "external_service_required": false
+    },
+    {
+      "check_id": "risk_wording",
+      "requires_evidence_source_ids": false,
+      "blocks_publish_on_fail": true,
+      "external_service_required": false
+    },
+    {
+      "check_id": "unsupported_claims",
+      "requires_evidence_source_ids": true,
+      "blocks_publish_on_fail": true,
+      "external_service_required": false
+    },
+    {
+      "check_id": "publish_safety",
+      "requires_evidence_source_ids": false,
+      "blocks_publish_on_fail": true,
+      "external_service_required": false
+    },
+    {
+      "check_id": "adapter_boundary",
+      "requires_evidence_source_ids": false,
+      "blocks_publish_on_fail": true,
+      "external_service_required": false
+    }
+  ],
+  "example_eval_pack": {
+    "pack_id": "piko_source_backed_guide_eval",
+    "min_required_checks": 5,
+    "publish_ready": false
+  },
+  "verification_bypass_allowed": false
+}

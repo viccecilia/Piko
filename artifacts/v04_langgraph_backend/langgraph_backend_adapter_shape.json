@@ -1,0 +1,292 @@
+{
+  "adapter_id": "langgraph_backend_adapter_shape",
+  "requested_backend": "langgraph_backend",
+  "effective_backend": "langgraph_backend",
+  "status": "available_for_pilot_smoke",
+  "blocked_reason": null,
+  "contract_compatible": true,
+  "graph_build_performed": true,
+  "graph_run_performed": true,
+  "pilot_trace": {
+    "artifact_id": "local_graph_fixture_run",
+    "generated_at": "2026-07-08T01:56:47.801542+00:00",
+    "graph_id": "piko_discovery_to_handoff_graph_fixture",
+    "status": "completed_internal",
+    "node_order": [
+      "source_discovery",
+      "evidence_rank",
+      "draft_handoff",
+      "verification_gate"
+    ],
+    "retry_counts": {},
+    "state": {
+      "game_name": "Example Game",
+      "player_question": "crash on startup",
+      "candidate": {
+        "topic_id": "fixture_topic_crash_startup",
+        "decision": "publish_candidate",
+        "intent": "fix_crash_on_startup",
+        "source_ids": [
+          "fixture_official_launch_001",
+          "fixture_wiki_launch_001"
+        ],
+        "risk": "low"
+      },
+      "evidence_cards": [
+        {
+          "evidence_card_id": "ev_fixture_official_launch_001_verify",
+          "source_id": "fixture_official_launch_001",
+          "claim": "Verify game files",
+          "confidence": 82
+        },
+        {
+          "evidence_card_id": "ev_fixture_wiki_launch_001_overlay",
+          "source_id": "fixture_wiki_launch_001",
+          "claim": "Disable overlays before deeper changes",
+          "confidence": 72
+        }
+      ],
+      "ranked_steps": [
+        {
+          "rank": 1,
+          "step": "Verify game files",
+          "source_ids": [
+            "fixture_official_launch_001"
+          ],
+          "risk": "low"
+        },
+        {
+          "rank": 2,
+          "step": "Disable overlays before deeper changes",
+          "source_ids": [
+            "fixture_wiki_launch_001"
+          ],
+          "risk": "low"
+        }
+      ],
+      "handoff": {
+        "handoff_id": "handoff_fixture_crash_startup",
+        "draft_intent": "internal article package handoff",
+        "source_ids": [
+          "fixture_official_launch_001",
+          "fixture_wiki_launch_001"
+        ],
+        "evidence_card_ids": [
+          "ev_fixture_official_launch_001_verify",
+          "ev_fixture_wiki_launch_001_overlay"
+        ],
+        "verification_required": true,
+        "publish_ready": false,
+        "publishing_performed": false
+      },
+      "verification": {
+        "status": "pass",
+        "gate": {
+          "decision": "pass_for_internal_handoff",
+          "reason": "source IDs, evidence cards, ranked steps, and publish-disabled flags are present",
+          "required_evidence": [
+            "source_ids",
+            "evidence_card_ids",
+            "ranked_steps"
+          ],
+          "next_action": "operator_review_before_real_activation"
+        }
+      },
+      "trace": [
+        {
+          "trace_id": "trace_01",
+          "node": "source_discovery",
+          "status": "completed",
+          "message": "selected fixture discovery candidate",
+          "state_keys": [
+            "candidate",
+            "evidence_cards",
+            "game_name",
+            "handoff",
+            "player_question",
+            "ranked_steps",
+            "safety",
+            "verification"
+          ],
+          "gate": null,
+          "retry_count": 0
+        },
+        {
+          "trace_id": "trace_02",
+          "node": "evidence_rank",
+          "status": "completed",
+          "message": "created evidence cards and ranked steps",
+          "state_keys": [
+            "candidate",
+            "evidence_cards",
+            "game_name",
+            "handoff",
+            "player_question",
+            "ranked_steps",
+            "safety",
+            "verification"
+          ],
+          "gate": null,
+          "retry_count": 0
+        },
+        {
+          "trace_id": "trace_03",
+          "node": "draft_handoff",
+          "status": "completed",
+          "message": "prepared internal draft handoff",
+          "state_keys": [
+            "candidate",
+            "evidence_cards",
+            "game_name",
+            "handoff",
+            "player_question",
+            "ranked_steps",
+            "safety",
+            "verification"
+          ],
+          "gate": null,
+          "retry_count": 0
+        },
+        {
+          "trace_id": "trace_04",
+          "node": "verification_gate",
+          "status": "completed",
+          "message": "verification gate passed for internal handoff",
+          "state_keys": [
+            "candidate",
+            "evidence_cards",
+            "game_name",
+            "handoff",
+            "player_question",
+            "ranked_steps",
+            "safety",
+            "verification"
+          ],
+          "gate": {
+            "decision": "pass_for_internal_handoff",
+            "reason": "source IDs, evidence cards, ranked steps, and publish-disabled flags are present",
+            "required_evidence": [
+              "source_ids",
+              "evidence_card_ids",
+              "ranked_steps"
+            ],
+            "next_action": "operator_review_before_real_activation"
+          },
+          "retry_count": 0
+        }
+      ],
+      "safety": {
+        "candidate_only": true,
+        "dry_run": true,
+        "publish_ready": false,
+        "publishing_performed": false,
+        "auto_install_performed": false,
+        "active_replacement_performed": false,
+        "network_performed": false,
+        "llm_performed": false,
+        "secrets_used": false
+      }
+    },
+    "trace": [
+      {
+        "trace_id": "trace_01",
+        "node": "source_discovery",
+        "status": "completed",
+        "message": "selected fixture discovery candidate",
+        "state_keys": [
+          "candidate",
+          "evidence_cards",
+          "game_name",
+          "handoff",
+          "player_question",
+          "ranked_steps",
+          "safety",
+          "verification"
+        ],
+        "gate": null,
+        "retry_count": 0
+      },
+      {
+        "trace_id": "trace_02",
+        "node": "evidence_rank",
+        "status": "completed",
+        "message": "created evidence cards and ranked steps",
+        "state_keys": [
+          "candidate",
+          "evidence_cards",
+          "game_name",
+          "handoff",
+          "player_question",
+          "ranked_steps",
+          "safety",
+          "verification"
+        ],
+        "gate": null,
+        "retry_count": 0
+      },
+      {
+        "trace_id": "trace_03",
+        "node": "draft_handoff",
+        "status": "completed",
+        "message": "prepared internal draft handoff",
+        "state_keys": [
+          "candidate",
+          "evidence_cards",
+          "game_name",
+          "handoff",
+          "player_question",
+          "ranked_steps",
+          "safety",
+          "verification"
+        ],
+        "gate": null,
+        "retry_count": 0
+      },
+      {
+        "trace_id": "trace_04",
+        "node": "verification_gate",
+        "status": "completed",
+        "message": "verification gate passed for internal handoff",
+        "state_keys": [
+          "candidate",
+          "evidence_cards",
+          "game_name",
+          "handoff",
+          "player_question",
+          "ranked_steps",
+          "safety",
+          "verification"
+        ],
+        "gate": {
+          "decision": "pass_for_internal_handoff",
+          "reason": "source IDs, evidence cards, ranked steps, and publish-disabled flags are present",
+          "required_evidence": [
+            "source_ids",
+            "evidence_card_ids",
+            "ranked_steps"
+          ],
+          "next_action": "operator_review_before_real_activation"
+        },
+        "retry_count": 0
+      }
+    ],
+    "candidate_only": true,
+    "dry_run": true,
+    "publish_ready": false,
+    "publishing_performed": false,
+    "auto_install_performed": false,
+    "active_replacement_performed": false,
+    "network_performed": false,
+    "llm_performed": false,
+    "secrets_used": false
+  },
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

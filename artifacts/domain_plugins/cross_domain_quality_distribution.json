@@ -1,0 +1,26 @@
+{
+  "artifact_type": "cross_domain_quality_distribution_handoff",
+  "generated_at": "2026-07-08T01:56:31.225447+00:00",
+  "content_quality_inputs": [
+    {
+      "domain_id": "gaming",
+      "content_package_ref": "artifacts/domain_plugins/gaming_compatibility_adapter.json"
+    },
+    {
+      "domain_id": "ai_tools",
+      "content_package_ref": "artifacts/domain_plugins/ai_tools_content_eval_pack.json"
+    }
+  ],
+  "distribution_package": {
+    "package_id": "cross_domain_distribution_dry_run_001",
+    "domain_ids": [
+      "gaming",
+      "ai_tools"
+    ],
+    "dispatch_performed": false,
+    "publishing_performed": false,
+    "upload_performed": false,
+    "approval_required": true,
+    "status": "dry_run_only"
+  }
+}

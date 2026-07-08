@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piko Guide Template</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f2; color: #181818; }
+    main { max-width: 860px; margin: 0 auto; padding: 32px 18px 56px; }
+    header, section { margin-bottom: 24px; }
+    h1 { font-size: 34px; line-height: 1.15; margin: 0 0 10px; }
+    h2 { font-size: 20px; margin: 0 0 10px; }
+    .note { color: #5f5f58; }
+    .step, .source-box { border: 1px solid #d8d6cc; background: #fff; border-radius: 8px; padding: 14px; margin: 12px 0; }
+    .risk { color: #8a3b00; font-weight: 700; }
+    code { background: #eee9dc; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Example Game Crash on Startup Fix</h1>
+      <p class="note">Short answer first, then source-backed steps and risk notes.</p>
+    </header>
+    <section>
+      <h2>Short Answer</h2>
+      <p>Start with low-risk fixes: verify game files, then disable Steam Overlay.</p>
+    </section>
+    <section>
+      <h2>Steps</h2>
+      <article class="step">
+        <h3>1. Verify game files</h3>
+        <p>Use this first because it is low risk and supported by fixture evidence.</p>
+        <p class="risk">Risk: Low.</p>
+        <p>Sources: <code>fixture_official_launch_001</code>, <code>fixture_wiki_launch_001</code></p>
+      </article>
+      <article class="step">
+        <h3>2. Disable Steam Overlay</h3>
+        <p>Try this if the black screen appears after clicking Play.</p>
+        <p class="risk">Risk: Low and reversible.</p>
+        <p>Sources: <code>fixture_community_overlay_001</code></p>
+      </article>
+    </section>
+    <section>
+      <h2>If It Fails</h2>
+      <p>Keep Windows fixes separate from Steam Deck / Proton notes before trying platform-specific steps.</p>
+    </section>
+    <section class="source-box">
+      <h2>Sources Checked</h2>
+      <ul>
+        <li><code>fixture_official_launch_001</code></li>
+        <li><code>fixture_wiki_launch_001</code></li>
+        <li><code>fixture_community_overlay_001</code></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

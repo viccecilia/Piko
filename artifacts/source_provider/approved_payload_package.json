@@ -1,0 +1,13 @@
+{
+  "artifact_type": "approved_json_payload_package",
+  "generated_at": "2026-07-08T01:56:45.887468+00:00",
+  "provider_package_scope": "deploy_ready_static_json",
+  "payload_path": "artifacts\\source_provider\\static_endpoint_package\\approved-market.json",
+  "contract_valid": true,
+  "game_count": 2,
+  "question_count": 4,
+  "prohibited_fields_present": false,
+  "external_provider_validated": false,
+  "deployment_performed": false,
+  "publishing_performed": false
+}

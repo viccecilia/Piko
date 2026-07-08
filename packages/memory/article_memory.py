@@ -1,0 +1,2 @@
+"""Reserved article memory module."""
+

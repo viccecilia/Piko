@@ -1,0 +1,16 @@
+{
+  "artifact_type": "piko_external_endpoint_env_handoff",
+  "generated_at": "2026-07-08T01:56:45.796464+00:00",
+  "ready_to_run_external": false,
+  "provider_status": "deploy_ready_pending_host",
+  "instructions": [
+    "$env:PIKO_ENABLE_DISCOVERY_REAL_SOURCE = \"true\"",
+    "$env:PIKO_LIVE_DISCOVERY_TEST = \"true\"",
+    "$env:PIKO_APPROVED_ENDPOINT_URL = \"<external approved json url>\"",
+    "python -m packages.external_endpoint.pipeline --write-artifacts"
+  ],
+  "placeholder_used": true,
+  "secrets_included": false,
+  "global_env_modified": false,
+  "deployment_performed": false
+}

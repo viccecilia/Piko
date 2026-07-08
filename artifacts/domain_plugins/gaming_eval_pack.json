@@ -1,0 +1,30 @@
+{
+  "artifact_type": "gaming_domain_eval_pack",
+  "domain_id": "gaming",
+  "generated_at": "2026-07-08T01:56:31.218448+00:00",
+  "cases": [
+    {
+      "case_id": "watchlist_not_runnable",
+      "status": "passed"
+    },
+    {
+      "case_id": "high_risk_blocks_candidate",
+      "status": "passed"
+    },
+    {
+      "case_id": "source_trace_required",
+      "status": "passed"
+    },
+    {
+      "case_id": "publish_disabled",
+      "status": "passed"
+    }
+  ],
+  "report": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0
+  },
+  "publish_ready": false,
+  "publishing_performed": false
+}

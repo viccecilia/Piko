@@ -1,0 +1,49 @@
+{
+  "artifact_type": "domain_pack_manifest",
+  "domain_id": "gaming",
+  "version": "0.1.0",
+  "generated_at": "2026-07-08T01:56:46.424276+00:00",
+  "source_types": [
+    "official_notes",
+    "wiki_reference",
+    "community_thread",
+    "compatibility_report",
+    "search_snippet"
+  ],
+  "signal_schema": [
+    "hot_title_signal",
+    "player_need_signal",
+    "source_coverage_signal"
+  ],
+  "normalizer": "packages.domain_plugins.pipeline.normalize_gaming_fixture",
+  "scoring_profile": {
+    "heat_weight": 0.4,
+    "evidence_maturity_weight": 0.3,
+    "risk_weight": 0.2,
+    "source_diversity_weight": 0.1
+  },
+  "content_templates": [
+    "source_backed_guide",
+    "known_issue_note",
+    "settings_checklist"
+  ],
+  "risk_policy": {
+    "high_risk_blocks_publish_candidate": true,
+    "watchlist_not_runnable": true
+  },
+  "distribution_targets": [
+    "web",
+    "xiaohongshu",
+    "wechat_official_account",
+    "douyin"
+  ],
+  "eval_suite": {
+    "suite_id": "gaming_domain_eval_v1",
+    "status": "passed"
+  },
+  "activation_status": "active",
+  "relation_to_existing_discovery": "compatibility_layer_over_existing_discovery_outputs",
+  "candidate_only": false,
+  "publish_ready": false,
+  "publishing_performed": false
+}

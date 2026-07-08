@@ -1,0 +1,424 @@
+{
+  "artifact_type": "latest_real_market_funnel_report",
+  "generated_at": "2026-06-27T03:49:25.953378+00:00",
+  "status": "completed",
+  "mode": "mock-live",
+  "hot_games": [
+    {
+      "game_id": "hades_ii",
+      "game_name": "Hades II",
+      "mode": "mock-live",
+      "ranking_score": 84,
+      "heat_score": 90,
+      "steam_player_rank": 5,
+      "steam_review_velocity": 88,
+      "discussion_velocity": 91,
+      "update_recency_days": 2,
+      "cross_region_mentions": 3,
+      "source_diversity": 2,
+      "region_signals": [
+        "steam",
+        "global"
+      ],
+      "candidate_only": true,
+      "reasons": [
+        "Strong Steam player rank signal.",
+        "Community discussion velocity is high.",
+        "Recent update can create fresh player needs.",
+        "Multiple regions show discussion activity.",
+        "Multiple source or region signals increase ranking confidence."
+      ]
+    },
+    {
+      "game_id": "stardew_valley",
+      "game_name": "Stardew Valley",
+      "mode": "mock-live",
+      "ranking_score": 43,
+      "heat_score": 36,
+      "steam_player_rank": null,
+      "steam_review_velocity": 0,
+      "discussion_velocity": 72,
+      "update_recency_days": 14,
+      "cross_region_mentions": 4,
+      "source_diversity": 2,
+      "region_signals": [
+        "reddit",
+        "global"
+      ],
+      "candidate_only": true,
+      "reasons": [
+        "Community discussion velocity is high.",
+        "Recent update can create fresh player needs.",
+        "Multiple regions show discussion activity.",
+        "Multiple source or region signals increase ranking confidence."
+      ]
+    }
+  ],
+  "hard_problems": {
+    "hot_answered_questions": [
+      {
+        "cluster_id": "rev_q_answered_001",
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "need_key": "endpoint_player_question",
+        "decision": "publish_candidate",
+        "intent": "walkthrough",
+        "evidence_quality": 70,
+        "heat": 96,
+        "answer_status": "answered",
+        "risk": "low",
+        "recommended_next_action": "review_candidate",
+        "source_type": "steam",
+        "source_region": "en",
+        "url": "https://example.invalid/steam/stardew/save-location",
+        "snippet": "Players ask where saves are stored before moving between PC and Steam Deck.",
+        "publish_ready": false,
+        "runnable": true,
+        "representative_question": "Where is the Stardew Valley save file location?"
+      }
+    ],
+    "hot_unanswered_watchlist_questions": [
+      {
+        "cluster_id": "rev_q_watchlist_001",
+        "game_id": "hades_ii",
+        "game_name": "Hades II",
+        "need_key": "endpoint_player_question",
+        "decision": "watchlist_waiting_for_answer",
+        "intent": "walkthrough",
+        "evidence_quality": 25,
+        "heat": 100,
+        "answer_status": "unanswered",
+        "risk": "medium",
+        "recommended_next_action": "watch_for_answer",
+        "source_type": "reddit",
+        "source_region": "en",
+        "url": "https://example.invalid/reddit/hades/crash",
+        "snippet": "Several players report crashes after the latest patch but no confirmed fix yet.",
+        "publish_ready": false,
+        "runnable": false,
+        "representative_question": "Hades II crashes after the latest patch, is there a fix?"
+      }
+    ],
+    "conflict_answer_topics": [
+      {
+        "cluster_id": "rev_q_conflict_001",
+        "game_id": "hades_ii",
+        "game_name": "Hades II",
+        "need_key": "endpoint_player_question",
+        "decision": "conflict_explainer",
+        "intent": "walkthrough",
+        "evidence_quality": 55,
+        "heat": 88,
+        "answer_status": "conflicting",
+        "risk": "low",
+        "recommended_next_action": "review_candidate",
+        "source_type": "serp_snippet",
+        "source_region": "global",
+        "url": "https://example.invalid/search/hades-deck-settings",
+        "snippet": "Search snippets disagree on frame cap and graphics settings.",
+        "publish_ready": false,
+        "runnable": false,
+        "representative_question": "Which Steam Deck settings keep Hades II stable at 40 FPS?"
+      }
+    ],
+    "high_risk_blocked_topics": [
+      {
+        "cluster_id": "rev_q_high_risk_001",
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "need_key": "endpoint_player_question",
+        "decision": "blocked_high_risk",
+        "intent": "walkthrough",
+        "evidence_quality": 55,
+        "heat": 42,
+        "answer_status": "conflicting",
+        "risk": "high",
+        "recommended_next_action": "block_normal_draft",
+        "source_type": "jp_community",
+        "source_region": "jp",
+        "url": "https://example.invalid/jp/stardew/save-recovery",
+        "snippet": "Players discuss save recovery tools, but the safest action is to avoid risky executables.",
+        "publish_ready": false,
+        "runnable": false,
+        "representative_question": "Can I use this third-party save recovery tool?"
+      }
+    ],
+    "must_check_guide_topics": [
+      {
+        "cluster_id": "rev_q_answered_001",
+        "game_id": "stardew_valley",
+        "game_name": "Stardew Valley",
+        "need_key": "endpoint_player_question",
+        "decision": "publish_candidate",
+        "intent": "walkthrough",
+        "evidence_quality": 70,
+        "heat": 96,
+        "answer_status": "answered",
+        "risk": "low",
+        "recommended_next_action": "review_candidate",
+        "source_type": "steam",
+        "source_region": "en",
+        "url": "https://example.invalid/steam/stardew/save-location",
+        "snippet": "Players ask where saves are stored before moving between PC and Steam Deck.",
+        "publish_ready": false,
+        "runnable": true,
+        "representative_question": "Where is the Stardew Valley save file location?"
+      },
+      {
+        "cluster_id": "rev_q_conflict_001",
+        "game_id": "hades_ii",
+        "game_name": "Hades II",
+        "need_key": "endpoint_player_question",
+        "decision": "conflict_explainer",
+        "intent": "walkthrough",
+        "evidence_quality": 55,
+        "heat": 88,
+        "answer_status": "conflicting",
+        "risk": "low",
+        "recommended_next_action": "review_candidate",
+        "source_type": "serp_snippet",
+        "source_region": "global",
+        "url": "https://example.invalid/search/hades-deck-settings",
+        "snippet": "Search snippets disagree on frame cap and graphics settings.",
+        "publish_ready": false,
+        "runnable": false,
+        "representative_question": "Which Steam Deck settings keep Hades II stable at 40 FPS?"
+      }
+    ]
+  },
+  "solution_signals": [
+    {
+      "signal_type": "answered_candidate",
+      "source_type": "steam_discussion",
+      "confidence": "candidate_signal_only"
+    },
+    {
+      "signal_type": "answered_candidate",
+      "source_type": "wiki_comment",
+      "confidence": "candidate_signal_only"
+    }
+  ],
+  "candidate_selection": {
+    "status": "completed",
+    "candidate": {
+      "candidate_id": "candidate_stardew_valley_save_file_location",
+      "cluster_id": "stardew_valley:save_file_location",
+      "game_id": "stardew_valley",
+      "game_name": "Stardew Valley",
+      "need_key": "save_file_location",
+      "search_intent": "save_file",
+      "normalization_hints": [
+        "location",
+        "save"
+      ],
+      "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "article_intent": "Help players find and safely back up Stardew Valley save files.",
+      "decision": "publish_candidate",
+      "answer_status": "answered",
+      "risk_level": "low",
+      "candidate_type": "solution_candidate",
+      "runnable": true,
+      "source_search_hints": [
+        "Stardew Valley save file location",
+        "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+        "Stardew Valley save file location en",
+        "Stardew Valley save file location jp",
+        "Stardew Valley save file location steam_discussion",
+        "Stardew Valley save file location wiki_comment"
+      ],
+      "source_query_hints": [
+        "Stardew Valley save file location",
+        "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+        "Stardew Valley save file location en",
+        "Stardew Valley save file location jp",
+        "Stardew Valley save file location steam_discussion",
+        "Stardew Valley save file location wiki_comment"
+      ],
+      "required_source_types": [
+        "steam_discussion",
+        "wiki_comment"
+      ],
+      "preferred_source_types": [
+        "steam_discussion",
+        "wiki_comment"
+      ],
+      "source_regions": [
+        "en",
+        "jp"
+      ],
+      "risk_flags": [],
+      "safety_flags": [
+        "candidate_only",
+        "requires_evidence_pipeline",
+        "not_publish_ready"
+      ],
+      "safety_reasons": [
+        "Discovery candidates are not publishing approval."
+      ],
+      "piko_value_add": [
+        "Single-page clarity: combine scattered answers into one source-traced guide.",
+        "Risk ordering: rank low-risk steps before risky actions.",
+        "Cross-language bridge: connect repeated EN/JP/KR questions with clear sourcing.",
+        "Gap fill: existing material appears fragmented.",
+        "Focused scope: this topic can likely be answered on one useful page."
+      ],
+      "cluster_reasons": [
+        "Game heat score: 72.",
+        "Question heat score: 53.",
+        "Answer status: answered.",
+        "Evidence quality: 75.",
+        "Competition gap: 76.",
+        "Piko value add score: 78.",
+        "Repeated questions appear across multiple regions.",
+        "Language-gap opportunity: bridge EN and JP/KR signals with clear sourcing.",
+        "Source coverage level: partial.",
+        "Competition gap status: fragmented."
+      ],
+      "score_inputs": {
+        "game_heat": 72,
+        "question_heat": 53,
+        "answer_status": "answered",
+        "evidence_quality": 75,
+        "conflict_score": 0,
+        "risk_level": "low",
+        "freshness_score": 36,
+        "evergreen_value": 85,
+        "competition_gap": 76,
+        "competition_gap_status": "fragmented",
+        "actionability_score": 85,
+        "piko_value_add_score": 78,
+        "content_opportunity_score": 87
+      },
+      "publish_ready": false,
+      "requires_evidence_pipeline": true,
+      "safety_notes": [
+        "Discovery output is candidate-only and is not publishing permission."
+      ]
+    },
+    "blocked_examples": [
+      {
+        "game_name": "Hades II",
+        "need_key": "settings_steam_deck",
+        "decision": "conflict_explainer",
+        "risk_level": "low",
+        "runnable": true,
+        "candidate_type": "synthesis_candidate",
+        "blocked_from_normal_draft": true,
+        "safety_flags": [
+          "candidate_only",
+          "requires_evidence_pipeline",
+          "not_publish_ready",
+          "synthesis_only"
+        ]
+      },
+      {
+        "game_name": "Hades II",
+        "need_key": "crash_after_update",
+        "decision": "watchlist_waiting_for_answer",
+        "risk_level": "medium",
+        "runnable": false,
+        "candidate_type": "watchlist_only",
+        "blocked_from_normal_draft": true,
+        "safety_flags": [
+          "candidate_only",
+          "requires_evidence_pipeline",
+          "not_publish_ready",
+          "not_runnable",
+          "watchlist_only"
+        ]
+      },
+      {
+        "game_name": "Stardew Valley",
+        "need_key": "save_recovery_risk",
+        "decision": "blocked_high_risk",
+        "risk_level": "high",
+        "runnable": false,
+        "candidate_type": "blocked_safety_note",
+        "blocked_from_normal_draft": true,
+        "safety_flags": [
+          "candidate_only",
+          "requires_evidence_pipeline",
+          "not_publish_ready",
+          "not_runnable",
+          "high_risk_block"
+        ]
+      }
+    ],
+    "publish_ready": false,
+    "publishing_performed": false,
+    "candidate_only": true
+  },
+  "source_trace": [
+    {
+      "requested_source": "steam",
+      "source_id": "fixture_mirror_market_001",
+      "source_type": "approved_market_json",
+      "mode": "mock-live",
+      "normalized_game_count": 2,
+      "normalized_question_count": 4,
+      "normalized_count": 6,
+      "discarded_count": 0,
+      "skip_reason": null,
+      "real_collection_performed": false
+    }
+  ],
+  "blocked_watchlist_reasons": [
+    {
+      "game_name": "Hades II",
+      "need_key": "settings_steam_deck",
+      "decision": "conflict_explainer",
+      "risk_level": "low",
+      "runnable": true,
+      "candidate_type": "synthesis_candidate",
+      "blocked_from_normal_draft": true,
+      "safety_flags": [
+        "candidate_only",
+        "requires_evidence_pipeline",
+        "not_publish_ready",
+        "synthesis_only"
+      ]
+    },
+    {
+      "game_name": "Hades II",
+      "need_key": "crash_after_update",
+      "decision": "watchlist_waiting_for_answer",
+      "risk_level": "medium",
+      "runnable": false,
+      "candidate_type": "watchlist_only",
+      "blocked_from_normal_draft": true,
+      "safety_flags": [
+        "candidate_only",
+        "requires_evidence_pipeline",
+        "not_publish_ready",
+        "not_runnable",
+        "watchlist_only"
+      ]
+    },
+    {
+      "game_name": "Stardew Valley",
+      "need_key": "save_recovery_risk",
+      "decision": "blocked_high_risk",
+      "risk_level": "high",
+      "runnable": false,
+      "candidate_type": "blocked_safety_note",
+      "blocked_from_normal_draft": true,
+      "safety_flags": [
+        "candidate_only",
+        "requires_evidence_pipeline",
+        "not_publish_ready",
+        "not_runnable",
+        "high_risk_block"
+      ]
+    }
+  ],
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "candidate_only": true,
+  "safety_flags": {
+    "raw_full_source_retained": false,
+    "crawler_used": false,
+    "default_network_disabled": true,
+    "llm_called": false
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "artifact_id": "latest_capability_map_v1",
+  "generated_at": "2026-07-08T01:56:29.676326+00:00",
+  "runtime_changes_performed": false,
+  "oss_candidates_reviewed": [
+    {
+      "candidate_id": "cap_agent_runtime_adapter_boundary",
+      "capability_change_type": "augment",
+      "risk": "medium",
+      "tests_needed": [
+        "adapter contract tests",
+        "no default LLM/API tests"
+      ],
+      "verification_needed": [
+        "Piko-verify approval before runtime changes"
+      ],
+      "auto_execute": false
+    }
+  ],
+  "capability_groups": [
+    {
+      "group": "discovery",
+      "capabilities": [
+        {
+          "capability_id": "workflow.discovery",
+          "decision": "keep",
+          "reason": "Discovery output is candidate-only and not publish permission.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "evidence",
+      "capabilities": [
+        {
+          "capability_id": "agent.source",
+          "decision": "keep",
+          "reason": "Real connectors are disabled by default.; Does not retain raw full source bodies.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "agent.evidence",
+          "decision": "improve",
+          "reason": "Needs more source-specific extraction rules before broad live use.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "workflow.endpoint_verification",
+          "decision": "keep",
+          "reason": "Live mode requires explicit opt-in and configured endpoint.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "writing",
+      "capabilities": [
+        {
+          "capability_id": "agent.ranking",
+          "decision": "keep",
+          "reason": "Ranking remains rule-based.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "agent.writer",
+          "decision": "improve",
+          "reason": "LLM writer is optional and disabled by default.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "agent.editor",
+          "decision": "keep",
+          "reason": "Style checks are conservative placeholder logic.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "verification",
+      "capabilities": [
+        {
+          "capability_id": "agent.factcheck",
+          "decision": "improve",
+          "reason": "Does not replace verification_report.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "gate.publish_readiness",
+          "decision": "keep",
+          "reason": "Eligibility never deploys or publishes.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "publishing_readiness",
+      "capabilities": [
+        {
+          "capability_id": "gate.publish_readiness",
+          "decision": "keep",
+          "reason": "Eligibility never deploys or publishes.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "plugin_domain",
+      "capabilities": [
+        {
+          "capability_id": "domain.registry",
+          "decision": "improve",
+          "reason": "Needed for governance visibility; not a runtime capability yet.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "proposal.domain_plugin",
+          "decision": "defer",
+          "reason": "Proposal only; requires worker/verify before runtime adoption.",
+          "human_approval_required": true,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "connector",
+      "capabilities": [
+        {
+          "capability_id": "workflow.endpoint_verification",
+          "decision": "keep",
+          "reason": "Live mode requires explicit opt-in and configured endpoint.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "automation",
+      "capabilities": [
+        {
+          "capability_id": "workflow.self_improvement",
+          "decision": "keep",
+          "reason": "Does not auto-apply patches.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "operator_ui",
+      "capabilities": [
+        {
+          "capability_id": "api.capabilities",
+          "decision": "improve",
+          "reason": "Needed for governance visibility; not a runtime capability yet.",
+          "human_approval_required": false,
+          "absorbed": false
+        },
+        {
+          "capability_id": "window.capabilities",
+          "decision": "improve",
+          "reason": "Needed for governance visibility; not a runtime capability yet.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    },
+    {
+      "group": "self_improvement",
+      "capabilities": [
+        {
+          "capability_id": "workflow.self_improvement",
+          "decision": "keep",
+          "reason": "Does not auto-apply patches.",
+          "human_approval_required": false,
+          "absorbed": false
+        }
+      ]
+    }
+  ],
+  "known_gaps": [
+    "real source provider breadth",
+    "domain plugin runtime",
+    "publish approval UI",
+    "capability evaluation harness"
+  ]
+}

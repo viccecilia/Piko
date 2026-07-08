@@ -1,0 +1,16 @@
+{
+  "artifact_type": "verify_verdict_correlation",
+  "generated_at": "2026-07-08T01:56:45.650466+00:00",
+  "run_id": "skill_trace_350c3656057f",
+  "worker_summary_file": ".piko/summaries/worker_SKILL-1-to-SKILL-5.md",
+  "verification_summary_file": ".piko/summaries/verify_SKILL-1-to-SKILL-5.md",
+  "verdict": "blocked",
+  "failed_rounds": [],
+  "blocked_reason": "waiting_for_piko_verify",
+  "regression_tests": [
+    "python -m pytest tests\\test_skill_runtime.py -q",
+    "python -m pytest tests\\test_discovery_search.py -q",
+    "python -m pytest"
+  ],
+  "next_action": "Piko-verify should inspect generated artifacts and guardrail scan."
+}

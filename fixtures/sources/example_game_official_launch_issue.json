@@ -1,0 +1,13 @@
+{
+  "source_id": "fixture_official_launch_001",
+  "source_type": "official_notes",
+  "url": "https://example.invalid/example-game/patch-notes",
+  "title": "Example Game Patch Notes: Launch Stability",
+  "date": "2026-06-01",
+  "game_id": "game_mock_001",
+  "game_name": "Example Game",
+  "trust_tier": "official",
+  "platform": "windows",
+  "content": "Some Windows players may see a black screen or crash on startup after launch. The low-risk first step is to verify game files. The team is investigating overlay-related launch problems."
+}
+

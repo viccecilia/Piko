@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent 工程化四层地图 9 卡</title>
+  <style>
+    :root {
+      --paper: #f6efe2;
+      --ink: #171614;
+      --muted: #625d54;
+      --line: #cfc2ae;
+      --red: #cc3f32;
+      --blue: #2457d6;
+      --green: #19825c;
+      --gold: #a56614;
+      --purple: #6a49c8;
+      --soft: rgba(255,255,255,.58);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #151515;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", Inter, Arial, sans-serif;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      padding: 24px;
+    }
+    .card {
+      width: min(100%, 420px);
+      aspect-ratio: 3 / 4;
+      margin: 0 auto;
+      padding: 34px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.34)),
+        var(--paper);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .dark {
+      background:
+        radial-gradient(circle at 85% 18%, rgba(204,63,50,.2), transparent 28%),
+        linear-gradient(180deg, #1a1917, #111);
+      color: #f8f1e5;
+      border-color: rgba(255,255,255,.18);
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .dark .topline { color: #bfb4a5; }
+    .badge {
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 13px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    h1, h2, h3, p { margin: 0; letter-spacing: 0; }
+    h1 {
+      font-size: 58px;
+      line-height: 1.02;
+      font-weight: 900;
+    }
+    h2 {
+      font-size: 42px;
+      line-height: 1.08;
+      font-weight: 900;
+    }
+    h3 {
+      font-size: 25px;
+      line-height: 1.18;
+      font-weight: 850;
+    }
+    p, li {
+      font-size: 18px;
+      line-height: 1.45;
+    }
+    ul { margin: 0; padding-left: 22px; }
+    .lead {
+      font-size: 24px;
+      line-height: 1.32;
+      font-weight: 750;
+    }
+    .accent { color: var(--red); }
+    .dark .accent { color: #ff725f; }
+    .section {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 16px;
+    }
+    .dark .section {
+      border-color: rgba(255,255,255,.2);
+      background: rgba(255,255,255,.07);
+    }
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .four {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .layer {
+      border-left: 8px solid var(--blue);
+      background: var(--soft);
+      padding: 14px;
+      min-height: 120px;
+    }
+    .layer strong { display: block; font-size: 20px; margin-bottom: 6px; }
+    .layer small { display: block; color: var(--muted); font-size: 13px; margin-top: 8px; }
+    .dark .layer { background: rgba(255,255,255,.08); }
+    .dark .layer small { color: #c9bdad; }
+    .l2 { border-left-color: var(--green); }
+    .l3 { border-left-color: var(--gold); }
+    .l4 { border-left-color: var(--red); }
+    .screenshot {
+      border: 2px dashed #8d8172;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.04) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, rgba(0,0,0,.04) 0 1px, transparent 1px 100%),
+        #fffaf0;
+      background-size: 22px 22px;
+      padding: 16px;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .screenshot .label {
+      font-weight: 900;
+      font-size: 20px;
+    }
+    .screenshot .note {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .repo-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      font-size: 13px;
+    }
+    .repo-meta span {
+      background: rgba(0,0,0,.06);
+      padding: 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .quote {
+      background: #1c1b18;
+      color: #f7efe3;
+      padding: 16px;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 750;
+    }
+    .dark .quote { background: #f7efe3; color: #171614; }
+    .takeaway {
+      border-top: 3px solid var(--ink);
+      padding-top: 12px;
+      font-size: 18px;
+      line-height: 1.42;
+      font-weight: 750;
+    }
+    .dark .takeaway { border-color: #f7efe3; }
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      border: 1px solid currentColor;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      line-height: 1;
+    }
+    .mini-title {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    .dark .mini-title { color: #c9bdad; }
+    .footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+    .dark .footer {
+      color: #c9bdad;
+      border-color: rgba(255,255,255,.18);
+    }
+    .check {
+      display: grid;
+      gap: 12px;
+    }
+    .check div {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+    .demo-path {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .demo-path span {
+      background: #1c1b18;
+      color: #f7efe3;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 800;
+      text-align: center;
+    }
+    .num {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: #fff;
+      font-weight: 900;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <section class="card dark">
+      <div class="topline"><span>2026-07-08 GitHub 扫描</span><span class="badge">小红书 01</span></div>
+      <h1>别只看 Agent 框架了</h1>
+      <p class="lead">今天真正值得看的，是 Agent 背后的 <span class="accent">四层工程底座</span>。</p>
+      <div class="four">
+        <div class="layer"><strong>知识图谱</strong>Graphify<br><small>让 Agent 先读懂项目结构</small></div>
+        <div class="layer l2"><strong>上下文压缩</strong>Headroom<br><small>让模型少吃垃圾 token</small></div>
+        <div class="layer l3"><strong>运行时状态</strong>OpenRath<br><small>把多 Agent 过程组织起来</small></div>
+        <div class="layer l4"><strong>长任务恢复</strong>Trigger.dev<br><small>让 AI workflow 可重试可观测</small></div>
+      </div>
+      <p class="takeaway">我的判断：Agent 落地的下一步，不是多一个聊天框，而是补齐这些工程层。</p>
+      <div class="footer"><span>主题：Agent 工程化地图</span><span>收藏框架</span></div>
+    </section>
+
+    <section class="card">
+      <div class="topline"><span>真实痛点</span><span class="badge">小红书 02</span></div>
+      <h2>Demo 很快，落地很慢</h2>
+      <p class="lead">很多 Agent 项目看起来会规划、会调用工具、会写代码，但一进真实项目就卡住。</p>
+      <div class="section">
+        <div class="mini-title">卡住的地方通常不是模型</div>
+        <ul>
+          <li>项目太大：模型不知道文件和依赖关系。</li>
+          <li>上下文太脏：日志、工具输出、RAG chunks 全塞进去。</li>
+          <li>任务太长：跑到一半失败，状态和原因都丢了。</li>
+          <li>风险太高：哪些步骤要人批准？没有边界。</li>
+        </ul>
+      </div>
+      <div class="quote">所以今天这 4 个项目，我不按 star 排名看，而是按“它补了哪块工程短板”来看。</div>
+      <p class="takeaway">读者能学什么：看 Agent 项目，先问它解决哪个工程问题，而不是只问用了什么模型。</p>
+      <div class="footer"><span>痛点：从演示到生产</span><span>不要只看工具调用</span></div>
+    </section>
+
+    <section class="card">
+      <div class="topline"><span>项目 1</span><span class="badge">Graphify</span></div>
+      <h2>先把项目读成图</h2>
+      <p class="lead">Graphify：把代码、文档、schema 映射成可查询知识图谱。</p>
+      <div class="screenshot">
+        <div class="label">GitHub / README 截图位</div>
+        <div class="note">REAL_SCREENSHOT_REQUIRED：发布前放 Graphify 仓库首页或 README 中“knowledge graph / GraphRAG”相关截图。</div>
+        <div class="repo-meta"><span>Repo</span><span>Stars 待核</span><span>MIT 待核</span></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">解决什么</div><p>大型项目不是一堆文件，而是依赖、调用、文档、schema 组成的关系网。</p></div>
+        <div class="section"><div class="mini-title">能学什么</div><p>做 RAG 不一定只靠向量库，代码理解可以引入 evidence graph。</p></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">适合</div><p>代码库问答、依赖追踪、架构理解。</p></div>
+        <div class="section"><div class="mini-title">不适合</div><p>只想简单搜文件，或不想维护索引。</p></div>
+      </div>
+      <div class="demo-path"><span>1 打开仓库</span><span>2 看索引对象</span><span>3 问跨文件关系</span></div>
+      <p class="takeaway">我的判断：Graphify 讲的是“先让 Agent 看懂项目地图”。</p>
+    </section>
+
+    <section class="card">
+      <div class="topline"><span>项目 2</span><span class="badge">Headroom</span></div>
+      <h2>上下文不是垃圾桶</h2>
+      <p class="lead">Headroom：在内容进入 LLM 前，压缩工具输出、日志、文件和 RAG chunks。</p>
+      <div class="screenshot">
+        <div class="label">GitHub / README 截图位</div>
+        <div class="note">REAL_SCREENSHOT_REQUIRED：发布前放 Headroom README 中 context compression / MCP / token reduction 相关截图。</div>
+        <div class="repo-meta"><span>Repo</span><span>Stars 待核</span><span>License 待核</span></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">解决什么</div><p>Agent 工具输出越来越长，模型上下文被日志和碎片材料塞满。</p></div>
+        <div class="section"><div class="mini-title">能学什么</div><p>上下文管理不是“塞更多 token”，而是先做筛选、压缩和保真边界。</p></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">适合</div><p>日志多、RAG chunk 多、工具输出长的 Agent。</p></div>
+        <div class="section"><div class="mini-title">不适合</div><p>法律、财务、引用精度极高的原文场景。</p></div>
+      </div>
+      <div class="demo-path"><span>1 准备长日志</span><span>2 先压缩再问</span><span>3 对照原文查漏</span></div>
+      <p class="takeaway">我的判断：未来每个认真做 Agent 的团队，都会遇到“压缩但不失真”的难题。</p>
+    </section>
+
+    <section class="card">
+      <div class="topline"><span>项目 3</span><span class="badge">OpenRath</span></div>
+      <h2>Agent 需要运行时</h2>
+      <p class="lead">OpenRath：面向 multi-agent / multi-session workflow 的 PyTorch-like runtime。</p>
+      <div class="screenshot">
+        <div class="label">GitHub / README 截图位</div>
+        <div class="note">REAL_SCREENSHOT_REQUIRED：发布前放 OpenRath README 中 Session、Sandbox、Memory、Tool、Workflow 结构截图。</div>
+        <div class="repo-meta"><span>Repo</span><span>Stars 待核</span><span>BSD 待核</span></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">解决什么</div><p>多 Agent 不是多开几个聊天窗口，而是要管理 session、memory、tool 和 workflow。</p></div>
+        <div class="section"><div class="mini-title">能学什么</div><p>把 Agent 过程看成可组织、可复盘、可替换的运行对象。</p></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">适合</div><p>多角色协作、长链路 session、实验型 agent runtime。</p></div>
+        <div class="section"><div class="mini-title">不适合</div><p>单轮聊天、短脚本自动化、成熟度要求很高的生产系统。</p></div>
+      </div>
+      <div class="demo-path"><span>1 定义 Session</span><span>2 接入 Tool</span><span>3 回看 Workflow</span></div>
+      <p class="takeaway">我的判断：它的价值不是马上拿来用，而是帮你理解 Agent runtime 该有哪些零件。</p>
+    </section>
+
+    <section class="card">
+      <div class="topline"><span>项目 4</span><span class="badge">Trigger.dev</span></div>
+      <h2>长任务必须能恢复</h2>
+      <p class="lead">Trigger.dev：用 TypeScript 构建 durable AI workflow 和 background tasks。</p>
+      <div class="screenshot">
+        <div class="label">GitHub / README 截图位</div>
+        <div class="note">REAL_SCREENSHOT_REQUIRED：发布前放 Trigger.dev README 中 AI workflow、background task、retries 或 observability 截图。</div>
+        <div class="repo-meta"><span>Repo</span><span>Stars 待核</span><span>Apache 待核</span></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">解决什么</div><p>AI workflow 会超时、失败、等待审批；不能只靠一个脚本从头跑到尾。</p></div>
+        <div class="section"><div class="mini-title">能学什么</div><p>长任务要有队列、重试、日志、状态、人工介入和可观察性。</p></div>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">适合</div><p>后台任务、AI 自动化流程、需要恢复和追踪的任务。</p></div>
+        <div class="section"><div class="mini-title">不适合</div><p>只想本地调用一次模型，或不想引入平台复杂度。</p></div>
+      </div>
+      <div class="demo-path"><span>1 拆成长任务</span><span>2 加 retry/queue</span><span>3 看 run log</span></div>
+      <p class="takeaway">我的判断：它提醒我们，Agent 工程最终会和任务队列、监控、审批系统汇合。</p>
+    </section>
+
+    <section class="card dark">
+      <div class="topline"><span>四层地图</span><span class="badge">小红书 07</span></div>
+      <h2>Agent 工程化四层地图</h2>
+      <p class="lead">今天这 4 个项目，刚好能拼成一张“从读懂到执行”的地图。</p>
+      <div class="section">
+        <div class="layer"><strong>第 1 层：知识结构</strong>Graphify：把项目读成图，让 Agent 知道“材料之间有什么关系”。</div>
+        <div class="layer l2"><strong>第 2 层：上下文预算</strong>Headroom：把噪音压掉，让模型吃到更干净的信息。</div>
+        <div class="layer l3"><strong>第 3 层：运行时状态</strong>OpenRath：组织 session、memory、tool、workflow。</div>
+        <div class="layer l4"><strong>第 4 层：可靠执行</strong>Trigger.dev：处理长任务、重试、队列、观测和人工介入。</div>
+      </div>
+      <p class="takeaway">读者能学什么：选 Agent 工具时，不要问“哪个最火”，要问“我缺的是哪一层”。</p>
+      <div class="footer"><span>可收藏地图</span><span>Knowledge / Context / Runtime / Workflow</span></div>
+    </section>
+
+    <section class="card">
+      <div class="topline"><span>判断卡</span><span class="badge">小红书 08</span></div>
+      <h2>不要盲目使用</h2>
+      <p class="lead">高 star 不等于适合你。今天这类项目，最怕被当成“万能 Agent 套件”。</p>
+      <div class="section">
+        <div class="mini-title">我的使用判断</div>
+        <ul>
+          <li>项目还小：先看 issue、commit、license，不要只看标题。</li>
+          <li>截图很炫：先问有没有真实 demo path。</li>
+          <li>压缩很猛：先问会不会损伤引用和证据。</li>
+          <li>平台很全：先问会不会比你的问题更重。</li>
+        </ul>
+      </div>
+      <div class="two">
+        <div class="section"><div class="mini-title">值得试</div><p>你正在做复杂 Agent、代码库问答、长任务自动化。</p></div>
+        <div class="section"><div class="mini-title">先别上</div><p>你只是做单次 prompt、小脚本、轻量 demo。</p></div>
+      </div>
+      <p class="takeaway">读者能学什么：开源项目不是越新越好，先判断它补的是不是你的短板。</p>
+      <div class="footer"><span>风险边界</span><span>别把 demo 当生产</span></div>
+    </section>
+
+    <section class="card dark">
+      <div class="topline"><span>收藏清单</span><span class="badge">小红书 09</span></div>
+      <h2>看 Agent 项目，先问 5 句</h2>
+      <div class="check">
+        <div><span class="num">1</span><p>它怎么读懂资料？是全文搜、向量库，还是 evidence graph？</p></div>
+        <div><span class="num">2</span><p>它怎么省上下文？有没有压缩、过滤、引用保真策略？</p></div>
+        <div><span class="num">3</span><p>它怎么管状态？session、memory、tool 调用有没有结构？</p></div>
+        <div><span class="num">4</span><p>失败怎么恢复？有没有重试、队列、日志、可观察性？</p></div>
+        <div><span class="num">5</span><p>人怎么介入？哪些步骤需要审批、确认、回滚？</p></div>
+      </div>
+      <p class="takeaway">我的判断：能回答这 5 句的 Agent 项目，才开始接近真实工程。</p>
+      <div class="footer"><span>保存这张</span><span>下次看 GitHub 项目就按它筛</span></div>
+    </section>
+  </main>
+</body>
+</html>

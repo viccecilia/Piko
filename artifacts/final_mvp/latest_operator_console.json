@@ -1,0 +1,88 @@
+{
+  "artifact_type": "final_mvp_operator_console",
+  "generated_at": "2026-07-08T01:56:31.497073+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "ready_for_operator_review",
+  "external_endpoint": {
+    "artifact_type": "final_mvp_external_live_result",
+    "generated_at": "2026-07-08T01:56:31.496071+00:00",
+    "scope": "external_approved_endpoint",
+    "status": "success",
+    "external_endpoint_status": "success",
+    "readiness_status": "ready",
+    "blocked_reason": null,
+    "missing_config": [],
+    "endpoint_url_present": true,
+    "endpoint_scheme": "https",
+    "endpoint_host": "example.com",
+    "endpoint_url_stored": false,
+    "double_opt_in_configured": true,
+    "real_collection_performed": true,
+    "normalized_game_count": 1,
+    "normalized_question_count": 1,
+    "retained_fields": [
+      "games",
+      "questions",
+      "snippet"
+    ],
+    "raw_response_body_saved": false,
+    "full_posts_saved": false,
+    "full_pages_saved": false,
+    "full_comments_saved": false,
+    "credentials_stored": false,
+    "secrets_retained": false,
+    "crawler_used": false,
+    "html_scrape_used": false,
+    "llm_called": false,
+    "broad_internet_coverage": false,
+    "publish_ready": false,
+    "publishing_performed": false,
+    "upload_performed": false,
+    "deployment_performed": false,
+    "candidate_only": true,
+    "next_action": "continue_finish_real_signal_funnel"
+  },
+  "real_signal_funnel": {
+    "status": "completed",
+    "top_hot_games_count": 1,
+    "topic_bucket_keys": [
+      "hot_answered_questions"
+    ]
+  },
+  "content_package": {
+    "status": "internal_candidate_package",
+    "selected_topic": {
+      "question_id": "q1",
+      "game_name": "Hades II",
+      "question_text": "Where is the save file?",
+      "evidence_quality": 70,
+      "risk_level": "low",
+      "publish_ready": false
+    },
+    "source_trace_present": true,
+    "evidence_trace_present": true
+  },
+  "approval_contract": {
+    "approval_required_for": [
+      "publish",
+      "upload",
+      "deploy",
+      "credential_use",
+      "external_connector_activation",
+      "active_plugin_replacement",
+      "paid_service_use"
+    ],
+    "default_state": "blocked_for_human_approval",
+    "approval_granted": false,
+    "credential_storage_allowed": false,
+    "publishing_performed": false
+  },
+  "read_only_surface": true,
+  "real_collection_performed": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "upload_performed": false,
+  "deployment_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

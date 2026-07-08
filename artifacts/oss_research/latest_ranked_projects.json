@@ -1,0 +1,122 @@
+{
+  "artifact_id": "latest_ranked_projects",
+  "mode": "fixture",
+  "generated_at": "2026-07-08T01:56:45.220980+00:00",
+  "projects": [
+    {
+      "project_name": "LangGraph",
+      "github_url": "https://github.com/langchain-ai/langgraph",
+      "stars": 5000,
+      "fixture_star_floor": true,
+      "license": "MIT",
+      "domain": "agent workflow orchestration",
+      "category": "workflow orchestration",
+      "recent_activity": "active_fixture",
+      "ecosystem": "Python",
+      "docs_quality": 85,
+      "integration_cost": 45,
+      "observed_patterns": [
+        "state machine",
+        "agent runtime boundary",
+        "checkpointed workflow"
+      ],
+      "piko_relevance": "Useful pattern for explicit, inspectable workflow state.",
+      "risks": [
+        "Needs adapter boundary; do not let external runtime bypass Piko verification."
+      ],
+      "source_date": "2026-07-01",
+      "score_components": {
+        "piko_goal_fit": 85,
+        "maturity": 85,
+        "integration_cost": 45,
+        "license_safety": 95,
+        "testability": 80,
+        "replace_existing_skill_value": 50,
+        "content_story_value": 75
+      },
+      "piko_relevance_score": 80,
+      "recommendation": "adopt_candidate",
+      "handoff_targets": [
+        "CAP",
+        "STORY"
+      ]
+    },
+    {
+      "project_name": "LlamaIndex",
+      "github_url": "https://github.com/run-llama/llama_index",
+      "stars": 5000,
+      "fixture_star_floor": true,
+      "license": "MIT",
+      "domain": "evidence indexing",
+      "category": "RAG/evidence indexing",
+      "recent_activity": "active_fixture",
+      "ecosystem": "Python",
+      "docs_quality": 82,
+      "integration_cost": 50,
+      "observed_patterns": [
+        "retriever abstraction",
+        "document metadata",
+        "source-grounded retrieval"
+      ],
+      "piko_relevance": "Useful for source indexing and evidence-card traceability.",
+      "risks": [
+        "Must avoid moving long raw source text through agent prompts."
+      ],
+      "source_date": "2026-07-01",
+      "score_components": {
+        "piko_goal_fit": 85,
+        "maturity": 82,
+        "integration_cost": 50,
+        "license_safety": 95,
+        "testability": 80,
+        "replace_existing_skill_value": 50,
+        "content_story_value": 75
+      },
+      "piko_relevance_score": 79,
+      "recommendation": "adopt_candidate",
+      "handoff_targets": [
+        "CAP",
+        "STORY"
+      ]
+    },
+    {
+      "project_name": "OpenAI Agents SDK",
+      "github_url": "https://github.com/openai/openai-agents-python",
+      "stars": 5000,
+      "fixture_star_floor": true,
+      "license": "MIT",
+      "domain": "agent framework",
+      "category": "agent framework",
+      "recent_activity": "active_fixture",
+      "ecosystem": "Python",
+      "docs_quality": 80,
+      "integration_cost": 55,
+      "observed_patterns": [
+        "tool policy",
+        "agent handoff",
+        "structured output"
+      ],
+      "piko_relevance": "Useful for future business agents behind Piko gates.",
+      "risks": [
+        "Must remain optional and disabled unless explicitly configured."
+      ],
+      "source_date": "2026-07-01",
+      "score_components": {
+        "piko_goal_fit": 85,
+        "maturity": 80,
+        "integration_cost": 55,
+        "license_safety": 95,
+        "testability": 80,
+        "replace_existing_skill_value": 50,
+        "content_story_value": 75
+      },
+      "piko_relevance_score": 78,
+      "recommendation": "adopt_candidate",
+      "handoff_targets": [
+        "CAP",
+        "STORY"
+      ]
+    }
+  ],
+  "auto_apply_performed": false
+}

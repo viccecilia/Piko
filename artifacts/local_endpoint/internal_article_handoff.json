@@ -1,0 +1,43 @@
+{
+  "artifact_type": "local_endpoint_internal_article_handoff",
+  "generated_at": "2026-07-08T01:56:44.994806+00:00",
+  "scope": "local_approved_endpoint",
+  "status": "ready_for_internal_evidence_pipeline",
+  "selected_topic": {
+    "question_id": "rev_q_answered_001",
+    "game_name": "Stardew Valley",
+    "question_text": "Where is the Stardew Valley save file location?",
+    "source_type": "steam",
+    "source_region": "en",
+    "answer_maturity": "answered",
+    "risk_level": "low",
+    "heat": 96,
+    "evidence_quality": 70,
+    "recommended_next_action": "review_candidate",
+    "publish_ready": false,
+    "runnable": true
+  },
+  "source_ids": [
+    "fixture_mirror_market_001"
+  ],
+  "evidence_trace": [
+    {
+      "source_id": "fixture_mirror_market_001",
+      "question_id": "rev_q_answered_001",
+      "claim": "Where is the Stardew Valley save file location?",
+      "trace_type": "local_approved_endpoint_signal"
+    }
+  ],
+  "outline": [
+    "What the player is trying to do",
+    "Where the answer signal came from",
+    "What still needs page-level evidence",
+    "Risk notes and source trace"
+  ],
+  "verification_required": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": true,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

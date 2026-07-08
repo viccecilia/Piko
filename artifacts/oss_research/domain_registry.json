@@ -1,0 +1,30 @@
+{
+  "registry_id": "piko_domain_registry_v1",
+  "default_domain": "gaming",
+  "domains": [
+    {
+      "domain_id": "gaming",
+      "status": "active",
+      "plugin_path": "packages.domains.gaming",
+      "capabilities": [
+        "discovery_search",
+        "evidence_pipeline",
+        "guide_writer_profile"
+      ],
+      "risk_level": "medium",
+      "enabled_by_default": true,
+      "real_collection_performed": false
+    },
+    {
+      "domain_id": "ai_tools",
+      "status": "demo_candidate",
+      "plugin_path": "packages.domains.ai_tools",
+      "capabilities": [
+        "story_candidate_only"
+      ],
+      "risk_level": "medium",
+      "enabled_by_default": false,
+      "real_collection_performed": false
+    }
+  ]
+}

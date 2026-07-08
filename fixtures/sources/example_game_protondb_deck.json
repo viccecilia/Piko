@@ -1,0 +1,13 @@
+{
+  "source_id": "fixture_protondb_deck_001",
+  "source_type": "protondb",
+  "url": "https://example.invalid/protondb/example-game",
+  "title": "Example Game Steam Deck Compatibility Notes",
+  "date": "2026-06-07",
+  "game_id": "game_mock_001",
+  "game_name": "Example Game",
+  "trust_tier": "compatibility",
+  "platform": "steam_deck",
+  "content": "Steam Deck users report that switching Proton version can help launch failures. This should not be treated as a Windows fix."
+}
+

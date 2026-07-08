@@ -1,0 +1,59 @@
+{
+  "artifact_type": "provider_live_endpoint_status",
+  "generated_at": "2026-07-08T01:57:38.857254+00:00",
+  "provider_results": [
+    {
+      "provider_id": "serp_snippet",
+      "endpoint_env_var": "PIKO_SERP_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_url_stored": false,
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "double_opt_in_configured": false,
+      "raw_response_body_saved": false,
+      "publishing_performed": false,
+      "candidate_only": true,
+      "status": "deploy_ready_pending_provider_host",
+      "blocked_reason": "missing_provider_endpoint_url",
+      "real_collection_performed": false
+    },
+    {
+      "provider_id": "reddit",
+      "endpoint_env_var": "PIKO_REDDIT_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_url_stored": false,
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "double_opt_in_configured": false,
+      "raw_response_body_saved": false,
+      "publishing_performed": false,
+      "candidate_only": true,
+      "status": "deploy_ready_pending_provider_host",
+      "blocked_reason": "missing_provider_endpoint_url",
+      "real_collection_performed": false
+    },
+    {
+      "provider_id": "steam",
+      "endpoint_env_var": "PIKO_STEAM_DISCOVERY_URL",
+      "endpoint_configured": false,
+      "endpoint_url_stored": false,
+      "endpoint_scheme": null,
+      "endpoint_host": null,
+      "double_opt_in_configured": false,
+      "raw_response_body_saved": false,
+      "publishing_performed": false,
+      "candidate_only": true,
+      "status": "deploy_ready_pending_provider_host",
+      "blocked_reason": "missing_provider_endpoint_url",
+      "real_collection_performed": false
+    }
+  ],
+  "successful_provider_count": 0,
+  "provider_live_status": "deploy_ready_pending_provider_host",
+  "realdata_expected_coverage": "blocked_for_provider_endpoints",
+  "real_collection_performed": false,
+  "broad_internet_coverage": false,
+  "raw_response_body_saved": false,
+  "publish_ready": false,
+  "publishing_performed": false
+}

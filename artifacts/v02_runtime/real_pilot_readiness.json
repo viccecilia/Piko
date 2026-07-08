@@ -1,0 +1,23 @@
+{
+  "artifact_id": "real_pilot_readiness",
+  "generated_at": "2026-07-08T01:56:46.596277+00:00",
+  "status": "blocked_for_endpoint",
+  "approved_endpoint_configured": false,
+  "double_opt_in_present": false,
+  "payload_limit": {
+    "max_sources": 3,
+    "max_questions": 10,
+    "timeout_seconds": 10
+  },
+  "artifact_safety": {
+    "save_raw_response_body": false,
+    "retained_fields_only": true
+  },
+  "publish_disabled": true,
+  "verification_required": true,
+  "real_collection_performed": false,
+  "live_success_claimed": false,
+  "blocked_reason": "missing approved endpoint or explicit double opt-in",
+  "publish_ready": false,
+  "publishing_performed": false
+}

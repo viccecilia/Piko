@@ -1,0 +1,22 @@
+{
+  "artifact_type": "real_external_handoff",
+  "generated_at": "2026-07-08T01:56:31.584072+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "blocked_for_external_endpoint",
+  "top_candidates": [],
+  "pain_buckets": {},
+  "source_trace": [
+    {
+      "scope": "external_approved_endpoint",
+      "status": "blocked_for_external_endpoint",
+      "source_id": null,
+      "real_collection_performed": false
+    }
+  ],
+  "blocked_reason": "missing_external_endpoint_url",
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

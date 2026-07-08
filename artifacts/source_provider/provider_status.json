@@ -1,0 +1,15 @@
+{
+  "artifact_type": "source_provider_status",
+  "generated_at": "2026-07-08T01:56:45.891464+00:00",
+  "provider_status": "deploy_ready_pending_host",
+  "external_provider_validated": false,
+  "approved_url_redacted": null,
+  "blocked_reason": "missing_external_url",
+  "package_path": "artifacts\\source_provider\\static_endpoint_package\\approved-market.json",
+  "payload_hash_sha256": "5ba073d8b366254fced86be2821a44ce82663e3e38a1e3a52bd1ab392adf8139",
+  "next_action": "host_static_endpoint_package_then_rerun_validation",
+  "strategy": "static_json_provider_package_first",
+  "deployment_performed": false,
+  "credentials_stored": false,
+  "publishing_performed": false
+}

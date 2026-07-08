@@ -1,0 +1,62 @@
+{
+  "artifact_type": "generic_signal_need_contract",
+  "generated_at": "2026-07-08T01:56:31.217451+00:00",
+  "contracts": {
+    "GenericSourceSignal": {
+      "required": [
+        "signal_id",
+        "domain_id",
+        "source_type",
+        "source_id",
+        "title",
+        "url",
+        "snippet",
+        "metrics",
+        "domain_payload"
+      ],
+      "raw_source_allowed": false
+    },
+    "NeedCluster": {
+      "required": [
+        "cluster_id",
+        "domain_id",
+        "need_type",
+        "representative_text",
+        "source_signal_ids",
+        "opportunity_score",
+        "domain_payload"
+      ],
+      "candidate_only_default": true
+    },
+    "OpportunityScore": {
+      "required": [
+        "heat",
+        "evidence_maturity",
+        "risk",
+        "source_diversity",
+        "actionability"
+      ],
+      "range": [
+        0,
+        100
+      ]
+    },
+    "EvidenceTrace": {
+      "required": [
+        "evidence_id",
+        "source_signal_id",
+        "claim",
+        "source_ids",
+        "confidence"
+      ],
+      "source_ids_required": true
+    }
+  },
+  "migration_map": {
+    "GameHeatSignal": "GenericSourceSignal",
+    "PlayerQuestionSignal": "NeedCluster",
+    "ToolCandidateSignal": "GenericSourceSignal",
+    "OperatorNeedSignal": "NeedCluster"
+  },
+  "candidate_only": true
+}

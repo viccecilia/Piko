@@ -1,0 +1,32 @@
+{
+  "adapter_id": "local_rule_based_adapter_fixture",
+  "task_id": "fixture_adapter_task",
+  "status": "completed",
+  "structured_result": {
+    "claim": "Fixture claim",
+    "answer": "Use source-backed, low-risk steps only.",
+    "source_ids": [
+      "fixture_source_001"
+    ],
+    "evidence_refs": [
+      {
+        "source_id": "fixture_source_001",
+        "evidence_id": "ev_fixture_source_001"
+      }
+    ]
+  },
+  "verification_inputs": {
+    "requires_source_ids": true,
+    "has_source_ids": true,
+    "unsupported_claim": false
+  },
+  "verification_report": {
+    "status": "pass",
+    "warnings": []
+  },
+  "llm_used": false,
+  "external_framework_used": false,
+  "network_performed": false,
+  "publish_ready": false,
+  "publishing_performed": false
+}

@@ -1,0 +1,49 @@
+{
+  "artifact_id": "latest_run_trace",
+  "generated_at": "2026-07-08T01:56:46.595277+00:00",
+  "run_id": "v02_trace_fixture_001",
+  "status": "completed_with_blocked_actions",
+  "stages": [
+    "approval",
+    "dry_run_materialization",
+    "domain_routing",
+    "adapter_fixture",
+    "eval_pack",
+    "readiness"
+  ],
+  "agents": [
+    "local_rule_based_adapter_fixture"
+  ],
+  "tools": [],
+  "gates": [
+    {
+      "gate": "approval_gate",
+      "status": "blocked",
+      "reason": "pending_operator_review"
+    },
+    {
+      "gate": "publish_gate",
+      "status": "blocked",
+      "reason": "publish disabled in V02"
+    }
+  ],
+  "failures": [
+    {
+      "failure_id": "approval_not_granted",
+      "located_at": "V02-1-R02",
+      "recoverable": true
+    }
+  ],
+  "commands": [
+    "python -m pytest tests\\test_discovery_search.py -q",
+    "python -m pytest"
+  ],
+  "artifact_refs": [
+    "artifacts/v02_runtime/approval_packet_contract.json",
+    "artifacts/v02_runtime/latest_materialization_preview.json",
+    "artifacts/v02_runtime/eval_pack_contract.json"
+  ],
+  "human_approval_state": "required_before_materialization",
+  "publish_ready": false,
+  "publishing_performed": false
+}

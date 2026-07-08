@@ -1,0 +1,56 @@
+{
+  "artifact_type": "ai_tools_content_eval_pack",
+  "domain_id": "ai_tools",
+  "generated_at": "2026-07-08T01:56:31.220450+00:00",
+  "content_templates": {
+    "tool_comparison": [
+      "problem",
+      "candidate_tools",
+      "evidence_trace",
+      "risk_notes",
+      "recommendation"
+    ],
+    "integration_risk_note": [
+      "change_summary",
+      "affected_workflow",
+      "safety_checklist",
+      "next_action"
+    ],
+    "workflow_template": [
+      "trigger",
+      "inputs",
+      "steps",
+      "verification",
+      "approval_required"
+    ]
+  },
+  "eval_suite": {
+    "suite_id": "ai_tools_domain_eval_v1",
+    "cases": [
+      {
+        "case_id": "source_trace_required",
+        "status": "passed"
+      },
+      {
+        "case_id": "license_risk_flagged",
+        "status": "passed"
+      },
+      {
+        "case_id": "publish_disabled",
+        "status": "passed"
+      }
+    ]
+  },
+  "content_package_fixture": {
+    "package_id": "ai_tools_internal_package_001",
+    "domain_id": "ai_tools",
+    "title": "Workflow adapter pilot comparison",
+    "source_signal_ids": [
+      "ai_tools_signal_workflow_adapter",
+      "ai_tools_signal_eval_runner"
+    ],
+    "evidence_trace_present": true,
+    "publish_ready": false,
+    "publishing_performed": false
+  }
+}

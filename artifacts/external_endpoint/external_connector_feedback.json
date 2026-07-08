@@ -1,0 +1,14 @@
+{
+  "artifact_type": "external_connector_feedback",
+  "generated_at": "2026-07-08T01:56:31.574072+00:00",
+  "connector_id": "approved_json_endpoint",
+  "scope": "external_approved_endpoint",
+  "last_external_probe_status": "blocked_for_external_endpoint",
+  "readiness_delta": "blocked_or_failed_no_activation",
+  "live_ready_candidate": false,
+  "production_activation_allowed": false,
+  "next_action": "configure_external_endpoint_and_re_run",
+  "real_collection_performed": false,
+  "publishing_performed": false,
+  "broad_internet_coverage": false
+}

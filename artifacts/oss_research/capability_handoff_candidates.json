@@ -1,0 +1,21 @@
+{
+  "artifact_id": "capability_handoff_candidates",
+  "generated_at": "2026-07-08T01:56:45.240979+00:00",
+  "candidates": [
+    {
+      "current_capability": "article_pipeline",
+      "new_candidate": "AgentRuntimeAdapter boundary",
+      "replacement_decision": "augment",
+      "decision_reason": "Can improve future adapter testing without replacing current agents.",
+      "migration_cost": "medium",
+      "verification_needed": [
+        "offline adapter fixture",
+        "verification cannot be bypassed"
+      ],
+      "handoff_target": "CAP",
+      "story_handoff": true,
+      "content_angle": "How Piko studies agent frameworks without blindly installing them."
+    }
+  ],
+  "auto_replace_performed": false
+}

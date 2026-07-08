@@ -1,0 +1,400 @@
+{
+  "artifact_type": "source_backed_article_package",
+  "package_status": "blocked_internal_draft_only",
+  "candidate": {
+    "candidate_id": "candidate_stardew_valley_save_file_location",
+    "cluster_id": "stardew_valley:save_file_location",
+    "game_id": "stardew_valley",
+    "game_name": "Stardew Valley",
+    "need_key": "save_file_location",
+    "search_intent": "save_file",
+    "normalization_hints": [
+      "location",
+      "save"
+    ],
+    "player_question": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+    "article_intent": "Help players find and safely back up Stardew Valley save files.",
+    "decision": "publish_candidate",
+    "answer_status": "answered",
+    "risk_level": "low",
+    "candidate_type": "solution_candidate",
+    "runnable": true,
+    "source_search_hints": [
+      "Stardew Valley save file location",
+      "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "Stardew Valley save file location en",
+      "Stardew Valley save file location jp",
+      "Stardew Valley save file location steam_discussion",
+      "Stardew Valley save file location wiki_comment"
+    ],
+    "source_query_hints": [
+      "Stardew Valley save file location",
+      "Stardew Valley Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "Stardew Valley save file location en",
+      "Stardew Valley save file location jp",
+      "Stardew Valley save file location steam_discussion",
+      "Stardew Valley save file location wiki_comment"
+    ],
+    "required_source_types": [
+      "steam_discussion",
+      "wiki_comment"
+    ],
+    "preferred_source_types": [
+      "steam_discussion",
+      "wiki_comment"
+    ],
+    "source_regions": [
+      "en",
+      "jp"
+    ],
+    "risk_flags": [],
+    "safety_flags": [
+      "candidate_only",
+      "requires_evidence_pipeline",
+      "not_publish_ready"
+    ],
+    "safety_reasons": [
+      "Discovery candidates are not publishing approval."
+    ],
+    "piko_value_add": [
+      "Single-page clarity: combine scattered answers into one source-traced guide.",
+      "Risk ordering: rank low-risk steps before risky actions.",
+      "Cross-language bridge: connect repeated EN/JP/KR questions with clear sourcing.",
+      "Gap fill: existing material appears fragmented.",
+      "Focused scope: this topic can likely be answered on one useful page."
+    ],
+    "cluster_reasons": [
+      "Game heat score: 72.",
+      "Question heat score: 53.",
+      "Answer status: answered.",
+      "Evidence quality: 75.",
+      "Competition gap: 76.",
+      "Piko value add score: 78.",
+      "Repeated questions appear across multiple regions.",
+      "Language-gap opportunity: bridge EN and JP/KR signals with clear sourcing.",
+      "Source coverage level: partial.",
+      "Competition gap status: fragmented."
+    ],
+    "score_inputs": {
+      "game_heat": 72,
+      "question_heat": 53,
+      "answer_status": "answered",
+      "evidence_quality": 75,
+      "conflict_score": 0,
+      "risk_level": "low",
+      "freshness_score": 36,
+      "evergreen_value": 85,
+      "competition_gap": 76,
+      "competition_gap_status": "fragmented",
+      "actionability_score": 85,
+      "piko_value_add_score": 78,
+      "content_opportunity_score": 87
+    },
+    "publish_ready": false,
+    "requires_evidence_pipeline": true,
+    "safety_notes": [
+      "Discovery output is candidate-only and is not publishing permission."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "source_mock_official",
+      "source_type": "official_notes",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "source_mock_wiki",
+      "source_type": "pcgamingwiki",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "source_mock_discussion",
+      "source_type": "steam_discussion",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "source_mock_forum",
+      "source_type": "community_forum",
+      "title": null,
+      "url": null,
+      "retrieved_at": null,
+      "trust_tier": "mock",
+      "snippet": null,
+      "clean_text": null,
+      "metadata": {}
+    }
+  ],
+  "evidence_cards": [
+    {
+      "evidence_card_id": "ev_mock_001",
+      "source_id": "source_mock_official",
+      "claim_type": "solution",
+      "claim": "Verify game files",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "solution": "Verify game files",
+      "platform": "windows",
+      "version": null,
+      "confidence": 82,
+      "risk_note": null
+    },
+    {
+      "evidence_card_id": "ev_mock_002",
+      "source_id": "source_mock_discussion",
+      "claim_type": "solution",
+      "claim": "Disable Steam Overlay",
+      "source_type": null,
+      "url": null,
+      "retrieved_at": null,
+      "symptom": "Where is the Stardew Valley save file location on Windows and Steam Deck?",
+      "solution": "Disable Steam Overlay",
+      "platform": "windows",
+      "version": null,
+      "confidence": 74,
+      "risk_note": null
+    }
+  ],
+  "ranked_steps": [
+    {
+      "rank": 1,
+      "solution": "Verify game files",
+      "confidence": 82,
+      "risk_level": "low",
+      "source_ids": [
+        "fixture_official_launch_001",
+        "fixture_wiki_launch_001"
+      ]
+    },
+    {
+      "rank": 2,
+      "solution": "Disable Steam Overlay",
+      "confidence": 74,
+      "risk_level": "low",
+      "source_ids": [
+        "fixture_community_overlay_001"
+      ]
+    }
+  ],
+  "agent_trace": [
+    {
+      "agent": "keyword_agent",
+      "status": "completed",
+      "output_keys": [
+        "keywords"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "pain_agent",
+      "status": "completed",
+      "output_keys": [
+        "article_candidate",
+        "blocking_level",
+        "pain_score",
+        "pain_type",
+        "reason",
+        "search_value"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "source_agent",
+      "status": "completed",
+      "output_keys": [
+        "fixture_selection",
+        "real_collection_performed",
+        "sources"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "evidence_agent",
+      "status": "completed",
+      "output_keys": [
+        "claim_candidates",
+        "evidence_cards"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "conflict_agent",
+      "status": "completed",
+      "output_keys": [
+        "conflicts",
+        "requires_human_review",
+        "warnings"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "ranking_agent",
+      "status": "completed",
+      "output_keys": [
+        "ranked_solutions"
+      ],
+      "source_ids": [],
+      "error": null
+    },
+    {
+      "agent": "writer_agent",
+      "status": "completed",
+      "output_keys": [
+        "claim_trace",
+        "draft_excerpt",
+        "draft_format",
+        "evidence_card_ids",
+        "game",
+        "llm_error",
+        "llm_fallback_used",
+        "llm_used",
+        "markdown",
+        "player_question",
+        "publish_ready",
+        "publishing_performed",
+        "ranked_steps",
+        "sections",
+        "source_ids",
+        "used_raw_sources",
+        "used_source_ids"
+      ],
+      "source_ids": [
+        "source_mock_discussion",
+        "source_mock_official"
+      ],
+      "error": null
+    },
+    {
+      "agent": "editor_agent",
+      "status": "completed",
+      "output_keys": [
+        "edited_text",
+        "editor_note",
+        "removed_patterns",
+        "risk_notes_visible",
+        "style_pass"
+      ],
+      "source_ids": [],
+      "error": null
+    }
+  ],
+  "verification_report": {
+    "status": "fail",
+    "checks": [
+      {
+        "name": "player_need",
+        "status": "pass",
+        "message": "Player need and game are present.",
+        "details": {}
+      },
+      {
+        "name": "source_evidence",
+        "status": "pass",
+        "message": "At least one traceable source is present.",
+        "details": {
+          "source_count": 4
+        }
+      },
+      {
+        "name": "evidence_source_trace",
+        "status": "pass",
+        "message": "Evidence cards link to known source IDs.",
+        "details": {
+          "missing_source_ids": []
+        }
+      },
+      {
+        "name": "ranked_step_trace",
+        "status": "fail",
+        "message": "Ranked steps use known source IDs.",
+        "details": {
+          "missing_source_ids": [
+            "fixture_community_overlay_001",
+            "fixture_official_launch_001",
+            "fixture_wiki_launch_001"
+          ]
+        }
+      },
+      {
+        "name": "conflicts_surfaced",
+        "status": "pass",
+        "message": "Unresolved conflicts must be surfaced before publish decisions.",
+        "details": {
+          "unresolved_conflicts": []
+        }
+      },
+      {
+        "name": "risk_notes",
+        "status": "pass",
+        "message": "Risk notes are visible for risky actions.",
+        "details": {
+          "high_risk_steps": []
+        }
+      },
+      {
+        "name": "no_publishing_side_effect",
+        "status": "pass",
+        "message": "Workflow did not publish content.",
+        "details": {}
+      },
+      {
+        "name": "gate_decision_consistency",
+        "status": "pass",
+        "message": "Publish-ready decisions cannot coexist with failed gates.",
+        "details": {
+          "failed_gates": []
+        }
+      }
+    ],
+    "summary": "fail: 7/8 checks passed.",
+    "workflow": "article_pipeline_v1",
+    "run_id": "run_mock_001"
+  },
+  "publish_decision": {
+    "value": "verification_failed",
+    "recommended_next_action": "Keep candidate output blocked until verification passes.",
+    "reasons": [
+      "fail: 7/8 checks passed."
+    ],
+    "blocks_publish": true
+  },
+  "publish_action": "draft_review",
+  "draft_markdown_path": "artifacts\\article_drafts\\latest_source_backed_article_package.md",
+  "media_plan_present": false,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "real_collection_performed": false,
+  "source_trace_present": true,
+  "evidence_trace_present": true,
+  "candidate_only": true,
+  "safety_fields": {
+    "artifact_internal_draft_only": true,
+    "not_public_web_page": true,
+    "long_raw_source_retained": false,
+    "draft_body_kept_in_json": false
+  }
+}

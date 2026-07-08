@@ -1,0 +1,27 @@
+{
+  "artifact_id": "operator_backend_status",
+  "generated_at": "2026-07-08T01:56:47.817540+00:00",
+  "backend_status": "available_for_pilot_smoke",
+  "approval_status": "pilot_approved",
+  "install_performed": false,
+  "effective_backend": "langgraph_backend",
+  "fallback_available": true,
+  "activation_status": "not_approved_for_production",
+  "blocked_reason": null,
+  "selector": {
+    "requested_backend": "langgraph_backend",
+    "effective_backend": "langgraph_backend",
+    "backend_status": "available_for_pilot_smoke",
+    "blocked_reason": null
+  },
+  "read_only": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

@@ -1,0 +1,45 @@
+{
+  "artifact_id": "human_approval_contract_v1",
+  "generated_at": "2026-07-08T01:56:29.719323+00:00",
+  "schema": {
+    "required_fields": [
+      "approval_id",
+      "action_type",
+      "summary",
+      "evidence_links",
+      "risk_flags",
+      "rollback_plan",
+      "expires_at",
+      "operator_decision"
+    ],
+    "action_types": [
+      "publish_article",
+      "deploy_site",
+      "use_paid_api",
+      "store_credentials",
+      "replace_capability",
+      "vendor_dependency",
+      "change_guardrail"
+    ]
+  },
+  "rules": [
+    "Unapproved actions must not run.",
+    "High-risk actions require evidence_links and rollback_plan.",
+    "Operator decision must be explicit and recorded outside automated artifacts."
+  ],
+  "sample_unapproved_action": {
+    "approval_id": "approval_sample_replace_capability",
+    "action_type": "replace_capability",
+    "summary": "Sample only; no action is approved or executed.",
+    "evidence_links": [
+      "artifacts/capability_map/capability_scorecard.json"
+    ],
+    "risk_flags": [
+      "destructive_replacement"
+    ],
+    "rollback_plan": "Restore prior capability and rerun full verification.",
+    "expires_at": null,
+    "operator_decision": "not_started",
+    "executed": false
+  }
+}

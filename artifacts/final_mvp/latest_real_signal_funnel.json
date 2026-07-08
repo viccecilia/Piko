@@ -1,0 +1,50 @@
+{
+  "artifact_type": "final_mvp_real_signal_funnel",
+  "generated_at": "2026-07-08T01:56:31.494073+00:00",
+  "scope": "external_approved_endpoint",
+  "status": "completed",
+  "mode": "real-source",
+  "domain_routing": {
+    "domain_id": "gaming",
+    "routing_decision": "route_to_gaming_domain_pack",
+    "core_concepts": [
+      "domain",
+      "source_signal",
+      "need_cluster",
+      "evidence",
+      "workflow_trace"
+    ],
+    "domain_pack_auto_activated": false
+  },
+  "top_hot_games": [
+    {
+      "game_id": "hades_ii",
+      "game_name": "Hades II",
+      "candidate_only": true
+    }
+  ],
+  "topic_buckets": {
+    "hot_answered_questions": [
+      {
+        "question_id": "q1",
+        "game_name": "Hades II",
+        "question_text": "Where is the save file?",
+        "evidence_quality": 70,
+        "risk_level": "low",
+        "publish_ready": false
+      }
+    ]
+  },
+  "source_trace": [
+    {
+      "scope": "external_approved_endpoint",
+      "status": "success",
+      "source_id": "approved_1"
+    }
+  ],
+  "real_collection_performed": true,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "broad_internet_coverage": false,
+  "candidate_only": true
+}

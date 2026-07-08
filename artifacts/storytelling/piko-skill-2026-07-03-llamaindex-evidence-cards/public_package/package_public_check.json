@@ -1,0 +1,27 @@
+{
+  "status": "CLEAN_PUBLIC_DRAFT",
+  "scan_date": "2026-07-03",
+  "main_topic": "LlamaIndex evidence traceability for document AI applications",
+  "outputs": {
+    "content_pack": true,
+    "wechat_article": true,
+    "xiaohongshu_cards": true,
+    "xiaohongshu_post_text": true,
+    "voiceover_script": true,
+    "storyboard": true,
+    "visual_plan": true,
+    "html_video_draft": true
+  },
+  "video": {
+    "aspect_ratio": "9:16",
+    "duration_seconds": 80,
+    "external_cdn": false,
+    "style": "faceless technical explainer"
+  },
+  "needs_before_publish": [
+    "Recheck current GitHub star count",
+    "Recheck repository license",
+    "Recheck current README positioning",
+    "Record or generate public-safe voiceover audio if needed"
+  ]
+}

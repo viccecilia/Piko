@@ -1,0 +1,8 @@
+{
+  "artifact_type": "source_provider_operator_instructions",
+  "generated_at": "2026-07-08T01:56:45.800466+00:00",
+  "markdown_path": "artifacts\\source_provider\\operator_instructions.md",
+  "contains_secrets": false,
+  "deployment_performed": false,
+  "publishing_performed": false
+}

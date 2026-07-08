@@ -1,0 +1,79 @@
+{
+  "games": [
+    {
+      "game_id": "provider-serp-hades-ii",
+      "game_name": "Hades II",
+      "source_category": "serp_snippet",
+      "source_url": "https://provider.example/serp_snippet/games/provider-serp-hades-ii",
+      "rank": 1,
+      "velocity": 62,
+      "region": "global",
+      "language": "en",
+      "update_recency_days": 14
+    }
+  ],
+  "questions": [
+    {
+      "game_id": "provider-serp-hades-ii",
+      "game_name": "Hades II",
+      "source_category": "serp_snippet",
+      "source_url": "https://provider.example/serp_snippet/questions/1",
+      "source_title": "SERP approved summary: common player issue",
+      "language": "en",
+      "region": "global",
+      "engagement_count": 77,
+      "reply_count": 12,
+      "growth_24h": 8,
+      "answer_maturity": "answered",
+      "conflict_count": 0,
+      "risk_level": "low",
+      "snippet": "Short approved summary only. No page body, selftext, or full comments are retained.",
+      "tags": [
+        "troubleshooting",
+        "guide-candidate"
+      ],
+      "question_id": "serp_snippet_q_save_or_crash",
+      "question_text": "Where should players look first when this issue appears?"
+    },
+    {
+      "game_id": "provider-serp-hades-ii",
+      "game_name": "Hades II",
+      "source_category": "serp_snippet",
+      "source_url": "https://provider.example/serp_snippet/questions/1",
+      "source_title": "SERP approved summary: common player issue",
+      "language": "en",
+      "region": "global",
+      "engagement_count": 44,
+      "reply_count": 3,
+      "growth_24h": 8,
+      "answer_maturity": "unanswered",
+      "conflict_count": 0,
+      "risk_level": "medium",
+      "snippet": "Short approved summary only. No page body, selftext, or full comments are retained.",
+      "tags": [
+        "troubleshooting",
+        "guide-candidate"
+      ],
+      "question_id": "serp_snippet_q_watchlist",
+      "question_text": "Is there a reliable fix for this new hot issue?"
+    }
+  ],
+  "source": {
+    "source_id": "serp_snippet_approved_package_v1",
+    "source_type": "approved_json_provider_package",
+    "source_category": "serp_snippet",
+    "endpoint_type": "json"
+  },
+  "generated_at": "2026-07-08T01:57:38.853247+00:00",
+  "metadata": {
+    "candidate_only": true,
+    "provider_live_package": true,
+    "raw_text_included": false,
+    "raw_response_body_saved": false,
+    "selftext_saved": false,
+    "full_comments_saved": false,
+    "broad_internet_coverage": false,
+    "publish_ready": false,
+    "publishing_performed": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "dependency_availability_probe",
+  "generated_at": "2026-07-08T01:56:47.778537+00:00",
+  "package_name": "langgraph",
+  "expected_import": "langgraph",
+  "probe_command": "importlib.import_module('langgraph')",
+  "install_performed": false,
+  "env_dump_performed": false,
+  "backend_status": "available",
+  "langgraph_available": true,
+  "version": "unknown",
+  "blocked_reason": null,
+  "publish_ready": false,
+  "publishing_performed": false,
+  "deploy_performed": false,
+  "active_runtime_replaced": false,
+  "production_activation_allowed": false,
+  "llm_performed": false,
+  "external_connector_performed": false,
+  "credentials_used": false,
+  "vendored_source": false
+}

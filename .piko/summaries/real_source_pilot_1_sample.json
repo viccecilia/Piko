@@ -1,0 +1,53 @@
+{
+  "source": "pcgamingwiki_mediawiki_api",
+  "query": "Hades",
+  "player_question": "Where is the save file location?",
+  "result_count": 3,
+  "records": [
+    {
+      "source_id": "pcgamingwiki_183626",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/w/api.php?curid=183626",
+      "title": "Hades II",
+      "retrieved_at": "2026-06-21T06:29:21.357559Z",
+      "snippet": "|cover = Hades II cover.jpg {{Infobox game/row/reception|Metacritic|hades-ii|94}}",
+      "trust_tier": "reference",
+      "raw_text": null,
+      "clean_text": "|cover = Hades II cover.jpg {{Infobox game/row/reception|Metacritic|hades-ii|94}}",
+      "metadata": {
+        "pageid": "183626",
+        "raw_text_included": false
+      }
+    },
+    {
+      "source_id": "pcgamingwiki_137191",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/w/api.php?curid=137191",
+      "title": "Hades",
+      "retrieved_at": "2026-06-21T06:29:21.357559Z",
+      "snippet": "|cover = Hades cover.jpg ...{{Refurl|url=https://fearlessrevolution.com/viewtopic.php?f=2&t=8378|title=Hades|date=2020-02-29}}}}",
+      "trust_tier": "reference",
+      "raw_text": null,
+      "clean_text": "|cover = Hades cover.jpg ...{{Refurl|url=https://fearlessrevolution.com/viewtopic.php?f=2&t=8378|title=Hades|date=2020-02-29}}}}",
+      "metadata": {
+        "pageid": "137191",
+        "raw_text_included": false
+      }
+    },
+    {
+      "source_id": "pcgamingwiki_91106",
+      "source_type": "pcgamingwiki",
+      "url": "https://www.pcgamingwiki.com/w/api.php?curid=91106",
+      "title": "The Road to Hades",
+      "retrieved_at": "2026-06-21T06:29:21.357559Z",
+      "snippet": "|cover = The Road to Hades cover.jpg",
+      "trust_tier": "reference",
+      "raw_text": null,
+      "clean_text": "|cover = The Road to Hades cover.jpg",
+      "metadata": {
+        "pageid": "91106",
+        "raw_text_included": false
+      }
+    }
+  ]
+}

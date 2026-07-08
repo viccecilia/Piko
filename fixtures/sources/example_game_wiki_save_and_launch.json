@@ -1,0 +1,13 @@
+{
+  "source_id": "fixture_wiki_launch_001",
+  "source_type": "pcgamingwiki",
+  "url": "https://example.invalid/wiki/example-game",
+  "title": "Example Game PC Notes",
+  "date": "2026-05-20",
+  "game_id": "game_mock_001",
+  "game_name": "Example Game",
+  "trust_tier": "reference",
+  "platform": "windows",
+  "content": "For launch crashes, verify game files before changing configuration. Save data is usually under a local user profile path. Avoid deleting saves without a backup."
+}
+
